@@ -86,6 +86,21 @@ def vribbon(x0, y0, x1, y1, w0, w1=None):
             f"C {x1+b_:.1f} {ym1:.1f} {x0+a:.1f} {ym0:.1f} {x0+a:.1f} {y0:.1f} Z")
 
 
+def _overlaps(VY, char, S):
+    bad = []
+    for i, row in enumerate(VY):
+        items = sorted((x, cid) for cid, x in row.items())
+        for (x1, c1), (x2, c2) in zip(items, items[1:]):
+            g = (x2 - char[c2][1] * S / 2) - (x1 + char[c1][1] * S / 2)
+            if g < 0.5:
+                bad.append((i, c1, c2, round(g, 1)))
+    return bad
+
+
+def _finish(svg, VY, char, S):
+    return "\n".join(svg)
+
+
 def render_v(spec):
     char, order, cols, ys = spec["char"], spec["order"], spec["cols"], spec["ys"]
     S = spec["scale"]
@@ -116,9 +131,10 @@ def render_v(spec):
         return out
 
     CB = cb_style(char, order) if spec.get("cb_safe") else {}
+    PP = spec.get("pattern_prefix", "")   # namespaces ids for multi-chart pages
 
     def fill_of(cid):
-        return f"url(#cb-{cid})" if CB else char[cid][2]
+        return f"url(#cb{PP}-{cid})" if CB else char[cid][2]
 
     VY = []
     for c in cols:
@@ -167,27 +183,32 @@ def render_v(spec):
             rowmax = max(rowmax, f)
         return rows, rowmax
 
+    MINI = spec.get("mini", False)
     lrows, lfont = legend_rows()
     last_row = ys[-1]
-    band_y = last_row + max(cap_depth(c) for c in cols) + 26
-    legend_y = band_y + (58 if spec.get("bands") else 26)
-    legend_bottom = legend_y + (lrows - 1) * (lfont * 1.5) + lfont * 1.1
-    note_y = legend_bottom + 24 if spec.get("legend_note") else None
-    rule_y = (note_y if note_y else legend_bottom) + 30
-    title_top = rule_y + 34
-    H = int(title_top + 26 * (len(spec["title"]) - 1) + 30)
+    if MINI:
+        H = int(last_row + spec.get("mini_pad", 26))
+        band_y = legend_y = note_y = rule_y = title_top = 0
+    else:
+        band_y = last_row + max(cap_depth(c) for c in cols) + 26
+        legend_y = band_y + (58 if spec.get("bands") else 26)
+        legend_bottom = legend_y + (lrows - 1) * (lfont * 1.5) + lfont * 1.1
+        note_y = legend_bottom + 24 if spec.get("legend_note") else None
+        rule_y = (note_y if note_y else legend_bottom) + 30
+        title_top = rule_y + 34
+        H = int(title_top + 26 * (len(spec["title"]) - 1) + 30)
 
     svg = []
     A = svg.append
     A(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
       f'viewBox="0 0 {W} {H}" font-family="Helvetica, Arial, sans-serif">')
-    A('<defs><pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">'
-      '<circle cx="1" cy="1" r="0.9" fill="#d8d2c8"/></pattern>'
+    A(f'<defs><pattern id="dots{PP}" width="26" height="26" patternUnits="userSpaceOnUse">'
+      f'<circle cx="1" cy="1" r="0.9" fill="#d8d2c8"/></pattern>'
       + ("" if CB else "</defs>"))
     if CB:
         for cid in order:
             _rank, _op, _sym, _dark = CB[cid]
-            A(f'<pattern id="cb-{cid}" width="9" height="9" patternUnits="userSpaceOnUse">')
+            A(f'<pattern id="cb{PP}-{cid}" width="9" height="9" patternUnits="userSpaceOnUse">')
             A(f'<rect width="9" height="9" fill="{char[cid][2]}" fill-opacity="{_op}"/>')
             if _sym:
                 A(f'<path d="{_sym}" fill="none" stroke="{_dark}" stroke-width="1.3" '
@@ -196,7 +217,7 @@ def render_v(spec):
         A('</defs>')
     A(f'<rect width="{W}" height="{H}" fill="#faf7f2"/>')
     A(f'<rect x="0" y="{ys[0]-90}" width="{W}" height="{last_row-ys[0]+180}" '
-      f'fill="url(#dots)" opacity="0.55"/>')
+      f'fill="url(#dots{PP})" opacity="0.55"/>')
 
     for y in ys:
         A(f'<line x1="70" y1="{y}" x2="{LANE_HI}" y2="{y}" stroke="#c9c2b6" '
@@ -205,7 +226,7 @@ def render_v(spec):
           f'stroke-width="1"/>')
 
     # caption column
-    for i, c in enumerate(cols):
+    for i, c in (enumerate(cols) if not MINI else []):
         y = ys[i]
         A(f'<text x="{CAPX}" y="{y-12}" font-size="{F["beat"]}" font-weight="700" '
           f'fill="#2b2622" letter-spacing="1.1">{c["beat"]}</text>')
@@ -303,7 +324,7 @@ def render_v(spec):
                   f'fill-opacity="{1 if CB else 0.72}"/>')
 
     # lane names, staggered, sized by strand weight
-    present = [(VY[0][cid], cid) for cid in order if cid in VY[0]]
+    present = [] if MINI else [(VY[0][cid], cid) for cid in order if cid in VY[0]]
     tiers = lane_tiers(present, spec.get("tiers", 5))
     for x, cid in present:
         f = lab_font[cid]
@@ -316,12 +337,44 @@ def render_v(spec):
           f'y2="{ys[0]-14}" stroke="{char[cid][2]}" stroke-width="1" opacity="0.28"/>')
 
     # semantic bands
-    for text, x0, x1 in spec.get("bands", []):
+    for text, x0, x1 in ([] if MINI else spec.get("bands", [])):
         A(f'<text x="{(x0+x1)/2:.0f}" y="{band_y}" font-size="{F["band"]}" '
           f'font-weight="700" letter-spacing="2" text-anchor="middle" '
           f'fill="#b3aa9d">{text}</text>')
 
-    # legend: type size follows strand weight
+    def emit_beat_links():
+        """An <a> hit area per beat row, on top of everything, plus a named
+        highlight target the page can light up while you read."""
+        links = spec.get("beat_links")
+        if not links:
+            return
+        half = spec.get("beat_hit_half", 78)
+        pre = spec.get("rowmark_prefix", "chart")
+        A('<g class="beat-rows">')
+        for i, c in enumerate(cols):
+            if not links(i, c):
+                continue
+            y = ys[i]
+            A(f'<rect class="rowmark" id="{pre}-{i+1:02d}" data-beat="{i+1:02d}" '
+              f'x="0" y="{y-half:.0f}" width="{W}" height="{half*2}" '
+              f'fill="transparent" pointer-events="none"/>')
+        for i, c in enumerate(cols):
+            href = links(i, c)
+            if not href:
+                continue
+            y = ys[i]
+            A(f'<a class="beat-link" href="{href}">'
+              f'<rect class="hit" x="0" y="{y-half:.0f}" width="{W}" height="{half*2}" '
+              f'fill="transparent"/><title>{c["beat"]}</title></a>')
+        A('</g>')
+
+    # legend: type size follows strand weight (mini mode has no legend and must
+    # still emit the beat links and CLOSE the svg before returning)
+    if MINI:
+        emit_beat_links()
+        A('</svg>')
+        return _finish(svg, VY, char, S), {"lane_overlaps": _overlaps(VY, char, S),
+                                          "H": H, "legend_rows": lrows}
     ly = legend_y
     A(f'<text x="60" y="{ly-16}" font-size="{F["legend_title"]}" font-weight="700" '
       f'letter-spacing="1.1" fill="#9a9086">{spec["legend_title"]}</text>')
@@ -344,6 +397,8 @@ def render_v(spec):
         A(f'<text x="60" y="{note_y:.0f}" font-size="{F["legend_title"]+1}" '
           f'font-style="italic" fill="#8b8377">{spec["legend_note"]}</text>')
 
+    emit_beat_links()
+
     # title block
     A(f'<line x1="60" y1="{rule_y}" x2="{W-60}" y2="{rule_y}" stroke="#ded7cb"/>')
     for k, (txt, sty) in enumerate(spec["title"]):
@@ -358,11 +413,5 @@ def render_v(spec):
               f'fill="#9a9086">{txt}</text>')
     A('</svg>')
 
-    bad = []
-    for i, row in enumerate(VY):
-        items = sorted((x, cid) for cid, x in row.items())
-        for (x1, c1), (x2, c2) in zip(items, items[1:]):
-            g = (x2 - char[c2][1] * S / 2) - (x1 + char[c1][1] * S / 2)
-            if g < 0.5:
-                bad.append((i, c1, c2, round(g, 1)))
-    return "\n".join(svg), {"lane_overlaps": bad, "H": H, "legend_rows": lrows}
+    return _finish(svg, VY, char, S), {"lane_overlaps": _overlaps(VY, char, S),
+                                      "H": H, "legend_rows": lrows}
