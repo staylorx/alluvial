@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2780" height="1420" viewBox="0 0 2780 1420" font-family="Helvetica, Arial, sans-serif">
+<defs>
+<pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.9" fill="#d8d2c8"/></pattern>
+</defs>
+<rect width="2780" height="1420" fill="#faf7f2"/>
+<rect x="0" y="130" width="2780" height="1000" fill="url(#dots)" opacity="0.55"/>
+<line x1="240" y1="140" x2="240" y2="1130" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="240" y="58" font-size="14" font-weight="700" fill="#2b2622" letter-spacing="1.6">THE SHIRE</text>
+<text x="240" y="76" font-size="11.5" fill="#9a9086" letter-spacing="0.6">0–8%</text>
+<text x="240" y="100" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">Bag End and the Long-expected Party</text>
+<text x="240" y="117" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">Frodo inherits; Gandalf rides off to investigate</text>
+<line x1="505" y1="140" x2="505" y2="1130" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="505" y="58" font-size="14" font-weight="700" fill="#2b2622" letter-spacing="1.6">THE ROAD TO BREE</text>
+<text x="505" y="76" font-size="11.5" fill="#9a9086" letter-spacing="0.6">8–25%</text>
+<text x="505" y="100" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">Bucklebury, the Old Forest, Bree</text>
+<text x="505" y="117" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">Merry and Pippin join; Strider is revealed</text>
+<line x1="770" y1="140" x2="770" y2="1130" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="770" y="58" font-size="14" font-weight="700" fill="#2b2622" letter-spacing="1.6">WEATHERTOP → THE FORD</text>
+<text x="770" y="76" font-size="11.5" fill="#9a9086" letter-spacing="0.6">25–33%</text>
+<text x="770" y="100" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">Frodo is wounded; the Black Riders close in</text>
+<text x="770" y="117" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">Aragorn carries the company to Rivendell</text>
+<line x1="1035" y1="140" x2="1035" y2="1130" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1035" y="58" font-size="14" font-weight="700" fill="#2b2622" letter-spacing="1.6">RIVENDELL — THE COUNCIL</text>
+<text x="1035" y="76" font-size="11.5" fill="#9a9086" letter-spacing="0.6">33–45%</text>
+<text x="1035" y="100" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">The nine walkers are chosen</text>
+<text x="1035" y="117" font-size="11.5" font-weight="700" font-style="normal" fill="#8a6a1f">★ every strand merges</text>
+<line x1="1300" y1="140" x2="1300" y2="1130" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1300" y="58" font-size="14" font-weight="700" fill="#2b2622" letter-spacing="1.6">MORIA</text>
+<text x="1300" y="76" font-size="11.5" fill="#9a9086" letter-spacing="0.6">45–58%</text>
+<text x="1300" y="100" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">Khazad-dûm and the Bridge</text>
+<text x="1300" y="117" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">Gandalf falls — strand detaches</text>
+<line x1="1565" y1="140" x2="1565" y2="1130" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1565" y="58" font-size="14" font-weight="700" fill="#2b2622" letter-spacing="1.6">LOTHLÓRIEN</text>
+<text x="1565" y="76" font-size="11.5" fill="#9a9086" letter-spacing="0.6">58–70%</text>
+<text x="1565" y="100" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">Galadriel's mirror; the company mourns</text>
+<text x="1565" y="117" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">Gollum begins to follow</text>
+<line x1="1830" y1="140" x2="1830" y2="1130" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1830" y="58" font-size="14" font-weight="700" fill="#2b2622" letter-spacing="1.6">THE GREAT RIVER</text>
+<text x="1830" y="76" font-size="11.5" fill="#9a9086" letter-spacing="0.6">70–84%</text>
+<text x="1830" y="100" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">The Anduin, and Boromir's betrayal</text>
+<text x="1830" y="117" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">eight still travel as one</text>
+<line x1="2095" y1="140" x2="2095" y2="1130" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="2095" y="58" font-size="14" font-weight="700" fill="#2b2622" letter-spacing="1.6">AMON HEN — THE BREAKING</text>
+<text x="2095" y="76" font-size="11.5" fill="#9a9086" letter-spacing="0.6">84–96%</text>
+<text x="2095" y="100" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">The Fellowship sunders</text>
+<text x="2095" y="117" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">one bus → three stories</text>
+<line x1="2360" y1="140" x2="2360" y2="1130" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="2360" y="58" font-size="14" font-weight="700" fill="#2b2622" letter-spacing="1.6">INTO THE TWO TOWERS</text>
+<text x="2360" y="76" font-size="11.5" fill="#9a9086" letter-spacing="0.6">96–100%</text>
+<text x="2360" y="100" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">Three separate stories begin</text>
+<text x="2360" y="117" font-size="11.5" font-weight="400" font-style="italic" fill="#7d7568">the strands never fully rejoin</text>
+<path d="M 240.0 174.0 C 279.9 174.0 295.1 178.5 335.0 178.5 L 335.0 181.5 C 295.1 181.5 279.9 186.0 240.0 186.0 Z" fill="#cf3a86" fill-opacity="0.8"/>
+<path d="M 410.0 539.0 C 449.9 539.0 465.1 532.5 505.0 532.5 L 505.0 548.5 C 465.1 548.5 449.9 542.0 410.0 542.0 Z" fill="#1e8a44" fill-opacity="0.8"/>
+<path d="M 410.0 560.0 C 449.9 560.0 465.1 553.5 505.0 553.5 L 505.0 569.5 C 465.1 569.5 449.9 563.0 410.0 563.0 Z" fill="#6f9a10" fill-opacity="0.8"/>
+<path d="M 410.0 858.5 C 449.9 858.5 465.1 848.0 505.0 848.0 L 505.0 872.0 C 465.1 872.0 449.9 861.5 410.0 861.5 Z" fill="#0d7266" fill-opacity="0.8"/>
+<path d="M 940.0 703.5 C 979.9 703.5 995.1 696.0 1035.0 696.0 L 1035.0 714.0 C 995.1 714.0 979.9 706.5 940.0 706.5 Z" fill="#c62b2b" fill-opacity="0.8"/>
+<path d="M 940.0 1018.5 C 979.9 1018.5 995.1 1014.0 1035.0 1014.0 L 1035.0 1026.0 C 995.1 1026.0 979.9 1021.5 940.0 1021.5 Z" fill="#cf3a86" fill-opacity="0.8"/>
+<path d="M 1035.0 1014.0 C 1074.9 1014.0 1090.1 1018.5 1130.0 1018.5 L 1130.0 1021.5 C 1090.1 1021.5 1074.9 1026.0 1035.0 1026.0 Z" fill="#cf3a86" fill-opacity="0.8"/>
+<path d="M 1470.0 1028.5 C 1509.9 1028.5 1525.1 1023.0 1565.0 1023.0 L 1565.0 1037.0 C 1525.1 1037.0 1509.9 1031.5 1470.0 1031.5 Z" fill="#6b7280" fill-opacity="0.8"/>
+<path d="M 1830.0 680.5 C 1899.0 680.5 1925.3 744.0 1994.3 744.0 L 1994.3 746.0 C 1925.3 746.0 1899.0 698.5 1830.0 698.5 Z" fill="#c62b2b" fill-opacity="0.55"/>
+<circle cx="2001.3" cy="745.0" r="5" fill="#c62b2b"/>
+<text x="2014.3" y="736.0" font-size="12.5" font-weight="700" fill="#c62b2b">Boromir falls at Amon Hen</text>
+<text x="2014.3" y="752.0" font-size="11" font-style="italic" fill="#8b8377">the strand ends here</text>
+<path d="M 240.0 340.5 C 351.3 340.5 393.7 470.5 505.0 470.5 L 505.0 500.5 C 393.7 500.5 351.3 370.5 240.0 370.5 Z" fill="#1f5fd0" fill-opacity="0.82"/>
+<path d="M 505.0 470.5 C 616.3 470.5 658.7 496.0 770.0 496.0 L 770.0 526.0 C 658.7 526.0 616.3 500.5 505.0 500.5 Z" fill="#1f5fd0" fill-opacity="0.82"/>
+<path d="M 770.0 496.0 C 881.3 496.0 923.7 532.0 1035.0 532.0 L 1035.0 562.0 C 923.7 562.0 881.3 526.0 770.0 526.0 Z" fill="#1f5fd0" fill-opacity="0.82"/>
+<path d="M 1035.0 532.0 C 1146.3 532.0 1188.7 547.5 1300.0 547.5 L 1300.0 577.5 C 1188.7 577.5 1146.3 562.0 1035.0 562.0 Z" fill="#1f5fd0" fill-opacity="0.82"/>
+<path d="M 1300.0 547.5 C 1411.3 547.5 1453.7 547.5 1565.0 547.5 L 1565.0 577.5 C 1453.7 577.5 1411.3 577.5 1300.0 577.5 Z" fill="#1f5fd0" fill-opacity="0.82"/>
+<path d="M 1565.0 547.5 C 1676.3 547.5 1718.7 547.5 1830.0 547.5 L 1830.0 577.5 C 1718.7 577.5 1676.3 577.5 1565.0 577.5 Z" fill="#1f5fd0" fill-opacity="0.82"/>
+<path d="M 1830.0 547.5 C 1941.3 547.5 1983.7 271.5 2095.0 271.5 L 2095.0 301.5 C 1983.7 301.5 1941.3 577.5 1830.0 577.5 Z" fill="#1f5fd0" fill-opacity="0.82"/>
+<path d="M 2095.0 271.5 C 2206.3 271.5 2248.7 291.5 2360.0 291.5 L 2360.0 321.5 C 2248.7 321.5 2206.3 301.5 2095.0 301.5 Z" fill="#1f5fd0" fill-opacity="0.82"/>
+<path d="M 240.0 549.0 C 351.3 549.0 393.7 505.5 505.0 505.5 L 505.0 527.5 C 393.7 527.5 351.3 571.0 240.0 571.0 Z" fill="#c2740a" fill-opacity="0.82"/>
+<path d="M 505.0 505.5 C 616.3 505.5 658.7 531.0 770.0 531.0 L 770.0 553.0 C 658.7 553.0 616.3 527.5 505.0 527.5 Z" fill="#c2740a" fill-opacity="0.82"/>
+<path d="M 770.0 531.0 C 881.3 531.0 923.7 567.0 1035.0 567.0 L 1035.0 589.0 C 923.7 589.0 881.3 553.0 770.0 553.0 Z" fill="#c2740a" fill-opacity="0.82"/>
+<path d="M 1035.0 567.0 C 1146.3 567.0 1188.7 582.5 1300.0 582.5 L 1300.0 604.5 C 1188.7 604.5 1146.3 589.0 1035.0 589.0 Z" fill="#c2740a" fill-opacity="0.82"/>
+<path d="M 1300.0 582.5 C 1411.3 582.5 1453.7 582.5 1565.0 582.5 L 1565.0 604.5 C 1453.7 604.5 1411.3 604.5 1300.0 604.5 Z" fill="#c2740a" fill-opacity="0.82"/>
+<path d="M 1565.0 582.5 C 1676.3 582.5 1718.7 582.5 1830.0 582.5 L 1830.0 604.5 C 1718.7 604.5 1676.3 604.5 1565.0 604.5 Z" fill="#c2740a" fill-opacity="0.82"/>
+<path d="M 1830.0 582.5 C 1941.3 582.5 1983.7 306.5 2095.0 306.5 L 2095.0 328.5 C 1983.7 328.5 1941.3 604.5 1830.0 604.5 Z" fill="#c2740a" fill-opacity="0.82"/>
+<path d="M 2095.0 306.5 C 2206.3 306.5 2248.7 326.5 2360.0 326.5 L 2360.0 348.5 C 2248.7 348.5 2206.3 328.5 2095.0 328.5 Z" fill="#c2740a" fill-opacity="0.82"/>
+<path d="M 505.0 532.5 C 616.3 532.5 658.7 558.0 770.0 558.0 L 770.0 574.0 C 658.7 574.0 616.3 548.5 505.0 548.5 Z" fill="#1e8a44" fill-opacity="0.82"/>
+<path d="M 770.0 558.0 C 881.3 558.0 923.7 594.0 1035.0 594.0 L 1035.0 610.0 C 923.7 610.0 881.3 574.0 770.0 574.0 Z" fill="#1e8a44" fill-opacity="0.82"/>
+<path d="M 1035.0 594.0 C 1146.3 594.0 1188.7 609.5 1300.0 609.5 L 1300.0 625.5 C 1188.7 625.5 1146.3 610.0 1035.0 610.0 Z" fill="#1e8a44" fill-opacity="0.82"/>
+<path d="M 1300.0 609.5 C 1411.3 609.5 1453.7 609.5 1565.0 609.5 L 1565.0 625.5 C 1453.7 625.5 1411.3 625.5 1300.0 625.5 Z" fill="#1e8a44" fill-opacity="0.82"/>
+<path d="M 1565.0 609.5 C 1676.3 609.5 1718.7 609.5 1830.0 609.5 L 1830.0 625.5 C 1718.7 625.5 1676.3 625.5 1565.0 625.5 Z" fill="#1e8a44" fill-opacity="0.82"/>
+<path d="M 1830.0 609.5 C 1941.3 609.5 1983.7 601.5 2095.0 601.5 L 2095.0 617.5 C 1983.7 617.5 1941.3 625.5 1830.0 625.5 Z" fill="#1e8a44" fill-opacity="0.82"/>
+<path d="M 2095.0 601.5 C 2206.3 601.5 2248.7 631.5 2360.0 631.5 L 2360.0 647.5 C 2248.7 647.5 2206.3 617.5 2095.0 617.5 Z" fill="#1e8a44" fill-opacity="0.82"/>
+<path d="M 505.0 553.5 C 616.3 553.5 658.7 579.0 770.0 579.0 L 770.0 595.0 C 658.7 595.0 616.3 569.5 505.0 569.5 Z" fill="#6f9a10" fill-opacity="0.82"/>
+<path d="M 770.0 579.0 C 881.3 579.0 923.7 615.0 1035.0 615.0 L 1035.0 631.0 C 923.7 631.0 881.3 595.0 770.0 595.0 Z" fill="#6f9a10" fill-opacity="0.82"/>
+<path d="M 1035.0 615.0 C 1146.3 615.0 1188.7 630.5 1300.0 630.5 L 1300.0 646.5 C 1188.7 646.5 1146.3 631.0 1035.0 631.0 Z" fill="#6f9a10" fill-opacity="0.82"/>
+<path d="M 1300.0 630.5 C 1411.3 630.5 1453.7 630.5 1565.0 630.5 L 1565.0 646.5 C 1453.7 646.5 1411.3 646.5 1300.0 646.5 Z" fill="#6f9a10" fill-opacity="0.82"/>
+<path d="M 1565.0 630.5 C 1676.3 630.5 1718.7 630.5 1830.0 630.5 L 1830.0 646.5 C 1718.7 646.5 1676.3 646.5 1565.0 646.5 Z" fill="#6f9a10" fill-opacity="0.82"/>
+<path d="M 1830.0 630.5 C 1941.3 630.5 1983.7 622.5 2095.0 622.5 L 2095.0 638.5 C 1983.7 638.5 1941.3 646.5 1830.0 646.5 Z" fill="#6f9a10" fill-opacity="0.82"/>
+<path d="M 2095.0 622.5 C 2206.3 622.5 2248.7 652.5 2360.0 652.5 L 2360.0 668.5 C 2248.7 668.5 2206.3 638.5 2095.0 638.5 Z" fill="#6f9a10" fill-opacity="0.82"/>
+<path d="M 240.0 309.5 C 351.3 309.5 393.7 137.0 505.0 137.0 L 505.0 163.0 C 393.7 163.0 351.3 335.5 240.0 335.5 Z" fill="#7040c8" fill-opacity="0.82"/>
+<path d="M 505.0 137.0 C 616.3 137.0 658.7 137.0 770.0 137.0 L 770.0 163.0 C 658.7 163.0 616.3 163.0 505.0 163.0 Z" fill="#7040c8" fill-opacity="0.82"/>
+<path d="M 770.0 137.0 C 881.3 137.0 923.7 636.0 1035.0 636.0 L 1035.0 662.0 C 923.7 662.0 881.3 163.0 770.0 163.0 Z" fill="#7040c8" fill-opacity="0.82"/>
+<path d="M 1035.0 636.0 C 1146.3 636.0 1188.7 127.0 1300.0 127.0 L 1300.0 153.0 C 1188.7 153.0 1146.3 662.0 1035.0 662.0 Z" fill="#7040c8" fill-opacity="0.17"/>
+<path d="M 1035.0 636.0 C 1146.3 636.0 1188.7 127.0 1300.0 127.0 L 1300.0 153.0 C 1188.7 153.0 1146.3 662.0 1035.0 662.0 Z" fill="none" stroke="#7040c8" stroke-width="1.6" stroke-dasharray="7 5" opacity="0.95"/>
+<path d="M 1300.0 127.0 C 1411.3 127.0 1453.7 107.0 1565.0 107.0 L 1565.0 133.0 C 1453.7 133.0 1411.3 153.0 1300.0 153.0 Z" fill="#7040c8" fill-opacity="0.17"/>
+<path d="M 1300.0 127.0 C 1411.3 127.0 1453.7 107.0 1565.0 107.0 L 1565.0 133.0 C 1453.7 133.0 1411.3 153.0 1300.0 153.0 Z" fill="none" stroke="#7040c8" stroke-width="1.6" stroke-dasharray="7 5" opacity="0.95"/>
+<path d="M 1565.0 107.0 C 1676.3 107.0 1718.7 107.0 1830.0 107.0 L 1830.0 133.0 C 1718.7 133.0 1676.3 133.0 1565.0 133.0 Z" fill="#7040c8" fill-opacity="0.17"/>
+<path d="M 1565.0 107.0 C 1676.3 107.0 1718.7 107.0 1830.0 107.0 L 1830.0 133.0 C 1718.7 133.0 1676.3 133.0 1565.0 133.0 Z" fill="none" stroke="#7040c8" stroke-width="1.6" stroke-dasharray="7 5" opacity="0.95"/>
+<path d="M 1830.0 107.0 C 1941.3 107.0 1983.7 97.0 2095.0 97.0 L 2095.0 123.0 C 1983.7 123.0 1941.3 133.0 1830.0 133.0 Z" fill="#7040c8" fill-opacity="0.17"/>
+<path d="M 1830.0 107.0 C 1941.3 107.0 1983.7 97.0 2095.0 97.0 L 2095.0 123.0 C 1983.7 123.0 1941.3 133.0 1830.0 133.0 Z" fill="none" stroke="#7040c8" stroke-width="1.6" stroke-dasharray="7 5" opacity="0.95"/>
+<path d="M 2095.0 97.0 C 2206.3 97.0 2248.7 97.0 2360.0 97.0 L 2360.0 123.0 C 2248.7 123.0 2206.3 123.0 2095.0 123.0 Z" fill="#7040c8" fill-opacity="0.17"/>
+<path d="M 2095.0 97.0 C 2206.3 97.0 2248.7 97.0 2360.0 97.0 L 2360.0 123.0 C 2248.7 123.0 2206.3 123.0 2095.0 123.0 Z" fill="none" stroke="#7040c8" stroke-width="1.6" stroke-dasharray="7 5" opacity="0.95"/>
+<path d="M 505.0 848.0 C 616.3 848.0 658.7 600.0 770.0 600.0 L 770.0 624.0 C 658.7 624.0 616.3 872.0 505.0 872.0 Z" fill="#0d7266" fill-opacity="0.82"/>
+<path d="M 770.0 600.0 C 881.3 600.0 923.7 667.0 1035.0 667.0 L 1035.0 691.0 C 923.7 691.0 881.3 624.0 770.0 624.0 Z" fill="#0d7266" fill-opacity="0.82"/>
+<path d="M 1035.0 667.0 C 1146.3 667.0 1188.7 651.5 1300.0 651.5 L 1300.0 675.5 C 1188.7 675.5 1146.3 691.0 1035.0 691.0 Z" fill="#0d7266" fill-opacity="0.82"/>
+<path d="M 1300.0 651.5 C 1411.3 651.5 1453.7 651.5 1565.0 651.5 L 1565.0 675.5 C 1453.7 675.5 1411.3 675.5 1300.0 675.5 Z" fill="#0d7266" fill-opacity="0.82"/>
+<path d="M 1565.0 651.5 C 1676.3 651.5 1718.7 651.5 1830.0 651.5 L 1830.0 675.5 C 1718.7 675.5 1676.3 675.5 1565.0 675.5 Z" fill="#0d7266" fill-opacity="0.82"/>
+<path d="M 1830.0 651.5 C 1941.3 651.5 1983.7 871.0 2095.0 871.0 L 2095.0 895.0 C 1983.7 895.0 1941.3 675.5 1830.0 675.5 Z" fill="#0d7266" fill-opacity="0.82"/>
+<path d="M 2095.0 871.0 C 2206.3 871.0 2248.7 911.0 2360.0 911.0 L 2360.0 935.0 C 2248.7 935.0 2206.3 895.0 2095.0 895.0 Z" fill="#0d7266" fill-opacity="0.82"/>
+<path d="M 1035.0 696.0 C 1146.3 696.0 1188.7 680.5 1300.0 680.5 L 1300.0 698.5 C 1188.7 698.5 1146.3 714.0 1035.0 714.0 Z" fill="#c62b2b" fill-opacity="0.82"/>
+<path d="M 1300.0 680.5 C 1411.3 680.5 1453.7 680.5 1565.0 680.5 L 1565.0 698.5 C 1453.7 698.5 1411.3 698.5 1300.0 698.5 Z" fill="#c62b2b" fill-opacity="0.82"/>
+<path d="M 1565.0 680.5 C 1676.3 680.5 1718.7 680.5 1830.0 680.5 L 1830.0 698.5 C 1718.7 698.5 1676.3 698.5 1565.0 698.5 Z" fill="#c62b2b" fill-opacity="0.82"/>
+<path d="M 1035.0 719.0 C 1146.3 719.0 1188.7 703.5 1300.0 703.5 L 1300.0 715.5 C 1188.7 715.5 1146.3 731.0 1035.0 731.0 Z" fill="#0b87ab" fill-opacity="0.82"/>
+<path d="M 1300.0 703.5 C 1411.3 703.5 1453.7 703.5 1565.0 703.5 L 1565.0 715.5 C 1453.7 715.5 1411.3 715.5 1300.0 715.5 Z" fill="#0b87ab" fill-opacity="0.82"/>
+<path d="M 1565.0 703.5 C 1676.3 703.5 1718.7 703.5 1830.0 703.5 L 1830.0 715.5 C 1718.7 715.5 1676.3 715.5 1565.0 715.5 Z" fill="#0b87ab" fill-opacity="0.82"/>
+<path d="M 1830.0 703.5 C 1941.3 703.5 1983.7 900.0 2095.0 900.0 L 2095.0 912.0 C 1983.7 912.0 1941.3 715.5 1830.0 715.5 Z" fill="#0b87ab" fill-opacity="0.82"/>
+<path d="M 2095.0 900.0 C 2206.3 900.0 2248.7 940.0 2360.0 940.0 L 2360.0 952.0 C 2248.7 952.0 2206.3 912.0 2095.0 912.0 Z" fill="#0b87ab" fill-opacity="0.82"/>
+<path d="M 1035.0 736.0 C 1146.3 736.0 1188.7 720.5 1300.0 720.5 L 1300.0 732.5 C 1188.7 732.5 1146.3 748.0 1035.0 748.0 Z" fill="#a2560c" fill-opacity="0.82"/>
+<path d="M 1300.0 720.5 C 1411.3 720.5 1453.7 720.5 1565.0 720.5 L 1565.0 732.5 C 1453.7 732.5 1411.3 732.5 1300.0 732.5 Z" fill="#a2560c" fill-opacity="0.82"/>
+<path d="M 1565.0 720.5 C 1676.3 720.5 1718.7 720.5 1830.0 720.5 L 1830.0 732.5 C 1718.7 732.5 1676.3 732.5 1565.0 732.5 Z" fill="#a2560c" fill-opacity="0.82"/>
+<path d="M 1830.0 720.5 C 1941.3 720.5 1983.7 917.0 2095.0 917.0 L 2095.0 929.0 C 1983.7 929.0 1941.3 732.5 1830.0 732.5 Z" fill="#a2560c" fill-opacity="0.82"/>
+<path d="M 2095.0 917.0 C 2206.3 917.0 2248.7 957.0 2360.0 957.0 L 2360.0 969.0 C 2248.7 969.0 2206.3 929.0 2095.0 929.0 Z" fill="#a2560c" fill-opacity="0.82"/>
+<path d="M 1565.0 1023.0 C 1676.3 1023.0 1718.7 1023.0 1830.0 1023.0 L 1830.0 1037.0 C 1718.7 1037.0 1676.3 1037.0 1565.0 1037.0 Z" fill="#6b7280" fill-opacity="0.17"/>
+<path d="M 1565.0 1023.0 C 1676.3 1023.0 1718.7 1023.0 1830.0 1023.0 L 1830.0 1037.0 C 1718.7 1037.0 1676.3 1037.0 1565.0 1037.0 Z" fill="none" stroke="#6b7280" stroke-width="1.6" stroke-dasharray="7 5" opacity="0.95"/>
+<path d="M 1830.0 1023.0 C 1941.3 1023.0 1983.7 1003.0 2095.0 1003.0 L 2095.0 1017.0 C 1983.7 1017.0 1941.3 1037.0 1830.0 1037.0 Z" fill="#6b7280" fill-opacity="0.17"/>
+<path d="M 1830.0 1023.0 C 1941.3 1023.0 1983.7 1003.0 2095.0 1003.0 L 2095.0 1017.0 C 1983.7 1017.0 1941.3 1037.0 1830.0 1037.0 Z" fill="none" stroke="#6b7280" stroke-width="1.6" stroke-dasharray="7 5" opacity="0.95"/>
+<path d="M 2095.0 1003.0 C 2206.3 1003.0 2248.7 393.0 2360.0 393.0 L 2360.0 407.0 C 2248.7 407.0 2206.3 1017.0 2095.0 1017.0 Z" fill="#6b7280" fill-opacity="0.17"/>
+<path d="M 2095.0 1003.0 C 2206.3 1003.0 2248.7 393.0 2360.0 393.0 L 2360.0 407.0 C 2248.7 407.0 2206.3 1017.0 2095.0 1017.0 Z" fill="none" stroke="#6b7280" stroke-width="1.6" stroke-dasharray="7 5" opacity="0.95"/>
+<text x="218" y="359.5" font-size="14" font-weight="700" text-anchor="end" fill="#1f5fd0">Frodo</text>
+<text x="218" y="564.0" font-size="14" font-weight="700" text-anchor="end" fill="#c2740a">Sam</text>
+<text x="218" y="326.5" font-size="14" font-weight="700" text-anchor="end" fill="#7040c8">Gandalf</text>
+<text x="218" y="184.0" font-size="14" font-weight="700" text-anchor="end" fill="#cf3a86">Bilbo</text>
+<text x="2386" y="324.0" font-size="12.5" font-weight="700" fill="#1f5fd0">Frodo & Sam → Mordor</text>
+<text x="2386" y="404.0" font-size="12.5" font-weight="700" fill="#6b7280">Gollum follows, unseen</text>
+<text x="2386" y="654.0" font-size="12.5" font-weight="700" fill="#1e8a44">Merry & Pippin → Isengard, then Rohan</text>
+<text x="2386" y="944.0" font-size="12.5" font-weight="700" fill="#0d7266">Aragorn, Legolas & Gimli → the hunt</text>
+<path d="M 2372 110 C 2390 150 2388 150 2394 171" fill="none" stroke="#7040c8" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.75"/>
+<text x="2386" y="199.0" font-size="12.5" font-weight="700" fill="#7040c8">Gandalf → reborn on Zirakzigil (off-page)</text>
+<text x="1049" y="518.0" font-size="15" font-weight="700" fill="#2b2622">THE FELLOWSHIP OF THE RING — nine walkers, one bus</text>
+<text x="1314" y="300" font-size="15" font-weight="700" fill="#7040c8">Gandalf falls — the strand leaves the company</text>
+<text x="1475" y="1078" font-size="13" font-style="italic" fill="#6b7280">Gollum, off to the side, begins to follow</text>
+<text x="60" y="1177" font-size="11" font-weight="700" letter-spacing="1.4" fill="#9a9086">STRANDS (ribbon thickness ≈ screen presence)</text>
+<rect x="60" y="1195" width="15" height="14" rx="3" fill="#1f5fd0" fill-opacity="0.85" />
+<text x="82" y="1207" font-size="13" font-weight="600" fill="#2b2622">Frodo</text>
+<rect x="149.0" y="1195" width="14" height="14" rx="3" fill="#c2740a" fill-opacity="0.85" />
+<text x="170.0" y="1207" font-size="13" font-weight="600" fill="#2b2622">Sam</text>
+<rect x="222.2" y="1195" width="14" height="14" rx="3" fill="#1e8a44" fill-opacity="0.85" />
+<text x="243.2" y="1207" font-size="13" font-weight="600" fill="#2b2622">Merry</text>
+<rect x="310.2" y="1195" width="14" height="14" rx="3" fill="#6f9a10" fill-opacity="0.85" />
+<text x="331.2" y="1207" font-size="13" font-weight="600" fill="#2b2622">Pippin</text>
+<rect x="405.6" y="1195" width="14" height="14" rx="3" fill="#7040c8" fill-opacity="0.25" stroke="#7040c8" stroke-dasharray="4 3"/>
+<text x="426.6" y="1207" font-size="13" font-weight="600" fill="#2b2622">Gandalf</text>
+<rect x="508.40000000000003" y="1195" width="14" height="14" rx="3" fill="#0d7266" fill-opacity="0.85" />
+<text x="529.4000000000001" y="1207" font-size="13" font-weight="600" fill="#2b2622">Aragorn</text>
+<rect x="611.2" y="1195" width="14" height="14" rx="3" fill="#c62b2b" fill-opacity="0.85" />
+<text x="632.2" y="1207" font-size="13" font-weight="600" fill="#2b2622">Boromir</text>
+<rect x="714.0" y="1195" width="14" height="14" rx="3" fill="#0b87ab" fill-opacity="0.85" />
+<text x="735.0" y="1207" font-size="13" font-weight="600" fill="#2b2622">Legolas</text>
+<rect x="816.8" y="1195" width="14" height="14" rx="3" fill="#a2560c" fill-opacity="0.85" />
+<text x="837.8" y="1207" font-size="13" font-weight="600" fill="#2b2622">Gimli</text>
+<rect x="904.8" y="1195" width="14" height="14" rx="3" fill="#6b7280" fill-opacity="0.25" stroke="#6b7280" stroke-dasharray="4 3"/>
+<text x="925.8" y="1207" font-size="13" font-weight="600" fill="#2b2622">Gollum</text>
+<rect x="1000.1999999999999" y="1195" width="14" height="14" rx="3" fill="#cf3a86" fill-opacity="0.85" />
+<text x="1021.1999999999999" y="1207" font-size="13" font-weight="600" fill="#2b2622">Bilbo</text>
+<text x="2720" y="1207" font-size="12" fill="#8b8377" text-anchor="end">dashed = off-page / following unseen</text>
+<line x1="60" y1="1265" x2="2720" y2="1265" stroke="#ded7cb"/>
+<text x="60" y="1315" font-family="Georgia, serif" font-size="34" fill="#22201d">The Fellowship of the Ring — a character alluvial</text>
+<text x="60" y="1348" font-size="14" fill="#6f675c">Eleven strands across nine beats. Convergence is a scene; divergence is a story. Ribbon width approximates screen presence — not a measure of importance.</text>
+<text x="60" y="1373" font-size="12.5" font-style="italic" fill="#9a9086">An alluvial diagram: a Sankey whose horizontal axis is time. Built by hermes-agent — pure hand-authored SVG.</text>
+</svg>

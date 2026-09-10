@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3320" height="1420" viewBox="0 0 3320 1420" font-family="Helvetica, Arial, sans-serif">
+<defs><pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.9" fill="#d8d2c8"/></pattern></defs>
+<rect width="3320" height="1420" fill="#faf7f2"/>
+<rect x="0" y="130" width="3320" height="1020" fill="url(#dots)" opacity="0.55"/>
+<text x="46" y="207" font-size="11" font-weight="700" letter-spacing="2.4" fill="#b3aa9d">THE SOCIAL WORLD</text>
+<text x="46" y="1120" font-size="11" font-weight="700" letter-spacing="2.4" fill="#b3aa9d">FAMILY / THE PRIVATE</text>
+<line x1="235" y1="140" x2="235" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="235" y="58" font-size="13.5" font-weight="700" fill="#2b2622" letter-spacing="1.5">EPISODE 1</text>
+<text x="235" y="76" font-size="11" fill="#9a9086" letter-spacing="0.3">Carricklea, Co. Sligo</text>
+<text x="235" y="100" font-size="10.8" font-style="italic" fill="#7d7568">Final year of school,</text>
+<text x="235" y="116" font-size="10.8" font-style="italic" fill="#7d7568">and the secret starts</text>
+<line x1="453" y1="140" x2="453" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="453" y="58" font-size="13.5" font-weight="700" fill="#2b2622" letter-spacing="1.5">EPISODE 2</text>
+<text x="453" y="76" font-size="11" fill="#9a9086" letter-spacing="0.3">Carricklea</text>
+<text x="453" y="100" font-size="10.8" font-style="italic" fill="#7d7568">The affair deepens;</text>
+<text x="453" y="116" font-size="10.8" font-style="italic" fill="#7d7568">he won't say it aloud</text>
+<line x1="671" y1="140" x2="671" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="671" y="58" font-size="13.5" font-weight="700" fill="#2b2622" letter-spacing="1.5">EPISODE 3</text>
+<text x="671" y="76" font-size="11" fill="#9a9086" letter-spacing="0.3">The Debs</text>
+<text x="671" y="100" font-size="10.8" font-style="italic" fill="#7d7568">He takes Rachel</text>
+<text x="671" y="116" font-size="10.8" font-style="italic" fill="#7d7568">to the Debs, not her</text>
+<text x="671" y="136" font-size="10.8" font-weight="700" fill="#9c3b34">▸ assaulted at the fundraiser</text>
+<line x1="889" y1="140" x2="889" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="889" y="58" font-size="13.5" font-weight="700" fill="#2b2622" letter-spacing="1.5">EPISODE 4</text>
+<text x="889" y="76" font-size="11" fill="#9a9086" letter-spacing="0.3">Dublin</text>
+<text x="889" y="100" font-size="10.8" font-style="italic" fill="#7d7568">Trinity, months later:</text>
+<text x="889" y="116" font-size="10.8" font-style="italic" fill="#7d7568">she has friends, he has rent</text>
+<line x1="1107" y1="140" x2="1107" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1107" y="58" font-size="13.5" font-weight="700" fill="#2b2622" letter-spacing="1.5">EPISODE 5</text>
+<text x="1107" y="76" font-size="11" fill="#9a9086" letter-spacing="0.3">Dublin</text>
+<text x="1107" y="100" font-size="10.8" font-style="italic" fill="#7d7568">Friends again — Gareth out,</text>
+<text x="1107" y="116" font-size="10.8" font-style="italic" fill="#7d7568">Jamie circling</text>
+<line x1="1325" y1="140" x2="1325" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1325" y="58" font-size="13.5" font-weight="700" fill="#2b2622" letter-spacing="1.5">EPISODE 6</text>
+<text x="1325" y="76" font-size="11" fill="#9a9086" letter-spacing="0.3">Dublin → Sligo</text>
+<text x="1325" y="100" font-size="10.8" font-style="italic" fill="#7d7568">The best of it — then</text>
+<text x="1325" y="116" font-size="10.8" font-style="italic" fill="#7d7568">Sligo, then money</text>
+<text x="1325" y="136" font-size="10.8" font-weight="700" fill="#9c3b34">▸ her brother, at home</text>
+<line x1="1543" y1="140" x2="1543" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1543" y="58" font-size="13.5" font-weight="700" fill="#2b2622" letter-spacing="1.5">EPISODE 7</text>
+<text x="1543" y="76" font-size="11" fill="#9a9086" letter-spacing="0.3">Sligo / Dublin</text>
+<text x="1543" y="100" font-size="10.8" font-style="italic" fill="#7d7568">Summer apart: Jamie for</text>
+<text x="1543" y="116" font-size="10.8" font-style="italic" fill="#7d7568">her, Helen for him</text>
+<line x1="1761" y1="140" x2="1761" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1761" y="58" font-size="13.5" font-weight="700" fill="#2b2622" letter-spacing="1.5">EPISODE 8</text>
+<text x="1761" y="76" font-size="11" fill="#9a9086" letter-spacing="0.3">Italy</text>
+<text x="1761" y="100" font-size="10.8" font-style="italic" fill="#7d7568">Jamie's grip tightens;</text>
+<text x="1761" y="116" font-size="10.8" font-style="italic" fill="#7d7568">she chooses Connell anyway</text>
+<line x1="1979" y1="140" x2="1979" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1979" y="58" font-size="13.5" font-weight="700" fill="#2b2622" letter-spacing="1.5">EPISODE 9</text>
+<text x="1979" y="76" font-size="11" fill="#9a9086" letter-spacing="0.3">Luleå, Sweden / Dublin</text>
+<text x="1979" y="100" font-size="10.8" font-style="italic" fill="#7d7568">Sweden — Lukas;</text>
+<text x="1979" y="116" font-size="10.8" font-style="italic" fill="#7d7568">Connell calls too often</text>
+<line x1="2197" y1="140" x2="2197" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="2197" y="58" font-size="13.5" font-weight="700" fill="#2b2622" letter-spacing="1.5">EPISODE 10</text>
+<text x="2197" y="76" font-size="11" fill="#9a9086" letter-spacing="0.3">Sligo & Dublin</text>
+<text x="2197" y="100" font-size="10.8" font-style="italic" fill="#7d7568">Rob dies; Connell</text>
+<text x="2197" y="116" font-size="10.8" font-style="italic" fill="#7d7568">starts therapy</text>
+<text x="2197" y="136" font-size="10.8" font-weight="700" fill="#9c3b34">▸ 31 December, alone</text>
+<line x1="2415" y1="140" x2="2415" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="2415" y="58" font-size="13.5" font-weight="700" fill="#2b2622" letter-spacing="1.5">EPISODE 11</text>
+<text x="2415" y="76" font-size="11" fill="#9a9086" letter-spacing="0.3">Sligo</text>
+<text x="2415" y="100" font-size="10.8" font-style="italic" fill="#7d7568">Home again — she asks</text>
+<text x="2415" y="116" font-size="10.8" font-style="italic" fill="#7d7568">him to hurt her</text>
+<text x="2415" y="136" font-size="10.8" font-weight="700" fill="#9c3b34">▸ then Alan breaks her nose</text>
+<line x1="2633" y1="140" x2="2633" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="2633" y="58" font-size="13.5" font-weight="700" fill="#2b2622" letter-spacing="1.5">EPISODE 12</text>
+<text x="2633" y="76" font-size="11" fill="#9a9086" letter-spacing="0.3">Sligo & Dublin</text>
+<text x="2633" y="100" font-size="10.8" font-style="italic" fill="#7d7568">Christmas with the Waldrons;</text>
+<text x="2633" y="116" font-size="10.8" font-style="italic" fill="#7d7568">New York is offered</text>
+<line x1="2851" y1="140" x2="2851" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="2851" y="58" font-size="13.5" font-weight="700" fill="#2b2622" letter-spacing="1.5">CODA</text>
+<text x="2851" y="76" font-size="11" fill="#9a9086" letter-spacing="0.3">Dublin → New York</text>
+<text x="2851" y="100" font-size="10.8" font-style="italic" fill="#7d7568">He goes. She stays.</text>
+<text x="2851" y="116" font-size="10.8" font-style="italic" fill="#7d7568">The braid never resolves</text>
+<path d="M 671.0 633.5 C 710.9 633.5 726.1 638.0 766.0 638.0 L 766.0 641.0 C 726.1 641.0 710.9 645.5 671.0 645.5 Z" fill="#8d7fa8" fill-opacity="0.8"/>
+<path d="M 794.0 348.5 C 833.9 348.5 849.1 344.0 889.0 344.0 L 889.0 356.0 C 849.1 356.0 833.9 351.5 794.0 351.5 Z" fill="#b09a4e" fill-opacity="0.8"/>
+<path d="M 794.0 428.0 C 833.9 428.0 849.1 423.5 889.0 423.5 L 889.0 435.5 C 849.1 435.5 833.9 431.0 794.0 431.0 Z" fill="#8a9299" fill-opacity="0.8"/>
+<path d="M 1012.0 458.5 C 1051.9 458.5 1067.1 452.0 1107.0 452.0 L 1107.0 468.0 C 1067.1 468.0 1051.9 461.5 1012.0 461.5 Z" fill="#9c6552" fill-opacity="0.8"/>
+<path d="M 1107.0 404.0 C 1146.9 404.0 1162.1 408.5 1202.0 408.5 L 1202.0 411.5 C 1162.1 411.5 1146.9 416.0 1107.0 416.0 Z" fill="#8a9299" fill-opacity="0.8"/>
+<path d="M 1448.0 638.0 C 1487.9 638.0 1503.1 632.5 1543.0 632.5 L 1543.0 646.5 C 1503.1 646.5 1487.9 641.0 1448.0 641.0 Z" fill="#6e9078" fill-opacity="0.8"/>
+<path d="M 1761.0 471.5 C 1800.9 471.5 1816.1 478.0 1856.0 478.0 L 1856.0 481.0 C 1816.1 481.0 1800.9 487.5 1761.0 487.5 Z" fill="#9c6552" fill-opacity="0.8"/>
+<path d="M 1884.0 518.0 C 1923.9 518.0 1939.1 513.5 1979.0 513.5 L 1979.0 525.5 C 1939.1 525.5 1923.9 521.0 1884.0 521.0 Z" fill="#9aa0a6" fill-opacity="0.8"/>
+<path d="M 1979.0 513.5 C 2018.9 513.5 2034.1 518.0 2074.0 518.0 L 2074.0 521.0 C 2034.1 521.0 2018.9 525.5 1979.0 525.5 Z" fill="#9aa0a6" fill-opacity="0.8"/>
+<path d="M 2102.0 688.5 C 2141.9 688.5 2157.1 685.0 2197.0 685.0 L 2197.0 695.0 C 2157.1 695.0 2141.9 691.5 2102.0 691.5 Z" fill="#6d78a8" fill-opacity="0.8"/>
+<path d="M 2197.0 538.0 C 2236.9 538.0 2252.1 543.5 2292.0 543.5 L 2292.0 546.5 C 2252.1 546.5 2236.9 552.0 2197.0 552.0 Z" fill="#6e9078" fill-opacity="0.8"/>
+<path d="M 2415.0 912.0 C 2454.9 912.0 2470.1 918.5 2510.0 918.5 L 2510.0 921.5 C 2470.1 921.5 2454.9 928.0 2415.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.8"/>
+<path d="M 2633.0 685.0 C 2672.9 685.0 2688.1 688.5 2728.0 688.5 L 2728.0 691.5 C 2688.1 691.5 2672.9 695.0 2633.0 695.0 Z" fill="#6d78a8" fill-opacity="0.8"/>
+<path d="M 2633.0 1025.0 C 2654.0 1025.0 2662.0 1028.5 2683.0 1028.5 L 2683.0 1031.5 C 2662.0 1031.5 2654.0 1035.0 2633.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.85"/>
+<line x1="2703" y1="1021.0" x2="2719" y2="1039.0" stroke="#9c3b34" stroke-width="1.8"/>
+<line x1="2703" y1="1039.0" x2="2719" y2="1021.0" stroke="#9c3b34" stroke-width="1.8"/>
+<text x="2703" y="1064.0" font-size="11.5" font-weight="700" fill="#9c3b34">her mother stops speaking</text>
+<path d="M 2851.0 463.0 C 2905.6 463.0 2926.4 493.0 2981.0 493.0 L 2981.0 495.0 C 2926.4 495.0 2905.6 497.0 2851.0 497.0 Z" fill="#1b57c4" fill-opacity="0.34"/>
+<path d="M 2851.0 713.0 C 2905.6 713.0 2926.4 743.0 2981.0 743.0 L 2981.0 745.0 C 2926.4 745.0 2905.6 747.0 2851.0 747.0 Z" fill="#d0316a" fill-opacity="0.34"/>
+<path d="M 1979.0 243.0 C 2033.9 243.0 2054.9 249.0 2109.8 249.0 L 2109.8 251.0 C 2054.9 251.0 2033.9 257.0 1979.0 257.0 Z" fill="#6f8f96" fill-opacity="0.55"/>
+<circle cx="2117.8" cy="250.0" r="5" fill="#6f8f96"/>
+<text x="2129.8" y="240.0" font-size="12.5" font-weight="700" fill="#6f8f96">Rob Hegarty takes his own life</text>
+<text x="2129.8" y="256.0" font-size="11" font-style="italic" fill="#8b8377">New Year’s Eve — the strand ends</text>
+<path d="M 235.0 583.5 C 326.6 583.5 361.4 583.5 453.0 583.5 L 453.0 617.5 C 361.4 617.5 326.6 617.5 235.0 617.5 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 453.0 583.5 C 544.6 583.5 579.4 594.5 671.0 594.5 L 671.0 628.5 C 579.4 628.5 544.6 617.5 453.0 617.5 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 671.0 594.5 C 762.6 594.5 797.4 603.0 889.0 603.0 L 889.0 637.0 C 797.4 637.0 762.6 628.5 671.0 628.5 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 889.0 603.0 C 980.6 603.0 1015.4 603.0 1107.0 603.0 L 1107.0 637.0 C 1015.4 637.0 980.6 637.0 889.0 637.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 1107.0 603.0 C 1198.6 603.0 1233.4 583.5 1325.0 583.5 L 1325.0 617.5 C 1233.4 617.5 1198.6 637.0 1107.0 637.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 1325.0 583.5 C 1416.6 583.5 1451.4 593.5 1543.0 593.5 L 1543.0 627.5 C 1451.4 627.5 1416.6 617.5 1325.0 617.5 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 1543.0 593.5 C 1634.6 593.5 1669.4 563.0 1761.0 563.0 L 1761.0 597.0 C 1669.4 597.0 1634.6 627.5 1543.0 627.5 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 1761.0 563.0 C 1852.6 563.0 1887.4 593.5 1979.0 593.5 L 1979.0 627.5 C 1887.4 627.5 1852.6 597.0 1761.0 597.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 1979.0 593.5 C 2070.6 593.5 2105.4 603.0 2197.0 603.0 L 2197.0 637.0 C 2105.4 637.0 2070.6 627.5 1979.0 627.5 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 2197.0 603.0 C 2288.6 603.0 2323.4 583.5 2415.0 583.5 L 2415.0 617.5 C 2323.4 617.5 2288.6 637.0 2197.0 637.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 2415.0 583.5 C 2506.6 583.5 2541.4 583.5 2633.0 583.5 L 2633.0 617.5 C 2541.4 617.5 2506.6 617.5 2415.0 617.5 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 2633.0 583.5 C 2724.6 583.5 2759.4 463.0 2851.0 463.0 L 2851.0 497.0 C 2759.4 497.0 2724.6 617.5 2633.0 617.5 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 235.0 622.5 C 326.6 622.5 361.4 622.5 453.0 622.5 L 453.0 656.5 C 361.4 656.5 326.6 656.5 235.0 656.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 453.0 622.5 C 544.6 622.5 579.4 708.0 671.0 708.0 L 671.0 742.0 C 579.4 742.0 544.6 656.5 453.0 656.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 671.0 708.0 C 762.6 708.0 797.4 384.5 889.0 384.5 L 889.0 418.5 C 797.4 418.5 762.6 742.0 671.0 742.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 889.0 384.5 C 980.6 384.5 1015.4 643.0 1107.0 643.0 L 1107.0 677.0 C 1015.4 677.0 980.6 418.5 889.0 418.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 1107.0 643.0 C 1198.6 643.0 1233.4 622.5 1325.0 622.5 L 1325.0 656.5 C 1233.4 656.5 1198.6 677.0 1107.0 677.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 1325.0 622.5 C 1416.6 622.5 1451.4 432.5 1543.0 432.5 L 1543.0 466.5 C 1451.4 466.5 1416.6 656.5 1325.0 656.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 1543.0 432.5 C 1634.6 432.5 1669.4 432.5 1761.0 432.5 L 1761.0 466.5 C 1669.4 466.5 1634.6 466.5 1543.0 466.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 1761.0 432.5 C 1852.6 432.5 1887.4 474.5 1979.0 474.5 L 1979.0 508.5 C 1887.4 508.5 1852.6 466.5 1761.0 466.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 1979.0 474.5 C 2070.6 474.5 2105.4 483.0 2197.0 483.0 L 2197.0 517.0 C 2105.4 517.0 2070.6 508.5 1979.0 508.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 2197.0 483.0 C 2288.6 483.0 2323.4 622.5 2415.0 622.5 L 2415.0 656.5 C 2323.4 656.5 2288.6 517.0 2197.0 517.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 2415.0 622.5 C 2506.6 622.5 2541.4 622.5 2633.0 622.5 L 2633.0 656.5 C 2541.4 656.5 2506.6 656.5 2415.0 656.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 2633.0 622.5 C 2724.6 622.5 2759.4 713.0 2851.0 713.0 L 2851.0 747.0 C 2759.4 747.0 2724.6 656.5 2633.0 656.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 235.0 243.0 C 326.6 243.0 361.4 243.0 453.0 243.0 L 453.0 257.0 C 361.4 257.0 326.6 257.0 235.0 257.0 Z" fill="#6f8f96" fill-opacity="0.82"/>
+<path d="M 453.0 243.0 C 544.6 243.0 579.4 243.0 671.0 243.0 L 671.0 257.0 C 579.4 257.0 544.6 257.0 453.0 257.0 Z" fill="#6f8f96" fill-opacity="0.82"/>
+<path d="M 671.0 243.0 C 762.6 243.0 797.4 243.0 889.0 243.0 L 889.0 257.0 C 797.4 257.0 762.6 257.0 671.0 257.0 Z" fill="#6f8f96" fill-opacity="0.82"/>
+<path d="M 889.0 243.0 C 980.6 243.0 1015.4 243.0 1107.0 243.0 L 1107.0 257.0 C 1015.4 257.0 980.6 257.0 889.0 257.0 Z" fill="#6f8f96" fill-opacity="0.16"/>
+<path d="M 889.0 243.0 C 980.6 243.0 1015.4 243.0 1107.0 243.0 L 1107.0 257.0 C 1015.4 257.0 980.6 257.0 889.0 257.0 Z" fill="none" stroke="#6f8f96" stroke-width="1.6" stroke-dasharray="7 5" opacity="0.95"/>
+<path d="M 1107.0 243.0 C 1198.6 243.0 1233.4 243.0 1325.0 243.0 L 1325.0 257.0 C 1233.4 257.0 1198.6 257.0 1107.0 257.0 Z" fill="#6f8f96" fill-opacity="0.16"/>
+<path d="M 1107.0 243.0 C 1198.6 243.0 1233.4 243.0 1325.0 243.0 L 1325.0 257.0 C 1233.4 257.0 1198.6 257.0 1107.0 257.0 Z" fill="none" stroke="#6f8f96" stroke-width="1.6" stroke-dasharray="7 5" opacity="0.95"/>
+<path d="M 1325.0 243.0 C 1416.6 243.0 1451.4 243.0 1543.0 243.0 L 1543.0 257.0 C 1451.4 257.0 1416.6 257.0 1325.0 257.0 Z" fill="#6f8f96" fill-opacity="0.16"/>
+<path d="M 1325.0 243.0 C 1416.6 243.0 1451.4 243.0 1543.0 243.0 L 1543.0 257.0 C 1451.4 257.0 1416.6 257.0 1325.0 257.0 Z" fill="none" stroke="#6f8f96" stroke-width="1.6" stroke-dasharray="7 5" opacity="0.95"/>
+<path d="M 1543.0 243.0 C 1634.6 243.0 1669.4 243.0 1761.0 243.0 L 1761.0 257.0 C 1669.4 257.0 1634.6 257.0 1543.0 257.0 Z" fill="#6f8f96" fill-opacity="0.82"/>
+<path d="M 1761.0 243.0 C 1852.6 243.0 1887.4 243.0 1979.0 243.0 L 1979.0 257.0 C 1887.4 257.0 1852.6 257.0 1761.0 257.0 Z" fill="#6f8f96" fill-opacity="0.82"/>
+<path d="M 235.0 304.0 C 326.6 304.0 361.4 304.0 453.0 304.0 L 453.0 316.0 C 361.4 316.0 326.6 316.0 235.0 316.0 Z" fill="#8d7fa8" fill-opacity="0.82"/>
+<path d="M 453.0 304.0 C 544.6 304.0 579.4 633.5 671.0 633.5 L 671.0 645.5 C 579.4 645.5 544.6 316.0 453.0 316.0 Z" fill="#8d7fa8" fill-opacity="0.82"/>
+<path d="M 889.0 344.0 C 980.6 344.0 1015.4 344.0 1107.0 344.0 L 1107.0 356.0 C 1015.4 356.0 980.6 356.0 889.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 1107.0 344.0 C 1198.6 344.0 1233.4 344.0 1325.0 344.0 L 1325.0 356.0 C 1233.4 356.0 1198.6 356.0 1107.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 1325.0 344.0 C 1416.6 344.0 1451.4 344.0 1543.0 344.0 L 1543.0 356.0 C 1451.4 356.0 1416.6 356.0 1325.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 1543.0 344.0 C 1634.6 344.0 1669.4 344.0 1761.0 344.0 L 1761.0 356.0 C 1669.4 356.0 1634.6 356.0 1543.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 1761.0 344.0 C 1852.6 344.0 1887.4 344.0 1979.0 344.0 L 1979.0 356.0 C 1887.4 356.0 1852.6 356.0 1761.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 1979.0 344.0 C 2070.6 344.0 2105.4 344.0 2197.0 344.0 L 2197.0 356.0 C 2105.4 356.0 2070.6 356.0 1979.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 2197.0 344.0 C 2288.6 344.0 2323.4 344.0 2415.0 344.0 L 2415.0 356.0 C 2323.4 356.0 2288.6 356.0 2197.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 2415.0 344.0 C 2506.6 344.0 2541.4 344.0 2633.0 344.0 L 2633.0 356.0 C 2541.4 356.0 2506.6 356.0 2415.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 2633.0 344.0 C 2724.6 344.0 2759.4 344.0 2851.0 344.0 L 2851.0 356.0 C 2759.4 356.0 2724.6 356.0 2633.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 889.0 423.5 C 980.6 423.5 1015.4 404.0 1107.0 404.0 L 1107.0 416.0 C 1015.4 416.0 980.6 435.5 889.0 435.5 Z" fill="#8a9299" fill-opacity="0.82"/>
+<path d="M 1107.0 452.0 C 1198.6 452.0 1233.4 452.0 1325.0 452.0 L 1325.0 468.0 C 1233.4 468.0 1198.6 468.0 1107.0 468.0 Z" fill="#9c6552" fill-opacity="0.82"/>
+<path d="M 1325.0 452.0 C 1416.6 452.0 1451.4 471.5 1543.0 471.5 L 1543.0 487.5 C 1451.4 487.5 1416.6 468.0 1325.0 468.0 Z" fill="#9c6552" fill-opacity="0.82"/>
+<path d="M 1543.0 471.5 C 1634.6 471.5 1669.4 471.5 1761.0 471.5 L 1761.0 487.5 C 1669.4 487.5 1634.6 487.5 1543.0 487.5 Z" fill="#9c6552" fill-opacity="0.82"/>
+<path d="M 1543.0 632.5 C 1634.6 632.5 1669.4 505.0 1761.0 505.0 L 1761.0 519.0 C 1669.4 519.0 1634.6 646.5 1543.0 646.5 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 1761.0 505.0 C 1852.6 505.0 1887.4 632.5 1979.0 632.5 L 1979.0 646.5 C 1887.4 646.5 1852.6 519.0 1761.0 519.0 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 1979.0 632.5 C 2070.6 632.5 2105.4 538.0 2197.0 538.0 L 2197.0 552.0 C 2105.4 552.0 2070.6 646.5 1979.0 646.5 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 235.0 803.0 C 326.6 803.0 361.4 803.0 453.0 803.0 L 453.0 817.0 C 361.4 817.0 326.6 817.0 235.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 453.0 803.0 C 544.6 803.0 579.4 843.0 671.0 843.0 L 671.0 857.0 C 579.4 857.0 544.6 817.0 453.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 671.0 843.0 C 762.6 843.0 797.4 803.0 889.0 803.0 L 889.0 817.0 C 797.4 817.0 762.6 857.0 671.0 857.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 889.0 803.0 C 980.6 803.0 1015.4 803.0 1107.0 803.0 L 1107.0 817.0 C 1015.4 817.0 980.6 817.0 889.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 1107.0 803.0 C 1198.6 803.0 1233.4 803.0 1325.0 803.0 L 1325.0 817.0 C 1233.4 817.0 1198.6 817.0 1107.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 1325.0 803.0 C 1416.6 803.0 1451.4 803.0 1543.0 803.0 L 1543.0 817.0 C 1451.4 817.0 1416.6 817.0 1325.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 1543.0 803.0 C 1634.6 803.0 1669.4 803.0 1761.0 803.0 L 1761.0 817.0 C 1669.4 817.0 1634.6 817.0 1543.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 1761.0 803.0 C 1852.6 803.0 1887.4 803.0 1979.0 803.0 L 1979.0 817.0 C 1887.4 817.0 1852.6 817.0 1761.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 1979.0 803.0 C 2070.6 803.0 2105.4 753.0 2197.0 753.0 L 2197.0 767.0 C 2105.4 767.0 2070.6 817.0 1979.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 2197.0 753.0 C 2288.6 753.0 2323.4 803.0 2415.0 803.0 L 2415.0 817.0 C 2323.4 817.0 2288.6 767.0 2197.0 767.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 2415.0 803.0 C 2506.6 803.0 2541.4 803.0 2633.0 803.0 L 2633.0 817.0 C 2541.4 817.0 2506.6 817.0 2415.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 2633.0 803.0 C 2724.6 803.0 2759.4 853.0 2851.0 853.0 L 2851.0 867.0 C 2759.4 867.0 2724.6 817.0 2633.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 235.0 912.0 C 326.6 912.0 361.4 912.0 453.0 912.0 L 453.0 928.0 C 361.4 928.0 326.6 928.0 235.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 453.0 912.0 C 544.6 912.0 579.4 932.0 671.0 932.0 L 671.0 948.0 C 579.4 948.0 544.6 928.0 453.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 671.0 932.0 C 762.6 932.0 797.4 912.0 889.0 912.0 L 889.0 928.0 C 797.4 928.0 762.6 948.0 671.0 948.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 889.0 912.0 C 980.6 912.0 1015.4 912.0 1107.0 912.0 L 1107.0 928.0 C 1015.4 928.0 980.6 928.0 889.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 1107.0 912.0 C 1198.6 912.0 1233.4 912.0 1325.0 912.0 L 1325.0 928.0 C 1233.4 928.0 1198.6 928.0 1107.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 1325.0 912.0 C 1416.6 912.0 1451.4 912.0 1543.0 912.0 L 1543.0 928.0 C 1451.4 928.0 1416.6 928.0 1325.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 1543.0 912.0 C 1634.6 912.0 1669.4 912.0 1761.0 912.0 L 1761.0 928.0 C 1669.4 928.0 1634.6 928.0 1543.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 1761.0 912.0 C 1852.6 912.0 1887.4 912.0 1979.0 912.0 L 1979.0 928.0 C 1887.4 928.0 1852.6 928.0 1761.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 1979.0 912.0 C 2070.6 912.0 2105.4 912.0 2197.0 912.0 L 2197.0 928.0 C 2105.4 928.0 2070.6 928.0 1979.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 2197.0 912.0 C 2288.6 912.0 2323.4 912.0 2415.0 912.0 L 2415.0 928.0 C 2323.4 928.0 2288.6 928.0 2197.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 235.0 1025.0 C 326.6 1025.0 361.4 1025.0 453.0 1025.0 L 453.0 1035.0 C 361.4 1035.0 326.6 1035.0 235.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 453.0 1025.0 C 544.6 1025.0 579.4 1045.0 671.0 1045.0 L 671.0 1055.0 C 579.4 1055.0 544.6 1035.0 453.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 671.0 1045.0 C 762.6 1045.0 797.4 1025.0 889.0 1025.0 L 889.0 1035.0 C 797.4 1035.0 762.6 1055.0 671.0 1055.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 889.0 1025.0 C 980.6 1025.0 1015.4 1025.0 1107.0 1025.0 L 1107.0 1035.0 C 1015.4 1035.0 980.6 1035.0 889.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 1107.0 1025.0 C 1198.6 1025.0 1233.4 1025.0 1325.0 1025.0 L 1325.0 1035.0 C 1233.4 1035.0 1198.6 1035.0 1107.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 1325.0 1025.0 C 1416.6 1025.0 1451.4 1025.0 1543.0 1025.0 L 1543.0 1035.0 C 1451.4 1035.0 1416.6 1035.0 1325.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 1543.0 1025.0 C 1634.6 1025.0 1669.4 1025.0 1761.0 1025.0 L 1761.0 1035.0 C 1669.4 1035.0 1634.6 1035.0 1543.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 1761.0 1025.0 C 1852.6 1025.0 1887.4 1025.0 1979.0 1025.0 L 1979.0 1035.0 C 1887.4 1035.0 1852.6 1035.0 1761.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 1979.0 1025.0 C 2070.6 1025.0 2105.4 1025.0 2197.0 1025.0 L 2197.0 1035.0 C 2105.4 1035.0 2070.6 1035.0 1979.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 2197.0 1025.0 C 2288.6 1025.0 2323.4 1025.0 2415.0 1025.0 L 2415.0 1035.0 C 2323.4 1035.0 2288.6 1035.0 2197.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 2415.0 1025.0 C 2506.6 1025.0 2541.4 1025.0 2633.0 1025.0 L 2633.0 1035.0 C 2541.4 1035.0 2506.6 1035.0 2415.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 2197.0 685.0 C 2288.6 685.0 2323.4 685.0 2415.0 685.0 L 2415.0 695.0 C 2323.4 695.0 2288.6 695.0 2197.0 695.0 Z" fill="#6d78a8" fill-opacity="0.82"/>
+<path d="M 2415.0 685.0 C 2506.6 685.0 2541.4 685.0 2633.0 685.0 L 2633.0 695.0 C 2541.4 695.0 2506.6 695.0 2415.0 695.0 Z" fill="#6d78a8" fill-opacity="0.82"/>
+<text x="215" y="604.5" font-size="13.5" font-weight="700" text-anchor="end" fill="#1b57c4">Connell</text>
+<text x="215" y="643.5" font-size="13.5" font-weight="700" text-anchor="end" fill="#d0316a">Marianne</text>
+<text x="215" y="254.0" font-size="13.5" font-weight="700" text-anchor="end" fill="#6f8f96">Rob</text>
+<text x="215" y="314.0" font-size="13.5" font-weight="700" text-anchor="end" fill="#8d7fa8">Rachel</text>
+<text x="215" y="814.0" font-size="13.5" font-weight="700" text-anchor="end" fill="#7d8f52">Lorraine</text>
+<text x="215" y="924.0" font-size="13.5" font-weight="700" text-anchor="end" fill="#7f4a4a">Alan</text>
+<text x="215" y="1034.0" font-size="13.5" font-weight="700" text-anchor="end" fill="#b0a89e">Denise</text>
+<text x="2997" y="354.0" font-size="12.5" font-weight="700" fill="#b09a4e">Peggy, Joanna & the Trinity circle</text>
+<text x="2997" y="484.0" font-size="12.5" font-weight="700" fill="#1b57c4">Connell → a year in New York</text>
+<text x="2997" y="734.0" font-size="12.5" font-weight="700" fill="#d0316a">Marianne stays — “I’ll always be here”</text>
+<text x="2997" y="864.0" font-size="12.5" font-weight="700" fill="#7d8f52">Lorraine</text>
+<text x="249" y="566" font-size="12" font-style="italic" fill="#1b57c4">the two of them — the braid</text>
+<text x="60" y="1177" font-size="11" font-weight="700" letter-spacing="1.4" fill="#9a9086">STRANDS — the two leads are the two saturated ribbons</text>
+<rect x="60" y="1195" width="17" height="14" rx="3" fill="#1b57c4" fill-opacity="0.85"/>
+<text x="84" y="1207" font-size="12.5" font-weight="600" fill="#2b2622">Connell</text>
+<rect x="160.4" y="1195" width="17" height="14" rx="3" fill="#d0316a" fill-opacity="0.85"/>
+<text x="184.4" y="1207" font-size="12.5" font-weight="600" fill="#2b2622">Marianne</text>
+<rect x="268.0" y="1195" width="16" height="14" rx="3" fill="#6f8f96" fill-opacity="0.85"/>
+<text x="291.0" y="1207" font-size="12.5" font-weight="600" fill="#2b2622">Rob</text>
+<rect x="338.6" y="1195" width="16" height="14" rx="3" fill="#8d7fa8" fill-opacity="0.85"/>
+<text x="361.6" y="1207" font-size="12.5" font-weight="600" fill="#2b2622">Rachel</text>
+<rect x="430.8" y="1195" width="16" height="14" rx="3" fill="#b09a4e" fill-opacity="0.85"/>
+<text x="453.8" y="1207" font-size="12.5" font-weight="600" fill="#2b2622">Peggy</text>
+<rect x="515.8" y="1195" width="16" height="14" rx="3" fill="#8a9299" fill-opacity="0.85"/>
+<text x="538.8" y="1207" font-size="12.5" font-weight="600" fill="#2b2622">Gareth</text>
+<rect x="608.0" y="1195" width="16" height="14" rx="3" fill="#9c6552" fill-opacity="0.85"/>
+<text x="631.0" y="1207" font-size="12.5" font-weight="600" fill="#2b2622">Jamie</text>
+<rect x="693.0" y="1195" width="16" height="14" rx="3" fill="#6e9078" fill-opacity="0.85"/>
+<text x="716.0" y="1207" font-size="12.5" font-weight="600" fill="#2b2622">Helen</text>
+<rect x="778.0" y="1195" width="16" height="14" rx="3" fill="#9aa0a6" fill-opacity="0.85"/>
+<text x="801.0" y="1207" font-size="12.5" font-weight="600" fill="#2b2622">Lukas</text>
+<rect x="863.0" y="1195" width="16" height="14" rx="3" fill="#7d8f52" fill-opacity="0.85"/>
+<text x="886.0" y="1207" font-size="12.5" font-weight="600" fill="#2b2622">Lorraine</text>
+<rect x="969.6" y="1195" width="16" height="14" rx="3" fill="#7f4a4a" fill-opacity="0.85"/>
+<text x="992.6" y="1207" font-size="12.5" font-weight="600" fill="#2b2622">Alan</text>
+<rect x="1047.4" y="1195" width="16" height="14" rx="3" fill="#b0a89e" fill-opacity="0.85"/>
+<text x="1070.4" y="1207" font-size="12.5" font-weight="600" fill="#2b2622">Denise</text>
+<rect x="1139.6000000000001" y="1195" width="16" height="14" rx="3" fill="#6d78a8" fill-opacity="0.85"/>
+<text x="1162.6000000000001" y="1207" font-size="12.5" font-weight="600" fill="#2b2622">Gillian</text>
+<text x="3260" y="1207" font-size="12" fill="#8b8377" text-anchor="end">hatched ribbon = off-page that episode</text>
+<line x1="60" y1="1262" x2="3260" y2="1262" stroke="#ded7cb"/>
+<text x="60" y="1312" font-family="Georgia, serif" font-size="33" fill="#22201d">Normal People — a character alluvial</text>
+<text x="60" y="1343" font-size="13.5" fill="#6f675c">Thirteen columns: the twelve episodes of the BBC/Hulu series, then a coda. Rooney’s novel covered the same ground — January 2011 to February 2015 — in dated chapters. There is no film.</text>
+<text x="60" y="1368" font-size="12.5" font-style="italic" fill="#9a9086">Above the spine: the social world. On it: Connell and Marianne. Below it: family, and the private. Where the two thick ribbons touch, they are together; where they part, someone else is holding on. Alan and Denise run the full width — off-stage in some episodes, never out of her story.</text>
+</svg>

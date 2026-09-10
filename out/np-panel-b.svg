@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2840" height="1420" viewBox="0 0 2840 1420" font-family="Helvetica, Arial, sans-serif">
+<defs><pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.9" fill="#d8d2c8"/></pattern></defs>
+<rect width="2840" height="1420" fill="#faf7f2"/>
+<rect x="0" y="140" width="2840" height="1010" fill="url(#dots)" opacity="0.55"/>
+<text x="46" y="207" font-size="12.5" font-weight="700" letter-spacing="2.4" fill="#b3aa9d">THE SOCIAL WORLD</text>
+<text x="46" y="1120" font-size="12.5" font-weight="700" letter-spacing="2.4" fill="#b3aa9d">FAMILY / THE PRIVATE</text>
+<line x1="340" y1="152" x2="340" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="340" y="58" font-size="16.5" font-weight="700" fill="#2b2622" letter-spacing="1.4">EPISODE 7</text>
+<text x="340" y="78" font-size="12.5" fill="#9a9086" letter-spacing="0.3">Sligo / Dublin</text>
+<text x="340" y="100" font-size="12.5" font-style="italic" fill="#7d7568">Summer apart: Jamie for</text>
+<text x="340" y="117" font-size="12.5" font-style="italic" fill="#7d7568">her, Helen for him</text>
+<line x1="680" y1="152" x2="680" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="680" y="58" font-size="16.5" font-weight="700" fill="#2b2622" letter-spacing="1.4">EPISODE 8</text>
+<text x="680" y="78" font-size="12.5" fill="#9a9086" letter-spacing="0.3">Italy</text>
+<text x="680" y="100" font-size="12.5" font-style="italic" fill="#7d7568">Jamie's grip tightens;</text>
+<text x="680" y="117" font-size="12.5" font-style="italic" fill="#7d7568">she chooses Connell anyway</text>
+<line x1="1020" y1="152" x2="1020" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1020" y="58" font-size="16.5" font-weight="700" fill="#2b2622" letter-spacing="1.4">EPISODE 9</text>
+<text x="1020" y="78" font-size="12.5" fill="#9a9086" letter-spacing="0.3">Luleå, Sweden / Dublin</text>
+<text x="1020" y="100" font-size="12.5" font-style="italic" fill="#7d7568">Sweden — Lukas;</text>
+<text x="1020" y="117" font-size="12.5" font-style="italic" fill="#7d7568">Connell calls too often</text>
+<line x1="1360" y1="152" x2="1360" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1360" y="58" font-size="16.5" font-weight="700" fill="#2b2622" letter-spacing="1.4">EPISODE 10</text>
+<text x="1360" y="78" font-size="12.5" fill="#9a9086" letter-spacing="0.3">Sligo & Dublin</text>
+<text x="1360" y="100" font-size="12.5" font-style="italic" fill="#7d7568">Rob dies; Connell</text>
+<text x="1360" y="117" font-size="12.5" font-style="italic" fill="#7d7568">starts therapy</text>
+<text x="1360" y="144" font-size="12.5" font-weight="700" fill="#9c3b34">▸ 31 December, alone</text>
+<line x1="1700" y1="152" x2="1700" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1700" y="58" font-size="16.5" font-weight="700" fill="#2b2622" letter-spacing="1.4">EPISODE 11</text>
+<text x="1700" y="78" font-size="12.5" fill="#9a9086" letter-spacing="0.3">Sligo</text>
+<text x="1700" y="100" font-size="12.5" font-style="italic" fill="#7d7568">Home again — she asks</text>
+<text x="1700" y="117" font-size="12.5" font-style="italic" fill="#7d7568">him to hurt her</text>
+<text x="1700" y="144" font-size="12.5" font-weight="700" fill="#9c3b34">▸ then Alan breaks her nose</text>
+<line x1="2040" y1="152" x2="2040" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="2040" y="58" font-size="16.5" font-weight="700" fill="#2b2622" letter-spacing="1.4">EPISODE 12</text>
+<text x="2040" y="78" font-size="12.5" fill="#9a9086" letter-spacing="0.3">Sligo & Dublin</text>
+<text x="2040" y="100" font-size="12.5" font-style="italic" fill="#7d7568">Christmas with the Waldrons;</text>
+<text x="2040" y="117" font-size="12.5" font-style="italic" fill="#7d7568">New York is offered</text>
+<line x1="2380" y1="152" x2="2380" y2="1150" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="2380" y="58" font-size="16.5" font-weight="700" fill="#2b2622" letter-spacing="1.4">CODA</text>
+<text x="2380" y="78" font-size="12.5" fill="#9a9086" letter-spacing="0.3">Dublin → New York</text>
+<text x="2380" y="100" font-size="12.5" font-style="italic" fill="#7d7568">He goes. She stays.</text>
+<text x="2380" y="117" font-size="12.5" font-style="italic" fill="#7d7568">The braid never resolves</text>
+<path d="M 245.0 638.0 C 284.9 638.0 300.1 632.5 340.0 632.5 L 340.0 646.5 C 300.1 646.5 284.9 641.0 245.0 641.0 Z" fill="#6e9078" fill-opacity="0.8"/>
+<path d="M 680.0 471.5 C 719.9 471.5 735.1 478.0 775.0 478.0 L 775.0 481.0 C 735.1 481.0 719.9 487.5 680.0 487.5 Z" fill="#9c6552" fill-opacity="0.8"/>
+<path d="M 925.0 518.0 C 964.9 518.0 980.1 513.5 1020.0 513.5 L 1020.0 525.5 C 980.1 525.5 964.9 521.0 925.0 521.0 Z" fill="#9aa0a6" fill-opacity="0.8"/>
+<path d="M 1020.0 513.5 C 1059.9 513.5 1075.1 518.0 1115.0 518.0 L 1115.0 521.0 C 1075.1 521.0 1059.9 525.5 1020.0 525.5 Z" fill="#9aa0a6" fill-opacity="0.8"/>
+<path d="M 1265.0 688.5 C 1304.9 688.5 1320.1 685.0 1360.0 685.0 L 1360.0 695.0 C 1320.1 695.0 1304.9 691.5 1265.0 691.5 Z" fill="#6d78a8" fill-opacity="0.8"/>
+<path d="M 1360.0 538.0 C 1399.9 538.0 1415.1 543.5 1455.0 543.5 L 1455.0 546.5 C 1415.1 546.5 1399.9 552.0 1360.0 552.0 Z" fill="#6e9078" fill-opacity="0.8"/>
+<path d="M 1700.0 912.0 C 1739.9 912.0 1755.1 918.5 1795.0 918.5 L 1795.0 921.5 C 1755.1 921.5 1739.9 928.0 1700.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.8"/>
+<path d="M 2040.0 685.0 C 2079.9 685.0 2095.1 688.5 2135.0 688.5 L 2135.0 691.5 C 2095.1 691.5 2079.9 695.0 2040.0 695.0 Z" fill="#6d78a8" fill-opacity="0.8"/>
+<path d="M 2040.0 1025.0 C 2061.0 1025.0 2069.0 1028.5 2090.0 1028.5 L 2090.0 1031.5 C 2069.0 1031.5 2061.0 1035.0 2040.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.85"/>
+<line x1="2110" y1="1021.0" x2="2126" y2="1039.0" stroke="#9c3b34" stroke-width="1.8"/>
+<line x1="2110" y1="1039.0" x2="2126" y2="1021.0" stroke="#9c3b34" stroke-width="1.8"/>
+<text x="2110" y="1064.0" font-size="12.5" font-weight="700" fill="#9c3b34">her mother stops speaking</text>
+<path d="M 2380.0 463.0 C 2434.6 463.0 2455.4 493.0 2510.0 493.0 L 2510.0 495.0 C 2455.4 495.0 2434.6 497.0 2380.0 497.0 Z" fill="#1b57c4" fill-opacity="0.34"/>
+<path d="M 2380.0 713.0 C 2434.6 713.0 2455.4 743.0 2510.0 743.0 L 2510.0 745.0 C 2455.4 745.0 2434.6 747.0 2380.0 747.0 Z" fill="#d0316a" fill-opacity="0.34"/>
+<path d="M 1020.0 243.0 C 1105.7 243.0 1138.3 249.0 1224.0 249.0 L 1224.0 251.0 C 1138.3 251.0 1105.7 257.0 1020.0 257.0 Z" fill="#6f8f96" fill-opacity="0.55"/>
+<circle cx="1232.0" cy="250.0" r="5" fill="#6f8f96"/>
+<text x="1244.0" y="240.0" font-size="13.5" font-weight="700" fill="#6f8f96">Rob Hegarty takes his own life</text>
+<text x="1244.0" y="257.0" font-size="12.5" font-style="italic" fill="#8b8377">New Year’s Eve — the strand ends</text>
+<path d="M 340.0 593.5 C 482.8 593.5 537.2 563.0 680.0 563.0 L 680.0 597.0 C 537.2 597.0 482.8 627.5 340.0 627.5 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 680.0 563.0 C 822.8 563.0 877.2 593.5 1020.0 593.5 L 1020.0 627.5 C 877.2 627.5 822.8 597.0 680.0 597.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 1020.0 593.5 C 1162.8 593.5 1217.2 603.0 1360.0 603.0 L 1360.0 637.0 C 1217.2 637.0 1162.8 627.5 1020.0 627.5 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 1360.0 603.0 C 1502.8 603.0 1557.2 583.5 1700.0 583.5 L 1700.0 617.5 C 1557.2 617.5 1502.8 637.0 1360.0 637.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 1700.0 583.5 C 1842.8 583.5 1897.2 583.5 2040.0 583.5 L 2040.0 617.5 C 1897.2 617.5 1842.8 617.5 1700.0 617.5 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 2040.0 583.5 C 2182.8 583.5 2237.2 463.0 2380.0 463.0 L 2380.0 497.0 C 2237.2 497.0 2182.8 617.5 2040.0 617.5 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 340.0 432.5 C 482.8 432.5 537.2 432.5 680.0 432.5 L 680.0 466.5 C 537.2 466.5 482.8 466.5 340.0 466.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 680.0 432.5 C 822.8 432.5 877.2 474.5 1020.0 474.5 L 1020.0 508.5 C 877.2 508.5 822.8 466.5 680.0 466.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 1020.0 474.5 C 1162.8 474.5 1217.2 483.0 1360.0 483.0 L 1360.0 517.0 C 1217.2 517.0 1162.8 508.5 1020.0 508.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 1360.0 483.0 C 1502.8 483.0 1557.2 622.5 1700.0 622.5 L 1700.0 656.5 C 1557.2 656.5 1502.8 517.0 1360.0 517.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 1700.0 622.5 C 1842.8 622.5 1897.2 622.5 2040.0 622.5 L 2040.0 656.5 C 1897.2 656.5 1842.8 656.5 1700.0 656.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 2040.0 622.5 C 2182.8 622.5 2237.2 713.0 2380.0 713.0 L 2380.0 747.0 C 2237.2 747.0 2182.8 656.5 2040.0 656.5 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 340.0 243.0 C 482.8 243.0 537.2 243.0 680.0 243.0 L 680.0 257.0 C 537.2 257.0 482.8 257.0 340.0 257.0 Z" fill="#6f8f96" fill-opacity="0.82"/>
+<path d="M 680.0 243.0 C 822.8 243.0 877.2 243.0 1020.0 243.0 L 1020.0 257.0 C 877.2 257.0 822.8 257.0 680.0 257.0 Z" fill="#6f8f96" fill-opacity="0.82"/>
+<path d="M 340.0 344.0 C 482.8 344.0 537.2 344.0 680.0 344.0 L 680.0 356.0 C 537.2 356.0 482.8 356.0 340.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 680.0 344.0 C 822.8 344.0 877.2 344.0 1020.0 344.0 L 1020.0 356.0 C 877.2 356.0 822.8 356.0 680.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 1020.0 344.0 C 1162.8 344.0 1217.2 344.0 1360.0 344.0 L 1360.0 356.0 C 1217.2 356.0 1162.8 356.0 1020.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 1360.0 344.0 C 1502.8 344.0 1557.2 344.0 1700.0 344.0 L 1700.0 356.0 C 1557.2 356.0 1502.8 356.0 1360.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 1700.0 344.0 C 1842.8 344.0 1897.2 344.0 2040.0 344.0 L 2040.0 356.0 C 1897.2 356.0 1842.8 356.0 1700.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 2040.0 344.0 C 2182.8 344.0 2237.2 344.0 2380.0 344.0 L 2380.0 356.0 C 2237.2 356.0 2182.8 356.0 2040.0 356.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 340.0 471.5 C 482.8 471.5 537.2 471.5 680.0 471.5 L 680.0 487.5 C 537.2 487.5 482.8 487.5 340.0 487.5 Z" fill="#9c6552" fill-opacity="0.82"/>
+<path d="M 340.0 632.5 C 482.8 632.5 537.2 505.0 680.0 505.0 L 680.0 519.0 C 537.2 519.0 482.8 646.5 340.0 646.5 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 680.0 505.0 C 822.8 505.0 877.2 632.5 1020.0 632.5 L 1020.0 646.5 C 877.2 646.5 822.8 519.0 680.0 519.0 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 1020.0 632.5 C 1162.8 632.5 1217.2 538.0 1360.0 538.0 L 1360.0 552.0 C 1217.2 552.0 1162.8 646.5 1020.0 646.5 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 340.0 803.0 C 482.8 803.0 537.2 803.0 680.0 803.0 L 680.0 817.0 C 537.2 817.0 482.8 817.0 340.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 680.0 803.0 C 822.8 803.0 877.2 803.0 1020.0 803.0 L 1020.0 817.0 C 877.2 817.0 822.8 817.0 680.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 1020.0 803.0 C 1162.8 803.0 1217.2 753.0 1360.0 753.0 L 1360.0 767.0 C 1217.2 767.0 1162.8 817.0 1020.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 1360.0 753.0 C 1502.8 753.0 1557.2 803.0 1700.0 803.0 L 1700.0 817.0 C 1557.2 817.0 1502.8 767.0 1360.0 767.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 1700.0 803.0 C 1842.8 803.0 1897.2 803.0 2040.0 803.0 L 2040.0 817.0 C 1897.2 817.0 1842.8 817.0 1700.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 2040.0 803.0 C 2182.8 803.0 2237.2 853.0 2380.0 853.0 L 2380.0 867.0 C 2237.2 867.0 2182.8 817.0 2040.0 817.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 340.0 912.0 C 482.8 912.0 537.2 912.0 680.0 912.0 L 680.0 928.0 C 537.2 928.0 482.8 928.0 340.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 680.0 912.0 C 822.8 912.0 877.2 912.0 1020.0 912.0 L 1020.0 928.0 C 877.2 928.0 822.8 928.0 680.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 1020.0 912.0 C 1162.8 912.0 1217.2 912.0 1360.0 912.0 L 1360.0 928.0 C 1217.2 928.0 1162.8 928.0 1020.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 1360.0 912.0 C 1502.8 912.0 1557.2 912.0 1700.0 912.0 L 1700.0 928.0 C 1557.2 928.0 1502.8 928.0 1360.0 928.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 340.0 1025.0 C 482.8 1025.0 537.2 1025.0 680.0 1025.0 L 680.0 1035.0 C 537.2 1035.0 482.8 1035.0 340.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 680.0 1025.0 C 822.8 1025.0 877.2 1025.0 1020.0 1025.0 L 1020.0 1035.0 C 877.2 1035.0 822.8 1035.0 680.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 1020.0 1025.0 C 1162.8 1025.0 1217.2 1025.0 1360.0 1025.0 L 1360.0 1035.0 C 1217.2 1035.0 1162.8 1035.0 1020.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 1360.0 1025.0 C 1502.8 1025.0 1557.2 1025.0 1700.0 1025.0 L 1700.0 1035.0 C 1557.2 1035.0 1502.8 1035.0 1360.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 1700.0 1025.0 C 1842.8 1025.0 1897.2 1025.0 2040.0 1025.0 L 2040.0 1035.0 C 1897.2 1035.0 1842.8 1035.0 1700.0 1035.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 1360.0 685.0 C 1502.8 685.0 1557.2 685.0 1700.0 685.0 L 1700.0 695.0 C 1557.2 695.0 1502.8 695.0 1360.0 695.0 Z" fill="#6d78a8" fill-opacity="0.82"/>
+<path d="M 1700.0 685.0 C 1842.8 685.0 1897.2 685.0 2040.0 685.0 L 2040.0 695.0 C 1897.2 695.0 1842.8 695.0 1700.0 695.0 Z" fill="#6d78a8" fill-opacity="0.82"/>
+<path d="M 282.0 609.0 C 306.4 609.0 315.6 593.5 340.0 593.5 L 340.0 627.5 C 315.6 627.5 306.4 612.0 282.0 612.0 Z" fill="#1b57c4" fill-opacity="0.72"/>
+<path d="M 282.0 448.0 C 306.4 448.0 315.6 432.5 340.0 432.5 L 340.0 466.5 C 315.6 466.5 306.4 451.0 282.0 451.0 Z" fill="#d0316a" fill-opacity="0.72"/>
+<path d="M 282.0 248.5 C 306.4 248.5 315.6 243.0 340.0 243.0 L 340.0 257.0 C 315.6 257.0 306.4 251.5 282.0 251.5 Z" fill="#6f8f96" fill-opacity="0.72"/>
+<path d="M 282.0 348.5 C 306.4 348.5 315.6 344.0 340.0 344.0 L 340.0 356.0 C 315.6 356.0 306.4 351.5 282.0 351.5 Z" fill="#b09a4e" fill-opacity="0.72"/>
+<path d="M 282.0 478.0 C 306.4 478.0 315.6 471.5 340.0 471.5 L 340.0 487.5 C 315.6 487.5 306.4 481.0 282.0 481.0 Z" fill="#9c6552" fill-opacity="0.72"/>
+<path d="M 282.0 638.0 C 306.4 638.0 315.6 632.5 340.0 632.5 L 340.0 646.5 C 315.6 646.5 306.4 641.0 282.0 641.0 Z" fill="#6e9078" fill-opacity="0.72"/>
+<path d="M 282.0 808.5 C 306.4 808.5 315.6 803.0 340.0 803.0 L 340.0 817.0 C 315.6 817.0 306.4 811.5 282.0 811.5 Z" fill="#7d8f52" fill-opacity="0.72"/>
+<path d="M 282.0 918.5 C 306.4 918.5 315.6 912.0 340.0 912.0 L 340.0 928.0 C 315.6 928.0 306.4 921.5 282.0 921.5 Z" fill="#7f4a4a" fill-opacity="0.72"/>
+<path d="M 282.0 1028.5 C 306.4 1028.5 315.6 1025.0 340.0 1025.0 L 340.0 1035.0 C 315.6 1035.0 306.4 1031.5 282.0 1031.5 Z" fill="#b0a89e" fill-opacity="0.72"/>
+<text x="320" y="614.5" font-size="15" font-weight="700" text-anchor="end" fill="#1b57c4">Connell</text>
+<text x="320" y="453.5" font-size="15" font-weight="700" text-anchor="end" fill="#d0316a">Marianne</text>
+<text x="320" y="254.0" font-size="15" font-weight="700" text-anchor="end" fill="#6f8f96">Rob</text>
+<text x="320" y="354.0" font-size="15" font-weight="700" text-anchor="end" fill="#b09a4e">Peggy</text>
+<text x="320" y="483.5" font-size="15" font-weight="700" text-anchor="end" fill="#9c6552">Jamie</text>
+<text x="320" y="643.5" font-size="15" font-weight="700" text-anchor="end" fill="#6e9078">Helen</text>
+<text x="320" y="814.0" font-size="15" font-weight="700" text-anchor="end" fill="#7d8f52">Lorraine</text>
+<text x="320" y="924.0" font-size="15" font-weight="700" text-anchor="end" fill="#7f4a4a">Alan</text>
+<text x="320" y="1034.0" font-size="15" font-weight="700" text-anchor="end" fill="#b0a89e">Denise</text>
+<text x="2530" y="354.0" font-size="14" font-weight="700" fill="#b09a4e">Peggy, Joanna & the Trinity circle</text>
+<text x="2530" y="484.0" font-size="14" font-weight="700" fill="#1b57c4">Connell → a year in New York</text>
+<text x="2530" y="734.0" font-size="14" font-weight="700" fill="#d0316a">Marianne stays — “I’ll always be here”</text>
+<text x="2530" y="864.0" font-size="14" font-weight="700" fill="#7d8f52">Lorraine</text>
+<text x="60" y="1177" font-size="12" font-weight="700" letter-spacing="1.4" fill="#9a9086">STRANDS — the two leads are the two saturated ribbons</text>
+<rect x="60" y="1195" width="17" height="14" rx="3" fill="#1b57c4" fill-opacity="0.85"/>
+<text x="84" y="1207" font-size="13" font-weight="600" fill="#2b2622">Connell</text>
+<rect x="162.78" y="1195" width="17" height="14" rx="3" fill="#d0316a" fill-opacity="0.85"/>
+<text x="186.78" y="1207" font-size="13" font-weight="600" fill="#2b2622">Marianne</text>
+<rect x="273.1" y="1195" width="16" height="14" rx="3" fill="#6f8f96" fill-opacity="0.85"/>
+<text x="296.1" y="1207" font-size="13" font-weight="600" fill="#2b2622">Rob</text>
+<rect x="344.72" y="1195" width="16" height="14" rx="3" fill="#8d7fa8" fill-opacity="0.85"/>
+<text x="367.72" y="1207" font-size="13" font-weight="600" fill="#2b2622">Rachel</text>
+<rect x="438.96000000000004" y="1195" width="16" height="14" rx="3" fill="#b09a4e" fill-opacity="0.85"/>
+<text x="461.96000000000004" y="1207" font-size="13" font-weight="600" fill="#2b2622">Peggy</text>
+<rect x="525.6600000000001" y="1195" width="16" height="14" rx="3" fill="#8a9299" fill-opacity="0.85"/>
+<text x="548.6600000000001" y="1207" font-size="13" font-weight="600" fill="#2b2622">Gareth</text>
+<rect x="619.9000000000001" y="1195" width="16" height="14" rx="3" fill="#9c6552" fill-opacity="0.85"/>
+<text x="642.9000000000001" y="1207" font-size="13" font-weight="600" fill="#2b2622">Jamie</text>
+<rect x="706.6000000000001" y="1195" width="16" height="14" rx="3" fill="#6e9078" fill-opacity="0.85"/>
+<text x="729.6000000000001" y="1207" font-size="13" font-weight="600" fill="#2b2622">Helen</text>
+<rect x="793.3000000000002" y="1195" width="16" height="14" rx="3" fill="#9aa0a6" fill-opacity="0.85"/>
+<text x="816.3000000000002" y="1207" font-size="13" font-weight="600" fill="#2b2622">Lukas</text>
+<rect x="880.0000000000002" y="1195" width="16" height="14" rx="3" fill="#7d8f52" fill-opacity="0.85"/>
+<text x="903.0000000000002" y="1207" font-size="13" font-weight="600" fill="#2b2622">Lorraine</text>
+<rect x="989.3200000000002" y="1195" width="16" height="14" rx="3" fill="#7f4a4a" fill-opacity="0.85"/>
+<text x="1012.3200000000002" y="1207" font-size="13" font-weight="600" fill="#2b2622">Alan</text>
+<rect x="1068.4800000000002" y="1195" width="16" height="14" rx="3" fill="#b0a89e" fill-opacity="0.85"/>
+<text x="1091.4800000000002" y="1207" font-size="13" font-weight="600" fill="#2b2622">Denise</text>
+<rect x="1162.7200000000003" y="1195" width="16" height="14" rx="3" fill="#6d78a8" fill-opacity="0.85"/>
+<text x="1185.7200000000003" y="1207" font-size="13" font-weight="600" fill="#2b2622">Gillian</text>
+<text x="2780" y="1207" font-size="13" fill="#8b8377" text-anchor="end">hatched ribbon = off-page that episode</text>
+<line x1="60" y1="1262" x2="2780" y2="1262" stroke="#ded7cb"/>
+<text x="60" y="1312" font-family="Georgia, serif" font-size="42" fill="#22201d">Normal People — the braid, panel B of 2: episode 7 to the coda</text>
+<text x="60" y="1342" font-size="16" fill="#6f675c">The separated years. Every strand that leaves the spine is a person one of them chose instead.</text>
+<text x="60" y="1364" font-size="14.5" font-style="italic" fill="#9a9086">Continues panel A. Alan and Denise run the full width — off-stage in some episodes, never out of her story.</text>
+</svg>

@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1010" height="2508" viewBox="0 0 1010 2508" font-family="Helvetica, Arial, sans-serif">
+<defs><pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.9" fill="#d8d2c8"/></pattern>
+<pattern id="cb-dresses" width="9" height="9" patternUnits="userSpaceOnUse">
+<rect width="9" height="9" fill="#b08a94" fill-opacity="0.45"/>
+<path d="M1,1 L8,8 M8,1 L1,8" fill="none" stroke="#796167" stroke-width="1.3" stroke-linecap="round" opacity="0.92"/>
+</pattern>
+<pattern id="cb-casey" width="9" height="9" patternUnits="userSpaceOnUse">
+<rect width="9" height="9" fill="#b09a4e" fill-opacity="0.55"/>
+<path d="M4.5,1 V8 M1,4.5 H8" fill="none" stroke="#796b3a" stroke-width="1.3" stroke-linecap="round" opacity="0.92"/>
+</pattern>
+<pattern id="cb-jane" width="9" height="9" patternUnits="userSpaceOnUse">
+<rect width="9" height="9" fill="#1b57c4" fill-opacity="0.95"/>
+</pattern>
+<pattern id="cb-kevin" width="9" height="9" patternUnits="userSpaceOnUse">
+<rect width="9" height="9" fill="#d0316a" fill-opacity="0.85"/>
+<path d="M0,9 L9,0" fill="none" stroke="#8e274c" stroke-width="1.3" stroke-linecap="round" opacity="0.92"/>
+</pattern>
+<pattern id="cb-george" width="9" height="9" patternUnits="userSpaceOnUse">
+<rect width="9" height="9" fill="#6e9078" fill-opacity="0.75"/>
+<path d="M0,0 L9,9" fill="none" stroke="#4e6555" stroke-width="1.3" stroke-linecap="round" opacity="0.92"/>
+</pattern>
+<pattern id="cb-tess" width="9" height="9" patternUnits="userSpaceOnUse">
+<rect width="9" height="9" fill="#9c6552" fill-opacity="0.65"/>
+<path d="M4.5,4.5 m-1.7,0 a1.7,1.7 0 1,0 3.4,0 a1.7,1.7 0 1,0 -3.4,0" fill="none" stroke="#6c493c" stroke-width="1.3" stroke-linecap="round" opacity="0.92"/>
+</pattern>
+</defs>
+<rect width="1010" height="2508" fill="#faf7f2"/>
+<rect x="0" y="210.0" width="1010" height="1900.0" fill="url(#dots)" opacity="0.55"/>
+<line x1="70" y1="300.0" x2="545.0" y2="300.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="300.0" x2="556.0" y2="300.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="465.0" x2="545.0" y2="465.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="465.0" x2="556.0" y2="465.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="630.0" x2="545.0" y2="630.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="630.0" x2="556.0" y2="630.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="795.0" x2="545.0" y2="795.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="795.0" x2="556.0" y2="795.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="960.0" x2="545.0" y2="960.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="960.0" x2="556.0" y2="960.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="1125.0" x2="545.0" y2="1125.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="1125.0" x2="556.0" y2="1125.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="1290.0" x2="545.0" y2="1290.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="1290.0" x2="556.0" y2="1290.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="1455.0" x2="545.0" y2="1455.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="1455.0" x2="556.0" y2="1455.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="1620.0" x2="545.0" y2="1620.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="1620.0" x2="556.0" y2="1620.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="1785.0" x2="545.0" y2="1785.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="1785.0" x2="556.0" y2="1785.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="2020.0" x2="545.0" y2="2020.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="2020.0" x2="556.0" y2="2020.0" stroke="#ded7cb" stroke-width="1"/>
+<text x="570.0" y="288.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">TWO WEDDINGS, ONE NIGHT</text>
+<text x="570.0" y="316.0" font-size="16" fill="#9a9086">≈ 0–10 min</text>
+<text x="570.0" y="346.0" font-size="16.5" font-style="italic" fill="#7d7568">Jane has been a bridesmaid 27 times</text>
+<text x="570.0" y="369.0" font-size="16.5" font-style="italic" fill="#7d7568">she shares a cab with a man in a tux</text>
+<text x="570.0" y="400.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ MEET-CUTE — an entrance, not a marriage</text>
+<text x="570.0" y="453.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE COLUMN</text>
+<text x="570.0" y="481.0" font-size="16" fill="#9a9086">≈ 10–25 min</text>
+<text x="570.0" y="511.0" font-size="16.5" font-style="italic" fill="#7d7568">George is back from the climbing trip</text>
+<text x="570.0" y="534.0" font-size="16.5" font-style="italic" fill="#7d7568">Kevin writes the column Jane despises</text>
+<text x="570.0" y="565.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ CHEMISTRY — they argue beautifully</text>
+<text x="570.0" y="587.0" font-size="14.5" fill="#9a9086">new lanes ▸</text>
+<text x="648" y="587.0" font-size="15.4" font-weight="700" fill="#b09a4e">Casey</text>
+<text x="570.0" y="618.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">TESS COMES HOME</text>
+<text x="570.0" y="646.0" font-size="16" fill="#9a9086">≈ 25–35 min</text>
+<text x="570.0" y="676.0" font-size="16.5" font-style="italic" fill="#7d7568">Six months in Europe, one engagement party</text>
+<text x="570.0" y="699.0" font-size="16.5" font-style="italic" fill="#7d7568">Tess catches George before Jane can speak</text>
+<text x="570.0" y="730.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ the loyalty trap springs</text>
+<text x="570.0" y="752.0" font-size="14.5" fill="#9a9086">new lanes ▸</text>
+<text x="648" y="752.0" font-size="17.5" font-weight="700" fill="#9c6552">Tess</text>
+<text x="570.0" y="783.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE ENGAGEMENT</text>
+<text x="570.0" y="811.0" font-size="16" fill="#9a9086">≈ 35–50 min</text>
+<text x="570.0" y="841.0" font-size="16.5" font-style="italic" fill="#7d7568">Vegetarian, dogs, the outdoors — all borrowed</text>
+<text x="570.0" y="864.0" font-size="16.5" font-style="italic" fill="#7d7568">their mother's dress goes to Tess</text>
+<text x="570.0" y="895.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ BFF — Casey, doing the actual work</text>
+<text x="570.0" y="948.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE BOATHOUSE</text>
+<text x="570.0" y="976.0" font-size="16" fill="#9a9086">≈ 50–62 min</text>
+<text x="570.0" y="1006.0" font-size="16.5" font-style="italic" fill="#7d7568">Jane plans her own dream wedding for her sister</text>
+<text x="570.0" y="1029.0" font-size="16.5" font-style="italic" fill="#7d7568">Malcolm Doyle turns out to be Kevin</text>
+<text x="570.0" y="1060.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ chemistry, second gear</text>
+<text x="570.0" y="1113.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE CLOSET</text>
+<text x="570.0" y="1141.0" font-size="16" fill="#9a9086">≈ 62–70 min</text>
+<text x="570.0" y="1171.0" font-size="16.5" font-style="italic" fill="#7d7568">Twenty-seven dresses, one fashion show</text>
+<text x="570.0" y="1194.0" font-size="16.5" font-style="italic" fill="#7d7568">the bride's happiness is paramount</text>
+<text x="570.0" y="1225.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ the scene the film is remembered for</text>
+<text x="570.0" y="1278.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE ARTICLE</text>
+<text x="570.0" y="1306.0" font-size="16" fill="#9a9086">≈ 70–80 min</text>
+<text x="570.0" y="1336.0" font-size="16.5" font-style="italic" fill="#7d7568">The piece runs without her knowing</text>
+<text x="570.0" y="1359.0" font-size="16.5" font-style="italic" fill="#7d7568">she ends it, and she is not wrong to</text>
+<text x="570.0" y="1390.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ BREAKUP — it flows from who he is</text>
+<text x="570.0" y="1443.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE SLIDESHOW</text>
+<text x="570.0" y="1471.0" font-size="16" fill="#9a9086">≈ 80–95 min</text>
+<text x="570.0" y="1501.0" font-size="16.5" font-style="italic" fill="#7d7568">Tess cuts up the dress; Jane retaliates</text>
+<text x="570.0" y="1524.0" font-size="16.5" font-style="italic" fill="#7d7568">George sees the dishonesty and cancels</text>
+<text x="570.0" y="1555.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ her sister's lane snaps off</text>
+<text x="570.0" y="1608.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE EMPTY VICTORY</text>
+<text x="570.0" y="1636.0" font-size="16" fill="#9a9086">≈ 95–102 min</text>
+<text x="570.0" y="1666.0" font-size="16.5" font-style="italic" fill="#7d7568">George praises her reliability</text>
+<text x="570.0" y="1689.0" font-size="16.5" font-style="italic" fill="#7d7568">she quits, and the crush has gone quiet</text>
+<text x="570.0" y="1720.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ the dark night, kept short</text>
+<text x="570.0" y="1773.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">ANOTHER WEDDING</text>
+<text x="570.0" y="1801.0" font-size="16" fill="#9a9086">≈ 102–109 min</text>
+<text x="570.0" y="1831.0" font-size="16.5" font-style="italic" fill="#7d7568">She finds him at somebody else's wedding</text>
+<text x="570.0" y="1854.0" font-size="16.5" font-style="italic" fill="#7d7568">and says it first, in front of strangers</text>
+<text x="570.0" y="1885.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ GESTURE — and it is hers, not his</text>
+<text x="570.0" y="2008.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">ONE YEAR LATER</text>
+<text x="570.0" y="2036.0" font-size="16" fill="#9a9086">the coda</text>
+<text x="570.0" y="2066.0" font-size="16.5" font-style="italic" fill="#7d7568">The beach; all twenty-seven brides</text>
+<text x="570.0" y="2089.0" font-size="16.5" font-style="italic" fill="#7d7568">wearing what Jane wore at their weddings</text>
+<text x="570.0" y="2120.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ the 28th dress</text>
+<path d="M 506.6 1455.0 C 506.6 1479.4 510.5 1488.6 510.5 1513.0 L 512.5 1513.0 C 512.5 1488.6 516.5 1479.4 516.5 1455.0 Z" fill="url(#cb-tess)" fill-opacity="1"/>
+<path d="M 468.1 1620.0 C 468.1 1644.4 472.0 1653.6 472.0 1678.0 L 474.0 1678.0 C 474.0 1653.6 477.9 1644.4 477.9 1620.0 Z" fill="url(#cb-george)" fill-opacity="1"/>
+<path d="M 117.7 300.0 C 117.7 369.3 117.7 395.7 117.7 465.0 L 124.3 465.0 C 124.3 395.7 124.3 369.3 124.3 300.0 Z" fill="url(#cb-dresses)" fill-opacity="1"/>
+<path d="M 117.7 465.0 C 117.7 534.3 117.7 560.7 117.7 630.0 L 124.3 630.0 C 124.3 560.7 124.3 534.3 124.3 465.0 Z" fill="url(#cb-dresses)" fill-opacity="1"/>
+<path d="M 117.7 630.0 C 117.7 699.3 117.7 725.7 117.7 795.0 L 124.3 795.0 C 124.3 725.7 124.3 699.3 124.3 630.0 Z" fill="url(#cb-dresses)" fill-opacity="1"/>
+<path d="M 117.7 795.0 C 117.7 864.3 117.7 890.7 117.7 960.0 L 124.3 960.0 C 124.3 890.7 124.3 864.3 124.3 795.0 Z" fill="url(#cb-dresses)" fill-opacity="1"/>
+<path d="M 117.7 960.0 C 117.7 1029.3 117.7 1055.7 117.7 1125.0 L 124.3 1125.0 C 124.3 1055.7 124.3 1029.3 124.3 960.0 Z" fill="url(#cb-dresses)" fill-opacity="1"/>
+<path d="M 117.7 1125.0 C 117.7 1194.3 117.7 1220.7 117.7 1290.0 L 124.3 1290.0 C 124.3 1220.7 124.3 1194.3 124.3 1125.0 Z" fill="url(#cb-dresses)" fill-opacity="1"/>
+<path d="M 117.7 1290.0 C 117.7 1359.3 117.7 1385.7 117.7 1455.0 L 124.3 1455.0 C 124.3 1385.7 124.3 1359.3 124.3 1290.0 Z" fill="url(#cb-dresses)" fill-opacity="1"/>
+<path d="M 117.7 1455.0 C 117.7 1524.3 117.7 1550.7 117.7 1620.0 L 124.3 1620.0 C 124.3 1550.7 124.3 1524.3 124.3 1455.0 Z" fill="url(#cb-dresses)" fill-opacity="1"/>
+<path d="M 117.7 1620.0 C 117.7 1689.3 117.7 1715.7 117.7 1785.0 L 124.3 1785.0 C 124.3 1715.7 124.3 1689.3 124.3 1620.0 Z" fill="url(#cb-dresses)" fill-opacity="1"/>
+<path d="M 117.7 1785.0 C 117.7 1883.7 268.4 1921.3 268.4 2020.0 L 275.0 2020.0 C 275.0 1921.3 124.3 1883.7 124.3 1785.0 Z" fill="url(#cb-dresses)" fill-opacity="1"/>
+<path d="M 216.2 465.0 C 216.2 534.3 216.2 560.7 216.2 630.0 L 223.8 630.0 C 223.8 560.7 223.8 534.3 223.8 465.0 Z" fill="url(#cb-casey)" fill-opacity="1"/>
+<path d="M 216.2 630.0 C 216.2 699.3 216.2 725.7 216.2 795.0 L 223.8 795.0 C 223.8 725.7 223.8 699.3 223.8 630.0 Z" fill="url(#cb-casey)" fill-opacity="1"/>
+<path d="M 216.2 795.0 C 216.2 864.3 216.2 890.7 216.2 960.0 L 223.8 960.0 C 223.8 890.7 223.8 864.3 223.8 795.0 Z" fill="url(#cb-casey)" fill-opacity="1"/>
+<path d="M 216.2 960.0 C 216.2 1029.3 216.2 1055.7 216.2 1125.0 L 223.8 1125.0 C 223.8 1055.7 223.8 1029.3 223.8 960.0 Z" fill="url(#cb-casey)" fill-opacity="1"/>
+<path d="M 216.2 1125.0 C 216.2 1194.3 216.2 1220.7 216.2 1290.0 L 223.8 1290.0 C 223.8 1220.7 223.8 1194.3 223.8 1125.0 Z" fill="url(#cb-casey)" fill-opacity="1"/>
+<path d="M 216.2 1290.0 C 216.2 1359.3 216.2 1385.7 216.2 1455.0 L 223.8 1455.0 C 223.8 1385.7 223.8 1359.3 223.8 1290.0 Z" fill="url(#cb-casey)" fill-opacity="1"/>
+<path d="M 216.2 1455.0 C 216.2 1524.3 216.2 1550.7 216.2 1620.0 L 223.8 1620.0 C 223.8 1550.7 223.8 1524.3 223.8 1455.0 Z" fill="url(#cb-casey)" fill-opacity="1"/>
+<path d="M 216.2 1620.0 C 216.2 1689.3 216.2 1715.7 216.2 1785.0 L 223.8 1785.0 C 223.8 1715.7 223.8 1689.3 223.8 1620.0 Z" fill="url(#cb-casey)" fill-opacity="1"/>
+<path d="M 216.2 1785.0 C 216.2 1883.7 216.2 1921.3 216.2 2020.0 L 223.8 2020.0 C 223.8 1921.3 223.8 1883.7 223.8 1785.0 Z" fill="url(#cb-casey)" fill-opacity="1"/>
+<path d="M 311.6 300.0 C 311.6 369.3 298.6 395.7 298.6 465.0 L 317.4 465.0 C 317.4 395.7 330.3 369.3 330.3 300.0 Z" fill="url(#cb-jane)" fill-opacity="1"/>
+<path d="M 298.6 465.0 C 298.6 534.3 298.6 560.7 298.6 630.0 L 317.4 630.0 C 317.4 560.7 317.4 534.3 317.4 465.0 Z" fill="url(#cb-jane)" fill-opacity="1"/>
+<path d="M 298.6 630.0 C 298.6 699.3 298.6 725.7 298.6 795.0 L 317.4 795.0 C 317.4 725.7 317.4 699.3 317.4 630.0 Z" fill="url(#cb-jane)" fill-opacity="1"/>
+<path d="M 298.6 795.0 C 298.6 864.3 298.6 890.7 298.6 960.0 L 317.4 960.0 C 317.4 890.7 317.4 864.3 317.4 795.0 Z" fill="url(#cb-jane)" fill-opacity="1"/>
+<path d="M 298.6 960.0 C 298.6 1029.3 300.6 1055.7 300.6 1125.0 L 319.3 1125.0 C 319.3 1055.7 317.4 1029.3 317.4 960.0 Z" fill="url(#cb-jane)" fill-opacity="1"/>
+<path d="M 300.6 1125.0 C 300.6 1194.3 298.6 1220.7 298.6 1290.0 L 317.4 1290.0 C 317.4 1220.7 319.3 1194.3 319.3 1125.0 Z" fill="url(#cb-jane)" fill-opacity="1"/>
+<path d="M 298.6 1290.0 C 298.6 1359.3 298.6 1385.7 298.6 1455.0 L 317.4 1455.0 C 317.4 1385.7 317.4 1359.3 317.4 1290.0 Z" fill="url(#cb-jane)" fill-opacity="1"/>
+<path d="M 298.6 1455.0 C 298.6 1524.3 298.6 1550.7 298.6 1620.0 L 317.4 1620.0 C 317.4 1550.7 317.4 1524.3 317.4 1455.0 Z" fill="url(#cb-jane)" fill-opacity="1"/>
+<path d="M 298.6 1620.0 C 298.6 1689.3 300.6 1715.7 300.6 1785.0 L 319.3 1785.0 C 319.3 1715.7 317.4 1689.3 317.4 1620.0 Z" fill="url(#cb-jane)" fill-opacity="1"/>
+<path d="M 300.6 1785.0 C 300.6 1883.7 277.8 1921.3 277.8 2020.0 L 296.5 2020.0 C 296.5 1921.3 319.3 1883.7 319.3 1785.0 Z" fill="url(#cb-jane)" fill-opacity="1"/>
+<path d="M 333.0 300.0 C 333.0 369.3 366.3 395.7 366.3 465.0 L 381.7 465.0 C 381.7 395.7 348.4 369.3 348.4 300.0 Z" fill="url(#cb-kevin)" fill-opacity="1"/>
+<path d="M 366.3 465.0 C 366.3 534.3 366.3 560.7 366.3 630.0 L 381.7 630.0 C 381.7 560.7 381.7 534.3 381.7 465.0 Z" fill="url(#cb-kevin)" fill-opacity="1"/>
+<path d="M 366.3 630.0 C 366.3 699.3 366.3 725.7 366.3 795.0 L 381.7 795.0 C 381.7 725.7 381.7 699.3 381.7 630.0 Z" fill="url(#cb-kevin)" fill-opacity="1"/>
+<path d="M 366.3 795.0 C 366.3 864.3 344.3 890.7 344.3 960.0 L 359.7 960.0 C 359.7 890.7 381.7 864.3 381.7 795.0 Z" fill="url(#cb-kevin)" fill-opacity="1"/>
+<path d="M 344.3 960.0 C 344.3 1029.3 322.0 1055.7 322.0 1125.0 L 337.4 1125.0 C 337.4 1055.7 359.7 1029.3 359.7 960.0 Z" fill="url(#cb-kevin)" fill-opacity="1"/>
+<path d="M 322.0 1125.0 C 322.0 1194.3 382.8 1220.7 382.8 1290.0 L 398.2 1290.0 C 398.2 1220.7 337.4 1194.3 337.4 1125.0 Z" fill="url(#cb-kevin)" fill-opacity="1"/>
+<path d="M 382.8 1290.0 C 382.8 1359.3 388.3 1385.7 388.3 1455.0 L 403.7 1455.0 C 403.7 1385.7 398.2 1359.3 398.2 1290.0 Z" fill="url(#cb-kevin)" fill-opacity="1"/>
+<path d="M 388.3 1455.0 C 388.3 1524.3 388.3 1550.7 388.3 1620.0 L 403.7 1620.0 C 403.7 1550.7 403.7 1524.3 403.7 1455.0 Z" fill="url(#cb-kevin)" fill-opacity="1"/>
+<path d="M 388.3 1620.0 C 388.3 1689.3 322.0 1715.7 322.0 1785.0 L 337.4 1785.0 C 337.4 1715.7 403.7 1689.3 403.7 1620.0 Z" fill="url(#cb-kevin)" fill-opacity="1"/>
+<path d="M 322.0 1785.0 C 322.0 1883.7 299.2 1921.3 299.2 2020.0 L 314.6 2020.0 C 314.6 1921.3 337.4 1883.7 337.4 1785.0 Z" fill="url(#cb-kevin)" fill-opacity="1"/>
+<path d="M 435.1 465.0 C 435.1 534.3 456.2 560.7 456.2 630.0 L 466.1 630.0 C 466.1 560.7 444.9 534.3 444.9 465.0 Z" fill="url(#cb-george)" fill-opacity="1"/>
+<path d="M 456.2 630.0 C 456.2 699.3 456.2 725.7 456.2 795.0 L 466.1 795.0 C 466.1 725.7 466.1 699.3 466.1 630.0 Z" fill="url(#cb-george)" fill-opacity="1"/>
+<path d="M 456.2 795.0 C 456.2 864.3 456.2 890.7 456.2 960.0 L 466.1 960.0 C 466.1 890.7 466.1 864.3 466.1 795.0 Z" fill="url(#cb-george)" fill-opacity="1"/>
+<path d="M 456.2 960.0 C 456.2 1029.3 456.2 1055.7 456.2 1125.0 L 466.1 1125.0 C 466.1 1055.7 466.1 1029.3 466.1 960.0 Z" fill="url(#cb-george)" fill-opacity="1"/>
+<path d="M 456.2 1125.0 C 456.2 1194.3 456.2 1220.7 456.2 1290.0 L 466.1 1290.0 C 466.1 1220.7 466.1 1194.3 466.1 1125.0 Z" fill="url(#cb-george)" fill-opacity="1"/>
+<path d="M 456.2 1290.0 C 456.2 1359.3 435.1 1385.7 435.1 1455.0 L 444.9 1455.0 C 444.9 1385.7 466.1 1359.3 466.1 1290.0 Z" fill="url(#cb-george)" fill-opacity="1"/>
+<path d="M 435.1 1455.0 C 435.1 1524.3 468.1 1550.7 468.1 1620.0 L 477.9 1620.0 C 477.9 1550.7 444.9 1524.3 444.9 1455.0 Z" fill="url(#cb-george)" fill-opacity="1"/>
+<path d="M 468.9 630.0 C 468.9 699.3 468.9 725.7 468.9 795.0 L 478.8 795.0 C 478.8 725.7 478.8 699.3 478.8 630.0 Z" fill="url(#cb-tess)" fill-opacity="1"/>
+<path d="M 468.9 795.0 C 468.9 864.3 468.9 890.7 468.9 960.0 L 478.8 960.0 C 478.8 890.7 478.8 864.3 478.8 795.0 Z" fill="url(#cb-tess)" fill-opacity="1"/>
+<path d="M 468.9 960.0 C 468.9 1029.3 468.9 1055.7 468.9 1125.0 L 478.8 1125.0 C 478.8 1055.7 478.8 1029.3 478.8 960.0 Z" fill="url(#cb-tess)" fill-opacity="1"/>
+<path d="M 468.9 1125.0 C 468.9 1194.3 468.9 1220.7 468.9 1290.0 L 478.8 1290.0 C 478.8 1220.7 478.8 1194.3 478.8 1125.0 Z" fill="url(#cb-tess)" fill-opacity="1"/>
+<path d="M 468.9 1290.0 C 468.9 1359.3 506.6 1385.7 506.6 1455.0 L 516.5 1455.0 C 516.5 1385.7 478.8 1359.3 478.8 1290.0 Z" fill="url(#cb-tess)" fill-opacity="1"/>
+<text x="121.0" y="55" font-size="14.3" font-weight="700" text-anchor="middle" fill="#b08a94">the dresses</text>
+<text x="320.9" y="63" font-size="24.0" font-weight="700" text-anchor="middle" fill="#1b57c4">Jane</text>
+<text x="340.7" y="101" font-size="21.8" font-weight="700" text-anchor="middle" fill="#d0316a">Kevin</text>
+<line x1="121.0" y1="62" x2="121.0" y2="286.0" stroke="#b08a94" stroke-width="1" opacity="0.28"/>
+<line x1="320.9" y1="70" x2="320.9" y2="286.0" stroke="#1b57c4" stroke-width="1" opacity="0.28"/>
+<line x1="340.7" y1="108" x2="340.7" y2="286.0" stroke="#d0316a" stroke-width="1" opacity="0.28"/>
+<text x="60" y="2192.0" font-size="13" font-weight="700" letter-spacing="1.1" fill="#9a9086">LANES — label size follows strand width, symbol = identity, darkness = weight</text>
+<rect x="60" y="2213" width="11" height="12" rx="2" fill="url(#cb-dresses)" fill-opacity="1"/>
+<text x="73" y="2219" font-size="14.3" font-weight="600" fill="#2b2622">the dresses</text>
+<rect x="183" y="2214" width="11" height="12" rx="2" fill="url(#cb-casey)" fill-opacity="1"/>
+<text x="197" y="2220" font-size="15.4" font-weight="600" fill="#2b2622">Casey</text>
+<rect x="262" y="2217" width="19" height="19" rx="2" fill="url(#cb-jane)" fill-opacity="1"/>
+<text x="287" y="2227" font-size="24.0" font-weight="600" fill="#2b2622">Jane</text>
+<rect x="363" y="2216" width="15" height="18" rx="2" fill="url(#cb-kevin)" fill-opacity="1"/>
+<text x="384" y="2225" font-size="21.8" font-weight="600" fill="#2b2622">Kevin</text>
+<rect x="467" y="2215" width="11" height="14" rx="2" fill="url(#cb-george)" fill-opacity="1"/>
+<text x="483" y="2222" font-size="17.5" font-weight="600" fill="#2b2622">George</text>
+<rect x="564" y="2215" width="11" height="14" rx="2" fill="url(#cb-tess)" fill-opacity="1"/>
+<text x="580" y="2222" font-size="17.5" font-weight="600" fill="#2b2622">Tess</text>
+<text x="60" y="2258" font-size="14" font-style="italic" fill="#8b8377">“the dresses” is the title object, not a person. Hatched lane = off-page.</text>
+<line x1="60" y1="2288.4" x2="950" y2="2288.4" stroke="#ded7cb"/>
+<text x="60" y="2322.4" font-family="Georgia, serif" font-size="31" fill="#22201d">27 Dresses — the house, vertically</text>
+<text x="60" y="2348.4" font-size="15.5" fill="#6f675c">Six lanes, eleven beats, 111 minutes. Time runs down the page.</text>
+<text x="60" y="2374.4" font-size="14.5" font-style="italic" fill="#9a9086">Row spacing widens before the coda — a year passes there.</text>
+<text x="60" y="2400.4" font-size="14.5" font-style="italic" fill="#9a9086">Each beat is tagged with the rubric category it earns, so this doubles as the anchor's scoring sheet.</text>
+<text x="60" y="2426.4" font-size="14.5" font-style="italic" fill="#9a9086">The house: 27 of 30, a nominal 100%. You don't ding the house the party's at.</text>
+<text x="60" y="2452.4" font-size="14.5" font-style="italic" fill="#9a9086">Ebert's three: left unpicked. Whether the house is a true 27 is still under review.</text>
+<text x="60" y="2478.4" font-size="14.5" font-style="italic" fill="#9a9086">Colour-blind mode: each strand carries its own symbol; the darker the ribbon, the heavier the character. Hue is decoration only.</text>
+</svg>

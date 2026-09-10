@@ -1,0 +1,77 @@
+# Alluvial charts — BACKLOG
+
+**Read this first.** Hand-authored alluvial (time-indexed Sankey) charts for
+stories: films, novels, series. Pure Python → SVG → PNG. No libraries, no
+runtime deps beyond PIL for export.
+
+Canonical home: `~/hermes/projects/alluvial/`
+Procedural memory: skill `narrative-alluvial` (engine docs, design rules, pitfalls).
+
+## Layout
+
+| Path | What |
+|---|---|
+| `scripts/alluvial_vlib.py` | **The vertical engine.** Generic renderer: lanes→columns, time→down, `cb_safe` colour-blind mode, width-scaled labels. Start here. |
+| `scripts/alluvial_np2.py` | Horizontal engine + Normal People (series) data. Also the source of the shared `COLS` data model. |
+| `scripts/alluvial_vertical.py` | Normal People, vertical (2 panels). |
+| `scripts/dresses27_vertical.py` | 27 Dresses, vertical, tagged with the romcom rubric. |
+| `scripts/fellowship_vertical.py` | Fellowship of the Ring, vertical (11 strands, time from the film's runtime marks). |
+| `scripts/fellowship_alluvial.py` | Fellowship, original horizontal version. |
+| `scripts/normal_people_alluvial.py` | Normal People, original horizontal version. |
+| `out/*.svg` | Canonical artifacts, committed. Hand-editable, restylable. |
+| `out/*.png` | 2x exports for chat/print. |
+| `web/` | Static-page generator (in progress — see BACKLOG below). |
+
+## The data model
+
+Every chart is one `COLS` table: a list of beats, each with
+`beat` / `loc` / `cap` / `hard` / `tag` / `groups` / `stubs` / `terminal` /
+`enter`, plus a `CHAR` map (label, ribbon width, colour). **This table is the
+content model** — the SVG, the PNG, and (next) the web page are all rendered
+from it. Adding a film = writing one table + the prose.
+
+## Running
+
+```bash
+cd scripts
+python3 dresses27_vertical.py        # -> out/27dresses-vertical.svg
+python3 dresses27_vertical.py --cb   # -> out/27dresses-vertical-cb.svg (colour-blind)
+```
+
+Verify a render (lane order read back out of the PNG):
+```bash
+python3 ~/.hermes/skills/creative/narrative-alluvial/scripts/verify_render.py \
+        ../out/np-vertical-a-raw.png 1120 h400:60-660
+```
+
+## Done
+
+- [x] Horizontal engine + Normal People (full, 13 columns; 2-panel split; novel with time-proportional spacing)
+- [x] Fellowship horizontal (11 strands, 9 beats)
+- [x] Vertical engine (transposed; semantic bands become left/right)
+- [x] Width-scaled label type (legend + lane names) — hierarchy at a glance
+- [x] Colour-blind mode (`cb_safe`): luminance ramp by strand weight + one symbol per strand, opt-in and byte-identical when off
+- [x] 27 Dresses vertical, tagged with the romcom rubric beats
+- [x] Checkpoint: repo, verified regenerable (all 11 SVGs byte-identical after the move)
+
+## Next
+
+- [ ] **Web pages** — one per film, static on staylorx.com, clickable beats that
+      jump to the writing for that beat. See `web/README.md`.
+- [ ] Chunked mode for very long works (Anna Karenina: ~8 parts, ~90 beats).
+      Long scroll is the goal; per-part SVG panels keep each file small.
+- [ ] Lane budget: 6–11 lanes is the legible maximum. Needs a strategy for
+      15+ character casts (focus mode, "others" lane, or per-part lane sets).
+- [ ] Density mode: one caption line per beat for long works, prose carries detail.
+- [ ] Optional: Okabe–Ito palette swap as a second colour-blind mode.
+
+## Decisions worth not re-litigating
+
+- Ribbon width ≈ narrative presence (Sankey rule). Label size + colour-blind
+  darkness both derive from it, so the encodings agree instead of fighting.
+- Time runs down in the vertical version; the semantic bands become left/right
+  (family | the leads | the social world).
+- Time-proportional row spacing where the data has real gaps (novel chapters,
+  film runtime marks). The clamp on near-instant gaps is itself a finding.
+- PNG is for chat; SVG is the deliverable. The web page inlines the SVG so the
+  page's CSS and links can reach every beat.

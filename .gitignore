@@ -1,0 +1,9 @@
+# 2x render intermediates — the browser harness writes these; regenerate on demand
+*-raw.png
+
+# *.html next to a chart is a throwaway file:// render shell, not content
+out/*.html
+
+__pycache__/
+*.pyc
+.DS_Store

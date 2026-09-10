@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1686" viewBox="0 0 1120 1686" font-family="Helvetica, Arial, sans-serif">
+<defs><pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.9" fill="#d8d2c8"/></pattern></defs>
+<rect width="1120" height="1686" fill="#faf7f2"/>
+<rect x="0" y="210.0" width="1120" height="1155.0" fill="url(#dots)" opacity="0.55"/>
+<line x1="70" y1="300.0" x2="650.0" y2="300.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="650.0" y1="300.0" x2="676.0" y2="300.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="495.0" x2="650.0" y2="495.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="650.0" y1="495.0" x2="676.0" y2="495.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="690.0" x2="650.0" y2="690.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="650.0" y1="690.0" x2="676.0" y2="690.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="885.0" x2="650.0" y2="885.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="650.0" y1="885.0" x2="676.0" y2="885.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="1080.0" x2="650.0" y2="1080.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="650.0" y1="1080.0" x2="676.0" y2="1080.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="1275.0" x2="650.0" y2="1275.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="650.0" y1="1275.0" x2="676.0" y2="1275.0" stroke="#ded7cb" stroke-width="1"/>
+<text x="690.0" y="288.0" font-size="21" font-weight="700" fill="#2b2622" letter-spacing="1.2">EPISODE 1</text>
+<text x="690.0" y="316.0" font-size="17" fill="#9a9086" letter-spacing="0.2">Carricklea, Co. Sligo</text>
+<text x="690.0" y="346.0" font-size="17" font-style="italic" fill="#7d7568">Final year of school,</text>
+<text x="690.0" y="371.0" font-size="17" font-style="italic" fill="#7d7568">and the secret starts</text>
+<text x="690.0" y="483.0" font-size="21" font-weight="700" fill="#2b2622" letter-spacing="1.2">EPISODE 2</text>
+<text x="690.0" y="511.0" font-size="17" fill="#9a9086" letter-spacing="0.2">Carricklea</text>
+<text x="690.0" y="541.0" font-size="17" font-style="italic" fill="#7d7568">The affair deepens;</text>
+<text x="690.0" y="566.0" font-size="17" font-style="italic" fill="#7d7568">he won't say it aloud</text>
+<text x="690.0" y="678.0" font-size="21" font-weight="700" fill="#2b2622" letter-spacing="1.2">EPISODE 3</text>
+<text x="690.0" y="706.0" font-size="17" fill="#9a9086" letter-spacing="0.2">The Debs</text>
+<text x="690.0" y="736.0" font-size="17" font-style="italic" fill="#7d7568">He takes Rachel</text>
+<text x="690.0" y="761.0" font-size="17" font-style="italic" fill="#7d7568">to the Debs, not her</text>
+<text x="690.0" y="794.0" font-size="17" font-weight="700" fill="#9c3b34">▸ assaulted at the fundraiser</text>
+<text x="690.0" y="873.0" font-size="21" font-weight="700" fill="#2b2622" letter-spacing="1.2">EPISODE 4</text>
+<text x="690.0" y="901.0" font-size="17" fill="#9a9086" letter-spacing="0.2">Dublin</text>
+<text x="690.0" y="931.0" font-size="17" font-style="italic" fill="#7d7568">Trinity, months later:</text>
+<text x="690.0" y="956.0" font-size="17" font-style="italic" fill="#7d7568">she has friends, he has rent</text>
+<text x="690.0" y="1068.0" font-size="21" font-weight="700" fill="#2b2622" letter-spacing="1.2">EPISODE 5</text>
+<text x="690.0" y="1096.0" font-size="17" fill="#9a9086" letter-spacing="0.2">Dublin</text>
+<text x="690.0" y="1126.0" font-size="17" font-style="italic" fill="#7d7568">Friends again — Gareth out,</text>
+<text x="690.0" y="1151.0" font-size="17" font-style="italic" fill="#7d7568">Jamie circling</text>
+<text x="690.0" y="1263.0" font-size="21" font-weight="700" fill="#2b2622" letter-spacing="1.2">EPISODE 6</text>
+<text x="690.0" y="1291.0" font-size="17" fill="#9a9086" letter-spacing="0.2">Dublin → Sligo</text>
+<text x="690.0" y="1321.0" font-size="17" font-style="italic" fill="#7d7568">The best of it — then</text>
+<text x="690.0" y="1346.0" font-size="17" font-style="italic" fill="#7d7568">Sligo, then money</text>
+<text x="690.0" y="1379.0" font-size="17" font-weight="700" fill="#9c3b34">▸ her brother, at home</text>
+<path d="M 404.7 690.0 C 404.7 714.4 407.3 723.6 407.3 748.0 L 409.3 748.0 C 409.3 723.6 411.9 714.4 411.9 690.0 Z" fill="#8d7fa8" fill-opacity="0.8"/>
+<path d="M 581.0 827.0 C 581.0 851.4 578.4 860.6 578.4 885.0 L 585.6 885.0 C 585.6 860.6 583.0 851.4 583.0 827.0 Z" fill="#b09a4e" fill-opacity="0.8"/>
+<path d="M 533.3 827.0 C 533.3 851.4 530.7 860.6 530.7 885.0 L 537.9 885.0 C 537.9 860.6 535.3 851.4 535.3 827.0 Z" fill="#8a9299" fill-opacity="0.8"/>
+<path d="M 515.0 1022.0 C 515.0 1046.4 511.2 1055.6 511.2 1080.0 L 520.8 1080.0 C 520.8 1055.6 517.0 1046.4 517.0 1022.0 Z" fill="#9c6552" fill-opacity="0.8"/>
+<path d="M 542.4 1080.0 C 542.4 1104.4 545.0 1113.6 545.0 1138.0 L 547.0 1138.0 C 547.0 1113.6 549.6 1104.4 549.6 1080.0 Z" fill="#8a9299" fill-opacity="0.8"/>
+<path d="M 421.5 300.0 C 421.5 381.9 421.5 413.1 421.5 495.0 L 441.9 495.0 C 441.9 413.1 441.9 381.9 441.9 300.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 421.5 495.0 C 421.5 576.9 414.9 608.1 414.9 690.0 L 435.3 690.0 C 435.3 608.1 441.9 576.9 441.9 495.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 414.9 690.0 C 414.9 771.9 409.8 803.1 409.8 885.0 L 430.2 885.0 C 430.2 803.1 435.3 771.9 435.3 690.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 409.8 885.0 C 409.8 966.9 409.8 998.1 409.8 1080.0 L 430.2 1080.0 C 430.2 998.1 430.2 966.9 430.2 885.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 409.8 1080.0 C 409.8 1161.9 421.5 1193.1 421.5 1275.0 L 441.9 1275.0 C 441.9 1193.1 430.2 1161.9 430.2 1080.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 398.1 300.0 C 398.1 381.9 398.1 413.1 398.1 495.0 L 418.5 495.0 C 418.5 413.1 418.5 381.9 418.5 300.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 398.1 495.0 C 398.1 576.9 346.8 608.1 346.8 690.0 L 367.2 690.0 C 367.2 608.1 418.5 576.9 418.5 495.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 346.8 690.0 C 346.8 771.9 540.9 803.1 540.9 885.0 L 561.3 885.0 C 561.3 803.1 367.2 771.9 367.2 690.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 540.9 885.0 C 540.9 966.9 385.8 998.1 385.8 1080.0 L 406.2 1080.0 C 406.2 998.1 561.3 966.9 561.3 885.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 385.8 1080.0 C 385.8 1161.9 398.1 1193.1 398.1 1275.0 L 418.5 1275.0 C 418.5 1193.1 406.2 1161.9 406.2 1080.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 637.8 300.0 C 637.8 381.9 637.8 413.1 637.8 495.0 L 646.2 495.0 C 646.2 413.1 646.2 381.9 646.2 300.0 Z" fill="#6f8f96" fill-opacity="0.82"/>
+<path d="M 637.8 495.0 C 637.8 576.9 637.8 608.1 637.8 690.0 L 646.2 690.0 C 646.2 608.1 646.2 576.9 646.2 495.0 Z" fill="#6f8f96" fill-opacity="0.82"/>
+<path d="M 637.8 690.0 C 637.8 771.9 637.8 803.1 637.8 885.0 L 646.2 885.0 C 646.2 803.1 646.2 771.9 646.2 690.0 Z" fill="#6f8f96" fill-opacity="0.82"/>
+<path d="M 637.8 885.0 C 637.8 966.9 637.8 998.1 637.8 1080.0 L 646.2 1080.0 C 646.2 998.1 646.2 966.9 646.2 885.0 Z" fill="#6f8f96" fill-opacity="0.16"/>
+<path d="M 637.8 885.0 C 637.8 966.9 637.8 998.1 637.8 1080.0 L 646.2 1080.0 C 646.2 998.1 646.2 966.9 646.2 885.0 Z" fill="none" stroke="#6f8f96" stroke-width="1.5" stroke-dasharray="7 5" opacity="0.95"/>
+<path d="M 637.8 1080.0 C 637.8 1161.9 637.8 1193.1 637.8 1275.0 L 646.2 1275.0 C 646.2 1193.1 646.2 1161.9 646.2 1080.0 Z" fill="#6f8f96" fill-opacity="0.16"/>
+<path d="M 637.8 1080.0 C 637.8 1161.9 637.8 1193.1 637.8 1275.0 L 646.2 1275.0 C 646.2 1193.1 646.2 1161.9 646.2 1080.0 Z" fill="none" stroke="#6f8f96" stroke-width="1.5" stroke-dasharray="7 5" opacity="0.95"/>
+<path d="M 602.4 300.0 C 602.4 381.9 602.4 413.1 602.4 495.0 L 609.6 495.0 C 609.6 413.1 609.6 381.9 609.6 300.0 Z" fill="#8d7fa8" fill-opacity="0.82"/>
+<path d="M 602.4 495.0 C 602.4 576.9 404.7 608.1 404.7 690.0 L 411.9 690.0 C 411.9 608.1 609.6 576.9 609.6 495.0 Z" fill="#8d7fa8" fill-opacity="0.82"/>
+<path d="M 578.4 885.0 C 578.4 966.9 578.4 998.1 578.4 1080.0 L 585.6 1080.0 C 585.6 998.1 585.6 966.9 585.6 885.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 578.4 1080.0 C 578.4 1161.9 578.4 1193.1 578.4 1275.0 L 585.6 1275.0 C 585.6 1193.1 585.6 1161.9 585.6 1080.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 530.7 885.0 C 530.7 966.9 542.4 998.1 542.4 1080.0 L 549.6 1080.0 C 549.6 998.1 537.9 966.9 537.9 885.0 Z" fill="#8a9299" fill-opacity="0.82"/>
+<path d="M 511.2 1080.0 C 511.2 1161.9 511.2 1193.1 511.2 1275.0 L 520.8 1275.0 C 520.8 1193.1 520.8 1161.9 520.8 1080.0 Z" fill="#9c6552" fill-opacity="0.82"/>
+<path d="M 301.8 300.0 C 301.8 381.9 301.8 413.1 301.8 495.0 L 310.2 495.0 C 310.2 413.1 310.2 381.9 310.2 300.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 301.8 495.0 C 301.8 576.9 277.8 608.1 277.8 690.0 L 286.2 690.0 C 286.2 608.1 310.2 576.9 310.2 495.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 277.8 690.0 C 277.8 771.9 301.8 803.1 301.8 885.0 L 310.2 885.0 C 310.2 803.1 286.2 771.9 286.2 690.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 301.8 885.0 C 301.8 966.9 301.8 998.1 301.8 1080.0 L 310.2 1080.0 C 310.2 998.1 310.2 966.9 310.2 885.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 301.8 1080.0 C 301.8 1161.9 301.8 1193.1 301.8 1275.0 L 310.2 1275.0 C 310.2 1193.1 310.2 1161.9 310.2 1080.0 Z" fill="#7d8f52" fill-opacity="0.82"/>
+<path d="M 235.2 300.0 C 235.2 381.9 235.2 413.1 235.2 495.0 L 244.8 495.0 C 244.8 413.1 244.8 381.9 244.8 300.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 235.2 495.0 C 235.2 576.9 223.2 608.1 223.2 690.0 L 232.8 690.0 C 232.8 608.1 244.8 576.9 244.8 495.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 223.2 690.0 C 223.2 771.9 235.2 803.1 235.2 885.0 L 244.8 885.0 C 244.8 803.1 232.8 771.9 232.8 690.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 235.2 885.0 C 235.2 966.9 235.2 998.1 235.2 1080.0 L 244.8 1080.0 C 244.8 998.1 244.8 966.9 244.8 885.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 235.2 1080.0 C 235.2 1161.9 235.2 1193.1 235.2 1275.0 L 244.8 1275.0 C 244.8 1193.1 244.8 1161.9 244.8 1080.0 Z" fill="#7f4a4a" fill-opacity="0.82"/>
+<path d="M 171.0 300.0 C 171.0 381.9 171.0 413.1 171.0 495.0 L 177.0 495.0 C 177.0 413.1 177.0 381.9 177.0 300.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 171.0 495.0 C 171.0 576.9 159.0 608.1 159.0 690.0 L 165.0 690.0 C 165.0 608.1 177.0 576.9 177.0 495.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 159.0 690.0 C 159.0 771.9 171.0 803.1 171.0 885.0 L 177.0 885.0 C 177.0 803.1 165.0 771.9 165.0 690.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 171.0 885.0 C 171.0 966.9 171.0 998.1 171.0 1080.0 L 177.0 1080.0 C 177.0 998.1 177.0 966.9 177.0 885.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 171.0 1080.0 C 171.0 1161.9 171.0 1193.1 171.0 1275.0 L 177.0 1275.0 C 177.0 1193.1 177.0 1161.9 177.0 1080.0 Z" fill="#b0a89e" fill-opacity="0.82"/>
+<path d="M 421.5 1275.0 C 421.5 1299.4 430.7 1308.6 430.7 1333.0 L 432.7 1333.0 C 432.7 1308.6 441.9 1299.4 441.9 1275.0 Z" fill="#1b57c4" fill-opacity="0.72"/>
+<path d="M 398.1 1275.0 C 398.1 1299.4 407.3 1308.6 407.3 1333.0 L 409.3 1333.0 C 409.3 1308.6 418.5 1299.4 418.5 1275.0 Z" fill="#d0316a" fill-opacity="0.72"/>
+<path d="M 637.8 1275.0 C 637.8 1299.4 641.0 1308.6 641.0 1333.0 L 643.0 1333.0 C 643.0 1308.6 646.2 1299.4 646.2 1275.0 Z" fill="#6f8f96" fill-opacity="0.72"/>
+<path d="M 578.4 1275.0 C 578.4 1299.4 581.0 1308.6 581.0 1333.0 L 583.0 1333.0 C 583.0 1308.6 585.6 1299.4 585.6 1275.0 Z" fill="#b09a4e" fill-opacity="0.72"/>
+<path d="M 511.2 1275.0 C 511.2 1299.4 515.0 1308.6 515.0 1333.0 L 517.0 1333.0 C 517.0 1308.6 520.8 1299.4 520.8 1275.0 Z" fill="#9c6552" fill-opacity="0.72"/>
+<path d="M 301.8 1275.0 C 301.8 1299.4 305.0 1308.6 305.0 1333.0 L 307.0 1333.0 C 307.0 1308.6 310.2 1299.4 310.2 1275.0 Z" fill="#7d8f52" fill-opacity="0.72"/>
+<path d="M 235.2 1275.0 C 235.2 1299.4 239.0 1308.6 239.0 1333.0 L 241.0 1333.0 C 241.0 1308.6 244.8 1299.4 244.8 1275.0 Z" fill="#7f4a4a" fill-opacity="0.72"/>
+<path d="M 171.0 1275.0 C 171.0 1299.4 173.0 1308.6 173.0 1333.0 L 175.0 1333.0 C 175.0 1308.6 177.0 1299.4 177.0 1275.0 Z" fill="#b0a89e" fill-opacity="0.72"/>
+<text x="431.7" y="100" font-size="18" font-weight="700" text-anchor="middle" fill="#1b57c4">Connell</text>
+<text x="408.3" y="62" font-size="18" font-weight="700" text-anchor="middle" fill="#d0316a">Marianne</text>
+<text x="642.0" y="100" font-size="18" font-weight="700" text-anchor="middle" fill="#6f8f96">Rob</text>
+<text x="606.0" y="62" font-size="18" font-weight="700" text-anchor="middle" fill="#8d7fa8">Rachel</text>
+<text x="306.0" y="100" font-size="18" font-weight="700" text-anchor="middle" fill="#7d8f52">Lorraine</text>
+<text x="240.0" y="62" font-size="18" font-weight="700" text-anchor="middle" fill="#7f4a4a">Alan</text>
+<text x="174.0" y="62" font-size="18" font-weight="700" text-anchor="middle" fill="#b0a89e">Denise</text>
+<line x1="431.7" y1="107" x2="431.7" y2="286.0" stroke="#1b57c4" stroke-width="1" opacity="0.28"/>
+<line x1="408.3" y1="69" x2="408.3" y2="286.0" stroke="#d0316a" stroke-width="1" opacity="0.28"/>
+<line x1="642.0" y1="107" x2="642.0" y2="286.0" stroke="#6f8f96" stroke-width="1" opacity="0.28"/>
+<line x1="606.0" y1="69" x2="606.0" y2="286.0" stroke="#8d7fa8" stroke-width="1" opacity="0.28"/>
+<line x1="306.0" y1="107" x2="306.0" y2="286.0" stroke="#7d8f52" stroke-width="1" opacity="0.28"/>
+<line x1="240.0" y1="69" x2="240.0" y2="286.0" stroke="#7f4a4a" stroke-width="1" opacity="0.28"/>
+<line x1="174.0" y1="69" x2="174.0" y2="286.0" stroke="#b0a89e" stroke-width="1" opacity="0.28"/>
+<text x="180" y="1405.0" font-size="15" font-weight="700" letter-spacing="2" text-anchor="middle" fill="#b3aa9d">FAMILY / THE PRIVATE</text>
+<text x="445" y="1405.0" font-size="15" font-weight="700" letter-spacing="2" text-anchor="middle" fill="#b3aa9d">THE TWO OF THEM</text>
+<text x="635" y="1405.0" font-size="15" font-weight="700" letter-spacing="2" text-anchor="middle" fill="#b3aa9d">THE SOCIAL WORLD</text>
+<text x="60" y="1447.0" font-size="12" font-weight="700" letter-spacing="1.2" fill="#9a9086">STRANDS — the two leads are the two saturated lanes</text>
+<rect x="60" y="1463.0" width="20" height="13" rx="3" fill="#1b57c4" fill-opacity="0.85"/>
+<text x="86" y="1475.0" font-size="14" font-weight="600" fill="#2b2622">Connell</text>
+<rect x="163" y="1463.0" width="20" height="13" rx="3" fill="#d0316a" fill-opacity="0.85"/>
+<text x="189" y="1475.0" font-size="14" font-weight="600" fill="#2b2622">Marianne</text>
+<rect x="274" y="1463.0" width="14" height="13" rx="3" fill="#6f8f96" fill-opacity="0.85"/>
+<text x="294" y="1475.0" font-size="14" font-weight="600" fill="#2b2622">Rob</text>
+<rect x="339" y="1463.0" width="14" height="13" rx="3" fill="#8d7fa8" fill-opacity="0.85"/>
+<text x="359" y="1475.0" font-size="14" font-weight="600" fill="#2b2622">Rachel</text>
+<rect x="428" y="1463.0" width="14" height="13" rx="3" fill="#b09a4e" fill-opacity="0.85"/>
+<text x="448" y="1475.0" font-size="14" font-weight="600" fill="#2b2622">Peggy</text>
+<rect x="509" y="1463.0" width="14" height="13" rx="3" fill="#8a9299" fill-opacity="0.85"/>
+<text x="529" y="1475.0" font-size="14" font-weight="600" fill="#2b2622">Gareth</text>
+<rect x="598" y="1463.0" width="14" height="13" rx="3" fill="#9c6552" fill-opacity="0.85"/>
+<text x="618" y="1475.0" font-size="14" font-weight="600" fill="#2b2622">Jamie</text>
+<rect x="680" y="1463.0" width="14" height="13" rx="3" fill="#6e9078" fill-opacity="0.85"/>
+<text x="700" y="1475.0" font-size="14" font-weight="600" fill="#2b2622">Helen</text>
+<rect x="761" y="1463.0" width="14" height="13" rx="3" fill="#9aa0a6" fill-opacity="0.85"/>
+<text x="781" y="1475.0" font-size="14" font-weight="600" fill="#2b2622">Lukas</text>
+<rect x="842" y="1463.0" width="14" height="13" rx="3" fill="#7d8f52" fill-opacity="0.85"/>
+<text x="862" y="1475.0" font-size="14" font-weight="600" fill="#2b2622">Lorraine</text>
+<rect x="947" y="1463.0" width="14" height="13" rx="3" fill="#7f4a4a" fill-opacity="0.85"/>
+<text x="967" y="1475.0" font-size="14" font-weight="600" fill="#2b2622">Alan</text>
+<rect x="60" y="1489.0" width="14" height="13" rx="3" fill="#b0a89e" fill-opacity="0.85"/>
+<text x="80" y="1501.0" font-size="14" font-weight="600" fill="#2b2622">Denise</text>
+<rect x="149" y="1489.0" width="14" height="13" rx="3" fill="#6d78a8" fill-opacity="0.85"/>
+<text x="169" y="1501.0" font-size="14" font-weight="600" fill="#2b2622">Gillian</text>
+<text x="1060" y="1501.0" font-size="13" fill="#8b8377" text-anchor="end">hatched lane = off-page that episode</text>
+<line x1="60" y1="1544.0" x2="1060" y2="1544.0" stroke="#ded7cb"/>
+<text x="60" y="1578.0" font-family="Georgia, serif" font-size="32" fill="#22201d">Normal People — the braid, vertical (panel A of 2)</text>
+<text x="60" y="1604.0" font-size="16" fill="#6f675c">Time runs down the page. Episodes 1–6.</text>
+<text x="60" y="1630.0" font-size="15" font-style="italic" fill="#9a9086">Left of centre: family and the private. Centre: the two of them. Right: the social world — school, Trinity, and the partners.</text>
+<text x="60" y="1656.0" font-size="15" font-style="italic" fill="#9a9086">Where the two centre lanes touch, they are together. Panel B carries on from the summer of episode 6.</text>
+</svg>
