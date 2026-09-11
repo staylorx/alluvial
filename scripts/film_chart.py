@@ -52,6 +52,18 @@ ANCHORS = {"play": "acts and scenes", "novel": "its parts", "series": "its episo
            "musical": "its acts"}
 
 
+# The rubric a story is graded by is DECLARED in the story (`rubric: romcom-27`),
+# never assumed: these are romcom-movie instruments and a story may or may not be
+# one. A story that declares none gets no categories, no score note and no rubric
+# text anywhere — silence is the honest default.
+RUBRICS = {rubric27.ID: rubric27}
+
+
+def rubric_for(film: dict):
+    """The rubric grading this story, or None when it declares none."""
+    return RUBRICS.get(film.get("rubric") or "")
+
+
 def load(slug: str) -> dict:
     """Films come from the data store: films/<slug>.yaml (JSON still works)."""
     import films_yaml
@@ -152,11 +164,11 @@ def spec_for(film: dict, cb: bool = False, mini: bool = False) -> dict:
     expr = film.get("expression") or "film"
     if film.get("title_notes"):
         notes = [(t, "note") for t in film["title_notes"]]
-    elif expr != "film":
-        notes = [("No beat carries a rubric category: the rubric is the romcom "
-                  "rubric, and this is not a romcom.", "note")]
-    else:
+    elif rubric_for(film):
         notes = [("Each beat names the rubric category its shape belongs to.", "note")]
+    else:
+        # no rubric declared: say nothing about categories at all
+        notes = []
     if film.get("score") and not film.get("title_notes"):
         notes.append((f"Scored {film['score']}/30 on the rubric \u2014 {film.get('score_note', '')}".rstrip(" \u2014"),
                       "note"))
@@ -221,8 +233,14 @@ def beats_data(film: dict, spec: dict, H: float, half: float) -> list[dict]:
         else:
             changes = events_for(i, char, S, rows)
         cats = film["beats"][i].get("cats")
-        rub = ([rubric27.BY_ID[c] for c in cats if c in rubric27.BY_ID]
-               if cats is not None else rubric27.for_beat(i + 1))
+        graded = rubric_for(film)
+        if cats is not None:
+            earned = [graded.BY_ID[c] for c in cats if c in graded.BY_ID] if graded else []
+        else:
+            # An omitted `cats` on a GRADED story falls back to that rubric's own
+            # house map; an ungraded story gets nothing, because there is nothing
+            # to name a category from.
+            earned = graded.for_beat(i + 1) if graded else []
         out.append({
             "n": i + 1,
             "id": f"beat-{i+1:02d}",
@@ -232,7 +250,7 @@ def beats_data(film: dict, spec: dict, H: float, half: float) -> list[dict]:
             "changes": changes,
             "tag": (lambda t: (t if isinstance(t, str) else " ".join(t))
                 .replace("\u25b8 ", ""))(c.get("cap_extra", ("", ""))[0]),
-            "rubric": [dict(rc) for rc in rub],
+            "rubric": [dict(rc) for rc in earned],
         })
     return out
 

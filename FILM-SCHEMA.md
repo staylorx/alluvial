@@ -1,7 +1,9 @@
 # Film chart data — the format
 
-One JSON file per film: `films/<slug>.json`. Everything visual is computed from
-it, so authoring a film is filling in a table, not drawing a chart. Two rules
+One YAML file per story: `films/<slug>.yaml` (the module name and this directory
+are still "films" — the store holds stories, and `expression` says which form).
+Everything visual is computed from it, so authoring a story is filling in a table,
+not drawing a chart. Two rules
 that matter most:
 
 - **Captions are chart captions, not prose.** Two lines, each ≤ **47** characters.
@@ -56,6 +58,18 @@ that matter most:
   than cinema.
 - **`runtime_min`** — a film's running time. Leave it off for a play or a
   novel; there is no honest number, so don't invent one.
+- **`rubric`** — the rubric that grades a story, if any: today `romcom-27`, the
+  27-point romcom rubric in `scripts/rubric27.py`. **Declared, never assumed.**
+  The rubrics are romcom-movie instruments and a story may or may not be one, so
+  a story with no `rubric` gets no categories, no score note and no rubric text
+  on its page — say nothing rather than implying the romcom rubric.
+  `score` and `score_note` REQUIRE it (the schema enforces the dependency).
+- **`cats`** on a beat — which category of the story's DECLARED rubric that
+  beat's shape belongs to. Only exists for a graded story; nothing is inferred
+  for a story that declares no rubric. `cats: []` is a legal explicit "nothing
+  earned here". (Before 2026-09-11 an omitted `cats` fell back to the HOUSE's own
+  beat map — 27 Dresses' — for any story, which quietly gave non-romcoms romcom
+  commentary. That fallback is now reachable only via `rubric: romcom-27`.)
 - **`order`** — every id, most important first. Stacks keep this order, so the
   chart reads consistently beat to beat. Lane **label size follows width**, so
   order matters less than width.
@@ -103,10 +117,9 @@ must run without error.
 
 ## What NOT to do
 
-- **A non-romcom must carry `cats: []` on every beat.** An OMITTED `cats` falls
-  back to the romcom rubric category for that beat number (`rubric27.for_beat`),
-  so a play or a novel silently acquires romcom commentary it never earned. Put
-  the empty list in — it is a statement, not a default.
+- **Don't put a score, a score note or a beat category on a story that declares
+  no `rubric`.** Grading is declared per story; those fields are claims about a
+  named instrument. The validator and the schema both refuse them without it.
 - Don't write prose, reviews, or opinion into `cap` — the captions are the
   film's skeleton.
 - Don't invent beats that aren't in the film, and don't invent character names

@@ -56,7 +56,10 @@ FRAME = [
     "the house is a true 27 is still under review. You don't ding the house the party's at.",
 ]
 
-# 1-based beat order -> the rubric categories that beat earns.
+# 1-based beat order -> the rubric categories that beat earns. THIS IS THE HOUSE'S
+# OWN MAP (27 Dresses: the cab, Casey, the gesture) — it is not a store-wide
+# default and it is not consulted for a story that does not declare `rubric:
+# romcom-27`. A story the rubric does not grade gets no categories at all.
 BEAT_CATS = {
     1: ["meet"],      # the cab, both in wedding clothes, playing roles
     2: ["chem"],      # they argue beautifully
@@ -69,9 +72,15 @@ BEAT_CATS = {
 
 BY_ID = {c["id"]: c for c in CATS}
 
+# The rubric's id as a story declares it (`rubric: romcom-27` in the store).
+ID = "romcom-27"
+
 
 def for_beat(n: int) -> list[dict]:
-    """The rubric text a given beat earns ([] when the beat is structure only)."""
+    """The HOUSE's beat n earns ([] when the beat is structure only).
+
+    Only meaningful for the story this map was written from; a caller must first
+    know the story declares this rubric."""
     return [BY_ID[cid] for cid in BEAT_CATS.get(n, [])]
 
 

@@ -25,7 +25,6 @@ import films_yaml as FY          # noqa: E402
 import rubric27                  # noqa: E402
 
 MAX_BEATS, MAX_LANES, CAP_LINES, CAP_CHARS = 13, 8, 2, 62
-CAT_IDS = set(rubric27.BY_ID)
 # The form the work is told in. Absent means a film (the store's first medium);
 # anything else is anchored to its own divisions rather than to minutes.
 EXPRESSIONS = {"film", "play", "novel", "series", "short story", "essay", "poem",
@@ -59,6 +58,18 @@ def schema_errors(film: dict) -> list[str]:
     expr = film.get("expression")
     if expr is not None and expr not in EXPRESSIONS:
         errs.append(f"expression {expr!r} is not one of {sorted(EXPRESSIONS)}")
+    # Grading is DECLARED per story. A score, a score note or a beat category with
+    # no declared rubric is a claim about an instrument nobody named — and a story
+    # the rubric does not grade must carry none of them.
+    graded = FC.rubric_for(film)
+    rid = film.get("rubric")
+    if rid is not None and not graded:
+        errs.append(f"rubric {rid!r} is not one of {sorted(FC.RUBRICS)}")
+    if not graded:
+        for key in ("score", "score_note"):
+            if film.get(key) is not None:
+                errs.append(f"{key} present without a rubric — nothing grades this story")
+    cat_ids = set(graded.BY_ID) if graded else set()
     ids = [c["id"] for c in film.get("chars", [])]
     chars = {c["id"]: c for c in film.get("chars", [])}
     if not ids:
@@ -99,7 +110,7 @@ def schema_errors(film: dict) -> list[str]:
         if cats is not None and not isinstance(cats, list):
             errs.append(f"beat {i}: cats is {type(cats).__name__}, not a list")
         for cid in (cats if isinstance(cats, list) else []):
-            if cid not in CAT_IDS:
+            if cid not in cat_ids:
                 errs.append(f"beat {i}: unknown rubric id {cid!r}")
         if not isinstance(b.get("name", ""), str) or not isinstance(b.get("tag", ""), str):
             errs.append(f"beat {i}: name/tag must be strings")

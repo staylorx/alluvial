@@ -6,6 +6,7 @@
   "type": "object",
   "additionalProperties": false,
   "required": ["slug", "title", "chars", "beats"],
+  "dependentRequired": {"score": ["rubric"], "score_note": ["rubric"]},
   "properties": {
     "slug": {"type": "string", "pattern": "^[a-z0-9-]+$"},
     "title": {"type": "string", "minLength": 1},
@@ -16,9 +17,13 @@
     "year": {"type": ["integer", "null"], "minimum": 1, "maximum": 2100,
              "description": "The work's year — a film's release, a play's first staging or composition. Not bounded at 1900: the store now holds works older than cinema."},
     "runtime_min": {"type": ["integer", "null"], "minimum": 1, "maximum": 400},
+    "rubric": {
+      "enum": ["romcom-27"],
+      "description": "The rubric that grades THIS story, if any. Absent means ungraded. The rubrics are romcom-movie instruments, so a story may or may not have one — a play, a novel or an essay usually does not, and nothing may be assumed about a story that does not say."
+    },
     "score": {"type": ["integer", "null"], "minimum": 0, "maximum": 30,
-              "description": "Whole-film rubric score out of 30, or null if not yet taken."},
-    "score_note": {"type": "string"},
+              "description": "Whole-film rubric score out of 30, or null while ungraded. Requires `rubric`."},
+    "score_note": {"type": "string", "description": "Requires `rubric`."},
     "blurb": {"type": "string", "description": "Optional page copy; generated if absent."},
     "legend_object": {"type": "string", "description": "A title object rather than a person, e.g. 'the dresses'."},
     "legend_note": {"type": "string"},

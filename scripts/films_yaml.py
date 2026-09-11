@@ -33,7 +33,7 @@ ROOT = os.path.abspath(os.path.join(HERE, ".."))
 FILMS = os.path.join(ROOT, "films")
 SCHEMA = os.path.join(ROOT, "schema")
 
-FILM_KEYS = ["slug", "title", "expression", "year", "runtime_min", "score", "score_note", "blurb",
+FILM_KEYS = ["slug", "title", "expression", "year", "runtime_min", "rubric", "score", "score_note", "blurb",
              "legend_object", "legend_note", "title_notes", "title_block", "mirror",
              "dashed", "never_separate_ok", "order", "chars", "beats"]
 CHAR_KEYS = ["id", "name", "width", "colour"]

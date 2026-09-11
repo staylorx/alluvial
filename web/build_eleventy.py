@@ -85,7 +85,10 @@ def build(repo):
             "hits": FC.hits(spec, H, spec.get("beat_hit_half", 78)),
             "minihits": FC.hits(mspec, Hm, mspec.get("beat_hit_half", 7.5)),
             "beats": beats,
-            "rubric": RUBRIC,
+            # The rubric travels with the story that declares one. A story that
+            # declares none gets null here, so the page layer has nothing to print
+            # — the romcom rubric is never assumed onto a story it doesn't grade.
+            "rubric": RUBRIC if FC.rubric_for(film) else None,
         })
         # a film with two clocks gets the second chart underneath the braid
         if any(os.path.exists(os.path.join(FILMS, f"{slug}-timechart{ext}"))
