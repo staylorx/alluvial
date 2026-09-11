@@ -54,10 +54,26 @@ python3 ~/.hermes/skills/creative/narrative-alluvial/scripts/verify_render.py \
 - [x] 27 Dresses vertical, tagged with the romcom rubric beats
 - [x] Checkpoint: repo, verified regenerable (all 11 SVGs byte-identical after the move)
 
+## Shipped: film pages on staylorx.com
+
+Live: **https://staylorx.com/movies/27-dresses/** (section at `/movies/`).
+Nav entry added; the site's build-time search index picks it up.
+Repo: `taybiz/com_staylorx_www`, commit `b51aef3` (push = deploy).
+Publisher: `web/build_eleventy.py` -> `src/_includes/charts/*.svg` +
+`src/_data/films.json`; page template `src/movies/27-dresses.njk`; `inline`
+shortcode in `.eleventy.js`.
+
+Scale lesson (cost one round): the site's post column is capped at 660px, so a
+1010px chart rendered its captions at ~11px and read as broken. A chart page must
+widen the layout for itself (`.layout` 1240px / `.main` 1040px) -> chart renders
+at 976px, captions 16.4px. Phones get a fixed 820px chart inside a horizontal
+scroller (13.8px) instead of a 6px fit-to-width.
+
 ## Next
 
-- [ ] **Web pages** — one per film, static on staylorx.com, clickable beats that
-      jump to the writing for that beat. See `web/README.md`.
+- [ ] **Beat prose.** Every beat already has an empty `prose` field in
+      `films.json` and its own anchor, so writing lands with no layout work.
+- [ ] More films: the data table is the only new input per film.
 - [ ] Chunked mode for very long works (Anna Karenina: ~8 parts, ~90 beats).
       Long scroll is the goal; per-part SVG panels keep each file small.
 - [ ] Lane budget: 6–11 lanes is the legible maximum. Needs a strategy for
