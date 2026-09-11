@@ -1,108 +1,96 @@
 #!/usr/bin/env python3
-"""Emit the staylorx.com assets for a film chart page.
+"""Emit the staylorx.com assets for EVERY film chart page.
 
 Writes into an Eleventy repo:
   src/_includes/charts/<slug>.svg        the full chart (inline, internal beat links)
   src/_includes/charts/<slug>-mini.svg   the compact map for the sticky strip
-  src/_data/films.json                   film + beat data the page template loops
+  src/_data/films.json                   the array the paginated template pages over
 
-Deterministic: no timestamps, no environment reads — a rebuild of the same
-commit reproduces the same bytes, which is what CI checks.
+One film = one file in films/ (see FILM-SCHEMA.md). Adding a film needs no new
+template: the paginated page generates itself from films.json.
 
-Usage:  python3 build_eleventy.py /tmp/staylorx-charts
+Deterministic: no timestamps, no environment reads — a rebuild of the same commit
+reproduces the same bytes, which is what CI checks.
+
+Usage:  python3 build_eleventy.py /tmp/staylorx-allfilms
 """
+import glob
 import json
 import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, HERE)
-sys.path.insert(0, os.path.join(HERE, "..", "scripts"))
+for p in (HERE, os.path.join(HERE, "..", "scripts")):
+    if p not in sys.path:
+        sys.path.insert(0, p)
 
-import build_page as BP
-from alluvial_vlib import render_v
-import rubric27
+import film_chart as FC          # noqa: E402
+import rubric27                  # noqa: E402
+
+FILMS = os.path.abspath(os.path.join(HERE, "..", "films"))
+
+RUBRIC = {
+    "title": rubric27.TITLE,
+    "kaling": rubric27.KALING,
+    "frame": rubric27.FRAME,
+    "cats": rubric27.CATS,
+    "genre_points": sum(c["pts"] for c in rubric27.CATS if c["id"] != "ebert"),
+}
 
 
-def hits(spec, H, half):
-    """Overlay geometry as percentages, so the template can lay real HTML
-    anchors over an SVG that scales to any column width."""
-    out = []
-    for i, c in enumerate(spec["cols"]):
-        out.append({
-            "n": i + 1,
-            "href": f"#beat-{i+1:02d}",
-            "name": c["beat"],
-            "top": round((spec["ys"][i] - half) / H * 100, 3),
-            "height": round((2 * half) / H * 100, 3),
-        })
-    return out
+def blurb(film, n_beats, n_lanes):
+    if film.get("blurb"):
+        return film["blurb"]
+    return (f"{n_beats} beats, {n_lanes} lanes. Who is with whom, and the moment it "
+            "changes. Each beat carries the rubric category it earns, and the notes "
+            "under it are computed from the diagram's own geometry, not written by hand.")
 
 
 def build(repo):
-    svg_full, spec, H = BP.chart_svg(False)
-    svg_mini, mspec, Hm = BP.chart_svg(False, mini=True)
-    rows = BP.lane_rows(spec)
-    char, S = spec["char"], spec["scale"]
-
-    beats = []
-    for i, c in enumerate(spec["cols"]):
-        if i == 0:
-            changes = [f"{char[k][0]} enters" for k in spec["order"] if k in rows[0]]
-        else:
-            changes = BP.events_for(i, char, S, rows)
-        tag = c.get("cap_extra", ("", ""))[0].replace("\u25b8 ", "")
-        rubric = rubric27.for_beat(i + 1)
-        beats.append({
-            "n": i + 1,
-            "id": f"beat-{i+1:02d}",
-            "name": c["beat"],
-            "loc": c["loc"],
-            "line": c["cap"][0],
-            "changes": changes,
-            "tag": tag,
-            "rubric": rubric,     # the rubric's own words for the categories it earns
-        })
-
-    films = {
-        "27-dresses": {
-            "slug": "27-dresses",
-            "title": "27 Dresses",
-            "year": 2008,
-            "url": "/movies/27-dresses/",
-            "runtime": "111 minutes",
-            "blurb": ("Eleven beats, six lanes. Who is with whom, and the moment it "
-                      "changes. Each beat carries the rubric category it earns, and the "
-                      "notes under it are computed from the diagram's own geometry, not "
-                      "written by hand."),
-            "chart": f"src/_includes/charts/27-dresses.svg",
-            "mini": f"src/_includes/charts/27-dresses-mini.svg",
-            "hits": hits(spec, H, spec.get("beat_hit_half", 78)),
-            "minihits": hits(mspec, Hm, mspec.get("beat_hit_half", 7.5)),
-            "beats": beats,
-            # the rubric itself, as text, so the page carries the argument
-            "rubric": {
-                "title": rubric27.TITLE,
-                "kaling": rubric27.KALING,
-                "frame": rubric27.FRAME,
-                "cats": rubric27.CATS,
-                "genre_points": sum(c["pts"] for c in rubric27.CATS if c["id"] != "ebert"),
-            },
-        }
-    }
-
     charts = os.path.join(repo, "src", "_includes", "charts")
-    os.makedirs(charts, exist_ok=True)
-    open(os.path.join(charts, "27-dresses.svg"), "w").write(svg_full)
-    open(os.path.join(charts, "27-dresses-mini.svg"), "w").write(svg_mini)
     data = os.path.join(repo, "src", "_data")
-    open(os.path.join(data, "films.json"), "w").write(json.dumps(films, indent=2) + "\n")
+    os.makedirs(charts, exist_ok=True)
 
-    print(f"chart  {len(svg_full)/1024:.1f} KB  ({H:.0f}px tall, {len(spec['cols'])} beats)")
-    print(f"mini   {len(svg_mini)/1024:.1f} KB  ({Hm:.0f}px tall)")
-    print(f"films.json {len(json.dumps(films))/1024:.1f} KB")
-    print(f"wrote -> {charts}/27-dresses.svg, 27-dresses-mini.svg, {data}/films.json")
+    entries, seen = [], sorted(glob.glob(os.path.join(FILMS, "*.json")))
+    for path in seen:
+        slug = os.path.basename(path)[:-5]
+        film = json.load(open(path, encoding="utf-8"))
+        svg, spec, H = FC.render(film)
+        mini, mspec, Hm = FC.render(film, mini=True)
+        open(os.path.join(charts, f"{slug}.svg"), "w", encoding="utf-8").write(svg)
+        open(os.path.join(charts, f"{slug}-mini.svg"), "w", encoding="utf-8").write(mini)
+
+        beats = FC.beats_data(film, spec, H, spec.get("beat_hit_half", 78))
+        n_lanes = len(spec["order"])
+        entries.append({
+            "slug": slug,
+            "title": film["title"],
+            "year": film.get("year"),
+            "url": f"/movies/{slug}/",
+            "score": film.get("score"),
+            "score_note": film.get("score_note", ""),
+            "runtime": (f"{film['runtime_min']} minutes" if film.get("runtime_min") else ""),
+            "n_beats": len(beats),
+            "n_lanes": n_lanes,
+            "blurb": blurb(film, len(beats), n_lanes),
+            "chart": f"src/_includes/charts/{slug}.svg",
+            "mini": f"src/_includes/charts/{slug}-mini.svg",
+            "hits": FC.hits(spec, H, spec.get("beat_hit_half", 78)),
+            "minihits": FC.hits(mspec, Hm, mspec.get("beat_hit_half", 7.5)),
+            "beats": beats,
+            "rubric": RUBRIC,
+        })
+        print(f"  {slug:34s} {len(beats):2d} beats  {n_lanes} lanes  "
+              f"{len(svg)/1024:5.1f} KB  H={H:.0f}")
+
+    # the compendium's own order: by score, unscored last
+    entries.sort(key=lambda e: (-(e["score"] if e["score"] else -1), e["title"]))
+    open(os.path.join(data, "films.json"), "w", encoding="utf-8").write(
+        json.dumps(entries, indent=1, ensure_ascii=False) + "\n")
+
+    print(f"\n{len(entries)} film(s) -> {data}/films.json "
+          f"({os.path.getsize(os.path.join(data, 'films.json'))/1024:.1f} KB)")
 
 
 if __name__ == "__main__":
-    build(sys.argv[1] if len(sys.argv) > 1 else "/tmp/staylorx-charts")
+    build(sys.argv[1] if len(sys.argv) > 1 else "/tmp/staylorx-allfilms")

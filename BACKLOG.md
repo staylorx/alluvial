@@ -86,9 +86,23 @@ Live: same URL, site commit `0096f90`.
 - **The rubric is quoted, not paraphrased.** If the rubric changes in the draft,
   change `scripts/rubric27.py` and rebuild — don't edit page copy.
 
+## The pipeline (30 films)
+
+`films/<slug>.json` (format: `FILM-SCHEMA.md`) -> `scripts/film_chart.py` (layout is
+computed, not drawn) -> `web/build_eleventy.py` -> the site's paginated
+`src/movies/film.njk`, which pages one over `films.json`. Adding a film is a data
+file; no new template. Verified faithful: 27 Dresses (which keeps its hand-tuned
+`groups`) renders **byte-identical** through the generic path.
+
+Layout rules that matter: in lane space larger y sits further RIGHT (mirror=False);
+a film may carry explicit `groups` instead of `clusters` for hand-tuning; captions
+are 2 lines of <=62 chars or the layout breaks; 8 lanes and 13 beats are the
+practical ceilings.
+
 ## Next
 
-- [ ] More films: the data table is the only new input per film.
+- [ ] Batch-verify every film's chart (lane overlaps + caption collisions) before
+      publishing, and spot-check captions against each film's cited source.
 - [ ] Focus mode for big casts (Anna Karenina): click a character, dim the rest.
 - [ ] Chunked mode for very long works (Anna Karenina: ~8 parts, ~90 beats).
       Long scroll is the goal; per-part SVG panels keep each file small.
