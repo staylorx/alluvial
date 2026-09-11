@@ -149,9 +149,9 @@ only one of the forms they arrive in. Two changes landed together:
   1900), and a non-film titles itself by form instead of counting minutes
   ("A play — the anchors are acts and scenes, not minutes.").
 - **`films/hamlet.yaml`** — the first non-film: 13 beats, 8 lanes, every beat
-  anchored to an act and scene. Every beat carries `cats: []` explicitly — an
-  OMITTED `cats` silently inherits the romcom category for that beat number
-  (`rubric27.for_beat`), which is the trap a non-romcom falls into. The ghost
+  anchored to an act and scene. Hamlet declares no `rubric`, so no beat carries a
+  category and nothing is claimed for it (`cats: []` on its beats is an explicit
+  "nothing earned here"). The ghost
   holds a lane; Fortinbras, Rosencrantz and Guildenstern, the players, Osric and
   the gravediggers are named in captions/tags plus `chart_limits`.
 
