@@ -1,0 +1,96 @@
+# A film's two-clock chart: as screened vs as it happened.
+#
+# Schema: schema/timechart.schema.json   (enforced — run: python3 scripts/stories_yaml.py validate)
+# yaml-language-server: $schema=schema/timechart.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: pulp-fiction
+title: Pulp Fiction
+year: 1994
+runtime_min: 154
+sub: Nine scenes. The left spine is the order the film screens them; the right spine is the order they happen to
+  the people in them.
+notes:
+- Where a ribbon runs straight, the story is telling itself in order. Where it crosses, the film cut time.
+- 'Chronology is the standard reading of the film: the diner robbery that opens it is the last thing that happens.'
+legend_note: 'Node numbering: left spine = screening position, right spine = real order. The gap between the two
+  numbers is the edit.'
+threads:
+  jules: Jules & Vincent
+  butch: Butch
+  mia: Mia
+  diners: the diners
+  wolf: the cleanup
+scenes:
+- id: diner-plan
+  label: Two diners plan a robbery
+  chapter: PROLOGUE
+  as_screened: 1
+  happened: 2
+  thread: diners
+  mins: 14
+- id: apartment
+  label: The apartment, the briefcase
+  chapter: PRELUDE — VINCENT & MIA
+  as_screened: 2
+  happened: 3
+  thread: jules
+  mins: 22
+- id: mia-date
+  label: Jack Rabbit Slim's, the needle
+  chapter: VINCENT & MARSELLUS'S WIFE
+  as_screened: 3
+  happened: 6
+  thread: mia
+  mins: 34
+- id: koons
+  label: Captain Koons and the watch
+  chapter: PRELUDE — THE GOLD WATCH
+  as_screened: 4
+  happened: 1
+  thread: butch
+  mins: 9
+- id: fight
+  label: The fight, the escape
+  chapter: THE GOLD WATCH
+  as_screened: 5
+  happened: 7
+  thread: butch
+  mins: 26
+- id: chopper
+  label: The pawn shop, Zed's chopper
+  chapter: THE GOLD WATCH
+  as_screened: 6
+  happened: 8
+  thread: butch
+  mins: 24
+- id: bonnie
+  label: Marvin, Jimmy's house, the Wolf
+  chapter: THE BONNIE SITUATION
+  as_screened: 7
+  happened: 4
+  thread: wolf
+  mins: 29
+- id: robbery
+  label: The robbery; Jules lets them go
+  chapter: EPILOGUE
+  as_screened: 8
+  happened: 5
+  thread: jules
+  mins: 12
+- id: rideoff
+  label: Butch and Fabienne ride off
+  chapter: THE GOLD STOP
+  as_screened: 9
+  happened: 9
+  thread: butch
+  mins: 4

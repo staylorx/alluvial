@@ -17,7 +17,7 @@ import 'package:alluvial_render/alluvial_render.dart';
 import 'package:alluvial_store_yaml/alluvial_store_yaml.dart';
 
 Future<void> main(List<String> args) async {
-  final store = args.isNotEmpty ? args[0] : '/tmp/alluvial-dart/films';
+  final store = args.isNotEmpty ? args[0] : '/tmp/alluvial-dart/stories';
   final reference = args.length > 1 ? args[1] : '/tmp/ref';
   final only = args.length > 2 ? args[2] : null;
 
@@ -120,7 +120,7 @@ Future<void> main(List<String> args) async {
 
   stdout.writeln(
     jsonEncode({
-      'films': keys.length,
+      'stories': keys.length,
       'svg_identical': identical,
       'svg_differing': differing,
       'svg_missing_reference': missing,

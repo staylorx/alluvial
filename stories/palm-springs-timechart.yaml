@@ -1,0 +1,143 @@
+# A film's two-clock chart: as screened vs as it happened.
+#
+# Schema: schema/timechart.schema.json   (enforced — run: python3 scripts/stories_yaml.py validate)
+# yaml-language-server: $schema=schema/timechart.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: palm-springs
+title: Palm Springs
+year: 2020
+runtime_min: 90
+sub: 'Two clocks: what the film shows you, and what actually happens. The chop here is not shuffled scenes — it
+  is one day, hit over and over.'
+notes:
+- 'The repetition: positions 2-12 on the right spine are not distinct dates, they are one day (9 November) replayed.
+  A strict 1..N spine cannot give two scenes the same position, so the repeated day is unfolded once — the wake,
+  the passes at it, then its evening and night — and every loop scene points into that one column. So read each
+  node''s two numbers as ''where the film puts it'' and ''where in the day it lives''; where the ribbons run back
+  up the spine, that cut is the loop resetting.'
+- 'Only four things happen once in real time: the 8th of November (Sarah and Abe, position 1, screened eighth as
+  the film''s late reveal), the pass Sarah follows Nyles into the cave on, the pass she blows the cave up on, and
+  the 10th (position 13). Everything between is one day repeating.'
+- 'The film opens with Nyles already inside the loop: his own first pass at 9 November, and the long stretch of
+  passes before Sarah arrives, are never screened — which is why the opening scene already sits deep in the column
+  rather than at its start.'
+- 'The last stretch runs straight: the final wedding, the cave, and the morning after are the only part of the film
+  told end to end. Roy''s reconciliation with Nyles in Irvine is folded into his hunting beat; the mid-credits scene
+  is placed last although its date is deliberately unresolved (Roy is still looping, Nyles is not).'
+legend_note: 'Node numbering: left spine = screening position, right spine = position in the day. Where a ribbon
+  runs back up the spine, the film has cut back to the start of the same day.'
+threads:
+  nyles: Nyles
+  sarah: Sarah
+  roy: Roy
+  wedding: the wedding
+  cave: the cave
+scenes:
+- id: wake
+  label: Nyles wakes; it's the wedding day
+  chapter: NOVEMBER 9
+  as_screened: 1
+  happened: 2
+  thread: nyles
+  mins: 4
+- id: reception
+  label: The reception; he meets Sarah
+  chapter: NOVEMBER 9
+  as_screened: 2
+  happened: 8
+  thread: wedding
+  mins: 8
+- id: arrow
+  label: 'The desert: Roy''s arrow'
+  chapter: NOVEMBER 9
+  as_screened: 3
+  happened: 9
+  thread: roy
+  mins: 3
+- id: vortex
+  label: Sarah follows him into the cave
+  chapter: NOVEMBER 9
+  as_screened: 4
+  happened: 10
+  thread: cave
+  mins: 4
+- id: explained
+  label: It's the 9th again; Nyles explains
+  chapter: THE LOOP
+  as_screened: 5
+  happened: 3
+  thread: nyles
+  mins: 8
+- id: royhunt
+  label: Roy hunts him, again and again
+  chapter: THE LOOP
+  as_screened: 6
+  happened: 4
+  thread: roy
+  mins: 6
+- id: reckless
+  label: She gives in; the reckless loops
+  chapter: THE LOOP
+  as_screened: 7
+  happened: 5
+  thread: sarah
+  mins: 10
+- id: affair
+  label: 'Abe wakes her: the night before'
+  chapter: NOVEMBER 8
+  as_screened: 8
+  happened: 1
+  thread: sarah
+  mins: 5
+- id: runover
+  label: She runs him over; Nyles confesses
+  chapter: THE LOOP
+  as_screened: 9
+  happened: 6
+  thread: nyles
+  mins: 8
+- id: study
+  label: Sarah studies physics; a way out
+  chapter: THE LOOP
+  as_screened: 10
+  happened: 7
+  thread: sarah
+  mins: 8
+- id: speech
+  label: One last wedding; her speech
+  chapter: NOVEMBER 9
+  as_screened: 11
+  happened: 11
+  thread: wedding
+  mins: 6
+- id: cave
+  label: 'The cave: the kiss, the detonator'
+  chapter: NOVEMBER 9
+  as_screened: 12
+  happened: 12
+  thread: cave
+  mins: 5
+- id: pool
+  label: The pool; the residents return
+  chapter: NOVEMBER 10
+  as_screened: 13
+  happened: 13
+  thread: nyles
+  mins: 3
+- id: credits
+  label: 'Mid-credits: Roy at the wedding'
+  chapter: MID-CREDITS
+  as_screened: 14
+  happened: 14
+  thread: roy
+  mins: 2

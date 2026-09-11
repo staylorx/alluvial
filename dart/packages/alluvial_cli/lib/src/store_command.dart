@@ -8,7 +8,7 @@ import 'output_format.dart';
 /// Base for every verb that works on a store.
 ///
 /// `--store` and `--output` are declared on the verb rather than only on the
-/// runner, so `alluvial list --store films` and `alluvial --store films list`
+/// runner, so `alluvial list --store stories` and `alluvial --store stories list`
 /// both work — an agent that puts the flag after the verb is not punished for
 /// it.
 ///

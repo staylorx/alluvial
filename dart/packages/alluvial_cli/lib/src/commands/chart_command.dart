@@ -56,7 +56,7 @@ final class ChartCommand extends StoreCommand {
     if (key == null) {
       stderr.writeln(
         'chart needs a story key, or --out-dir <dir> for every story:\n'
-        '  alluvial chart when-harry-met-sally --store films --out chart.svg',
+        '  alluvial chart when-harry-met-sally --store stories --out chart.svg',
       );
       return 64;
     }

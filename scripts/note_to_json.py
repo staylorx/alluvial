@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""An edited Obsidian note -> the film's chart data. The inverse of film_note.py.
+"""An edited Obsidian note -> the film's chart data. The inverse of story_note.py.
 
 Reads the note's machine fields (frontmatter scalars + `order` list, the cast
 table, and the `- **field:**` bullets under each `### n · BEAT` block) and
@@ -8,7 +8,7 @@ never parsed, so note-taking can never break a chart.
 
   python3 scripts/note_to_json.py --check            # round-trip every film
   python3 scripts/note_to_json.py --check <slug> ...
-  python3 scripts/note_to_json.py <slug>             # note -> films/<slug>.json
+  python3 scripts/note_to_json.py <slug>             # note -> stories/<slug>.json
   python3 scripts/note_to_json.py <slug> --stdout    # ... print instead
 
 A film whose layout is hand-tuned (`groups`, i.e. 27 Dresses) is refused: its
@@ -25,7 +25,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, ".."))
-FILMS = os.path.join(ROOT, "films")
+STORIES = os.path.join(ROOT, "stories")
 NOTES = os.path.join(ROOT, "out", "notes")
 
 CAT_LABEL = {
@@ -151,7 +151,7 @@ def parse_beats(sec: str, name_to_id: dict[str, str], film: str) -> list[dict]:
             elif key == "notes":
                 if scalar(val):
                     beat["notes"] = val
-        # canonical field order, matching films/*.json
+        # canonical field order, matching stories/*.json
         order = ["name", "loc", "cap", "tag", "cats", "clusters", "enter", "stubs", "notes"]
         beat["cap"] = caps
         beats.append({k: beat[k] for k in order if k in beat})
@@ -193,7 +193,7 @@ def parse_note(text: str, film: str = "?") -> dict:
     front, body = split_front(text)
     fm = parse_front(front)
     if fm.get("layout") == "hand-tuned":
-        raise NoteError(f"{film}: layout is hand-tuned — edit films/{film}.json directly")
+        raise NoteError(f"{film}: layout is hand-tuned — edit stories/{film}.json directly")
     sec = sections(body)
     chars, name_to_id = parse_chars(sec.get("Cast of characters", ""))
     beats = parse_beats(sec.get("Plot beats", ""), name_to_id, film)
@@ -234,14 +234,14 @@ def main(argv: list[str]) -> int:
     args = [a for a in argv if not a.startswith("--")]
     slugs = args[1:]
     if "--check" in argv:
-        import film_chart as FC
+        import story_chart as FC
         slugs = slugs or sorted(
-            os.path.splitext(os.path.basename(p))[0] for p in glob.glob(os.path.join(FILMS, "*.json"))
+            os.path.splitext(os.path.basename(p))[0] for p in glob.glob(os.path.join(STORIES, "*.json"))
         )
         bad = []
         for slug in slugs:
             note = os.path.join(NOTES, f"{slug}.md")
-            src = os.path.join(FILMS, f"{slug}.json")
+            src = os.path.join(STORIES, f"{slug}.json")
             if not os.path.exists(src):
                 continue
             with open(src, encoding="utf-8") as fh:
@@ -281,7 +281,7 @@ def main(argv: list[str]) -> int:
         if "--stdout" in argv:
             sys.stdout.write(text)
         else:
-            path = os.path.join(FILMS, f"{slug}.json")
+            path = os.path.join(STORIES, f"{slug}.json")
             with open(path, "w", encoding="utf-8") as fh:
                 fh.write(text)
             print(f"{path}  written from note")

@@ -1,0 +1,195 @@
+# A film's braid chart: who stands with whom, beat by beat.
+#
+# Schema: schema/story.schema.json   (enforced — run: python3 scripts/stories_yaml.py validate)
+# yaml-language-server: $schema=schema/story.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: crazy-stupid-love
+title: Crazy, Stupid, Love
+year: 2011
+runtime_min: 118
+rubric: romcom-27
+score: 24
+score_note: the ensemble keeps splitting into pairs that then collide
+order:
+- cal
+- emily
+- jacob
+- hannah
+- robbie
+- jessica
+chars:
+- id: cal
+  name: Cal
+  width: 32
+  colour: '#1b57c4'
+- id: emily
+  name: Emily
+  width: 28
+  colour: '#d0316a'
+- id: jacob
+  name: Jacob
+  width: 26
+  colour: '#6e9078'
+- id: hannah
+  name: Hannah
+  width: 24
+  colour: '#b09a4e'
+- id: robbie
+  name: Robbie
+  width: 18
+  colour: '#8d7fa8'
+- id: jessica
+  name: Jessica
+  width: 16
+  colour: '#6f8f96'
+beats:
+- name: THE CAR RIDE
+  loc: ≈ 0–10 min
+  cap:
+  - she says she slept with someone;
+  - he opens the door and gets out
+  tag: the split happens in minute nine
+  cats: []
+  clusters:
+  - - cal
+  - - emily
+  - - robbie
+  - - jessica
+- name: THE BAR
+  loc: ≈ 10–25 min
+  cap:
+  - Jacob takes the sad man in hand
+  - and rebuilds him as a stranger
+  tag: the best-friend category, inverted
+  cats:
+  - bff
+  clusters:
+  - - cal
+    - jacob
+  - - emily
+  - - robbie
+    - jessica
+- name: THE BABYSITTER
+  loc: ≈ 25–35 min
+  cap:
+  - Robbie is in love with Jessica,
+  - who is fifteen and unimpressed
+  tag: the wrong-scale crush
+  cats: []
+  clusters:
+  - - cal
+    - jacob
+  - - robbie
+    - jessica
+  - - emily
+- name: THE NEW CAL
+  loc: ≈ 35–48 min
+  cap:
+  - he sleeps with nine women and
+  - still texts his wife at midnight
+  tag: chemistry, wearing a new suit
+  cats:
+  - chem
+  clusters:
+  - - cal
+  - - jacob
+  - - emily
+  - - robbie
+    - jessica
+- name: HANNAH
+  loc: ≈ 48–62 min
+  cap:
+  - Jacob meets the one woman
+  - who does not want the move
+  tag: the bar's own meet-cute
+  cats:
+  - meet
+  clusters:
+  - - cal
+  - - jacob
+    - hannah
+  - - emily
+  - - robbie
+    - jessica
+- name: THE CONFESSION
+  loc: ≈ 62–72 min
+  cap:
+  - Emily tells Cal the affair was
+  - a cry, and he half hears it
+  tag: the split is still live
+  cats: []
+  clusters:
+  - - cal
+  - - emily
+  - - jacob
+    - hannah
+  - - robbie
+    - jessica
+- name: THE SPEECH
+  loc: ≈ 72–84 min
+  cap:
+  - Robbie's graduation speech is
+  - the film's thesis, said out loud
+  tag: the ebert scene, plainly
+  cats:
+  - ebert
+  clusters:
+  - - cal
+  - - emily
+  - - jacob
+    - hannah
+  - - robbie
+    - jessica
+- name: THE DINNER
+  loc: ≈ 84–96 min
+  cap:
+  - 'every strand lands in one house:'
+  - the wife, the lover, the son, the sitter
+  tag: the collision the film built to
+  cats: []
+  clusters:
+  - - cal
+    - emily
+  - - jacob
+    - hannah
+  - - robbie
+    - jessica
+- name: THE YARD
+  loc: ≈ 96–108 min
+  cap:
+  - the drunk speech in the garden;
+  - the film decides who means it
+  tag: the gesture, badly timed
+  cats:
+  - gesture
+  clusters:
+  - - cal
+    - emily
+  - - jacob
+  - - hannah
+  - - robbie
+  - - jessica
+- name: THE PARK
+  loc: the coda
+  cap:
+  - Cal and Emily sit on a bench with
+  - the marriage still unresolved
+  tag: no tidy ending, on purpose
+  cats: []
+  clusters:
+  - - cal
+    - emily
+  - - jacob
+    - hannah
+  - - robbie
+  - - jessica

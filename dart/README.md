@@ -28,10 +28,10 @@ dart format .
 
 # against a store (the store lives at the repo root; this is packages/alluvial_cli)
 cd packages/alluvial_cli
-dart run bin/alluvial.dart list --store ../../../films
-dart run bin/alluvial.dart timeline when-harry-met-sally --store ../../../films --output text
-dart run bin/alluvial.dart chart when-harry-met-sally --store ../../../films --out /tmp/whms.svg
-dart run bin/alluvial.dart chart --out-dir /tmp/charts --store ../../../films
+dart run bin/alluvial.dart list --store ../../../stories
+dart run bin/alluvial.dart timeline when-harry-met-sally --store ../../../stories --output text
+dart run bin/alluvial.dart chart when-harry-met-sally --store ../../../stories --out /tmp/whms.svg
+dart run bin/alluvial.dart chart --out-dir /tmp/charts --store ../../../stories
 
 # the artifact an agent drives (tens of ms a call, not a compile each time)
 cd ../.. && dart build cli -t packages/alluvial_cli/bin/alluvial.dart -o build/cli
@@ -61,7 +61,7 @@ dart run tool/parity_report.dart <store-dir> /tmp/ref
 ```
 
 Set `ALLUVIAL_REFERENCE`, `ALLUVIAL_STORE` and `ALLUVIAL_NUMBERS` to move the
-corpus, the store, or the number fixture; the store defaults to `../../../films`
+corpus, the store, or the number fixture; the store defaults to `../../../stories`
 in this repo and the rest to `/tmp/ref`. Both tests SKIP when the corpus is
 missing rather than inventing a reference.
 

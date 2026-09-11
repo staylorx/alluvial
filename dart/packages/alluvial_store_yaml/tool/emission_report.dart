@@ -15,7 +15,7 @@ import 'package:alluvial_store_yaml/alluvial_store_yaml.dart';
 import 'package:path/path.dart' as p;
 
 Future<void> main(List<String> args) async {
-  final store = args.isEmpty ? 'films' : args.first;
+  final store = args.isEmpty ? 'stories' : args.first;
   final codec = const StoryDocumentCodec();
   final datasource = YamlFolderDatasource(directory: store);
   final keys = (await datasource.slugs().run()).getRight().toNullable()!;

@@ -83,7 +83,7 @@ Measured against the real 35-file store (30 braid + 5 two-clock):
 ## Real defects this found in the existing data
 
 `validate` is stricter than the Python gate, whose JSON schema only covers
-shapes. Both findings are the documented rule from `FILM-SCHEMA.md` — a stub
+shapes. Both findings are the documented rule from `STORY-SCHEMA.md` — a stub
 must sit on the character's last present beat — so both are content errors, not
 validator noise:
 
@@ -102,7 +102,7 @@ Neither file is written by `format --apply` until the data is fixed.
   disagrees with the first is worse than one renderer, so the port is a phase of
   its own and its gate is byte-identity with the approved artifacts — the same
   gate the Python pipeline used on itself.
-- **The note ↔ data loop.** `film_note.py` / `note_to_json.py` (the readable
+- **The note ↔ data loop.** `story_note.py` / `note_to_json.py` (the readable
   editing surface with the note-body hash guard) have no Dart counterpart yet.
 - **The web page builder.**
 
@@ -115,8 +115,14 @@ Neither file is written by `format --apply` until the data is fixed.
       beat id), so renaming a beat renames it everywhere. If a stable identity
       is wanted, the schema and the Python writer have to agree on an `id:` field
       first — do not invent one on the Dart side alone.
-- [ ] Decide the store's `kind` vocabulary for works that are not films (the
-      field exists, defaults to `film`, and no file uses it yet).
+- [ ] **Converge the work-form field with the Python reference.** The Dart port
+      calls it `kind` (`WorkKind`: film/book/play/series/other, unused by any file);
+      the Python store calls it `expression` (film|play|novel|series|short story|
+      essay|poem|song|musical, and films/hamlet.yaml uses `play`). Two names for one
+      field is the fork the doctrine warns about. Recommendation: Dart adopts
+      `expression` and the Python vocabulary — `kind` is already taken INSIDE the
+      same document (character kind, beat kind), which is why it reads badly at the
+      top level. Owner call.
 - [ ] The two-clock shape reads but does not yet expose its second clock in
       `timeline` (the crossings are the point of that chart).
 - [ ] A `new` verb to scaffold a story file from a template.

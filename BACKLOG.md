@@ -30,7 +30,7 @@ entities (character / beat / appearance), validates it against the schema and
 the authored limits, writes it back, and **draws it** — both renderers are
 ported and byte-identical.
 
-- **The store + CLI**: `alluvial <verb> --store films --output json` — `list`,
+- **The store + CLI**: `alluvial <verb> --store stories --output json` — `list`,
   `show`, `validate`, `timeline`, `roundtrip`, `format` (dry-run first), `chart`
   (`--variant braid|colour-blind|mini|two-clock`, `--out`, `--out-dir`).
 - **The renderers match the Python engine to the byte.** The reference corpus is
@@ -54,7 +54,7 @@ Every chart is one `COLS` table: a list of beats, each with
 `beat` / `loc` / `cap` / `hard` / `tag` / `groups` / `stubs` / `terminal` /
 `enter`, plus a `CHAR` map (label, ribbon width, colour). **This table is the
 content model** — the SVG, the PNG, and (next) the web page are all rendered
-from it. Adding a film = writing one table + the prose.
+from it. Adding a story = writing one table + the prose.
 
 ## Running
 
@@ -82,11 +82,11 @@ python3 ~/.hermes/skills/creative/narrative-alluvial/scripts/verify_render.py \
 
 ## Shipped: film pages on staylorx.com
 
-Live: **https://staylorx.com/movies/27-dresses/** (section at `/movies/`).
+Live: **https://staylorx.com/stories/27-dresses/** (section at `/stories/`).
 Nav entry added; the site's build-time search index picks it up.
 Repo: `taybiz/com_staylorx_www`, commit `b51aef3` (push = deploy).
 Publisher: `web/build_eleventy.py` -> `src/_includes/charts/*.svg` +
-`src/_data/films.json`; page template `src/movies/27-dresses.njk`; `inline`
+`src/_data/stories.json`; page template `src/stories/27-dresses.njk`; `inline`
 shortcode in `.eleventy.js`.
 
 Scale lesson (cost one round): the site's post column is capped at 660px, so a
@@ -114,9 +114,9 @@ Live: same URL, site commit `0096f90`.
 
 ## The pipeline (30 films)
 
-`films/<slug>.json` (format: `FILM-SCHEMA.md`) -> `scripts/film_chart.py` (layout is
+`stories/<slug>.json` (format: `STORY-SCHEMA.md`) -> `scripts/story_chart.py` (layout is
 computed, not drawn) -> `web/build_eleventy.py` -> the site's paginated
-`src/movies/film.njk`, which pages one over `films.json`. Adding a film is a data
+`src/stories/story.njk`, which pages one over `stories.json`. Adding a story is a data
 file; no new template. Verified faithful: 27 Dresses (which keeps its hand-tuned
 `groups`) renders **byte-identical** through the generic path.
 
@@ -142,13 +142,13 @@ practical ceilings.
 The store's naming is behind its content: these are **stories**, and `film` is
 only one of the forms they arrive in. Two changes landed together:
 
-- **`expression`** (both schemas + `FILM_KEYS`/`TIME_KEYS`) — `film` by default,
+- **`expression`** (both schemas + `STORY_KEYS`/`TIME_KEYS`) — `film` by default,
   else `play`, `novel`, `series`, `short story`, `essay`, `poem`, `song`,
   `musical`. Absent means film, so every existing file, chart and published
   artifact stays byte-identical. `year` is now the WORK's year (minimum 1, not
   1900), and a non-film titles itself by form instead of counting minutes
   ("A play — the anchors are acts and scenes, not minutes.").
-- **`films/hamlet.yaml`** — the first non-film: 13 beats, 8 lanes, every beat
+- **`stories/hamlet.yaml`** — the first non-film: 13 beats, 8 lanes, every beat
   anchored to an act and scene. Hamlet declares no `rubric`, so no beat carries a
   category and nothing is claimed for it (`cats: []` on its beats is an explicit
   "nothing earned here"). The ghost
@@ -158,13 +158,13 @@ only one of the forms they arrive in. Two changes landed together:
 Two things were left BROKEN by `180d780` (Remove the superseded JSON store), and
 both failed SILENTLY — found while wiring Hamlet up, fixed here:
 
-- `web/build_eleventy.py` globbed `films/*.json` for discovery, so it published
+- `web/build_eleventy.py` globbed `stories/*.json` for discovery, so it published
   **0 films** and reported success. Discovery now goes through the store's own
   API (`FY.all_slugs()` + `is_timechart`). Verified by republishing: all 30 site
   charts come back **byte-identical** to the live artifacts except the two whose
   store data was corrected after the last publish (`the-wedding-singer`,
   `10-things-i-hate-about-you`) — those corrections were never republished.
-- `scripts/verify_films.py`'s batch sweep globbed the same pattern: the gate
+- `scripts/verify_stories.py`'s batch sweep globbed the same pattern: the gate
   meant to catch lane and caption defects exited 0 over an EMPTY set. It now
   sweeps `FY.all_slugs()` — 36 braids + 5 timecharts, 36/36 pass.
 
@@ -180,11 +180,11 @@ the validator refuses a score, a score note or a beat category on an ungraded st
 and the house's map is reachable only through that declaration. The 30 romcoms each
 declare it; hamlet declares none and gets no rubric text anywhere. Byte-neutral:
 republishing still reproduces the live site artifacts (29/30 charts + every
-films.json rubric block).
+stories.json rubric block).
 
 Still open, in order: (1) rename the store and its paths from films to stories —
-`films/` -> `stories/`, `films_yaml.py` / `FILM-SCHEMA.md`, and on the site
-`/movies/` -> `/stories/` with redirects for the 30 live URLs; (2) give
+`stories/` -> `stories/`, `stories_yaml.py` / `STORY-SCHEMA.md`, and on the site
+`/stories/` -> `/stories/` with redirects for the 30 live URLs; (2) give
 `expression` a first-class home in the Dart store (the codec carries it in
 `extra` today: it round-trips, but that is not modelling) — same for `rubric`;
 (3) republish the two corrected films; (4) the site's story page must honor a null

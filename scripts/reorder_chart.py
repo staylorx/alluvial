@@ -24,7 +24,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.abspath(os.path.join(HERE, "..", "out"))
-DATA = os.path.abspath(os.path.join(HERE, "..", "films"))
+DATA = os.path.abspath(os.path.join(HERE, "..", "stories"))
 
 BG = "#faf7f2"
 INK = "#22201d"
@@ -42,9 +42,9 @@ THREAD = {
 
 
 def load(slug: str) -> dict:
-    """A timechart comes from the same store: films/<slug>-timechart.yaml."""
-    import films_yaml
-    return films_yaml.load(f"{slug}-timechart")
+    """A timechart comes from the same store: stories/<slug>-timechart.yaml."""
+    import stories_yaml
+    return stories_yaml.load(f"{slug}-timechart")
 
 
 def render(doc: dict) -> tuple[str, dict]:

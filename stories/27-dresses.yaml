@@ -1,0 +1,296 @@
+# A film's braid chart: who stands with whom, beat by beat.
+#
+# Schema: schema/story.schema.json   (enforced — run: python3 scripts/stories_yaml.py validate)
+# yaml-language-server: $schema=schema/story.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: 27-dresses
+title: 27 Dresses
+year: 2008
+runtime_min: 111
+rubric: romcom-27
+score: 27
+score_note: nominal 100%, the house the rubric is named for; Ebert's three left unpicked
+legend_object: the dresses
+legend_note: “the dresses” is the title object, not a person. Hatched lane = off-page.
+title_block:
+- - 27 Dresses — the house, vertically
+  - title
+- - Six lanes, eleven beats, 111 minutes. Time runs down the page.
+  - sub
+- - Row spacing widens before the coda — a year passes there.
+  - note
+- - Each beat names the rubric category its shape belongs to.
+  - note
+- - 'The house: 27 of 30, a nominal 100%. You don''t ding the house the party''s at.'
+  - note
+- - 'Ebert''s three: left unpicked. Whether the house is a true 27 is still under review.'
+  - note
+mirror: false
+order:
+- dresses
+- casey
+- jane
+- kevin
+- george
+- tess
+chars:
+- id: jane
+  name: Jane
+  width: 34
+  colour: '#1b57c4'
+- id: kevin
+  name: Kevin
+  width: 28
+  colour: '#d0316a'
+- id: george
+  name: George
+  width: 18
+  colour: '#6e9078'
+- id: tess
+  name: Tess
+  width: 18
+  colour: '#9c6552'
+- id: casey
+  name: Casey
+  width: 14
+  colour: '#b09a4e'
+- id: dresses
+  name: the dresses
+  width: 12
+  colour: '#b08a94'
+beats:
+- name: TWO WEDDINGS, ONE NIGHT
+  loc: ≈ 0–10 min
+  cap:
+  - Jane has been a bridesmaid 27 times
+  - she shares a cab with a man in a tux
+  tag: MEET-CUTE — an entrance, not a marriage
+  cats:
+  - meet
+  groups:
+  - - 120
+    - - dresses
+  - - 500
+    - - jane
+      - kevin
+  enter: []
+  stubs: []
+- name: THE COLUMN
+  loc: ≈ 10–25 min
+  cap:
+  - George is back from the climbing trip
+  - Kevin writes the column Jane despises
+  tag: CHEMISTRY — they argue beautifully
+  cats:
+  - chem
+  groups:
+  - - 120
+    - - dresses
+  - - 300
+    - - casey
+  - - 460
+    - - jane
+  - - 700
+    - - george
+  - - 580
+    - - kevin
+  enter:
+  - casey
+  stubs: []
+- name: TESS COMES HOME
+  loc: ≈ 25–35 min
+  cap:
+  - Six months in Europe, one engagement party
+  - Tess catches George before Jane can speak
+  tag: the loyalty trap springs
+  cats: []
+  groups:
+  - - 120
+    - - dresses
+  - - 300
+    - - casey
+  - - 460
+    - - jane
+  - - 750
+    - - george
+      - tess
+  - - 580
+    - - kevin
+  enter:
+  - tess
+  stubs: []
+- name: THE ENGAGEMENT
+  loc: ≈ 35–50 min
+  cap:
+  - Vegetarian, dogs, the outdoors — all borrowed
+  - their mother's dress goes to Tess
+  tag: BFF — Casey, doing the actual work
+  cats:
+  - bff
+  groups:
+  - - 120
+    - - dresses
+  - - 300
+    - - casey
+  - - 460
+    - - jane
+  - - 750
+    - - george
+      - tess
+  - - 580
+    - - kevin
+  enter: []
+  stubs: []
+- name: THE BOATHOUSE
+  loc: ≈ 50–62 min
+  cap:
+  - Jane plans her own dream wedding for her sister
+  - Malcolm Doyle turns out to be Kevin
+  tag: chemistry, second gear
+  cats:
+  - chem
+  groups:
+  - - 120
+    - - dresses
+  - - 300
+    - - casey
+  - - 460
+    - - jane
+  - - 750
+    - - george
+      - tess
+  - - 540
+    - - kevin
+  enter: []
+  stubs: []
+- name: THE CLOSET
+  loc: ≈ 62–70 min
+  cap:
+  - Twenty-seven dresses, one fashion show
+  - the bride's happiness is paramount
+  tag: the scene the film is remembered for
+  cats:
+  - ebert
+  groups:
+  - - 120
+    - - dresses
+  - - 300
+    - - casey
+  - - 480
+    - - jane
+      - kevin
+  - - 750
+    - - george
+      - tess
+  enter: []
+  stubs: []
+- name: THE ARTICLE
+  loc: ≈ 70–80 min
+  cap:
+  - The piece runs without her knowing
+  - she ends it, and she is not wrong to
+  tag: BREAKUP — it flows from who he is
+  cats:
+  - breakup
+  groups:
+  - - 120
+    - - dresses
+  - - 300
+    - - casey
+  - - 460
+    - - jane
+  - - 750
+    - - george
+      - tess
+  - - 610
+    - - kevin
+  enter: []
+  stubs: []
+- name: THE SLIDESHOW
+  loc: ≈ 80–95 min
+  cap:
+  - Tess cuts up the dress; Jane retaliates
+  - George sees the dishonesty and cancels
+  tag: her sister's lane snaps off
+  cats: []
+  groups:
+  - - 120
+    - - dresses
+  - - 300
+    - - casey
+  - - 460
+    - - jane
+  - - 700
+    - - george
+  - - 620
+    - - kevin
+  - - 830
+    - - tess
+  enter: []
+  stubs:
+  - tess
+- name: THE EMPTY VICTORY
+  loc: ≈ 95–102 min
+  cap:
+  - George praises her reliability
+  - she quits, and the crush has gone quiet
+  tag: the dark night, kept short
+  cats: []
+  groups:
+  - - 120
+    - - dresses
+  - - 300
+    - - casey
+  - - 460
+    - - jane
+  - - 760
+    - - george
+  - - 620
+    - - kevin
+  enter: []
+  stubs:
+  - george
+- name: ANOTHER WEDDING
+  loc: ≈ 102–109 min
+  cap:
+  - She finds him at somebody else's wedding
+  - and says it first, in front of strangers
+  tag: GESTURE — and it is hers, not his
+  cats:
+  - gesture
+  groups:
+  - - 120
+    - - dresses
+  - - 300
+    - - casey
+  - - 480
+    - - jane
+      - kevin
+  enter: []
+  stubs: []
+- name: ONE YEAR LATER
+  loc: the coda
+  cap:
+  - The beach; all twenty-seven brides
+  - wearing what Jane wore at their weddings
+  tag: the 28th dress
+  cats: []
+  groups:
+  - - 430
+    - - dresses
+      - jane
+      - kevin
+  - - 300
+    - - casey
+  enter: []
+  stubs: []

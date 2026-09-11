@@ -31,22 +31,22 @@ for path in (os.path.join(ROOT, "scripts"), os.path.join(ROOT, "web")):
     if path not in sys.path:
         sys.path.insert(0, path)
 
-import film_chart          # noqa: E402
-import films_yaml          # noqa: E402
+import story_chart          # noqa: E402
+import stories_yaml          # noqa: E402
 
 OUT = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else "/tmp/ref/numbers.tsv"
 
 values: list[float] = []
 
-for slug in films_yaml.all_slugs():
-    doc = films_yaml.load(slug)
+for slug in stories_yaml.all_slugs():
+    doc = stories_yaml.load(slug)
     if "scenes" in doc:
         continue
     char = {c["id"]: (c["name"], c["width"], c["colour"]) for c in doc["chars"]}
-    spec = film_chart.spec_for(doc)
+    spec = story_chart.spec_for(doc)
 
     # label sizes (the sqrt width scale) and the ribbon widths behind them
-    values.extend(film_chart.width_fonts(char, base=24.0, lo=14.0, hi=26.0).values())
+    values.extend(story_chart.width_fonts(char, base=24.0, lo=14.0, hi=26.0).values())
     values.extend(c["width"] * 0.55 for c in doc["chars"])
     values.extend(spec["ys"])
 

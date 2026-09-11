@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://staylorx.com/schema/story.schema.json",
+  "title": "Film braid chart source",
+  "description": "One film's chart source. stories/<slug>.yaml is the authored file; captions are chart captions (two lines), clusters are who stands together in each beat.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["slug", "title", "chars", "beats"],
+  "dependentRequired": {"score": ["rubric"], "score_note": ["rubric"]},
+  "properties": {
+    "slug": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "title": {"type": "string", "minLength": 1},
+    "expression": {
+      "enum": ["film", "play", "novel", "series", "short story", "essay", "poem", "song", "musical"],
+      "description": "The form the story is told in — its expression, in the bibliographic sense. Absent means 'film' (the medium this store started in). The chart's anchors follow it: a film is anchored to minutes, a play to acts and scenes."
+    },
+    "year": {"type": ["integer", "null"], "minimum": 1, "maximum": 2100,
+             "description": "The work's year — a film's release, a play's first staging or composition. Not bounded at 1900: the store now holds works older than cinema."},
+    "runtime_min": {"type": ["integer", "null"], "minimum": 1, "maximum": 400},
+    "rubric": {
+      "enum": ["romcom-27"],
+      "description": "The rubric that grades THIS story, if any. Absent means ungraded. The rubrics are romcom-movie instruments, so a story may or may not have one — a play, a novel or an essay usually does not, and nothing may be assumed about a story that does not say."
+    },
+    "score": {"type": ["integer", "null"], "minimum": 0, "maximum": 30,
+              "description": "Whole-film rubric score out of 30, or null while ungraded. Requires `rubric`."},
+    "score_note": {"type": "string", "description": "Requires `rubric`."},
+    "blurb": {"type": "string", "description": "Optional page copy; generated if absent."},
+    "legend_object": {"type": "string", "description": "A title object rather than a person, e.g. 'the dresses'."},
+    "legend_note": {"type": "string"},
+    "title_notes": {"type": "array", "items": {"type": "string"}},
+    "title_block": {"type": "array", "description": "Full custom title block: [text, style] pairs.",
+                    "items": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 2}},
+    "mirror": {"type": "boolean"},
+    "dashed": {"type": "object"},
+    "caption_source": {"type": "string",
+      "description": "Where the captions came from, and what could NOT be verified against a source. Keep this honest."},
+    "chart_limits": {"type": "string",
+      "description": "What this chart deliberately leaves out (e.g. strands folded into a shared 'others' lane)."},
+    "storylines": {"type": ["array", "object"],
+      "description": "Optional per-strand notes on what each lane is following."},
+    "never_separate_ok": {"type": "string",
+      "description": "Set with a reason when the leads genuinely never part; exempts the film from the separation rule."},
+    "order": {"type": "array", "description": "Lane order. Defaults to the chars order.",
+              "items": {"type": "string"}},
+    "chars": {
+      "type": "array", "minItems": 2, "maxItems": 8,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "name", "width", "colour"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9_-]+$"},
+          "name": {"type": "string", "maxLength": 11, "description": "Prints in a lane label."},
+          "width": {"type": "integer", "minimum": 10, "maximum": 40,
+                    "description": "Story weight: lead 30-34, second 22-28, third 16-20, minor 12-15."},
+          "colour": {"type": "string", "pattern": "^#[0-9a-fA-F]{6}$"}
+        }
+      }
+    },
+    "beats": {
+      "type": "array", "minItems": 6, "maxItems": 13,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["name", "loc", "cap"],
+        "anyOf": [{"required": ["clusters"]}, {"required": ["groups"]}],
+        "properties": {
+          "name": {"type": "string", "maxLength": 40},
+          "loc": {"type": "string", "description": "Approximate position, e.g. '≈ 35-50 min' or 'the coda'."},
+          "cap": {"type": "array", "minItems": 2, "maxItems": 2,
+                  "items": {"type": "string", "maxLength": 62},
+                  "description": "Exactly two caption lines. Lines over ~47 chars are wrapped at render time."},
+          "tag": {"type": "string", "description": "What the beat is, after an em dash."},
+          "cats": {"type": "array", "description": "Rubric categories this beat's shape belongs to (not points owed).",
+                   "items": {"enum": ["chem", "meet", "bff", "breakup", "gesture", "ebert"]}},
+          "clusters": {
+            "type": "array", "description": "Left-to-right; each entry is the ids standing together. A character present must appear in exactly one cluster.",
+            "items": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+          },
+          "groups": {"type": "array", "description": "Hand-tuned alternative to clusters: [lane_y, [ids]] with larger y further right.",
+                     "items": {"type": "array", "minItems": 2, "maxItems": 2}},
+          "enter": {"type": "array", "items": {"type": "string"}, "description": "First appearance in this beat."},
+          "stubs": {"type": "array", "items": {"type": "string"},
+                    "description": "Final exit. Must name the character's LAST PRESENT beat."},
+          "hard": {"type": "string"}
+        }
+      }
+    }
+  }
+}

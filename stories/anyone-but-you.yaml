@@ -1,0 +1,214 @@
+# A film's braid chart: who stands with whom, beat by beat.
+#
+# Schema: schema/story.schema.json   (enforced — run: python3 scripts/stories_yaml.py validate)
+# yaml-language-server: $schema=schema/story.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: anyone-but-you
+title: Anyone But You
+year: 2023
+runtime_min: 103
+rubric: romcom-27
+score: 20
+score_note: a fake-dating machine, run at full speed
+order:
+- bea
+- ben
+- pete
+- halle
+- claudia
+- margaret
+- jonathan
+chars:
+- id: bea
+  name: Bea
+  width: 34
+  colour: '#1b57c4'
+- id: ben
+  name: Ben
+  width: 32
+  colour: '#d0316a'
+- id: pete
+  name: Pete
+  width: 24
+  colour: '#6e9078'
+- id: halle
+  name: Halle
+  width: 22
+  colour: '#9c6552'
+- id: claudia
+  name: Claudia
+  width: 22
+  colour: '#b09a4e'
+- id: margaret
+  name: Margaret
+  width: 16
+  colour: '#8d7fa8'
+- id: jonathan
+  name: Jonathan
+  width: 16
+  colour: '#6f8f96'
+beats:
+- name: THE COFFEE SHOP
+  loc: ≈ 0–12 min
+  cap:
+  - Bea and Ben meet and spend the day
+  - together without meaning to
+  tag: MEET-CUTE — a whole day, no plan
+  cats:
+  - meet
+  clusters:
+  - - bea
+    - ben
+  enter:
+  - bea
+  - ben
+- name: THE MORNING AFTER
+  loc: ≈ 12–22 min
+  cap:
+  - she slips out before he wakes, then
+  - hears him mock her to his friend
+  tag: MISUNDERSTANDING — the exit sets the wound
+  cats: []
+  clusters:
+  - - bea
+  - - ben
+    - pete
+  enter:
+  - pete
+- name: ONE WEDDING, TWO FAMILIES
+  loc: ≈ 22–32 min
+  cap:
+  - six months later they are pulled apart
+  - and then into the same wedding
+  tag: STRUCTURE — the wedding forces them back
+  cats: []
+  clusters:
+  - - bea
+    - halle
+  - - ben
+    - pete
+    - claudia
+  enter:
+  - halle
+  - claudia
+- name: THE TRIP TO SYDNEY
+  loc: ≈ 32–45 min
+  cap:
+  - same flight to Sydney, same house, and
+  - both of their exes turn up
+  tag: PRESSURE — nowhere to hide from each other
+  cats: []
+  clusters:
+  - - bea
+    - ben
+  - - pete
+    - claudia
+    - halle
+  - - margaret
+  - - jonathan
+  enter:
+  - margaret
+  - jonathan
+- name: THE CONSPIRACY
+  loc: ≈ 45–55 min
+  cap:
+  - the wedding party conspires to push
+  - Bea and Ben toward each other
+  tag: BFF — the friends run the plot
+  cats:
+  - bff
+  clusters:
+  - - bea
+  - - ben
+  - - pete
+    - claudia
+    - halle
+- name: THE DEAL
+  loc: ≈ 55–62 min
+  cap:
+  - they agree to fake a relationship for
+  - her parents and for his ex
+  tag: DEAL — a lie with two beneficiaries
+  cats: []
+  clusters:
+  - - bea
+    - ben
+- name: THE BOAT
+  loc: ≈ 62–72 min
+  cap:
+  - the Titanic pose ends in the harbour;
+  - on the buoy she tells him the truth
+  tag: CHEMISTRY — the fake turns real at sea
+  cats:
+  - chem
+  clusters:
+  - - bea
+    - ben
+  - - pete
+    - claudia
+    - halle
+- name: THE TRUTH AT LAST
+  loc: ≈ 72–80 min
+  cap:
+  - they finally explain that first morning,
+  - then spend the night together
+  tag: EXPLANATION — the wound finally gets named
+  cats: []
+  clusters:
+  - - bea
+    - ben
+- name: THE MISTAKE
+  loc: ≈ 80–90 min
+  cap:
+  - she calls the night a mistake; he
+  - slips out and the lie falls apart
+  tag: BREAKUP — both of them running
+  cats: []
+  clusters:
+  - - bea
+  - - ben
+  - - pete
+    - claudia
+    - halle
+- name: THE CLIFF
+  loc: ≈ 90–98 min
+  cap:
+  - Bea sees Margaret kiss Ben and leaves;
+  - he turns her down and dives in after
+  tag: GESTURE — he jumps in the ocean for her
+  cats:
+  - gesture
+  clusters:
+  - - bea
+  - - ben
+    - margaret
+  - - pete
+    - claudia
+    - halle
+  - - jonathan
+  stubs:
+  - margaret
+- name: THE OPERA HOUSE
+  loc: ≈ 98–103 min
+  cap:
+  - at the Opera House they admit the night
+  - was the one thing she didn't regret
+  tag: REUNION — the ruse that turned out real
+  cats: []
+  clusters:
+  - - bea
+    - ben
+  - - pete
+    - claudia
+    - halle
+  - - jonathan

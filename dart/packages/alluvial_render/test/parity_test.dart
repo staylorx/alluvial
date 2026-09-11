@@ -15,7 +15,7 @@ import 'package:test/test.dart';
 /// (default, colour-blind, mini) and the spec dict as JSON, plus every
 /// two-clock chart. When the corpus is absent the test SKIPS — it is a gate,
 /// not a fixture, and a port cannot invent its own reference.
-final _store = Platform.environment['ALLUVIAL_STORE'] ?? '../../../films';
+final _store = Platform.environment['ALLUVIAL_STORE'] ?? '../../../stories';
 final _reference = Platform.environment['ALLUVIAL_REFERENCE'] ?? '/tmp/ref';
 
 Future<void> main() async {

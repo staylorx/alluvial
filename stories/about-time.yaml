@@ -1,0 +1,210 @@
+# A film's braid chart: who stands with whom, beat by beat.
+#
+# Schema: schema/story.schema.json   (enforced — run: python3 scripts/stories_yaml.py validate)
+# yaml-language-server: $schema=schema/story.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: about-time
+title: About Time
+year: 2013
+runtime_min: 123
+rubric: romcom-27
+score: 27
+score_note: a wistful 27; the rubric cannot hear the jokes
+order:
+- tim
+- mary
+- dad
+- kitkat
+- charlotte
+- harry
+- jay
+chars:
+- id: tim
+  name: Tim
+  width: 32
+  colour: '#1b57c4'
+- id: mary
+  name: Mary
+  width: 30
+  colour: '#d0316a'
+- id: dad
+  name: Dad
+  width: 24
+  colour: '#6e9078'
+- id: kitkat
+  name: Kit Kat
+  width: 18
+  colour: '#9c6552'
+- id: charlotte
+  name: Charlotte
+  width: 16
+  colour: '#b09a4e'
+- id: harry
+  name: Harry
+  width: 15
+  colour: '#8d7fa8'
+- id: jay
+  name: Jay
+  width: 14
+  colour: '#6f8f96'
+beats:
+- name: THE 21st BIRTHDAY
+  loc: ≈ 0–10 min
+  cap:
+  - his father takes him aside and tells him
+  - 'the family secret: the men can go back'
+  tag: the gift, explained plainly
+  cats: []
+  clusters:
+  - - dad
+    - tim
+    - kitkat
+    - jay
+- name: THE CORNWALL SUMMER
+  loc: ≈ 10–25 min
+  cap:
+  - he rewinds the whole holiday to get
+  - Charlotte right, and still does not
+  tag: the summer he cannot fix
+  cats: []
+  clusters:
+  - - tim
+    - charlotte
+  - - dad
+    - kitkat
+  - - jay
+- name: THE BLIND DINNER
+  loc: ≈ 25–35 min
+  cap:
+  - they meet in a restaurant with no lights
+  - and talk like they already know each other
+  tag: MEET-CUTE — an entrance, not a marriage
+  cats:
+  - meet
+  - chem
+  clusters:
+  - - tim
+    - mary
+  - - kitkat
+  - - jay
+  enter:
+  - mary
+- name: HARRY'S PLAY
+  loc: ≈ 35–48 min
+  cap:
+  - he goes back to rescue a friend's
+  - opening night, and erases Mary doing it
+  tag: BFF — Harry, doing the actual work
+  cats:
+  - bff
+  clusters:
+  - - tim
+    - harry
+  - - mary
+  - - kitkat
+- name: THE EXHIBITION
+  loc: ≈ 48–58 min
+  cap:
+  - he stages chance encounters until
+  - she lets him start again
+  tag: chemistry, second gear
+  cats:
+  - chem
+  clusters:
+  - - tim
+    - mary
+  - - harry
+  - - jay
+- name: THE WET WEDDING
+  loc: ≈ 58–68 min
+  cap:
+  - the marquee, the storm, the soaked
+  - walk home; nobody minds
+  tag: the scene the film is remembered for
+  cats:
+  - ebert
+  clusters:
+  - - tim
+    - mary
+  - - dad
+    - kitkat
+  - - jay
+    - harry
+- name: THE CRASH
+  loc: ≈ 68–78 min
+  cap:
+  - Kit Kat's car, and the day he rewinds
+  - until it does not happen
+  tag: the dark night, kept short
+  cats: []
+  clusters:
+  - - tim
+    - kitkat
+    - jay
+  - - mary
+  - - dad
+- name: THE FIRST CHILD
+  loc: ≈ 78–88 min
+  cap:
+  - a daughter, and then Mary wants
+  - another; Dad's illness arrives
+  tag: the clock starts
+  cats: []
+  clusters:
+  - - tim
+    - mary
+  - - dad
+  - - kitkat
+    - jay
+- name: THE LAST TRIP
+  loc: ≈ 88–98 min
+  cap:
+  - he keeps going back to the beach
+  - because going back is all that is left
+  tag: BREAKUP — and it is a death
+  cats:
+  - breakup
+  clusters:
+  - - tim
+    - dad
+  - - mary
+    - kitkat
+  - - jay
+- name: THE THIRD CHILD
+  loc: ≈ 98–108 min
+  cap:
+  - a third child means never seeing Dad
+  - again, and he chooses the living
+  tag: the choice, made out loud
+  cats: []
+  clusters:
+  - - tim
+    - mary
+  - - kitkat
+  - - jay
+  stubs:
+  - dad
+- name: THE ORDINARY DAY
+  loc: the coda
+  cap:
+  - he stops rewinding and lives each day
+  - 'twice: once nervous, once glad'
+  tag: GESTURE — the gift, finally spent well
+  cats:
+  - gesture
+  clusters:
+  - - tim
+    - mary
+  - - kitkat
+    - jay
+  - - harry

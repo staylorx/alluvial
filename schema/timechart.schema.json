@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://staylorx.com/schema/timechart.schema.json",
   "title": "Two-clock chart source",
-  "description": "films/<slug>-timechart.yaml. Two spines over one scene set: what the film screens, and what actually happens.",
+  "description": "stories/<slug>-timechart.yaml. Two spines over one scene set: what the film screens, and what actually happens.",
   "type": "object",
   "additionalProperties": false,
   "required": ["slug", "title", "threads", "scenes"],

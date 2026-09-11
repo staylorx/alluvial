@@ -1,0 +1,202 @@
+# A film's braid chart: who stands with whom, beat by beat.
+#
+# Schema: schema/story.schema.json   (enforced — run: python3 scripts/stories_yaml.py validate)
+# yaml-language-server: $schema=schema/story.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: silver-linings-playbook
+title: Silver Linings Playbook
+year: 2012
+runtime_min: 122
+rubric: romcom-27
+score: 26
+order:
+- pat
+- tiffany
+- patsr
+- dolores
+- cliff
+- ronnie
+- danny
+chars:
+- id: pat
+  name: Pat
+  width: 34
+  colour: '#1b57c4'
+- id: tiffany
+  name: Tiffany
+  width: 32
+  colour: '#d0316a'
+- id: patsr
+  name: Pat Sr.
+  width: 24
+  colour: '#6e9078'
+- id: dolores
+  name: Dolores
+  width: 18
+  colour: '#9c6552'
+- id: cliff
+  name: Cliff
+  width: 16
+  colour: '#b09a4e'
+- id: ronnie
+  name: Ronnie
+  width: 15
+  colour: '#8d7fa8'
+- id: danny
+  name: Danny
+  width: 14
+  colour: '#6f8f96'
+beats:
+- name: OUT OF THE FACILITY
+  loc: ≈ 0–10 min
+  cap:
+  - Pat comes home after eight months; Nikki
+  - has a restraining order and he has a plan
+  tag: OPENING — a man rebuilding on a broken plan
+  cats: []
+  clusters:
+  - - pat
+    - dolores
+  - - patsr
+  enter:
+  - pat
+  - dolores
+  - patsr
+- name: CLIFF'S OFFICE
+  loc: ≈ 10–18 min
+  cap:
+  - His therapist Cliff wants him back on the
+  - medication; Pat insists that he is fine
+  tag: ROUTINE — the help he keeps refusing
+  cats: []
+  clusters:
+  - - pat
+    - cliff
+  enter:
+  - cliff
+- name: DINNER AT RONNIE'S
+  loc: ≈ 20–28 min
+  cap:
+  - At his best friend's dinner Pat meets
+  - Tiffany, a widow, and they swap diagnoses
+  tag: MEET-CUTE — two griefs comparing notes
+  cats:
+  - meet
+  clusters:
+  - - pat
+    - ronnie
+  - - tiffany
+  enter:
+  - tiffany
+  - ronnie
+- name: THE DEAL
+  loc: ≈ 28–38 min
+  cap:
+  - Tiffany offers to carry letters to Nikki if
+  - Pat trains with her for a dance contest
+  tag: THE DEAL — a favour that is really a bet
+  cats: []
+  clusters:
+  - - pat
+    - tiffany
+- name: THE STUDIO
+  loc: ≈ 38–58 min
+  cap:
+  - They rehearse the routine after hours; he
+  - reads Nikki's letters and starts to change
+  tag: TRAINING — the two of them, getting better
+  cats:
+  - chem
+  clusters:
+  - - pat
+    - tiffany
+- name: DANNY TURNS UP
+  loc: ≈ 58–66 min
+  cap:
+  - Danny, his friend from the ward, shows up
+  - at the house and pushes him to keep going
+  tag: BEST FRIEND — the one who got out first
+  cats:
+  - bff
+  clusters:
+  - - pat
+    - danny
+  enter:
+  - danny
+- name: PAT SR.'S PARLAY
+  loc: ≈ 66–78 min
+  cap:
+  - Pat's father bets the family money on the
+  - Eagles and on his son's dance score
+  tag: SUBPLOT — the father's superstition and debt
+  cats: []
+  clusters:
+  - - patsr
+    - dolores
+  - - pat
+- name: THE SUNDAY BLOW-UP
+  loc: ≈ 78–90 min
+  cap:
+  - Game day ends in shouting between Pat and
+  - his father; Tiffany walks out of the house
+  tag: FIGHT — everyone convinced they are right
+  cats: []
+  clusters:
+  - - pat
+    - tiffany
+  - - patsr
+    - dolores
+- name: THE LETTER
+  loc: ≈ 90–98 min
+  cap:
+  - Cliff points out that the letter signed by
+  - Nikki is Tiffany's handwriting and work
+  tag: REVEAL — the letters were Tiffany's all along
+  cats: []
+  clusters:
+  - - pat
+    - cliff
+- name: PAT RUNS
+  loc: ≈ 98–104 min
+  cap:
+  - Pat runs through the streets looking for
+  - Tiffany, who has gone missing since the row
+  tag: GESTURE — the first thing he has chased
+  cats:
+  - gesture
+  clusters:
+  - - pat
+- name: FIVE POINTS
+  loc: ≈ 104–118 min
+  cap:
+  - They perform the routine; the judges hold
+  - up a 5, and the parlay comes down to it
+  tag: CLIMAX — the number that settles the bet
+  cats:
+  - chem
+  clusters:
+  - - pat
+    - tiffany
+  - - patsr
+    - dolores
+- name: THE SILVER LINING
+  loc: the coda
+  cap:
+  - Pat stops trying to win Nikki back and
+  - stays with Tiffany; the bet pays off
+  tag: ENDING — the silver lining chosen out loud
+  cats:
+  - breakup
+  clusters:
+  - - pat
+    - tiffany

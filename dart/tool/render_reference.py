@@ -34,8 +34,8 @@ for path in (os.path.join(ROOT, "scripts"), os.path.join(ROOT, "web")):
     if path not in sys.path:
         sys.path.insert(0, path)
 
-import film_chart          # noqa: E402
-import films_yaml          # noqa: E402
+import story_chart          # noqa: E402
+import stories_yaml          # noqa: E402
 import reorder_chart       # noqa: E402
 
 OUT = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else "/tmp/ref"
@@ -46,10 +46,10 @@ os.makedirs(os.path.join(OUT, "twoclock"), exist_ok=True)
 
 braid = 0
 two_clock = 0
-for slug in films_yaml.all_slugs():
+for slug in stories_yaml.all_slugs():
     if ONLY and slug != ONLY:
         continue
-    doc = films_yaml.load(slug)
+    doc = stories_yaml.load(slug)
     if "scenes" in doc:
         svg, _info = reorder_chart.render(doc)
         with open(os.path.join(OUT, "twoclock", f"{slug}.svg"), "w", encoding="utf-8") as fh:
@@ -58,7 +58,7 @@ for slug in films_yaml.all_slugs():
         continue
 
     for suffix, kwargs in (("", {}), (".cb", {"cb": True}), (".mini", {"mini": True})):
-        svg, spec, height, checks = film_chart.render(doc, **kwargs)
+        svg, spec, height, checks = story_chart.render(doc, **kwargs)
         with open(os.path.join(OUT, f"{slug}{suffix}.svg"), "w", encoding="utf-8") as fh:
             fh.write(svg)
         if suffix == "":

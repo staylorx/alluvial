@@ -41,7 +41,7 @@ const maxSceneLabelChars = 34;
 /// Findings are errors unless marked as warnings; an error means the story
 /// would render wrong or not at all, a warning means it is readable but
 /// suspicious. The rules come from the published schema and the authored
-/// limits in `FILM-SCHEMA.md`, restated here as the one place they live.
+/// limits in `STORY-SCHEMA.md`, restated here as the one place they live.
 final class StoryValidator {
   /// Creates the validator.
   const StoryValidator();

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Emit the staylorx.com assets for EVERY film chart page.
+"""Emit the staylorx.com assets for EVERY story chart page.
 
 Writes into an Eleventy repo:
   src/_includes/charts/<slug>.svg        the full chart (inline, internal beat links)
   src/_includes/charts/<slug>-mini.svg   the compact map for the sticky strip
-  src/_data/films.json                   the array the paginated template pages over
+  src/_data/stories.json                   the array the paginated template pages over
 
-One film = one file in films/ (see FILM-SCHEMA.md). Adding a film needs no new
-template: the paginated page generates itself from films.json.
+One story = one file in stories/ (see STORY-SCHEMA.md). Adding a story needs no new
+template: the paginated page generates itself from stories.json.
 
 Deterministic: no timestamps, no environment reads — a rebuild of the same commit
 reproduces the same bytes, which is what CI checks.
@@ -24,12 +24,12 @@ for p in (HERE, os.path.join(HERE, "..", "scripts")):
     if p not in sys.path:
         sys.path.insert(0, p)
 
-import film_chart as FC          # noqa: E402
-import films_yaml as FY          # noqa: E402
+import story_chart as FC          # noqa: E402
+import stories_yaml as FY          # noqa: E402
 import reorder_chart as RC       # noqa: E402
 import rubric27                  # noqa: E402
 
-FILMS = os.path.abspath(os.path.join(HERE, "..", "films"))
+STORIES = os.path.abspath(os.path.join(HERE, "..", "stories"))
 
 RUBRIC = {
     "title": rubric27.TITLE,
@@ -73,7 +73,7 @@ def build(repo):
             "slug": slug,
             "title": film["title"],
             "year": film.get("year"),
-            "url": f"/movies/{slug}/",
+            "url": f"/stories/{slug}/",
             "score": film.get("score"),
             "score_note": film.get("score_note", ""),
             "runtime": (f"{film['runtime_min']} minutes" if film.get("runtime_min") else ""),
@@ -91,7 +91,7 @@ def build(repo):
             "rubric": RUBRIC if FC.rubric_for(film) else None,
         })
         # a film with two clocks gets the second chart underneath the braid
-        if any(os.path.exists(os.path.join(FILMS, f"{slug}-timechart{ext}"))
+        if any(os.path.exists(os.path.join(STORIES, f"{slug}-timechart{ext}"))
                for ext in (".yaml", ".json")):
             tc_doc = FY.load(f"{slug}-timechart")
             tc_svg, tc_info = RC.render(tc_doc)
@@ -105,11 +105,11 @@ def build(repo):
 
     # the compendium's own order: by score, unscored last
     entries.sort(key=lambda e: (-(e["score"] if e["score"] else -1), e["title"]))
-    open(os.path.join(data, "films.json"), "w", encoding="utf-8").write(
+    open(os.path.join(data, "stories.json"), "w", encoding="utf-8").write(
         json.dumps(entries, indent=1, ensure_ascii=False) + "\n")
 
-    print(f"\n{len(entries)} film(s) -> {data}/films.json "
-          f"({os.path.getsize(os.path.join(data, 'films.json'))/1024:.1f} KB)")
+    print(f"\n{len(entries)} stor{'y' if len(entries) == 1 else 'ies'} -> {data}/stories.json "
+          f"({os.path.getsize(os.path.join(data, 'stories.json'))/1024:.1f} KB)")
 
 
 if __name__ == "__main__":
