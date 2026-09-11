@@ -1,0 +1,14 @@
+name: alluvial_workspace
+description: The alluvial story store and CLI, as a Dart pub workspace.
+publish_to: none
+
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+
+workspace:
+  - packages/alluvial_domain
+  - packages/alluvial_usecases
+  - packages/alluvial_store_yaml
+  - packages/alluvial_store_memory
+  - packages/alluvial_testing
+  - packages/alluvial_cli

@@ -7,3 +7,8 @@ out/*.html
 __pycache__/
 *.pyc
 .DS_Store
+
+# Dart workspace build output — the CLI bundle is rebuilt, never committed
+dart/.dart_tool/
+dart/build/
+**/.dart_tool/

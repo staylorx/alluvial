@@ -1,0 +1,20 @@
+name: alluvial_store_memory
+description: An in-memory story store, for tests and dry runs.
+version: 0.1.0
+publish_to: none
+resolution: workspace
+
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+
+dependencies:
+  alluvial_domain:
+    path: ../alluvial_domain
+  fpdart: ^1.2.0
+
+dev_dependencies:
+  alluvial_testing:
+    path: ../alluvial_testing
+  lints: ^6.0.0
+  shouldly: ^0.5.0+1
+  test: ^1.25.0

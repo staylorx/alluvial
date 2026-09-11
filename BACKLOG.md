@@ -21,6 +21,25 @@ Procedural memory: skill `narrative-alluvial` (engine docs, design rules, pitfal
 | `out/*.svg` | Canonical artifacts, committed. Hand-editable, restylable. |
 | `out/*.png` | 2x exports for chat/print. |
 | `web/` | Static-page generator (in progress — see BACKLOG below). |
+| `dart/` | **The Dart store + CLI** — reads these files, validates them, writes them back. See `dart/BACKLOG.md`. |
+
+## The Dart port (branch `dart-cli`)
+
+`dart/` is a Dart pub workspace that reads this store, models it as three
+entities (character / beat / appearance), validates it against the schema and
+the authored limits, and writes it back. It is built to be driven by skills:
+`alluvial <verb> --store films --output json`, including `validate`,
+`timeline`, `roundtrip`, and a dry-run-first `format`.
+
+Measured on this store: all 35 files decode; 35/35 are a fixed point through
+decode → encode → decode; a full `format --apply` cycle over a copy reproduces
+34 of 35 files byte-for-byte and loses none. Read `dart/BACKLOG.md` for the
+proofs, the open questions, and **two real defects it found in this store**
+(`50-first-dates` and `about-time`, both a `stubs` entry on a beat where the
+character does not stand).
+
+The Python pipeline below is still the only renderer: the SVG engine is a
+separate port, gated on byte-identity with the committed artifacts in `out/`.
 
 ## The data model
 
