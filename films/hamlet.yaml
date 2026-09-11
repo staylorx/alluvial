@@ -235,8 +235,7 @@ beats:
   - - laertes
   - - gertrude
 caption_source: 'Written from the play''s action, act by act: no line is quoted and no scene is invented. The act
-  and scene numbers are the traditional division (the Folio has no act breaks in this play). Not checked against
-  a specific edition.'
+  and scene numbers are the standard editorial division, not the author''s own. Not checked against a specific edition.'
 chart_limits: 'Hamlet''s cast is larger than eight lanes. Rosencrantz and Guildenstern, the players, Osric, the
   gravediggers and Fortinbras hold no lane — Fortinbras arrives in the last beat and is named in its tag. The graveyard
   (ACT V, SC. 1) is folded into the beats around it, and the rubric does not apply: no beat carries a category.'
