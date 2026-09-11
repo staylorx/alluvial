@@ -52,8 +52,16 @@
   article h2 { font-size:1.05rem; margin:0 0 .5rem; font-weight:700; }
   .struct { color:var(--mut); font-size:.85rem; margin:0 0 .3rem; }
   .tag { color:var(--tag); font-size:.8rem; font-weight:700; margin:0 0 1rem; }
-  .prose { min-height:4.5em; border-left:2px solid var(--rule); padding-left:1rem;
-            color:var(--faint); font-style:italic; margin:0 0 .9rem; }
+  .rubricline { font-size:.84rem; color:#433f39; margin:.4rem 0 0; max-width:74ch; }
+  .rpts { color:var(--tag); font-weight:700; }
+  .rubricsheet { margin:3.4rem 0 0; padding-top:1.4rem; border-top:1px solid var(--rule); }
+  .rubricsheet h2 { font-size:1.05rem; margin:0 0 .8rem; }
+  .rquote { font-style:italic; color:#433f39; margin:0 0 1rem; max-width:74ch; font-size:.88rem; }
+  .rframe { color:#433f39; margin:0 0 .8rem; max-width:74ch; font-size:.88rem; }
+  .rcats { margin:1rem 0 .8rem; }
+  .rcats dt { font-weight:700; font-size:.9rem; margin:.9rem 0 .15rem; }
+  .rcats dd { margin:0; color:#433f39; max-width:74ch; font-size:.86rem; }
+  .rsrc { color:var(--mut); font-size:.78rem; margin:1.2rem 0 0; max-width:74ch; }
   .back { margin:0; font-size:.78rem; }
   .back a, a { color:var(--accent); }
   /* Phones: fit-to-width renders the chart's captions at ~6px, so give it a
@@ -72,7 +80,7 @@
   <header>
     <h1>27 Dresses &mdash; the braid, on the web</h1>
     <p>One static page. The diagram is inline SVG, so every beat row is a link: click a
-       beat and you land in the writing for it. Scroll on; the map on the left follows you.
+       beat and you jump to it below. Scroll on; the map docks at the top and follows you.
        Nothing here needs a server, a build step, or a CDN.</p>
   </header>
 
@@ -618,13 +626,14 @@
     </div>
     <div class="beats">
       <p class="kicker" style="margin-bottom:1.4rem">each beat below is a link target &mdash;
-        the <em>what changes</em> line is computed from the lane geometry, not typed by hand</p>
+        the <em>what changes</em> line is computed from the lane geometry, and the rubric
+        text under it is the rubric's own wording</p>
       <article id="beat-01">
         <p class="kicker">TWO WEDDINGS, ONE NIGHT &middot; ≈ 0–10 min</p>
         <h2>Jane has been a bridesmaid 27 times</h2>
         <p class="struct">the dresses enters; Jane enters; Kevin enters</p>
         <p class="tag">MEET-CUTE — an entrance, not a marriage</p>
-        <p class="prose">[01]</p>
+        <p class="rubricline"><span class="rname">Meet-cute <span class="rpts">5</span></span> An entrance, not a marriage. A spilled coffee is worth two points. A spilled coffee at a wedding where they're both playing roles they don't believe in is worth the full five.</p>
         <p class="back"><a href="#chart-01">&uarr; back to the map</a></p>
       </article>
       <article id="beat-02">
@@ -632,7 +641,7 @@
         <h2>George is back from the climbing trip</h2>
         <p class="struct">Casey enters; George enters; Jane &amp; Kevin: together &rarr; near</p>
         <p class="tag">CHEMISTRY — they argue beautifully</p>
-        <p class="prose">[02]</p>
+        <p class="rubricline"><span class="rname">Chemistry <span class="rpts">10</span></span> The load-bearing wall. Everything else is scaffolding. A bad meet-cute can be forgiven if the banter lands; nothing forgives dead eyes.</p>
         <p class="back"><a href="#chart-02">&uarr; back to the map</a></p>
       </article>
       <article id="beat-03">
@@ -640,7 +649,6 @@
         <h2>Six months in Europe, one engagement party</h2>
         <p class="struct">Tess enters; George &amp; Kevin: near &rarr; apart</p>
         <p class="tag">the loyalty trap springs</p>
-        <p class="prose">[03]</p>
         <p class="back"><a href="#chart-03">&uarr; back to the map</a></p>
       </article>
       <article id="beat-04">
@@ -648,7 +656,7 @@
         <h2>Vegetarian, dogs, the outdoors — all borrowed</h2>
         <p class="struct">no lane changes this beat</p>
         <p class="tag">BFF — Casey, doing the actual work</p>
-        <p class="prose">[04]</p>
+        <p class="rubricline"><span class="rname">Quirky best friend <span class="rpts">5</span></span> The category most romcoms overspend on. The rubric quietly punishes that, and it should.</p>
         <p class="back"><a href="#chart-04">&uarr; back to the map</a></p>
       </article>
       <article id="beat-05">
@@ -656,7 +664,7 @@
         <h2>Jane plans her own dream wedding for her sister</h2>
         <p class="struct">no lane changes this beat</p>
         <p class="tag">chemistry, second gear</p>
-        <p class="prose">[05]</p>
+        <p class="rubricline"><span class="rname">Chemistry <span class="rpts">10</span></span> The load-bearing wall. Everything else is scaffolding. A bad meet-cute can be forgiven if the banter lands; nothing forgives dead eyes.</p>
         <p class="back"><a href="#chart-05">&uarr; back to the map</a></p>
       </article>
       <article id="beat-06">
@@ -664,7 +672,7 @@
         <h2>Twenty-seven dresses, one fashion show</h2>
         <p class="struct">Jane &amp; Kevin: near &rarr; together</p>
         <p class="tag">the scene the film is remembered for</p>
-        <p class="prose">[06]</p>
+        <p class="rubricline"><span class="rname">Ebert's three scenes <span class="rpts">3</span></span> Always graded. Hawks' rule in Ebert's voice: three good scenes and no bad ones — one point per great scene, and a bad scene costs one. The genre can't buy these; only the movie can.</p>
         <p class="back"><a href="#chart-06">&uarr; back to the map</a></p>
       </article>
       <article id="beat-07">
@@ -672,7 +680,7 @@
         <h2>The piece runs without her knowing</h2>
         <p class="struct">Jane &amp; Kevin: together &rarr; near; George &amp; Kevin: apart &rarr; near</p>
         <p class="tag">BREAKUP — it flows from who he is</p>
-        <p class="prose">[07]</p>
+        <p class="rubricline"><span class="rname">Breakup that makes sense <span class="rpts">5</span></span> The third-act split should flow from who these people actually are, not from a misunderstanding that a single conversation would fix.</p>
         <p class="back"><a href="#chart-07">&uarr; back to the map</a></p>
       </article>
       <article id="beat-08">
@@ -680,7 +688,6 @@
         <h2>Tess cuts up the dress; Jane retaliates</h2>
         <p class="struct">Jane &amp; Kevin: near &rarr; apart; George &amp; Tess: together &rarr; near</p>
         <p class="tag">her sister's lane snaps off</p>
-        <p class="prose">[08]</p>
         <p class="back"><a href="#chart-08">&uarr; back to the map</a></p>
       </article>
       <article id="beat-09">
@@ -688,7 +695,6 @@
         <h2>George praises her reliability</h2>
         <p class="struct">Tess leaves</p>
         <p class="tag">the dark night, kept short</p>
-        <p class="prose">[09]</p>
         <p class="back"><a href="#chart-09">&uarr; back to the map</a></p>
       </article>
       <article id="beat-10">
@@ -696,7 +702,7 @@
         <h2>She finds him at somebody else's wedding</h2>
         <p class="struct">George leaves; Jane &amp; Kevin: apart &rarr; together</p>
         <p class="tag">GESTURE — and it is hers, not his</p>
-        <p class="prose">[10]</p>
+        <p class="rubricline"><span class="rname">Gesture that earns it <span class="rpts">2</span></span> The airport run is worth two points, maximum, and only when the breakup earned it. The original seven got split: five for the breakup, two for the gesture.</p>
         <p class="back"><a href="#chart-10">&uarr; back to the map</a></p>
       </article>
       <article id="beat-11">
@@ -704,10 +710,35 @@
         <h2>The beach; all twenty-seven brides</h2>
         <p class="struct">the dresses &amp; Jane: apart &rarr; together; the dresses &amp; Kevin: apart &rarr; near; the dresses &amp; Casey: apart &rarr; near; Jane &amp; Casey: apart &rarr; near</p>
         <p class="tag">the 28th dress</p>
-        <p class="prose">[11]</p>
         <p class="back"><a href="#chart-11">&uarr; back to the map</a></p>
       </article>
     </div>
+
+    <section class="rubricsheet" id="rubric">
+      <h2>The rubric</h2>
+      <p class="rquote">“I simply regard romantic comedies as a subgenre of sci-fi, in which the world operates according to different rules than my regular human world.” — Mindy Kaling</p>
+      <p class="rframe">Twenty-seven points, across five genre categories — because the genre's patron saint is a movie called 27 Dresses, and because a perfect score should look like the film's own title.</p>
+      <p class="rframe">Then three more the genre can't buy. The Ebert dimension is always part of the grade, which makes thirty possible points, but the percentage runs against the twenty-seven, because the house is 27 Dresses at a nominal 100%. A movie that clears the genre ceiling lands at 104%, 107%, or 111%: the only way to beat the house is to be a better movie, not a better romcom.</p>
+      <p class="rframe">The house, scored: 27 of 30, nominal 100%. Ebert's three are left unpicked — whether the house is a true 27 is still under review. You don't ding the house the party's at.</p>
+      <dl class="rcats">
+        <dt>Chemistry <span class="rpts">10</span></dt>
+        <dd>The load-bearing wall. Everything else is scaffolding. A bad meet-cute can be forgiven if the banter lands; nothing forgives dead eyes.</dd>
+        <dt>Meet-cute <span class="rpts">5</span></dt>
+        <dd>An entrance, not a marriage. A spilled coffee is worth two points. A spilled coffee at a wedding where they're both playing roles they don't believe in is worth the full five.</dd>
+        <dt>Quirky best friend <span class="rpts">5</span></dt>
+        <dd>The category most romcoms overspend on. The rubric quietly punishes that, and it should.</dd>
+        <dt>Breakup that makes sense <span class="rpts">5</span></dt>
+        <dd>The third-act split should flow from who these people actually are, not from a misunderstanding that a single conversation would fix.</dd>
+        <dt>Gesture that earns it <span class="rpts">2</span></dt>
+        <dd>The airport run is worth two points, maximum, and only when the breakup earned it. The original seven got split: five for the breakup, two for the gesture.</dd>
+        <dt>Ebert's three scenes <span class="rpts">3</span></dt>
+        <dd>Always graded. Hawks' rule in Ebert's voice: three good scenes and no bad ones — one point per great scene, and a bad scene costs one. The genre can't buy these; only the movie can.</dd>
+      </dl>
+      <p class="rsrc">27 genre points
+        across five categories, plus the three the genre can't buy. From
+        &ldquo;Romcoms Are Science Fiction, and I Have a Rubric&rdquo; &mdash; a draft. The chart marks which beat earns which
+        category.</p>
+    </section>
   </section>
 </div>
 

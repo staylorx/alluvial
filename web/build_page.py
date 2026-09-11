@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a static, self-contained chart page: diagram + clickable beats + prose.
+"""Build a static, self-contained chart page: diagram + clickable beats + the rubric as text.
 
 The page is ONE html file with the SVG inlined three ways:
 
@@ -23,6 +23,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "scripts"))
 
 import dresses27_vertical as FILM                        # the film we're demoing
+import rubric27
 from alluvial_vlib import render_v
 
 OUT = os.path.join(HERE, "27-dresses.html")
@@ -134,16 +135,25 @@ def build_page():
     rows = lane_rows(spec)
     cols = spec["cols"]
 
+    rub_frame = "\n".join(f'      <p class="rframe">{p}</p>' for p in rubric27.FRAME)
+    rub_cats = "\n".join(
+        f'        <dt>{c["name"]} <span class="rpts">{c["pts"]}</span></dt>\n'
+        f'        <dd>{c["text"]}</dd>' for c in rubric27.CATS)
+
     articles = []
     for i, c in enumerate(cols):
         ev = events_for(i, char, S, rows) if i else [f"{char[k][0]} enters" for k in spec["order"] if k in rows[0]]
         tag = c.get("cap_extra", ("", ""))[0].replace("\u25b8 ", "")
+        rub = "".join(
+            f'\n        <p class="rubricline">'
+            f'<span class="rname">{rc["name"]} '
+            f'<span class="rpts">{rc["pts"]}</span></span> {rc["text"]}</p>'
+            for rc in rubric27.for_beat(i + 1))
         articles.append(f"""      <article id="beat-{i+1:02d}">
         <p class="kicker">{c['beat']} &middot; {c['loc']}</p>
         <h2>{c['cap'][0]}</h2>
         <p class="struct">{'; '.join(ev) if ev else 'no lane changes this beat'}</p>
-        <p class="tag">{tag}</p>
-        <p class="prose">[{i+1:02d}]</p>
+        <p class="tag">{tag}</p>{rub}
         <p class="back"><a href="#chart-{i+1:02d}">&uarr; back to the map</a></p>
       </article>""")
 
@@ -201,8 +211,16 @@ def build_page():
   article h2 {{ font-size:1.05rem; margin:0 0 .5rem; font-weight:700; }}
   .struct {{ color:var(--mut); font-size:.85rem; margin:0 0 .3rem; }}
   .tag {{ color:var(--tag); font-size:.8rem; font-weight:700; margin:0 0 1rem; }}
-  .prose {{ min-height:4.5em; border-left:2px solid var(--rule); padding-left:1rem;
-            color:var(--faint); font-style:italic; margin:0 0 .9rem; }}
+  .rubricline {{ font-size:.84rem; color:#433f39; margin:.4rem 0 0; max-width:74ch; }}
+  .rpts {{ color:var(--tag); font-weight:700; }}
+  .rubricsheet {{ margin:3.4rem 0 0; padding-top:1.4rem; border-top:1px solid var(--rule); }}
+  .rubricsheet h2 {{ font-size:1.05rem; margin:0 0 .8rem; }}
+  .rquote {{ font-style:italic; color:#433f39; margin:0 0 1rem; max-width:74ch; font-size:.88rem; }}
+  .rframe {{ color:#433f39; margin:0 0 .8rem; max-width:74ch; font-size:.88rem; }}
+  .rcats {{ margin:1rem 0 .8rem; }}
+  .rcats dt {{ font-weight:700; font-size:.9rem; margin:.9rem 0 .15rem; }}
+  .rcats dd {{ margin:0; color:#433f39; max-width:74ch; font-size:.86rem; }}
+  .rsrc {{ color:var(--mut); font-size:.78rem; margin:1.2rem 0 0; max-width:74ch; }}
   .back {{ margin:0; font-size:.78rem; }}
   .back a, a {{ color:var(--accent); }}
   /* Phones: fit-to-width renders the chart's captions at ~6px, so give it a
@@ -221,7 +239,7 @@ def build_page():
   <header>
     <h1>27 Dresses &mdash; the braid, on the web</h1>
     <p>One static page. The diagram is inline SVG, so every beat row is a link: click a
-       beat and you land in the writing for it. Scroll on; the map on the left follows you.
+       beat and you jump to it below. Scroll on; the map docks at the top and follows you.
        Nothing here needs a server, a build step, or a CDN.</p>
   </header>
 
@@ -241,9 +259,23 @@ def build_page():
     </div>
     <div class="beats">
       <p class="kicker" style="margin-bottom:1.4rem">each beat below is a link target &mdash;
-        the <em>what changes</em> line is computed from the lane geometry, not typed by hand</p>
+        the <em>what changes</em> line is computed from the lane geometry, and the rubric
+        text under it is the rubric's own wording</p>
 {chr(10).join(articles)}
     </div>
+
+    <section class="rubricsheet" id="rubric">
+      <h2>The rubric</h2>
+      <p class="rquote">{rubric27.KALING}</p>
+{rub_frame}
+      <dl class="rcats">
+{rub_cats}
+      </dl>
+      <p class="rsrc">{sum(c["pts"] for c in rubric27.CATS if c["id"] != "ebert")} genre points
+        across five categories, plus the three the genre can't buy. From
+        &ldquo;{rubric27.TITLE}&rdquo; &mdash; a draft. The chart marks which beat earns which
+        category.</p>
+    </section>
   </section>
 </div>
 

@@ -21,6 +21,7 @@ sys.path.insert(0, os.path.join(HERE, "..", "scripts"))
 
 import build_page as BP
 from alluvial_vlib import render_v
+import rubric27
 
 
 def hits(spec, H, half):
@@ -51,6 +52,7 @@ def build(repo):
         else:
             changes = BP.events_for(i, char, S, rows)
         tag = c.get("cap_extra", ("", ""))[0].replace("\u25b8 ", "")
+        rubric = rubric27.for_beat(i + 1)
         beats.append({
             "n": i + 1,
             "id": f"beat-{i+1:02d}",
@@ -59,7 +61,7 @@ def build(repo):
             "line": c["cap"][0],
             "changes": changes,
             "tag": tag,
-            "prose": "",          # empty until there is real writing to put here
+            "rubric": rubric,     # the rubric's own words for the categories it earns
         })
 
     films = {
@@ -70,13 +72,22 @@ def build(repo):
             "url": "/movies/27-dresses/",
             "runtime": "111 minutes",
             "blurb": ("Eleven beats, six lanes. Who is with whom, and the moment it "
-                      "changes. The notes under each beat are computed from the "
-                      "diagram's own geometry, not written by hand."),
+                      "changes. Each beat carries the rubric category it earns, and the "
+                      "notes under it are computed from the diagram's own geometry, not "
+                      "written by hand."),
             "chart": f"src/_includes/charts/27-dresses.svg",
             "mini": f"src/_includes/charts/27-dresses-mini.svg",
             "hits": hits(spec, H, spec.get("beat_hit_half", 78)),
             "minihits": hits(mspec, Hm, mspec.get("beat_hit_half", 7.5)),
             "beats": beats,
+            # the rubric itself, as text, so the page carries the argument
+            "rubric": {
+                "title": rubric27.TITLE,
+                "kaling": rubric27.KALING,
+                "frame": rubric27.FRAME,
+                "cats": rubric27.CATS,
+                "genre_points": sum(c["pts"] for c in rubric27.CATS if c["id"] != "ebert"),
+            },
         }
     }
 

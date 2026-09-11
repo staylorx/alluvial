@@ -69,11 +69,27 @@ widen the layout for itself (`.layout` 1240px / `.main` 1040px) -> chart renders
 at 976px, captions 16.4px. Phones get a fixed 820px chart inside a horizontal
 scroller (13.8px) instead of a 6px fit-to-width.
 
+## Shipped: the rubric, as text
+
+The page carries the rubric itself (six categories, point values, wording quoted
+from the draft, the Kaling line, the house note) plus the category text under
+each beat that earns one. `scripts/rubric27.py` is the single source of truth
+for that text and for the beat -> category map; both page builders import it.
+Live: same URL, site commit `0096f90`.
+
+## Decisions
+
+- **No per-beat writing.** The beats are anchors to jump around in — there is
+  nothing to say per beat and the requirement is dropped (owner, 2026-09-11).
+  Do not add writing slots back. The rubric text sits under each beat instead,
+  because that is text we actually have.
+- **The rubric is quoted, not paraphrased.** If the rubric changes in the draft,
+  change `scripts/rubric27.py` and rebuild — don't edit page copy.
+
 ## Next
 
-- [ ] **Beat prose.** Every beat already has an empty `prose` field in
-      `films.json` and its own anchor, so writing lands with no layout work.
 - [ ] More films: the data table is the only new input per film.
+- [ ] Focus mode for big casts (Anna Karenina): click a character, dim the rest.
 - [ ] Chunked mode for very long works (Anna Karenina: ~8 parts, ~90 beats).
       Long scroll is the goal; per-part SVG panels keep each file small.
 - [ ] Lane budget: 6–11 lanes is the legible maximum. Needs a strategy for
