@@ -203,7 +203,7 @@ A beat's block in the caption column is `46 + 2 caption lines (23px each) + 8
 + tag line(s) + entrant line(s)` and the row pitch is **165px**. Two beats were
 over it: THE COURT (a five-name entrant list wraps to two lines, + a tag) at
 165.5px, and THE HOUSE (its tag wrapped to two lines at the 46-character wrap
-width, "▸ " included) at 166px — so the ENT RANT list printed into the next beat's
+width, "▸ " included) at 166px — so the entrant list printed into the next beat's
 title.
 
 The court cannot shrink: five lanes genuinely arrive in ACT I, SC. 2, and the
