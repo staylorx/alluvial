@@ -1,0 +1,194 @@
+<svg class="chart" preserveAspectRatio="xMidYMin meet" xmlns="http://www.w3.org/2000/svg" width="1010" height="2844" viewBox="0 0 1010 2844" font-family="Helvetica, Arial, sans-serif">
+<defs><pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.9" fill="#d8d2c8"/></pattern></defs>
+<rect width="1010" height="2844" fill="#faf7f2"/>
+<rect x="0" y="210.0" width="1010" height="2230.0" fill="url(#dots)" opacity="0.55"/>
+<line x1="70" y1="300.0" x2="545.0" y2="300.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="300.0" x2="556.0" y2="300.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="465.0" x2="545.0" y2="465.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="465.0" x2="556.0" y2="465.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="630.0" x2="545.0" y2="630.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="630.0" x2="556.0" y2="630.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="795.0" x2="545.0" y2="795.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="795.0" x2="556.0" y2="795.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="960.0" x2="545.0" y2="960.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="960.0" x2="556.0" y2="960.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="1125.0" x2="545.0" y2="1125.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="1125.0" x2="556.0" y2="1125.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="1290.0" x2="545.0" y2="1290.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="1290.0" x2="556.0" y2="1290.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="1455.0" x2="545.0" y2="1455.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="1455.0" x2="556.0" y2="1455.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="1620.0" x2="545.0" y2="1620.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="1620.0" x2="556.0" y2="1620.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="1785.0" x2="545.0" y2="1785.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="1785.0" x2="556.0" y2="1785.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="1950.0" x2="545.0" y2="1950.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="1950.0" x2="556.0" y2="1950.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="2115.0" x2="545.0" y2="2115.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="2115.0" x2="556.0" y2="2115.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="2350.0" x2="545.0" y2="2350.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="2350.0" x2="556.0" y2="2350.0" stroke="#ded7cb" stroke-width="1"/>
+<text x="570.0" y="288.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE WATCH</text>
+<text x="570.0" y="316.0" font-size="16" fill="#9a9086">ACT I, SC. 1</text>
+<text x="570.0" y="346.0" font-size="16.5" font-style="italic" fill="#7d7568">A dead king walks the battlements at night;</text>
+<text x="570.0" y="369.0" font-size="16.5" font-style="italic" fill="#7d7568">the watch brings Horatio out to see it</text>
+<text x="570.0" y="400.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ THE HOOK — the dead king is walking</text>
+<text x="570.0" y="422.0" font-size="14.5" fill="#9a9086">new lanes ▸</text>
+<text x="648" y="422.0" font-size="17.5" font-weight="700" fill="#6f8f96">Horatio</text>
+<text x="736" y="422.0" font-size="15.4" font-weight="700" fill="#b08a94">the ghost</text>
+<text x="570.0" y="453.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE COURT</text>
+<text x="570.0" y="481.0" font-size="16" fill="#9a9086">ACT I, SC. 2</text>
+<text x="570.0" y="511.0" font-size="16.5" font-style="italic" fill="#7d7568">Claudius takes the throne and the widow;</text>
+<text x="570.0" y="534.0" font-size="16.5" font-style="italic" fill="#7d7568">Hamlet keeps his black and his silence</text>
+<text x="570.0" y="565.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ THE NEW ORDER — an uncle on the throne</text>
+<text x="570.0" y="587.0" font-size="14.5" fill="#9a9086">new lanes ▸</text>
+<text x="648" y="587.0" font-size="22.5" font-weight="700" fill="#d0316a">Claudius</text>
+<text x="772" y="587.0" font-size="21.0" font-weight="700" fill="#6e9078">Gertrude</text>
+<text x="888" y="587.0" font-size="19.3" font-weight="700" fill="#b09a4e">Polonius</text>
+<text x="648" y="608.75" font-size="18.4" font-weight="700" fill="#8d7fa8">Laertes</text>
+<text x="740" y="608.75" font-size="24.0" font-weight="700" fill="#1b57c4">Hamlet</text>
+<text x="570.0" y="618.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE HOUSE</text>
+<text x="570.0" y="646.0" font-size="16" fill="#9a9086">ACT I, SC. 3</text>
+<text x="570.0" y="676.0" font-size="16.5" font-style="italic" fill="#7d7568">Laertes warns his sister off Hamlet;</text>
+<text x="570.0" y="699.0" font-size="16.5" font-style="italic" fill="#7d7568">their father orders her to end it</text>
+<text x="570.0" y="730.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ THE HOUSE — a brother and a father close a</text>
+<text x="570.0" y="752.0" font-size="15.5" font-weight="700" fill="#8a6a1f">door</text>
+<text x="570.0" y="774.0" font-size="14.5" fill="#9a9086">new lanes ▸</text>
+<text x="648" y="774.0" font-size="20.2" font-weight="700" fill="#9c6552">Ophelia</text>
+<text x="570.0" y="783.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE GHOST SPEAKS</text>
+<text x="570.0" y="811.0" font-size="16" fill="#9a9086">ACT I, SC. 4–5</text>
+<text x="570.0" y="841.0" font-size="16.5" font-style="italic" fill="#7d7568">His father's ghost says he was murdered by</text>
+<text x="570.0" y="864.0" font-size="16.5" font-style="italic" fill="#7d7568">the brother who took the crown and the wife</text>
+<text x="570.0" y="895.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ THE CHARGE — a son is handed a murder</text>
+<text x="570.0" y="948.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE MADNESS</text>
+<text x="570.0" y="976.0" font-size="16" fill="#9a9086">ACT II, SC. 1–2</text>
+<text x="570.0" y="1006.0" font-size="16.5" font-style="italic" fill="#7d7568">Ophelia reports a visit, his clothes undone;</text>
+<text x="570.0" y="1029.0" font-size="16.5" font-style="italic" fill="#7d7568">the court decides the cause is love</text>
+<text x="570.0" y="1060.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ THE ALARM — the court reads him as lovesick</text>
+<text x="570.0" y="1113.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE NUNNERY</text>
+<text x="570.0" y="1141.0" font-size="16" fill="#9a9086">ACT III, SC. 1</text>
+<text x="570.0" y="1171.0" font-size="16.5" font-style="italic" fill="#7d7568">With the king and her father listening,</text>
+<text x="570.0" y="1194.0" font-size="16.5" font-style="italic" fill="#7d7568">Hamlet tells Ophelia to go to a nunnery</text>
+<text x="570.0" y="1225.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ THE TURN — he sends her away and means it</text>
+<text x="570.0" y="1278.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE TRAP</text>
+<text x="570.0" y="1306.0" font-size="16" fill="#9a9086">ACT II, SC. 2 – III, SC. 2</text>
+<text x="570.0" y="1336.0" font-size="16.5" font-style="italic" fill="#7d7568">Actors stage a murder like his father's;</text>
+<text x="570.0" y="1359.0" font-size="16.5" font-style="italic" fill="#7d7568">the king gets up and calls for light</text>
+<text x="570.0" y="1390.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ THE TRAP — the guilty one shows himself</text>
+<text x="570.0" y="1443.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE PRAYER</text>
+<text x="570.0" y="1471.0" font-size="16" fill="#9a9086">ACT III, SC. 3</text>
+<text x="570.0" y="1501.0" font-size="16.5" font-style="italic" fill="#7d7568">Hamlet finds the king alone and kneeling,</text>
+<text x="570.0" y="1524.0" font-size="16.5" font-style="italic" fill="#7d7568">and does not do it — the one chance he gets</text>
+<text x="570.0" y="1555.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ THE SPARING — a sword put away, once</text>
+<text x="570.0" y="1608.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE CLOSET</text>
+<text x="570.0" y="1636.0" font-size="16" fill="#9a9086">ACT III, SC. 4</text>
+<text x="570.0" y="1666.0" font-size="16.5" font-style="italic" fill="#7d7568">His sword goes through the curtain and finds</text>
+<text x="570.0" y="1689.0" font-size="16.5" font-style="italic" fill="#7d7568">the wrong man — Ophelia's father</text>
+<text x="570.0" y="1720.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ THE KILLING — the wrong man behind the arras</text>
+<text x="570.0" y="1773.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">LAERTES RETURNS</text>
+<text x="570.0" y="1801.0" font-size="16" fill="#9a9086">ACT IV, SC. 5</text>
+<text x="570.0" y="1831.0" font-size="16.5" font-style="italic" fill="#7d7568">Ophelia sings and hands out flowers;</text>
+<text x="570.0" y="1854.0" font-size="16.5" font-style="italic" fill="#7d7568">her brother breaks in with a mob</text>
+<text x="570.0" y="1885.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ THE ANGER — a brother comes home for blood</text>
+<text x="570.0" y="1938.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE WILLOW</text>
+<text x="570.0" y="1966.0" font-size="16" fill="#9a9086">ACT IV, SC. 7</text>
+<text x="570.0" y="1996.0" font-size="16.5" font-style="italic" fill="#7d7568">Gertrude reports the willow and the water;</text>
+<text x="570.0" y="2019.0" font-size="16.5" font-style="italic" fill="#7d7568">the king and Laertes agree on a sharp foil</text>
+<text x="570.0" y="2050.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ THE ENDGAME — a duel, a cup, and no way back</text>
+<text x="570.0" y="2103.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE MATCH</text>
+<text x="570.0" y="2131.0" font-size="16" fill="#9a9086">ACT V, SC. 2</text>
+<text x="570.0" y="2161.0" font-size="16.5" font-style="italic" fill="#7d7568">Hamlet fences Laertes while the court watches;</text>
+<text x="570.0" y="2184.0" font-size="16.5" font-style="italic" fill="#7d7568">the foil and the cup are both poisoned</text>
+<text x="570.0" y="2215.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ THE MATCH — a fight he does not know is fixed</text>
+<text x="570.0" y="2338.0" font-size="20" font-weight="700" fill="#2b2622" letter-spacing="1.1">THE FLOOR</text>
+<text x="570.0" y="2366.0" font-size="16" fill="#9a9086">ACT V, SC. 2 — the end</text>
+<text x="570.0" y="2396.0" font-size="16.5" font-style="italic" fill="#7d7568">The queen drinks the cup, the king is stabbed,</text>
+<text x="570.0" y="2419.0" font-size="16.5" font-style="italic" fill="#7d7568">and Hamlet dies in Horatio's arms</text>
+<text x="570.0" y="2450.0" font-size="15.5" font-weight="700" fill="#8a6a1f">▸ THE FLOOR — four die; Fortinbras takes</text>
+<text x="570.0" y="2472.0" font-size="15.5" font-weight="700" fill="#8a6a1f">Denmark</text>
+<path d="M 390.7 1620.0 C 390.7 1644.4 395.7 1653.6 395.7 1678.0 L 397.7 1678.0 C 397.7 1653.6 402.8 1644.4 402.8 1620.0 Z" fill="#b09a4e" fill-opacity="0.8"/>
+<path d="M 122.4 1620.0 C 122.4 1644.4 125.2 1653.6 125.2 1678.0 L 127.2 1678.0 C 127.2 1653.6 130.1 1644.4 130.1 1620.0 Z" fill="#b08a94" fill-opacity="0.8"/>
+<path d="M 315.4 1785.0 C 315.4 1809.4 321.0 1818.6 321.0 1843.0 L 323.0 1843.0 C 323.0 1818.6 328.6 1809.4 328.6 1785.0 Z" fill="#9c6552" fill-opacity="0.8"/>
+<path d="M 298.9 795.0 C 298.9 864.3 400.6 890.7 400.6 960.0 L 419.3 960.0 C 419.3 890.7 317.6 864.3 317.6 795.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 400.6 960.0 C 400.6 1029.3 98.2 1055.7 98.2 1125.0 L 116.9 1125.0 C 116.9 1055.7 419.3 1029.3 419.3 960.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 98.2 1125.0 C 98.2 1194.3 99.8 1220.7 99.8 1290.0 L 118.5 1290.0 C 118.5 1220.7 116.9 1194.3 116.9 1125.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 99.8 1290.0 C 99.8 1359.3 106.1 1385.7 106.1 1455.0 L 124.8 1455.0 C 124.8 1385.7 118.5 1359.3 118.5 1290.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 106.1 1455.0 C 106.1 1524.3 100.9 1550.7 100.9 1620.0 L 119.6 1620.0 C 119.6 1550.7 124.8 1524.3 124.8 1455.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 99.3 2115.0 C 99.3 2213.7 99.8 2251.3 99.8 2350.0 L 118.5 2350.0 C 118.5 2251.3 118.0 2213.7 118.0 2115.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 246.0 960.0 C 246.0 1029.3 297.8 1055.7 297.8 1125.0 L 314.3 1125.0 C 314.3 1055.7 262.5 1029.3 262.5 960.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 297.8 1125.0 C 297.8 1194.3 230.7 1220.7 230.7 1290.0 L 247.2 1290.0 C 247.2 1220.7 314.3 1194.3 314.3 1125.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 230.7 1290.0 C 230.7 1359.3 305.2 1385.7 305.2 1455.0 L 321.8 1455.0 C 321.8 1385.7 247.2 1359.3 247.2 1290.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 100.4 1785.0 C 100.4 1854.3 100.4 1880.7 100.4 1950.0 L 116.9 1950.0 C 116.9 1880.7 116.9 1854.3 116.9 1785.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 100.4 1950.0 C 100.4 2019.3 246.0 2045.7 246.0 2115.0 L 262.5 2115.0 C 262.5 2045.7 116.9 2019.3 116.9 1950.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 246.0 2115.0 C 246.0 2213.7 236.3 2251.3 236.3 2350.0 L 252.8 2350.0 C 252.8 2251.3 262.5 2213.7 262.5 2115.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 274.8 1620.0 C 274.8 1689.3 298.4 1715.7 298.4 1785.0 L 312.7 1785.0 C 312.7 1715.7 289.1 1689.3 289.1 1620.0 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 298.4 1785.0 C 298.4 1854.3 342.7 1880.7 342.7 1950.0 L 357.0 1950.0 C 357.0 1880.7 312.7 1854.3 312.7 1785.0 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 342.7 1950.0 C 342.7 2019.3 265.2 2045.7 265.2 2115.0 L 279.5 2115.0 C 279.5 2045.7 357.0 2019.3 357.0 1950.0 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 265.2 2115.0 C 265.2 2213.7 415.4 2251.3 415.4 2350.0 L 429.7 2350.0 C 429.7 2251.3 279.5 2213.7 279.5 2115.0 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 116.3 960.0 C 116.3 1029.3 119.6 1055.7 119.6 1125.0 L 132.8 1125.0 C 132.8 1055.7 129.5 1029.3 129.5 960.0 Z" fill="#9c6552" fill-opacity="0.82"/>
+<path d="M 119.6 1125.0 C 119.6 1194.3 380.3 1220.7 380.3 1290.0 L 393.5 1290.0 C 393.5 1220.7 132.8 1194.3 132.8 1125.0 Z" fill="#9c6552" fill-opacity="0.82"/>
+<path d="M 249.8 465.0 C 249.8 534.3 343.8 560.7 343.8 630.0 L 355.9 630.0 C 355.9 560.7 261.9 534.3 261.9 465.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 101.5 960.0 C 101.5 1029.3 317.1 1055.7 317.1 1125.0 L 329.2 1125.0 C 329.2 1055.7 113.6 1029.3 113.6 960.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 317.1 1125.0 C 317.1 1194.3 365.5 1220.7 365.5 1290.0 L 377.6 1290.0 C 377.6 1220.7 329.2 1194.3 329.2 1125.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 264.7 465.0 C 264.7 534.3 102.0 560.7 102.0 630.0 L 113.0 630.0 C 113.0 560.7 275.7 534.3 275.7 465.0 Z" fill="#8d7fa8" fill-opacity="0.82"/>
+<path d="M 119.6 1785.0 C 119.6 1854.3 119.6 1880.7 119.6 1950.0 L 130.6 1950.0 C 130.6 1880.7 130.6 1854.3 130.6 1785.0 Z" fill="#8d7fa8" fill-opacity="0.82"/>
+<path d="M 119.6 1950.0 C 119.6 2019.3 120.7 2045.7 120.7 2115.0 L 131.7 2115.0 C 131.7 2045.7 130.6 2019.3 130.6 1950.0 Z" fill="#8d7fa8" fill-opacity="0.82"/>
+<path d="M 120.7 2115.0 C 120.7 2213.7 328.0 2251.3 328.0 2350.0 L 339.0 2350.0 C 339.0 2251.3 131.7 2213.7 131.7 2115.0 Z" fill="#8d7fa8" fill-opacity="0.82"/>
+<path d="M 405.0 2115.0 C 405.0 2213.7 121.3 2251.3 121.3 2350.0 L 131.2 2350.0 C 131.2 2251.3 414.9 2213.7 414.9 2115.0 Z" fill="#6f8f96" fill-opacity="0.82"/>
+<text x="115.5" y="58" font-size="17.5" font-weight="700" text-anchor="middle" fill="#6f8f96">Horatio</text>
+<text x="313.5" y="56" font-size="15.4" font-weight="700" text-anchor="middle" fill="#b08a94">the ghost</text>
+<line x1="115.5" y1="65" x2="115.5" y2="286.0" stroke="#6f8f96" stroke-width="1" opacity="0.28"/>
+<line x1="313.5" y1="63" x2="313.5" y2="286.0" stroke="#b08a94" stroke-width="1" opacity="0.28"/>
+<text x="60" y="2544.0" font-size="13" font-weight="700" letter-spacing="1.1" fill="#9a9086">LANES — label size follows strand width</text>
+<rect x="60" y="2571" width="19" height="15" rx="2" fill="#1b57c4" fill-opacity="0.85"/>
+<text x="85" y="2579" font-size="24.0" font-weight="600" fill="#2b2622">Hamlet</text>
+<rect x="188" y="2571" width="16" height="14" rx="2" fill="#d0316a" fill-opacity="0.85"/>
+<text x="210" y="2578" font-size="22.5" font-weight="600" fill="#2b2622">Claudius</text>
+<rect x="332" y="2570" width="14" height="13" rx="2" fill="#6e9078" fill-opacity="0.85"/>
+<text x="352" y="2576" font-size="21.0" font-weight="600" fill="#2b2622">Gertrude</text>
+<rect x="469" y="2569" width="13" height="13" rx="2" fill="#9c6552" fill-opacity="0.85"/>
+<text x="488" y="2576" font-size="20.2" font-weight="600" fill="#2b2622">Ophelia</text>
+<rect x="589" y="2569" width="12" height="12" rx="2" fill="#b09a4e" fill-opacity="0.85"/>
+<text x="607" y="2575" font-size="19.3" font-weight="600" fill="#2b2622">Polonius</text>
+<rect x="715" y="2569" width="11" height="11" rx="2" fill="#8d7fa8" fill-opacity="0.85"/>
+<text x="732" y="2574" font-size="18.4" font-weight="600" fill="#2b2622">Laertes</text>
+<rect x="826" y="2568" width="10" height="11" rx="2" fill="#6f8f96" fill-opacity="0.85"/>
+<text x="842" y="2574" font-size="17.5" font-weight="600" fill="#2b2622">Horatio</text>
+<rect x="60" y="2603" width="8" height="10" rx="2" fill="#b08a94" fill-opacity="0.85"/>
+<text x="74" y="2608" font-size="15.4" font-weight="600" fill="#2b2622">the ghost</text>
+<text x="60" y="2646" font-size="14" font-style="italic" fill="#8b8377">Hatched lane = off-page.</text>
+<g class="beat-rows">
+<rect class="rowmark" id="chart-01" data-beat="01" x="0" y="222" width="1010" height="156" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="chart-02" data-beat="02" x="0" y="387" width="1010" height="156" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="chart-03" data-beat="03" x="0" y="552" width="1010" height="156" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="chart-04" data-beat="04" x="0" y="717" width="1010" height="156" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="chart-05" data-beat="05" x="0" y="882" width="1010" height="156" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="chart-06" data-beat="06" x="0" y="1047" width="1010" height="156" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="chart-07" data-beat="07" x="0" y="1212" width="1010" height="156" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="chart-08" data-beat="08" x="0" y="1377" width="1010" height="156" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="chart-09" data-beat="09" x="0" y="1542" width="1010" height="156" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="chart-10" data-beat="10" x="0" y="1707" width="1010" height="156" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="chart-11" data-beat="11" x="0" y="1872" width="1010" height="156" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="chart-12" data-beat="12" x="0" y="2037" width="1010" height="156" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="chart-13" data-beat="13" x="0" y="2272" width="1010" height="156" fill="transparent" pointer-events="none"/>
+<a class="beat-link" href="#beat-01"><rect class="hit" x="0" y="222" width="1010" height="156" fill="transparent"/><title>THE WATCH</title></a>
+<a class="beat-link" href="#beat-02"><rect class="hit" x="0" y="387" width="1010" height="156" fill="transparent"/><title>THE COURT</title></a>
+<a class="beat-link" href="#beat-03"><rect class="hit" x="0" y="552" width="1010" height="156" fill="transparent"/><title>THE HOUSE</title></a>
+<a class="beat-link" href="#beat-04"><rect class="hit" x="0" y="717" width="1010" height="156" fill="transparent"/><title>THE GHOST SPEAKS</title></a>
+<a class="beat-link" href="#beat-05"><rect class="hit" x="0" y="882" width="1010" height="156" fill="transparent"/><title>THE MADNESS</title></a>
+<a class="beat-link" href="#beat-06"><rect class="hit" x="0" y="1047" width="1010" height="156" fill="transparent"/><title>THE NUNNERY</title></a>
+<a class="beat-link" href="#beat-07"><rect class="hit" x="0" y="1212" width="1010" height="156" fill="transparent"/><title>THE TRAP</title></a>
+<a class="beat-link" href="#beat-08"><rect class="hit" x="0" y="1377" width="1010" height="156" fill="transparent"/><title>THE PRAYER</title></a>
+<a class="beat-link" href="#beat-09"><rect class="hit" x="0" y="1542" width="1010" height="156" fill="transparent"/><title>THE CLOSET</title></a>
+<a class="beat-link" href="#beat-10"><rect class="hit" x="0" y="1707" width="1010" height="156" fill="transparent"/><title>LAERTES RETURNS</title></a>
+<a class="beat-link" href="#beat-11"><rect class="hit" x="0" y="1872" width="1010" height="156" fill="transparent"/><title>THE WILLOW</title></a>
+<a class="beat-link" href="#beat-12"><rect class="hit" x="0" y="2037" width="1010" height="156" fill="transparent"/><title>THE MATCH</title></a>
+<a class="beat-link" href="#beat-13"><rect class="hit" x="0" y="2272" width="1010" height="156" fill="transparent"/><title>THE FLOOR</title></a>
+</g>
+<line x1="60" y1="2676.4" x2="950" y2="2676.4" stroke="#ded7cb"/>
+<text x="60" y="2710.4" font-family="Georgia, serif" font-size="31" fill="#22201d">Hamlet (1600) — the braid</text>
+<text x="60" y="2736.4" font-size="15.5" fill="#6f675c">13 beats, 8 lanes. A play — the anchors are acts and scenes, not minutes.</text>
+<text x="60" y="2762.4" font-size="14.5" font-style="italic" fill="#9a9086">Row spacing widens before the coda — time passes there.</text>
+<text x="60" y="2788.4" font-size="14.5" font-style="italic" fill="#9a9086">A play in five acts: each beat is anchored to an act and a scene, not to a minute mark.</text>
+<text x="60" y="2814.4" font-size="14.5" font-style="italic" fill="#9a9086">Row spacing widens before the coda — the last beat is four deaths.</text>
+</svg>
