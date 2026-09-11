@@ -72,6 +72,7 @@ def build(repo):
         entries.append({
             "slug": slug,
             "title": film["title"],
+            "expression": film.get("expression"),
             "year": film.get("year"),
             "url": f"/stories/{slug}/",
             "score": film.get("score"),
