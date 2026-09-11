@@ -1,0 +1,15 @@
+# Shared analyzer gate for every package in the workspace.
+# Doctrine: clean = ZERO diagnostics of any severity.
+include: package:lints/recommended.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+  errors:
+    todo: error
+
+linter:
+  rules:
+    public_member_api_docs: true

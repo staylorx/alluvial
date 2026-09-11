@@ -21,6 +21,32 @@ Procedural memory: skill `narrative-alluvial` (engine docs, design rules, pitfal
 | `out/*.svg` | Canonical artifacts, committed. Hand-editable, restylable. |
 | `out/*.png` | 2x exports for chat/print. |
 | `web/` | Static-page generator (in progress — see BACKLOG below). |
+| `dart/` | **The Dart store + CLI** — reads these files, validates them, writes them back. See `dart/BACKLOG.md`. |
+
+## The Dart port (branch `dart-cli`)
+
+`dart/` is a Dart pub workspace that reads this store, models it as three
+entities (character / beat / appearance), validates it against the schema and
+the authored limits, writes it back, and **draws it** — both renderers are
+ported and byte-identical.
+
+- **The store + CLI**: `alluvial <verb> --store films --output json` — `list`,
+  `show`, `validate`, `timeline`, `roundtrip`, `format` (dry-run first), `chart`
+  (`--variant braid|colour-blind|mini|two-clock`, `--out`, `--out-dir`).
+- **The renderers match the Python engine to the byte.** The reference corpus is
+  rendered by the Python pipeline itself: 30 braid films × the three treatments
+  the pages embed, plus all 5 two-clock charts = 95 artifacts. Dart reproduces
+  all 95, with the drawn layout matching field for field. `dart test` in
+  `packages/alluvial_render` runs that gate.
+- Measured on this store: all 35 files decode; 35/35 are a fixed point through
+  decode → encode → decode; a full `format --apply` cycle over a copy reproduces
+  34 of 35 files byte-for-byte and loses none.
+
+Read `dart/BACKLOG.md` for the proofs and the open questions. Two openings worth
+a decision, neither closed by the port: the two-clock palette (`THREAD` in
+`scripts/reorder_chart.py`) only knows Pulp Fiction's five thread ids, so four of
+the five timechart charts draw every ribbon grey; and the Eleventy page layer
+(`web/`) is still JavaScript.
 
 ## The data model
 

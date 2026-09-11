@@ -1,0 +1,77 @@
+import 'dart:io';
+
+import 'package:alluvial_render/alluvial_render.dart';
+import 'package:shouldly/shouldly.dart';
+import 'package:test/test.dart';
+
+/// The number corpus is generated from the Python engine itself — see
+/// `dart/tool/number_corpus.py` — so this test asserts the port against
+/// CPython's own output rather than against a hand-written expectation.
+final _corpusPath =
+    Platform.environment['ALLUVIAL_NUMBERS'] ?? '/tmp/ref/numbers.tsv';
+
+void main() {
+  final corpus = File(_corpusPath).existsSync()
+      ? File(_corpusPath).readAsLinesSync()
+      : const <String>[];
+
+  group('PyNum against CPython', () {
+    test('Given the fixture exists, when read, then it carries values', () {
+      (corpus.length > 100).should.be(true);
+    });
+
+    test(
+      'Given every corpus value, when formatted, then it matches CPython',
+      () {
+        final mismatches = <String>[];
+        for (final line in corpus) {
+          final cells = line.split('\t');
+          if (cells.length < 7) continue;
+          final value = double.parse(cells[0]);
+          final checks = <String, String>{
+            'fixed1': PyNum.fixed(value, 1),
+            'fixed0': PyNum.fixed(value, 0),
+            'round1': PyNum.repr(PyNum.roundTo(value, 1)),
+            'round3': PyNum.repr(PyNum.roundTo(value, 3)),
+            'round0': '${PyNum.roundToInt(value)}',
+            'repr': PyNum.repr(value),
+          };
+          final expected = <String, String>{
+            'fixed1': cells[1],
+            'fixed0': cells[2],
+            'round1': cells[3],
+            'round3': cells[4],
+            'round0': cells[5],
+            'repr': cells[6],
+          };
+          for (final key in checks.keys) {
+            if (checks[key] != expected[key]) {
+              mismatches.add(
+                'value $value  $key: got ${checks[key]}  want ${expected[key]}',
+              );
+            }
+          }
+        }
+        (mismatches.take(12).join('\n')).should.be('');
+        mismatches.length.should.be(0);
+      },
+    );
+
+    test('Given the known ties, when rounded, then it is half to even', () {
+      PyNum.roundToInt(16.5).should.be(16);
+      PyNum.roundToInt(17.5).should.be(18);
+      PyNum.roundToInt(0.5).should.be(0);
+      PyNum.roundToInt(2.5).should.be(2);
+      PyNum.roundToInt(3.5).should.be(4);
+      PyNum.fixed(2.675, 2).should.be('2.67');
+      // 1.005 is really 1.00499999…, so CPython prints 1.00
+      PyNum.fixed(1.005, 2).should.be('1.00');
+    });
+
+    test('Given a whole number, when printed, then it keeps its point', () {
+      PyNum.repr(470.0).should.be('470.0');
+      PyNum.repr(26.0).should.be('26.0');
+      PyNum.fixed(470.0, 1).should.be('470.0');
+    });
+  });
+}
