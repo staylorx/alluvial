@@ -142,7 +142,7 @@ def render(film: dict, cb: bool = False, mini: bool = False, href=lambda i, c: f
         spec["beat_hit_half"] = step / 2
     svg, checks = render_v(spec)
     svg = svg.replace("<svg ", '<svg class="chart" preserveAspectRatio="xMidYMin meet" ', 1)
-    return svg, spec, checks["H"]
+    return svg, spec, checks["H"], checks
 
 
 def beats_data(film: dict, spec: dict, H: float, half: float) -> list[dict]:
@@ -181,7 +181,7 @@ def hits(spec: dict, H: float, half: float) -> list[dict]:
 if __name__ == "__main__":
     slug = sys.argv[1]
     film = load(slug)
-    svg, spec, H = render(film)
+    svg, spec, H, _chk = render(film)
     beats = beats_data(film, spec, H, 78)
     print(f"{film['title']}: {len(svg)/1024:.1f} KB, H={H:.0f}, "
           f"{len(spec['cols'])} beats, {len(spec['order'])} lanes, "

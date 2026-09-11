@@ -55,8 +55,8 @@ def build(repo):
     for path in seen:
         slug = os.path.basename(path)[:-5]
         film = json.load(open(path, encoding="utf-8"))
-        svg, spec, H = FC.render(film)
-        mini, mspec, Hm = FC.render(film, mini=True)
+        svg, spec, H, _ = FC.render(film)
+        mini, mspec, Hm, _ = FC.render(film, mini=True)
         open(os.path.join(charts, f"{slug}.svg"), "w", encoding="utf-8").write(svg)
         open(os.path.join(charts, f"{slug}-mini.svg"), "w", encoding="utf-8").write(mini)
 
