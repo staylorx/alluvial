@@ -1,0 +1,216 @@
+# A film's braid chart: who stands with whom, beat by beat.
+#
+# Schema: schema/film.schema.json   (enforced — run: python3 scripts/films_yaml.py validate)
+# yaml-language-server: $schema=schema/film.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: to-all-the-boys-i-ve-loved-before
+title: To All the Boys I've Loved Before
+year: 2018
+runtime_min: 99
+score: 24
+score_note: the letters start the plot; after the diner the pair share a lane to the end
+legend_object: the hatbox of unsent letters
+order:
+- lara-jean
+- peter
+- kitty
+- margot
+- josh
+- gen
+- chris
+chars:
+- id: lara-jean
+  name: Lara Jean
+  width: 34
+  colour: '#1b57c4'
+- id: peter
+  name: Peter
+  width: 32
+  colour: '#d0316a'
+- id: kitty
+  name: Kitty
+  width: 22
+  colour: '#6e9078'
+- id: margot
+  name: Margot
+  width: 20
+  colour: '#9c6552'
+- id: josh
+  name: Josh
+  width: 18
+  colour: '#b09a4e'
+- id: gen
+  name: Gen
+  width: 17
+  colour: '#8d7fa8'
+- id: chris
+  name: Chris
+  width: 14
+  colour: '#6f8f96'
+beats:
+- name: THE HATBOX
+  loc: ≈ 0–8 min
+  cap:
+  - Lara Jean writes five letters and hides
+  - them; Margot ends things with Josh
+  tag: SET-UP — the letters are written before the story
+  cats: []
+  clusters:
+  - - lara-jean
+    - kitty
+  - - margot
+    - josh
+  enter:
+  - lara-jean
+  - kitty
+  - margot
+  - josh
+- name: KITTY MAILS THE LETTERS
+  loc: ≈ 8–13 min
+  cap:
+  - Kitty finds the hatbox and mails all five
+  - letters before Lara Jean wakes up
+  tag: INCITING EVENT — the secret goes in the post
+  cats: []
+  clusters:
+  - - lara-jean
+    - kitty
+- name: THE LETTERS ARRIVE
+  loc: ≈ 13–22 min
+  cap:
+  - Peter confronts her with his letter; she
+  - faints, then kisses him to dodge Josh
+  tag: MEET-CUTE — a panic kiss, staged for an audience
+  cats:
+  - meet
+  clusters:
+  - - lara-jean
+    - peter
+  - - josh
+  enter:
+  - peter
+- name: THE DINER AND THE CONTRACT
+  loc: ≈ 22–30 min
+  cap:
+  - Peter follows her to the diner and proposes
+  - fake dating; they write the rules down
+  tag: THE DEAL — an arrangement with written terms
+  cats: []
+  clusters:
+  - - lara-jean
+    - peter
+- name: PLAYING THE COUPLE
+  loc: ≈ 30–45 min
+  cap:
+  - months of staged dates convince the school
+  - and both families; it starts to feel real
+  tag: CHEMISTRY — the performance gets too good
+  cats:
+  - chem
+  clusters:
+  - - lara-jean
+    - peter
+  - - chris
+  - - josh
+  enter:
+  - chris
+  stubs:
+  - chris
+- name: GEN WANTS HIM BACK
+  loc: ≈ 45–55 min
+  cap:
+  - Gen tells Peter she wants him back and he
+  - stalls; the pair admit they are friends now
+  tag: BFF — the act turns into an actual friendship
+  cats:
+  - bff
+  clusters:
+  - - lara-jean
+    - peter
+  - - gen
+  enter:
+  - gen
+- name: THE SKI TRIP HOT TUB
+  loc: ≈ 55–70 min
+  cap:
+  - on the school ski trip Peter says he has
+  - real feelings and they kiss in the hot tub
+  tag: CHEMISTRY — the kiss nobody staged
+  cats:
+  - chem
+  clusters:
+  - - lara-jean
+    - peter
+- name: GEN'S LIE
+  loc: ≈ 70–80 min
+  cap:
+  - Gen says Peter slept in her room and waves
+  - his scrunchie; Lara Jean ends it, furious
+  tag: BREAKUP — a lie finishes what the truth began
+  cats:
+  - breakup
+  clusters:
+  - - lara-jean
+    - gen
+  - - peter
+- name: THE HOUSE ON THE HILL
+  loc: ≈ 80–88 min
+  cap:
+  - Margot is back; Peter and Josh both turn
+  - up; the hot tub video is posted online
+  tag: THE FALLOUT — everyone arrives at once
+  cats: []
+  clusters:
+  - - lara-jean
+    - margot
+  - - peter
+  - - josh
+  - - kitty
+- name: THE SISTERS MAKE UP
+  loc: ≈ 88–93 min
+  cap:
+  - Kitty admits she mailed the letters and the
+  - sisters forgive her; the video comes down
+  tag: FAMILY — the letters were never the betrayal
+  cats: []
+  clusters:
+  - - lara-jean
+    - kitty
+    - margot
+  stubs:
+  - margot
+- name: THE FALL AFTER CHRISTMAS
+  loc: ≈ 93–96 min
+  cap:
+  - Gen admits posting the video, still angry
+  - about a spin the bottle kiss years back
+  tag: CONFESSION — the sabotage had a four-year fuse
+  cats: []
+  clusters:
+  - - lara-jean
+    - gen
+  - - josh
+  stubs:
+  - gen
+  - josh
+- name: GO SEE HIM
+  loc: the coda
+  cap:
+  - Kitty shows her the notes he wrote all along;
+  - Peter tells her he loves her and they kiss
+  tag: GRAND GESTURE — the notes were the confession
+  cats:
+  - gesture
+  clusters:
+  - - lara-jean
+    - peter

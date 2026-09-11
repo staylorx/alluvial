@@ -42,8 +42,9 @@ FONTS = dict(beat=20, loc=16, cap=16.5, hard=16.5, band=14, legend_title=13,
 
 
 def load(slug: str) -> dict:
-    with open(os.path.join(FILMS, f"{slug}.json"), encoding="utf-8") as fh:
-        return json.load(fh)
+    """Films come from the data store: films/<slug>.yaml (JSON still works)."""
+    import films_yaml
+    return films_yaml.load(slug)
 
 
 def _flat_ids(v) -> list[str]:
@@ -140,8 +141,7 @@ def spec_for(film: dict, cb: bool = False, mini: bool = False) -> dict:
     if film.get("title_notes"):
         notes = [(t, "note") for t in film["title_notes"]]
     else:
-        notes = [("Each beat is tagged with the rubric category it earns, so this doubles "
-                  "as the film's scoring sheet.", "note")]
+        notes = [("Each beat names the rubric category its shape belongs to.", "note")]
     if film.get("score") and not film.get("title_notes"):
         notes.append((f"Scored {film['score']}/30 on the rubric \u2014 {film.get('score_note', '')}".rstrip(" \u2014"),
                       "note"))
@@ -208,7 +208,8 @@ def beats_data(film: dict, spec: dict, H: float, half: float) -> list[dict]:
             "loc": c["loc"],
             "line": c["cap"][0],
             "changes": changes,
-            "tag": c.get("cap_extra", ("", ""))[0].replace("\u25b8 ", ""),
+            "tag": (lambda t: (t if isinstance(t, str) else " ".join(t))
+                .replace("\u25b8 ", ""))(c.get("cap_extra", ("", ""))[0]),
             "rubric": [dict(rc) for rc in rub],
         })
     return out

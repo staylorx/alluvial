@@ -42,8 +42,9 @@ THREAD = {
 
 
 def load(slug: str) -> dict:
-    with open(os.path.join(DATA, f"{slug}-timechart.json"), encoding="utf-8") as fh:
-        return json.load(fh)
+    """A timechart comes from the same store: films/<slug>-timechart.yaml."""
+    import films_yaml
+    return films_yaml.load(f"{slug}-timechart")
 
 
 def render(doc: dict) -> tuple[str, dict]:

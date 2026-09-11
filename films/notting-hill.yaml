@@ -1,0 +1,208 @@
+# A film's braid chart: who stands with whom, beat by beat.
+#
+# Schema: schema/film.schema.json   (enforced — run: python3 scripts/films_yaml.py validate)
+# yaml-language-server: $schema=schema/film.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: notting-hill
+title: Notting Hill
+year: 1999
+runtime_min: 124
+score: 27
+score_note: 27 points on the rubric
+order:
+- will
+- anna
+- spike
+- honey
+- max
+- bella
+- bernie
+chars:
+- id: will
+  name: Will
+  width: 32
+  colour: '#1b57c4'
+- id: anna
+  name: Anna
+  width: 31
+  colour: '#d0316a'
+- id: spike
+  name: Spike
+  width: 24
+  colour: '#6e9078'
+- id: honey
+  name: Honey
+  width: 20
+  colour: '#9c6552'
+- id: max
+  name: Max
+  width: 19
+  colour: '#b09a4e'
+- id: bella
+  name: Bella
+  width: 18
+  colour: '#8d7fa8'
+- id: bernie
+  name: Bernie
+  width: 17
+  colour: '#6f8f96'
+beats:
+- name: SHE WALKS INTO THE SHOP
+  loc: ≈ 0–8 min
+  cap:
+  - a famous face buys a book
+  - and he says the wrong thing
+  tag: MEET-CUTE — an entrance, not a marriage
+  cats:
+  - meet
+  clusters:
+  - - will
+    - anna
+  - - spike
+- name: THE SPILLED JUICE
+  loc: ≈ 8–20 min
+  cap:
+  - an apology, a kiss, and then
+  - the phone call that reframes it
+  tag: CHEMISTRY — they are good at this part
+  cats:
+  - chem
+  clusters:
+  - - will
+    - anna
+  - - spike
+- name: THE PRESS JUNKET
+  loc: ≈ 20–30 min
+  cap:
+  - he poses as a journalist from
+  - a horse magazine to reach her
+  tag: BFF — Spike, lending the haircut
+  cats:
+  - bff
+  clusters:
+  - - will
+    - anna
+  - - spike
+    - bernie
+- name: HONEY'S BIRTHDAY
+  loc: ≈ 30–45 min
+  cap:
+  - her world arrives at his table
+  - the two worlds meet badly
+  tag: the dinner the film is remembered for
+  cats:
+  - ebert
+  clusters:
+  - - will
+    - anna
+  - - honey
+    - max
+    - bella
+  - - spike
+    - bernie
+- name: THE HOTEL ROOM
+  loc: ≈ 45–55 min
+  cap:
+  - he hears a man in her suite
+  - and leaves without knocking
+  tag: the first split, and it is his choice
+  cats: []
+  clusters:
+  - - will
+  - - anna
+  - - spike
+  stubs: []
+- name: JUST A GIRL
+  loc: ≈ 55–65 min
+  cap:
+  - she comes to the shop to explain
+  - and says the line everybody quotes
+  tag: GESTURE — the apology, offered first
+  cats:
+  - gesture
+  clusters:
+  - - will
+    - anna
+  - - spike
+- name: THE WALLED GARDEN
+  loc: ≈ 65–75 min
+  cap:
+  - the dinner that ends in photographs
+  - and a decision made for him
+  tag: chemistry, under a camera
+  cats:
+  - chem
+  clusters:
+  - - will
+    - anna
+  - - max
+    - bella
+  - - spike
+- name: THE STORY BREAKS
+  loc: ≈ 75–82 min
+  cap:
+  - the papers print her life, and he
+  - cannot see a place for himself in it
+  tag: BREAKUP — it flows from who he is
+  cats:
+  - breakup
+  clusters:
+  - - will
+    - spike
+  - - anna
+  - - max
+    - bella
+- name: THE YEAR ALONE
+  loc: ≈ 82–92 min
+  cap:
+  - the seasons turn over the market
+  - and he walks through all of them alone
+  tag: ebert
+  cats:
+  - ebert
+  clusters:
+  - - will
+    - spike
+  - - honey
+    - max
+    - bella
+  - - bernie
+- name: THE PRESS CONFERENCE
+  loc: ≈ 92–105 min
+  cap:
+  - he turns up in the room and asks
+  - her a question as a journalist
+  tag: GESTURE — the airport run, indoors
+  cats:
+  - gesture
+  clusters:
+  - - will
+    - anna
+  - - honey
+    - max
+    - bella
+  - - spike
+    - bernie
+- name: THE CODA
+  loc: the coda
+  cap:
+  - a bench, a garden, and a baby
+  - between them on the grass
+  tag: the 28th dress, on a bench
+  cats: []
+  clusters:
+  - - will
+    - anna
+  - - honey
+    - max
+    - bella

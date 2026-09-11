@@ -1,0 +1,141 @@
+{
+ "slug": "sliding-doors",
+ "title": "Sliding Doors",
+ "year": 1998,
+ "runtime_min": 99,
+ "sub": "Two clocks: the film's cuts between Helen's two lives, and the two lives themselves.",
+ "notes": [
+  "The two timelines run in parallel, not in sequence: they begin at the same instant on the platform and are never one chronology.",
+  "Numbering: the miss-the-train line (#2, 5, 7, 10, 11) and the catch-the-train line (#3, 4, 6, 8, 9, 12) are each numbered in their own order, then interleaved on the right spine so adjacent numbers are roughly the same moment in each life. Nothing is merged.",
+  "The film screens the miss first, then rewinds and screens the catch; both are the same instant, so they sit next to each other on the right spine.",
+  "The catch-the-train Helen runs ahead of the miss-the-train Helen in real time, so a ribbon crosses whenever the film cuts back to the other life.",
+  "The shared prologue (#1) belongs to both lives; the hospital (#13) is where the two are shown in the same place at last.",
+  "Beat order within each line follows the film; the published plot summaries are brief, so a few placements are a judgement call."
+ ],
+ "threads": {
+  "helen": "Helen (before the split)",
+  "catch": "Catches the train",
+  "miss": "Misses the train",
+  "both": "Both lifetimes"
+ },
+ "legend_note": "Left spine = the order the film screens its scenes. Right spine = the order they happen, with the two lifetimes numbered in parallel side by side, each in its own order.",
+ "scenes": [
+  {
+   "id": "sacked",
+   "label": "Sacked; the earring in the lift",
+   "chapter": "PROLOGUE",
+   "as_screened": 1,
+   "happened": 1,
+   "thread": "helen",
+   "mins": 7
+  },
+  {
+   "id": "doors-shut",
+   "label": "The girl; the doors shut on her",
+   "chapter": "THE SPLIT",
+   "as_screened": 2,
+   "happened": 2,
+   "thread": "miss",
+   "mins": 3
+  },
+  {
+   "id": "doors-open",
+   "label": "Rewind: she forces the doors open",
+   "chapter": "THE SPLIT",
+   "as_screened": 3,
+   "happened": 3,
+   "thread": "catch",
+   "mins": 3
+  },
+  {
+   "id": "train-james",
+   "label": "James on the train; the walk",
+   "chapter": "ACT ONE",
+   "as_screened": 4,
+   "happened": 4,
+   "thread": "catch",
+   "mins": 9
+  },
+  {
+   "id": "home-late",
+   "label": "Home late; nothing amiss",
+   "chapter": "ACT ONE",
+   "as_screened": 5,
+   "happened": 6,
+   "thread": "miss",
+   "mins": 8
+  },
+  {
+   "id": "catches-gerry",
+   "label": "Home early; Gerry and Lydia",
+   "chapter": "ACT ONE",
+   "as_screened": 6,
+   "happened": 5,
+   "thread": "catch",
+   "mins": 8
+  },
+  {
+   "id": "waitressing",
+   "label": "Waiting tables; pregnant",
+   "chapter": "ACT TWO",
+   "as_screened": 7,
+   "happened": 7,
+   "thread": "miss",
+   "mins": 12
+  },
+  {
+   "id": "haircut",
+   "label": "The haircut; her own firm",
+   "chapter": "ACT TWO",
+   "as_screened": 8,
+   "happened": 8,
+   "thread": "catch",
+   "mins": 10
+  },
+  {
+   "id": "party",
+   "label": "The party; Gerry with Lydia",
+   "chapter": "ACT TWO",
+   "as_screened": 9,
+   "happened": 10,
+   "thread": "miss",
+   "mins": 9
+  },
+  {
+   "id": "james-love",
+   "label": "Helen and James together",
+   "chapter": "ACT TWO",
+   "as_screened": 10,
+   "happened": 9,
+   "thread": "catch",
+   "mins": 12
+  },
+  {
+   "id": "the-fall",
+   "label": "The fall; she loses the baby",
+   "chapter": "ACT THREE",
+   "as_screened": 11,
+   "happened": 11,
+   "thread": "miss",
+   "mins": 6
+  },
+  {
+   "id": "james-hit",
+   "label": "James is hit by a car",
+   "chapter": "ACT THREE",
+   "as_screened": 12,
+   "happened": 12,
+   "thread": "catch",
+   "mins": 7
+  },
+  {
+   "id": "hospital",
+   "label": "Two Helens in the hospital",
+   "chapter": "ACT THREE",
+   "as_screened": 13,
+   "happened": 13,
+   "thread": "both",
+   "mins": 6
+  }
+ ]
+}

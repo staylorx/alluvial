@@ -1,0 +1,118 @@
+{
+  "slug": "rye-lane",
+  "title": "Rye Lane",
+  "year": 2023,
+  "runtime_min": 82,
+  "score": 26,
+  "score_note": "one day, two breakups, and a walk that never leaves the pair's side of the page",
+  "order": ["dom", "yas", "gia", "jules", "eric", "nathan", "mona"],
+  "chars": [
+    {"id": "dom", "name": "Dom", "width": 34, "colour": "#1b57c4"},
+    {"id": "yas", "name": "Yas", "width": 33, "colour": "#d0316a"},
+    {"id": "gia", "name": "Gia", "width": 18, "colour": "#6e9078"},
+    {"id": "jules", "name": "Jules", "width": 20, "colour": "#9c6552"},
+    {"id": "eric", "name": "Eric", "width": 16, "colour": "#b09a4e"},
+    {"id": "nathan", "name": "Nathan", "width": 15, "colour": "#8d7fa8"},
+    {"id": "mona", "name": "Mona", "width": 12, "colour": "#6f8f96"}
+  ],
+  "beats": [
+    {
+      "name": "THE TOILET AT THE EXHIBITION",
+      "loc": "≈ 0–7 min",
+      "cap": ["Dom is crying in the toilet at a friend's",
+              "art show; Yas walks in on him"],
+      "tag": "MEET-CUTE — a shared cubicle, not a marriage",
+      "cats": ["meet"],
+      "clusters": [["dom", "yas"], ["nathan"]],
+      "enter": ["dom", "yas", "nathan"]
+    },
+    {
+      "name": "RYE LANE MARKET",
+      "loc": "≈ 7–18 min",
+      "cap": ["they walk the market and trade stories",
+              "of the breakups that brought them here"],
+      "tag": "CHEMISTRY — two strangers, one afternoon",
+      "cats": ["chem"],
+      "clusters": [["dom", "yas"]]
+    },
+    {
+      "name": "THE RESTAURANT",
+      "loc": "≈ 18–30 min",
+      "cap": ["Yas crashes Dom's lunch with Gia and",
+              "Eric, posing as the woman he met singing"],
+      "tag": "CONFRONTATION — the ex, met on her own terms",
+      "cats": [],
+      "clusters": [["dom", "yas"], ["gia", "eric"]],
+      "enter": ["gia", "eric"],
+      "stubs": ["gia", "eric"]
+    },
+    {
+      "name": "LUNCH AT THE TORTILLA SHOP",
+      "loc": "≈ 30–42 min",
+      "cap": ["over lunch Yas explains why Jules was",
+              "wrong; Dom suggests stealing her record"],
+      "tag": "CONFESSION — the second breakup, told plainly",
+      "cats": ["bff"],
+      "clusters": [["dom", "yas"]]
+    },
+    {
+      "name": "THE HUNT FOR THE KEY",
+      "loc": "≈ 42–52 min",
+      "cap": ["they hunt for Jules's spare key and Dom",
+              "is caught in the knickers drawer"],
+      "tag": "CAPER — the plan fails in a stranger's hallway",
+      "cats": [],
+      "clusters": [["dom", "yas"]]
+    },
+    {
+      "name": "MONA'S KARAOKE BAR",
+      "loc": "≈ 52–62 min",
+      "cap": ["to win the key they must sing karaoke,",
+              "and Yas kisses Dom on the way out"],
+      "tag": "CHEMISTRY — the duet is the date",
+      "cats": ["chem", "ebert"],
+      "clusters": [["dom", "yas"], ["mona"]],
+      "enter": ["mona"],
+      "stubs": ["mona"]
+    },
+    {
+      "name": "THE BREAK-IN",
+      "loc": "≈ 62–72 min",
+      "cap": ["Jules and his girlfriend catch them; he",
+              "says he did the dumping; Dom storms off"],
+      "tag": "BREAKUP — the lie, not the ex, ends the day",
+      "cats": ["breakup"],
+      "clusters": [["dom", "yas"], ["jules"]],
+      "enter": ["jules"],
+      "stubs": ["jules"]
+    },
+    {
+      "name": "MONTHS APART",
+      "loc": "≈ 72–78 min",
+      "cap": ["months pass; both date other people but",
+              "neither can forget the other"],
+      "tag": "THE GAP — separate lanes for the first time",
+      "cats": [],
+      "clusters": [["dom"], ["yas"]]
+    },
+    {
+      "name": "NATHAN'S SECOND EXHIBITION",
+      "loc": "≈ 78–80 min",
+      "cap": ["at Nathan's second show Dom takes a call",
+              "and Yas waves to him from a boat"],
+      "tag": "GESTURE — the tourist-wave, turned into a vow",
+      "cats": ["gesture"],
+      "clusters": [["dom"], ["yas"], ["nathan"]],
+      "stubs": ["nathan"]
+    },
+    {
+      "name": "THE EMBRACE AT THE RIVER",
+      "loc": "the coda",
+      "cap": ["he runs down to the river and waits for",
+              "the boat to land; they kiss"],
+      "tag": "PAGE ONE — the pair share a lane again",
+      "cats": [],
+      "clusters": [["dom", "yas"]]
+    }
+  ]
+}

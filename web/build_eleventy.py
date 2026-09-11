@@ -25,6 +25,8 @@ for p in (HERE, os.path.join(HERE, "..", "scripts")):
         sys.path.insert(0, p)
 
 import film_chart as FC          # noqa: E402
+import films_yaml as FY          # noqa: E402
+import reorder_chart as RC       # noqa: E402
 import rubric27                  # noqa: E402
 
 FILMS = os.path.abspath(os.path.join(HERE, "..", "films"))
@@ -42,8 +44,9 @@ def blurb(film, n_beats, n_lanes):
     if film.get("blurb"):
         return film["blurb"]
     return (f"{n_beats} beats, {n_lanes} lanes. Who is with whom, and the moment it "
-            "changes. Each beat carries the rubric category it earns, and the notes "
-            "under it are computed from the diagram's own geometry, not written by hand.")
+            "changes. Each beat names the rubric category its shape belongs to, and the "
+            "notes under it are computed from the diagram's own geometry, not written "
+            "by hand.")
 
 
 def build(repo):
@@ -51,7 +54,10 @@ def build(repo):
     data = os.path.join(repo, "src", "_data")
     os.makedirs(charts, exist_ok=True)
 
-    entries, seen = [], sorted(glob.glob(os.path.join(FILMS, "*.json")))
+    # films/<slug>.json are braid films; <slug>-timechart.json is a different
+    # chart shape and is handled by reorder_chart.py, not here.
+    entries, seen = [], sorted(p for p in glob.glob(os.path.join(FILMS, "*.json"))
+                               if not p.endswith("-timechart.json"))
     for path in seen:
         slug = os.path.basename(path)[:-5]
         film = json.load(open(path, encoding="utf-8"))
@@ -80,6 +86,16 @@ def build(repo):
             "beats": beats,
             "rubric": RUBRIC,
         })
+        # a film with two clocks gets the second chart underneath the braid
+        if any(os.path.exists(os.path.join(FILMS, f"{slug}-timechart{ext}"))
+               for ext in (".yaml", ".json")):
+            tc_doc = FY.load(f"{slug}-timechart")
+            tc_svg, tc_info = RC.render(tc_doc)
+            open(os.path.join(charts, f"{slug}-timechart.svg"), "w",
+                 encoding="utf-8").write(tc_svg)
+            entries[-1]["timechart"] = f"src/_includes/charts/{slug}-timechart.svg"
+            entries[-1]["timechart_scenes"] = len(tc_doc["scenes"])
+            entries[-1]["timechart_notes"] = tc_doc.get("notes", [])
         print(f"  {slug:34s} {len(beats):2d} beats  {n_lanes} lanes  "
               f"{len(svg)/1024:5.1f} KB  H={H:.0f}")
 

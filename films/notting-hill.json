@@ -1,130 +1,321 @@
 {
-  "slug": "notting-hill",
-  "title": "Notting Hill",
-  "year": 1999,
-  "runtime_min": 124,
-  "score": 27,
-  "score_note": "27 points on the rubric",
-  "order": ["will", "anna", "spike", "honey", "max", "bella", "bernie"],
-  "chars": [
-    {"id": "will", "name": "Will", "width": 32, "colour": "#1b57c4"},
-    {"id": "anna", "name": "Anna", "width": 31, "colour": "#d0316a"},
-    {"id": "spike", "name": "Spike", "width": 24, "colour": "#6e9078"},
-    {"id": "honey", "name": "Honey", "width": 20, "colour": "#9c6552"},
-    {"id": "max", "name": "Max", "width": 19, "colour": "#b09a4e"},
-    {"id": "bella", "name": "Bella", "width": 18, "colour": "#8d7fa8"},
-    {"id": "bernie", "name": "Bernie", "width": 17, "colour": "#6f8f96"}
-  ],
-  "beats": [
-    {
-      "name": "SHE WALKS INTO THE SHOP",
-      "loc": "≈ 0–10 min",
-      "cap": ["a famous American actress buys a travel",
-              "book from the man who owns the shop"],
-      "tag": "MEET-CUTE — she comes to him, not the reverse",
-      "cats": ["meet"],
-      "clusters": [["will", "anna"], ["spike"]],
-      "enter": ["will", "anna", "spike"]
-    },
-    {
-      "name": "THE SPILLED JUICE",
-      "loc": "≈ 10–20 min",
-      "cap": ["he spills orange juice on her in the street",
-              "and she changes clothes in his flat"],
-      "tag": "CHEMISTRY — she kisses him at the door",
-      "cats": ["chem"],
-      "clusters": [["will", "anna"], ["spike"]]
-    },
-    {
-      "name": "THE PRESS JUNKET",
-      "loc": "≈ 20–30 min",
-      "cap": ["taken for a reporter at her hotel,",
-              "he gets one free press conference"],
-      "tag": "DOOR — the lie that will cost him",
-      "cats": [],
-      "clusters": [["will", "anna"]]
-    },
-    {
-      "name": "HONEY'S BIRTHDAY",
-      "loc": "≈ 30–45 min",
-      "cap": ["he brings a film star to a family dinner",
-              "and she is the one who fits in"],
-      "tag": "FRIENDS — the ordinary world she has never had",
-      "cats": ["bff"],
-      "clusters": [["will", "anna"], ["honey"], ["max", "bella"], ["bernie"], ["spike"]],
-      "enter": ["honey", "max", "bella", "bernie"]
-    },
-    {
-      "name": "THE WALLED GARDEN",
-      "loc": "≈ 45–52 min",
-      "cap": ["past a locked gate that is not his to open",
-              "they find a garden and kiss again"],
-      "tag": "CHEMISTRY — the same beat, earned twice",
-      "cats": ["chem"],
-      "clusters": [["will", "anna"]]
-    },
-    {
-      "name": "THE RESTAURANT",
-      "loc": "≈ 52–60 min",
-      "cap": ["at the next table men list the films she",
-              "made and the men she made them with"],
-      "tag": "PRICE — the past she cannot outrun",
-      "cats": [],
-      "clusters": [["will", "anna"]]
-    },
-    {
-      "name": "THE HOTEL ROOM",
-      "loc": "≈ 60–68 min",
-      "cap": ["he arrives at her door with a gift and",
-              "finds another man already in the room"],
-      "tag": "SETBACK — she flies home in the morning",
-      "cats": [],
-      "clusters": [["will", "anna"]]
-    },
-    {
-      "name": "SHE COMES BACK",
-      "loc": "≈ 68–80 min",
-      "cap": ["months later she is in London filming",
-              "and she calls him, and he comes"],
-      "tag": "RESUME — the deal is made again",
-      "cats": [],
-      "clusters": [["will", "anna"], ["spike"]]
-    },
-    {
-      "name": "THE STORY BREAKS",
-      "loc": "≈ 80–92 min",
-      "cap": ["the tabloids get the story and his quiet",
-              "street fills with photographers"],
-      "tag": "BREAKUP — fame gets the last word",
-      "cats": ["breakup"],
-      "clusters": [["will", "anna"], ["spike"]]
-    },
-    {
-      "name": "JUST A GIRL",
-      "loc": "≈ 92–100 min",
-      "cap": ["standing in front of a boy, she asks to",
-              "be loved, and then she leaves"],
-      "tag": "TURN — the speech he does not answer",
-      "cats": [],
-      "clusters": [["will", "anna"]]
-    },
-    {
-      "name": "THE PRESS CONFERENCE",
-      "loc": "≈ 100–115 min",
-      "cap": ["his friends bundle him into the car and he",
-              "reaches the press conference in time"],
-      "tag": "GESTURE — he says it in front of everyone",
-      "cats": ["gesture"],
-      "clusters": [["will", "anna"], ["honey"], ["max", "bella"], ["bernie"], ["spike"]]
-    },
-    {
-      "name": "THE CODA",
-      "loc": "the coda",
-      "cap": ["married, expecting a child, on a bench in",
-              "the park they used to walk through"],
-      "tag": "CODA — the ordinary ending she chose",
-      "cats": [],
-      "clusters": [["will", "anna"]]
-    }
-  ]
+ "slug": "notting-hill",
+ "title": "Notting Hill",
+ "year": 1999,
+ "runtime_min": 124,
+ "score": 27,
+ "score_note": "27 points on the rubric",
+ "order": [
+  "will",
+  "anna",
+  "spike",
+  "honey",
+  "max",
+  "bella",
+  "bernie"
+ ],
+ "chars": [
+  {
+   "id": "will",
+   "name": "Will",
+   "width": 32,
+   "colour": "#1b57c4"
+  },
+  {
+   "id": "anna",
+   "name": "Anna",
+   "width": 31,
+   "colour": "#d0316a"
+  },
+  {
+   "id": "spike",
+   "name": "Spike",
+   "width": 24,
+   "colour": "#6e9078"
+  },
+  {
+   "id": "honey",
+   "name": "Honey",
+   "width": 20,
+   "colour": "#9c6552"
+  },
+  {
+   "id": "max",
+   "name": "Max",
+   "width": 19,
+   "colour": "#b09a4e"
+  },
+  {
+   "id": "bella",
+   "name": "Bella",
+   "width": 18,
+   "colour": "#8d7fa8"
+  },
+  {
+   "id": "bernie",
+   "name": "Bernie",
+   "width": 17,
+   "colour": "#6f8f96"
+  }
+ ],
+ "beats": [
+  {
+   "name": "SHE WALKS INTO THE SHOP",
+   "loc": "≈ 0–8 min",
+   "cap": [
+    "a famous face buys a book",
+    "and he says the wrong thing"
+   ],
+   "tag": "MEET-CUTE — an entrance, not a marriage",
+   "cats": [
+    "meet"
+   ],
+   "clusters": [
+    [
+     "will",
+     "anna"
+    ],
+    [
+     "spike"
+    ]
+   ]
+  },
+  {
+   "name": "THE SPILLED JUICE",
+   "loc": "≈ 8–20 min",
+   "cap": [
+    "an apology, a kiss, and then",
+    "the phone call that reframes it"
+   ],
+   "tag": "CHEMISTRY — they are good at this part",
+   "cats": [
+    "chem"
+   ],
+   "clusters": [
+    [
+     "will",
+     "anna"
+    ],
+    [
+     "spike"
+    ]
+   ]
+  },
+  {
+   "name": "THE PRESS JUNKET",
+   "loc": "≈ 20–30 min",
+   "cap": [
+    "he poses as a journalist from",
+    "a horse magazine to reach her"
+   ],
+   "tag": "BFF — Spike, lending the haircut",
+   "cats": [
+    "bff"
+   ],
+   "clusters": [
+    [
+     "will",
+     "anna"
+    ],
+    [
+     "spike",
+     "bernie"
+    ]
+   ]
+  },
+  {
+   "name": "HONEY'S BIRTHDAY",
+   "loc": "≈ 30–45 min",
+   "cap": [
+    "her world arrives at his table",
+    "the two worlds meet badly"
+   ],
+   "tag": "the dinner the film is remembered for",
+   "cats": [
+    "ebert"
+   ],
+   "clusters": [
+    [
+     "will",
+     "anna"
+    ],
+    [
+     "honey",
+     "max",
+     "bella"
+    ],
+    [
+     "spike",
+     "bernie"
+    ]
+   ]
+  },
+  {
+   "name": "THE HOTEL ROOM",
+   "loc": "≈ 45–55 min",
+   "cap": [
+    "he hears a man in her suite",
+    "and leaves without knocking"
+   ],
+   "tag": "the first split, and it is his choice",
+   "cats": [],
+   "clusters": [
+    [
+     "will"
+    ],
+    [
+     "anna"
+    ],
+    [
+     "spike"
+    ]
+   ],
+   "stubs": []
+  },
+  {
+   "name": "JUST A GIRL",
+   "loc": "≈ 55–65 min",
+   "cap": [
+    "she comes to the shop to explain",
+    "and says the line everybody quotes"
+   ],
+   "tag": "GESTURE — the apology, offered first",
+   "cats": [
+    "gesture"
+   ],
+   "clusters": [
+    [
+     "will",
+     "anna"
+    ],
+    [
+     "spike"
+    ]
+   ]
+  },
+  {
+   "name": "THE WALLED GARDEN",
+   "loc": "≈ 65–75 min",
+   "cap": [
+    "the dinner that ends in photographs",
+    "and a decision made for him"
+   ],
+   "tag": "chemistry, under a camera",
+   "cats": [
+    "chem"
+   ],
+   "clusters": [
+    [
+     "will",
+     "anna"
+    ],
+    [
+     "max",
+     "bella"
+    ],
+    [
+     "spike"
+    ]
+   ]
+  },
+  {
+   "name": "THE STORY BREAKS",
+   "loc": "≈ 75–82 min",
+   "cap": [
+    "the papers print her life, and he",
+    "cannot see a place for himself in it"
+   ],
+   "tag": "BREAKUP — it flows from who he is",
+   "cats": [
+    "breakup"
+   ],
+   "clusters": [
+    [
+     "will",
+     "spike"
+    ],
+    [
+     "anna"
+    ],
+    [
+     "max",
+     "bella"
+    ]
+   ]
+  },
+  {
+   "name": "THE YEAR ALONE",
+   "cap": [
+    "the seasons turn over the market",
+    "and he walks through all of them alone"
+   ],
+   "tag": "ebert",
+   "cats": [
+    "ebert"
+   ],
+   "clusters": [
+    [
+     "will",
+     "spike"
+    ],
+    [
+     "honey",
+     "max",
+     "bella"
+    ],
+    [
+     "bernie"
+    ]
+   ],
+   "loc": "≈ 82–92 min"
+  },
+  {
+   "name": "THE PRESS CONFERENCE",
+   "loc": "≈ 92–105 min",
+   "cap": [
+    "he turns up in the room and asks",
+    "her a question as a journalist"
+   ],
+   "tag": "GESTURE — the airport run, indoors",
+   "cats": [
+    "gesture"
+   ],
+   "clusters": [
+    [
+     "will",
+     "anna"
+    ],
+    [
+     "honey",
+     "max",
+     "bella"
+    ],
+    [
+     "spike",
+     "bernie"
+    ]
+   ]
+  },
+  {
+   "name": "THE CODA",
+   "loc": "the coda",
+   "cap": [
+    "a bench, a garden, and a baby",
+    "between them on the grass"
+   ],
+   "tag": "the 28th dress, on a bench",
+   "cats": [],
+   "clusters": [
+    [
+     "will",
+     "anna"
+    ],
+    [
+     "honey",
+     "max",
+     "bella"
+    ]
+   ]
+  }
+ ]
 }

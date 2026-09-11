@@ -1,0 +1,199 @@
+# A film's braid chart: who stands with whom, beat by beat.
+#
+# Schema: schema/film.schema.json   (enforced — run: python3 scripts/films_yaml.py validate)
+# yaml-language-server: $schema=schema/film.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: bridget-jones-s-diary
+title: Bridget Jones's Diary
+year: 2001
+runtime_min: 96
+score: 27
+score_note: 27 points on the rubric
+legend_object: the diary
+order:
+- bridget
+- mark
+- daniel
+- mum
+- dad
+- shazzer
+- jude
+- tom
+chars:
+- id: bridget
+  name: Bridget
+  width: 32
+  colour: '#1b57c4'
+- id: mark
+  name: Mark
+  width: 30
+  colour: '#d0316a'
+- id: daniel
+  name: Daniel
+  width: 26
+  colour: '#6e9078'
+- id: mum
+  name: Mum
+  width: 18
+  colour: '#9c6552'
+- id: dad
+  name: Dad
+  width: 17
+  colour: '#b09a4e'
+- id: shazzer
+  name: Shazzer
+  width: 14
+  colour: '#8d7fa8'
+- id: jude
+  name: Jude
+  width: 13
+  colour: '#6f8f96'
+- id: tom
+  name: Tom
+  width: 13
+  colour: '#b08a94'
+beats:
+- name: THE RESOLUTIONS
+  loc: ≈ 0–5 min
+  cap:
+  - thirty-two, single, and resolving to lose
+  - weight, drink less and find a nice man
+  tag: OPENING — the diary starts the film
+  cats: []
+  clusters:
+  - - bridget
+  enter:
+  - bridget
+- name: A NEW YEAR PARTY
+  loc: ≈ 5–15 min
+  cap:
+  - reintroduced to a barrister she has known
+  - since childhood, in a terrible jumper
+  tag: MEET-CUTE — an old acquaintance, read wrong
+  cats:
+  - meet
+  clusters:
+  - - bridget
+  - - mum
+    - dad
+  - - mark
+  enter:
+  - mark
+  - mum
+  - dad
+- name: THE BOSS AND THE SKIRT
+  loc: ≈ 15–28 min
+  cap:
+  - a short skirt, a chauffeured lunch, and an
+  - affair with her womanising boss
+  tag: CHEMISTRY — the wrong man, entirely
+  cats:
+  - chem
+  clusters:
+  - - bridget
+    - daniel
+  - - shazzer
+  enter:
+  - daniel
+  - shazzer
+- name: THE BLUE SOUP DINNER
+  loc: ≈ 28–38 min
+  cap:
+  - she cooks for her birthday and the soup
+  - turns an unearthly blue; they toast anyway
+  tag: FRIENDS — the audience for every disaster
+  cats:
+  - bff
+  clusters:
+  - - bridget
+  - - daniel
+  - - shazzer
+    - jude
+    - tom
+  enter:
+  - jude
+  - tom
+- name: DANIEL'S FLAT
+  loc: ≈ 38–48 min
+  cap:
+  - the weekend in the country reveals a lover
+  - she was not told about; she quits
+  tag: BREAKUP — she walks out on the job and him
+  cats:
+  - breakup
+  clusters:
+  - - bridget
+    - daniel
+- name: THE TARTS AND VICARS PARTY
+  loc: ≈ 48–58 min
+  cap:
+  - dressed as a bunny among a garden full of
+  - vicars, she meets him again anyway
+  tag: SET PIECE — the wrong costume for the party
+  cats: []
+  clusters:
+  - - bridget
+  - - mum
+    - dad
+  - - mark
+- name: THE FIRE STATION
+  loc: ≈ 58–68 min
+  cap:
+  - a live interview at a fire station ends
+  - with her sliding down the pole on air
+  tag: SET PIECE — competence and disaster at once
+  cats: []
+  clusters:
+  - - bridget
+- name: MARK'S WORLD
+  loc: ≈ 68–78 min
+  cap:
+  - his family, his colleagues and the woman
+  - everyone expects him to marry
+  tag: WORLDS APART — she does not fit and says so
+  cats: []
+  clusters:
+  - - bridget
+    - mark
+- name: THE MISREADING
+  loc: ≈ 78–88 min
+  cap:
+  - she believes he is marrying someone else
+  - and the two of them are done speaking
+  tag: MISUNDERSTANDING — the plot turns on it
+  cats: []
+  clusters:
+  - - bridget
+  - - mark
+- name: THE FIGHT IN THE STREET
+  loc: ≈ 88–94 min
+  cap:
+  - the two men who want her brawl in the
+  - street, and one of them wins ugly
+  tag: RIVALS — settled in the road
+  cats: []
+  clusters:
+  - - bridget
+  - - mark
+    - daniel
+- name: THE NEW DIARY
+  loc: ≈ 94–end
+  cap:
+  - a new diary arrives with a note inside,
+  - and she finds him in the falling snow
+  tag: GESTURE — he answers in her own language
+  cats:
+  - gesture
+  clusters:
+  - - bridget
+    - mark

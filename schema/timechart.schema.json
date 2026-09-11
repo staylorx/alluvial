@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://staylorx.com/schema/timechart.schema.json",
+  "title": "Two-clock chart source",
+  "description": "films/<slug>-timechart.yaml. Two spines over one scene set: what the film screens, and what actually happens.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["slug", "title", "threads", "scenes"],
+  "properties": {
+    "slug": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "title": {"type": "string"},
+    "year": {"type": ["integer", "null"]},
+    "runtime_min": {"type": ["integer", "null"]},
+    "sub": {"type": "string"},
+    "notes": {"type": "array", "items": {"type": "string"}},
+    "legend_note": {"type": "string"},
+    "threads": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string"}},
+    "scenes": {
+      "type": "array", "minItems": 6, "maxItems": 14,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "label", "chapter", "as_screened", "happened", "thread"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "label": {"type": "string", "maxLength": 34},
+          "chapter": {"type": "string", "description": "The film's own chapter card, or the act it sits in."},
+          "as_screened": {"type": "integer", "minimum": 1},
+          "happened": {"type": "integer", "minimum": 1},
+          "thread": {"type": "string"},
+          "mins": {"type": "number", "minimum": 1}
+        }
+      }
+    }
+  }
+}

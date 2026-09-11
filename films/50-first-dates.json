@@ -115,7 +115,18 @@
    ],
    "tag": "the film's real engine",
    "cats": [],
-   "clusters": []
+   "clusters": [
+    [
+     "henry",
+     "lucy"
+    ],
+    [
+     "marlin"
+    ],
+    [
+     "doug"
+    ]
+   ]
   },
   {
    "name": "FIRST DATES, REPEATED",

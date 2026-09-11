@@ -1,0 +1,228 @@
+# A film's braid chart: who stands with whom, beat by beat.
+#
+# Schema: schema/film.schema.json   (enforced — run: python3 scripts/films_yaml.py validate)
+# yaml-language-server: $schema=schema/film.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: you-ve-got-mail
+title: You've Got Mail
+year: 1998
+runtime_min: 119
+score: 24
+score_note: the chemistry lives in the inbox, not the room
+order:
+- joe
+- kathleen
+- frank
+- patricia
+- kevin
+- birdie
+- george
+- christina
+chars:
+- id: joe
+  name: Joe
+  width: 32
+  colour: '#1b57c4'
+- id: kathleen
+  name: Kathleen
+  width: 32
+  colour: '#d0316a'
+- id: frank
+  name: Frank
+  width: 22
+  colour: '#6e9078'
+- id: patricia
+  name: Patricia
+  width: 22
+  colour: '#9c6552'
+- id: kevin
+  name: Kevin
+  width: 18
+  colour: '#b09a4e'
+- id: birdie
+  name: Birdie
+  width: 17
+  colour: '#8d7fa8'
+- id: george
+  name: George
+  width: 16
+  colour: '#6f8f96'
+- id: christina
+  name: Christina
+  width: 13
+  colour: '#b08a94'
+beats:
+- name: TWO SCREEN NAMES
+  loc: ≈ 0–12 min
+  cap:
+  - two strangers write every day, anonymous
+  - Shopgirl and NY152, and neither knows
+  tag: MEET-CUTE — by modem, before they ever meet
+  cats:
+  - chem
+  clusters:
+  - - joe
+    - kevin
+  - - kathleen
+    - birdie
+  enter:
+  - joe
+  - kathleen
+  - kevin
+  - birdie
+- name: THE SUPERSTORE OPENS
+  loc: ≈ 12–25 min
+  cap:
+  - Fox Books opens two blocks from her shop;
+  - her staff fear the chain will bury them
+  tag: THE THREAT — a chain moves in two blocks away
+  cats: []
+  clusters:
+  - - joe
+    - kevin
+    - patricia
+  - - kathleen
+    - frank
+    - birdie
+    - george
+    - christina
+  enter:
+  - patricia
+  - frank
+  - george
+  - christina
+- name: STORYTIME
+  loc: ≈ 25–35 min
+  cap:
+  - he brings his young aunt and brother to her
+  - storytime; she scorns the store he owns
+  tag: MEET-CUTE — the first hello, surname withheld
+  cats:
+  - meet
+  clusters:
+  - - kathleen
+    - birdie
+    - george
+    - christina
+  - - joe
+- name: THE PUBLISHING PARTY
+  loc: ≈ 35–45 min
+  cap:
+  - she learns his name and his family's chain;
+  - they trade insults and walk away enemies
+  tag: RIVALS — the two emailers are sworn enemies
+  cats:
+  - chem
+  clusters:
+  - - kathleen
+  - - joe
+    - patricia
+- name: THE COLUMN AND THE PICKETS
+  loc: ≈ 45–58 min
+  cap:
+  - Frank writes in her defense; TV and papers
+  - take up the fight and picket Fox Books
+  tag: THE CAMPAIGN — the press takes her side
+  cats:
+  - bff
+  clusters:
+  - - kathleen
+    - frank
+    - birdie
+    - george
+    - christina
+  - - joe
+    - kevin
+    - patricia
+- name: THE CAFÉ
+  loc: ≈ 58–68 min
+  cap:
+  - they agree to meet; he sees she is his rival
+  - and sits down without giving himself away
+  tag: THE NO-SHOW — he knows, she never will
+  cats:
+  - chem
+  clusters:
+  - - joe
+    - kevin
+  - - kathleen
+- name: THE APOLOGY
+  loc: ≈ 68–75 min
+  cap:
+  - she writes that she finally stood up to him;
+  - he answers that whoever she hurt deserved it
+  tag: BY EMAIL — comfort from the man she insulted
+  cats:
+  - chem
+  clusters:
+  - - joe
+  - - kathleen
+- name: THE SHOP CLOSES
+  loc: ≈ 75–88 min
+  cap:
+  - the chain outlasts her; she closes the store
+  - and decides to write children's books instead
+  tag: THE LOSS — the shop she inherited is gone
+  cats:
+  - breakup
+  clusters:
+  - - kathleen
+    - birdie
+    - george
+    - christina
+  - - joe
+    - kevin
+  stubs:
+  - birdie
+  - george
+  - christina
+  - kevin
+- name: THE TWO BREAKUPS
+  loc: ≈ 88–96 min
+  cap:
+  - she and Frank part, agreeing they were right
+  - on paper; Joe ends it with Patricia too
+  tag: BREAKUPS — both tethers cut in one stretch
+  cats:
+  - breakup
+  clusters:
+  - - kathleen
+    - frank
+  - - joe
+    - patricia
+  stubs:
+  - frank
+  - patricia
+- name: THE SLOW BUILD
+  loc: ≈ 96–108 min
+  cap:
+  - he courts her in person, keeps the emails
+  - going, and never says who NY152 is
+  tag: THE SLOW BUILD — two romances, one man
+  cats:
+  - chem
+  clusters:
+  - - joe
+    - kathleen
+- name: RIVERSIDE PARK
+  loc: the coda
+  cap:
+  - he confesses; she goes to meet NY152 and
+  - hears Brinkley bark and knows it is Joe
+  tag: THE REVEAL — the pen pal and the rival are one
+  cats:
+  - gesture
+  - ebert
+  clusters:
+  - - joe
+    - kathleen

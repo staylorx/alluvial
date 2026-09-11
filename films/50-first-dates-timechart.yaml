@@ -1,0 +1,139 @@
+# A film's two-clock chart: as screened vs as it happened.
+#
+# Schema: schema/timechart.schema.json   (enforced — run: python3 scripts/films_yaml.py validate)
+# yaml-language-server: $schema=schema/timechart.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: 50-first-dates
+title: 50 First Dates
+year: 2004
+runtime_min: 99
+sub: 'Two clocks: what the film shows you, and what actually happens.'
+notes:
+- 'The loop is the film''s whole idea: Lucy wakes each morning with no memory, so the same first date happens again
+  and again. Real time stops moving; the running order keeps going.'
+- 'How the repeats are numbered: the three repeat mornings get 7, 8 and 9 on the real spine, in the order the film
+  shows them (labelled Morning 1, 2, 3). The format forbids two scenes sharing a position, so one held morning takes
+  three consecutive slots — read that band as a single point in real time.'
+- 'The two backward cuts are the film''s own: the family''s staged morning (shown mid-flow) has actually been running
+  since just after the crash a year before, and the crash tape that explains Lucy is the oldest thing in the film,
+  screened near the end.'
+- Real time only resumes at the journal, the boat and the coda — the three places where the two clocks start running
+  together again.
+- 'Chronology is a judgement call only for the ritual: it sits at its origin, a year before the present, because
+  the reveal is that this same morning has been restaged every day since.'
+legend_note: 'Node numbering: left spine = screening position, right spine = real order. Where the repeat mornings
+  run straight and parallel, real time is standing still.'
+threads:
+  henry: Henry
+  lucy: Lucy
+  marlin: Marlin & Doug
+  tape: the tape
+scenes:
+- id: henry-rule
+  label: 'Henry''s rule: tourists only'
+  chapter: ACT ONE
+  as_screened: 1
+  happened: 3
+  thread: henry
+  mins: 6
+- id: boat
+  label: Boat dies; waffles at Hukilau
+  chapter: ACT ONE
+  as_screened: 2
+  happened: 4
+  thread: lucy
+  mins: 8
+- id: breakfast-one
+  label: Breakfast; 'meet me tomorrow'
+  chapter: ACT ONE
+  as_screened: 3
+  happened: 5
+  thread: lucy
+  mins: 6
+- id: no-memory
+  label: She doesn't know him; Sue tells
+  chapter: ACT ONE
+  as_screened: 4
+  happened: 6
+  thread: lucy
+  mins: 7
+- id: morning-one
+  label: 'Morning 1: the staged crash'
+  chapter: THE SAME MORNING
+  as_screened: 5
+  happened: 7
+  thread: henry
+  mins: 9
+- id: ritual
+  label: 'Every morning: paper and pineapple'
+  chapter: THE YEAR BEFORE
+  as_screened: 6
+  happened: 2
+  thread: marlin
+  mins: 9
+- id: morning-two
+  label: 'Morning 2: the paintings of Henry'
+  chapter: THE SAME MORNING
+  as_screened: 7
+  happened: 8
+  thread: lucy
+  mins: 6
+- id: morning-three
+  label: 'Morning 3: a new Henry again'
+  chapter: THE SAME MORNING
+  as_screened: 8
+  happened: 9
+  thread: henry
+  mins: 6
+- id: crash-tape
+  label: 'The tape: the crash, a year ago'
+  chapter: THE YEAR BEFORE
+  as_screened: 9
+  happened: 1
+  thread: tape
+  mins: 8
+- id: lets-go
+  label: She lets him go
+  chapter: ACT THREE
+  as_screened: 10
+  happened: 10
+  thread: lucy
+  mins: 8
+- id: journal
+  label: 'Lucy''s tape: the journal'
+  chapter: ACT THREE
+  as_screened: 11
+  happened: 11
+  thread: tape
+  mins: 9
+- id: arctic
+  label: Henry alone; the Arctic trip
+  chapter: ACT THREE
+  as_screened: 12
+  happened: 12
+  thread: henry
+  mins: 7
+- id: dock
+  label: Lucy at the dock
+  chapter: ACT THREE
+  as_screened: 13
+  happened: 13
+  thread: lucy
+  mins: 5
+- id: coda
+  label: 'A year later: the boat, Alaska'
+  chapter: CODA
+  as_screened: 14
+  happened: 14
+  thread: henry
+  mins: 5

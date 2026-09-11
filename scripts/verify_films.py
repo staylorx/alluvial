@@ -31,6 +31,24 @@ TEXT_RE = re.compile(
     re.S)
 
 
+def timechart_errors(doc: dict) -> list[str]:
+    errs = []
+    sc = doc.get("scenes", [])
+    if not 6 <= len(sc) <= 14:
+        errs.append(f"{len(sc)} scenes (want 6-14)")
+    for key in ("as_screened", "happened"):
+        pos = sorted(s.get(key) for s in sc)
+        if pos != list(range(1, len(sc) + 1)):
+            errs.append(f"{key} is not a permutation of 1..{len(sc)}")
+    threads = set(doc.get("threads", {}))
+    for s in sc:
+        if s.get("thread") not in threads:
+            errs.append(f"scene {s.get('id')!r}: thread {s.get('thread')!r} not in threads")
+        if len(s.get("label", "")) > 34:
+            errs.append(f"scene {s.get('id')!r}: label is {len(s['label'])} chars (max 34)")
+    return errs
+
+
 def schema_errors(film: dict) -> list[str]:
     errs = []
     ids = [c["id"] for c in film.get("chars", [])]
@@ -66,6 +84,9 @@ def schema_errors(film: dict) -> list[str]:
                        if x not in chars]
             if unknown:
                 errs.append(f"beat {i}: unknown ids {sorted(set(unknown))}")
+        cl = b.get("clusters") or []
+        if cl == [] and not b.get("groups"):
+            errs.append(f"beat {i}: no clusters at all")
         cats = b.get("cats")
         if cats is not None and not isinstance(cats, list):
             errs.append(f"beat {i}: cats is {type(cats).__name__}, not a list")
@@ -74,6 +95,27 @@ def schema_errors(film: dict) -> list[str]:
                 errs.append(f"beat {i}: unknown rubric id {cid!r}")
         if not isinstance(b.get("name", ""), str) or not isinstance(b.get("tag", ""), str):
             errs.append(f"beat {i}: name/tag must be strings")
+    # NOTE for future sweeps: do NOT add a rule that "a beat tagged breakup must
+    # have the leads apart". A breakup beat is the scene where the split HAPPENS,
+    # so the couple is normally co-located in it, and the reconciliation usually
+    # follows the last one. Sweeping all 30 films with that rule flags 12 of them
+    # and every flag is a false positive. The real error signature is the one
+    # below: no separation ANYWHERE in the film (that is how Notting Hill's
+    # missing year apart presented).
+    #
+    # A romance whose two leads share a lane in EVERY beat is missing its split.
+    # Catches the failure mode where a chart shows the couple together from the
+    # meet-cute to the coda, which is never true of a third-act-breakup film.
+    if (len(order := (film.get("order") or ids)) >= 2 and not film.get("never_separate_ok")
+            and all(not b.get("groups") for b in beats)):
+        lead_a, lead_b = order[0], order[1]
+        together = []
+        for b in beats:
+            flat = [set(c) for c in (b.get("clusters") or [])]
+            together.append(any(lead_a in c and lead_b in c for c in flat))
+        if together and all(together):
+            errs.append(f"leads '{lead_a}' and '{lead_b}' share a lane in every beat "
+                        f"— a romance with no separation is almost certainly wrong")
     return errs
 
 
@@ -110,6 +152,10 @@ def collisions(boxes, min_dx=6.0, min_dy=3.0):
 
 
 def check(slug: str) -> tuple[bool, list[str], list[str]]:
+    if slug.endswith("-timechart"):
+        doc = FC.load(slug)
+        errs = timechart_errors(doc)
+        return not errs, errs, [f"{len(doc['scenes'])} scenes"]
     film = FC.load(slug)
     errs = schema_errors(film)
     notes = []

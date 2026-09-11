@@ -146,8 +146,7 @@ def build_page():
         tag = c.get("cap_extra", ("", ""))[0].replace("\u25b8 ", "")
         rub = "".join(
             f'\n        <p class="rubricline">'
-            f'<span class="rname">{rc["name"]} '
-            f'<span class="rpts">{rc["pts"]}</span></span> {rc["text"]}</p>'
+            f'<span class="rname">{rc["name"]}</span> &mdash; {rc["text"]}</p>'
             for rc in rubric27.for_beat(i + 1))
         articles.append(f"""      <article id="beat-{i+1:02d}">
         <p class="kicker">{c['beat']} &middot; {c['loc']}</p>

@@ -1,0 +1,201 @@
+# A film's braid chart: who stands with whom, beat by beat.
+#
+# Schema: schema/film.schema.json   (enforced — run: python3 scripts/films_yaml.py validate)
+# yaml-language-server: $schema=schema/film.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: the-big-sick
+title: The Big Sick
+year: 2017
+runtime_min: 120
+score: 26
+order:
+- kumail
+- emily
+- beth
+- terry
+- azmat
+- sharmeen
+- naveed
+- others
+chars:
+- id: kumail
+  name: Kumail
+  width: 34
+  colour: '#1b57c4'
+- id: emily
+  name: Emily
+  width: 32
+  colour: '#d0316a'
+- id: beth
+  name: Beth
+  width: 20
+  colour: '#6e9078'
+- id: terry
+  name: Terry
+  width: 18
+  colour: '#9c6552'
+- id: azmat
+  name: Azmat
+  width: 16
+  colour: '#b09a4e'
+- id: sharmeen
+  name: Sharmeen
+  width: 16
+  colour: '#8d7fa8'
+- id: naveed
+  name: Naveed
+  width: 14
+  colour: '#6f8f96'
+- id: others
+  name: others
+  width: 12
+  colour: '#b08a94'
+beats:
+- name: THE COMEDY CLUB
+  loc: ≈ 0–10 min
+  cap:
+  - Kumail performs standup; Emily heckles him
+  - and they leave together
+  tag: MEET-CUTE — heckling as flirtation
+  cats:
+  - meet
+  - chem
+  clusters:
+  - - kumail
+    - emily
+  - - naveed
+  enter:
+  - kumail
+  - emily
+  - naveed
+- name: DATING ACROSS THE GAP
+  loc: ≈ 10–25 min
+  cap:
+  - they date for months, keeping Kumail's
+  - family in the dark
+  tag: ROMANCE — the ordinary middle
+  cats:
+  - chem
+  clusters:
+  - - kumail
+    - emily
+- name: THE PHOTOS
+  loc: ≈ 25–35 min
+  cap:
+  - Emily finds the photos of marriage
+  - candidates and ends the relationship
+  tag: BREAKUP — it flows from who he is
+  cats:
+  - breakup
+  clusters:
+  - - kumail
+    - emily
+- name: THE MONTREAL AUDITION
+  loc: ≈ 35–45 min
+  cap:
+  - Kumail wins an audition for Montreal and
+  - sleeps with a woman from the audience
+  tag: DISTRACTION — the wrong turn
+  cats: []
+  clusters:
+  - - kumail
+- name: THE FAMILY DINNERS
+  loc: ≈ 45–55 min
+  cap:
+  - Kumail's parents keep producing marriage
+  - candidates he will not consider
+  tag: PRESSURE — two worlds pulling apart
+  cats: []
+  clusters:
+  - - kumail
+    - azmat
+    - sharmeen
+    - others
+  enter:
+  - azmat
+  - sharmeen
+  - others
+- name: THE CALL
+  loc: ≈ 55–65 min
+  cap:
+  - Emily is hospitalised with a lung infection;
+  - Kumail races to her side
+  tag: CRISIS — the plot turns
+  cats: []
+  clusters:
+  - - emily
+  - - kumail
+- name: THE COMA
+  loc: ≈ 65–78 min
+  cap:
+  - doctors put Emily in a medical coma and
+  - her parents Beth and Terry fly in
+  tag: ARRIVAL — two families, one corridor
+  cats: []
+  clusters:
+  - - emily
+  - - beth
+    - terry
+  - - kumail
+  enter:
+  - beth
+  - terry
+- name: THE VIGIL
+  loc: ≈ 78–90 min
+  cap:
+  - Kumail stays at the hospital; Beth and
+  - Terry slowly let him in
+  tag: BONDING — the corridor makes a family
+  cats: []
+  clusters:
+  - - kumail
+    - beth
+    - terry
+  - - emily
+- name: THE HECKLERS
+  loc: ≈ 90–102 min
+  cap:
+  - Beth and Terry defend Kumail from hecklers
+  - at his set, then drink with him
+  tag: ALLIANCE — they take his side
+  cats:
+  - ebert
+  clusters:
+  - - kumail
+    - beth
+    - terry
+- name: EMILY WAKES
+  loc: ≈ 102–112 min
+  cap:
+  - Emily wakes and learns Kumail never left;
+  - she still cannot take him back
+  tag: AFTERMATH — the truth, plainly
+  cats:
+  - breakup
+  clusters:
+  - - kumail
+    - emily
+  - - beth
+    - terry
+- name: THE CHOICE
+  loc: ≈ 112–120 min
+  cap:
+  - Kumail refuses the arranged marriage and
+  - goes to Emily; they start again
+  tag: GESTURE — he chooses her
+  cats:
+  - gesture
+  - chem
+  clusters:
+  - - kumail
+    - emily

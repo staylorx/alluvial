@@ -1,0 +1,196 @@
+# A film's braid chart: who stands with whom, beat by beat.
+#
+# Schema: schema/film.schema.json   (enforced — run: python3 scripts/films_yaml.py validate)
+# yaml-language-server: $schema=schema/film.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: the-half-of-it
+title: The Half of It
+year: 2020
+runtime_min: 104
+score: 25
+score_note: chemistry in the letters, a bff turn and two gestures
+order:
+- ellie
+- paul
+- aster
+- trig
+- edwin
+- others
+chars:
+- id: ellie
+  name: Ellie
+  width: 32
+  colour: '#1b57c4'
+- id: paul
+  name: Paul
+  width: 30
+  colour: '#d0316a'
+- id: aster
+  name: Aster
+  width: 26
+  colour: '#6e9078'
+- id: trig
+  name: Trig
+  width: 16
+  colour: '#9c6552'
+- id: edwin
+  name: Edwin Chu
+  width: 14
+  colour: '#b09a4e'
+- id: others
+  name: others
+  width: 13
+  colour: '#8d7fa8'
+beats:
+- name: GHOSTWRITING IN SQUAHAMISH
+  loc: ≈ 0–12 min
+  cap:
+  - ellie writes other students' essays and
+  - watches aster from a distance
+  tag: SETUP — invisible in her own town
+  cats: []
+  clusters:
+  - - ellie
+    - edwin
+  - - aster
+    - trig
+  - - others
+  enter:
+  - ellie
+  - edwin
+  - aster
+  - trig
+  - others
+- name: PAUL'S COMMISSION
+  loc: ≈ 12–22 min
+  cap:
+  - paul asks her to ghostwrite a love letter
+  - to aster; she agrees for the money
+  tag: ARRANGEMENT — a business deal that finds a voice
+  cats: []
+  clusters:
+  - - ellie
+    - paul
+  enter:
+  - paul
+- name: THE LETTERS
+  loc: ≈ 22–35 min
+  cap:
+  - posing as paul, ellie finds a mind that
+  - answers her own; a teacher pushes grinnell
+  tag: CORRESPONDENCE — the real romance is written
+  cats:
+  - chem
+  clusters:
+  - - ellie
+    - aster
+  - - paul
+  - - others
+- name: THE FIRST DATE
+  loc: ≈ 35–45 min
+  cap:
+  - paul is tongue-tied and the first date fails;
+  - ellie watches from outside the restaurant
+  tag: FAILURE — the persona outshines the boy
+  cats: []
+  clusters:
+  - - paul
+    - aster
+  - - ellie
+- name: THE BULLIES
+  loc: ≈ 45–55 min
+  cap:
+  - paul defends ellie from the bullies and
+  - she starts teaching him art and literature
+  tag: THE TURN — he proves worth the effort
+  cats:
+  - bff
+  clusters:
+  - - ellie
+    - paul
+  - - others
+- name: THE TALENT SHOW
+  loc: ≈ 55–70 min
+  cap:
+  - paul stops the sabotage and ellie gets a
+  - standing ovation; he finds her campaign
+  tag: RECIPROCITY — each one makes the other braver
+  cats:
+  - gesture
+  clusters:
+  - - ellie
+    - paul
+  - - others
+- name: THE HOT SPRING
+  loc: ≈ 70–82 min
+  cap:
+  - aster takes ellie to a hot spring and tells
+  - her that trig intends to marry her
+  tag: CONFESSION — two people telling the truth
+  cats:
+  - chem
+  clusters:
+  - - ellie
+    - aster
+- name: THE KISS AT THE DOOR
+  loc: ≈ 82–90 min
+  cap:
+  - seeing ellie's words in paul, aster kisses
+  - him; ellie mails the grinnell application
+  tag: MISREADING — the story slips out of her hands
+  cats: []
+  clusters:
+  - - aster
+    - paul
+  - - ellie
+    - edwin
+- name: THE FOOTBALL GAME
+  loc: ≈ 90–96 min
+  cap:
+  - paul scores and tries to kiss ellie; she
+  - refuses and he calls her a sinner
+  tag: RUPTURE — the wrong person finds out
+  cats:
+  - breakup
+  clusters:
+  - - ellie
+    - paul
+  - - aster
+    - others
+- name: THE CHURCH PROPOSAL
+  loc: ≈ 96–102 min
+  cap:
+  - ellie and then paul interrupt trig's proposal;
+  - aster hears her own letter read aloud
+  tag: REVEAL — the author of the letters stands up
+  cats:
+  - gesture
+  clusters:
+  - - ellie
+    - paul
+  - - aster
+    - trig
+  - - others
+- name: THE GOODBYES
+  loc: the coda
+  cap:
+  - aster refuses trig for art school and kisses
+  - ellie; paul runs beside the departing train
+  tag: RESOLUTION — she leaves, and she is seen off
+  cats:
+  - chem
+  clusters:
+  - - ellie
+    - aster
+  - - paul
+  - - edwin

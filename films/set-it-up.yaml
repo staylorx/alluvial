@@ -1,0 +1,224 @@
+# A film's braid chart: who stands with whom, beat by beat.
+#
+# Schema: schema/film.schema.json   (enforced — run: python3 scripts/films_yaml.py validate)
+# yaml-language-server: $schema=schema/film.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: set-it-up
+title: Set It Up
+year: 2018
+runtime_min: 105
+score: 22
+score_note: the lead chemistry is the engine; the bosses' romance is the plot
+order:
+- charlie
+- harper
+- kirsten
+- rick
+- suze
+- becca
+- creepy-tim
+chars:
+- id: charlie
+  name: Charlie
+  width: 32
+  colour: '#1b57c4'
+- id: harper
+  name: Harper
+  width: 32
+  colour: '#d0316a'
+- id: kirsten
+  name: Kirsten
+  width: 24
+  colour: '#6e9078'
+- id: rick
+  name: Rick
+  width: 24
+  colour: '#9c6552'
+- id: suze
+  name: Suze
+  width: 15
+  colour: '#b09a4e'
+- id: becca
+  name: Becca
+  width: 15
+  colour: '#8d7fa8'
+- id: creepy-tim
+  name: Creepy Tim
+  width: 12
+  colour: '#6f8f96'
+beats:
+- name: TWO ASSISTANTS
+  loc: ≈ 0–12 min
+  cap:
+  - two assistants in one tower collide over
+  - a dinner order neither of them can pay for
+  tag: MEET-CUTE — a lobby, a dinner order, no cash
+  cats:
+  - meet
+  clusters:
+  - - charlie
+    - rick
+  - - harper
+    - kirsten
+  enter:
+  - charlie
+  - harper
+  - kirsten
+  - rick
+- name: THE PITCH
+  loc: ≈ 12–22 min
+  cap:
+  - she proposes setting their bosses up so
+  - the two of them might get their lives back
+  tag: THE SCHEME — a plan to buy back their own time
+  cats:
+  - chem
+  clusters:
+  - - charlie
+    - harper
+  - - suze
+  enter:
+  - suze
+- name: THE ELEVATOR
+  loc: ≈ 22–32 min
+  cap:
+  - they stall the elevator to force a meeting;
+  - a panicking delivery man ruins the plan
+  tag: THE SCHEME FAILS — the meet-cute goes wrong
+  cats: []
+  clusters:
+  - - charlie
+    - harper
+    - creepy-tim
+  - - kirsten
+    - rick
+  enter:
+  - creepy-tim
+  stubs:
+  - creepy-tim
+- name: THE KISS-CAM
+  loc: ≈ 32–42 min
+  cap:
+  - a bribed kiss-cam finally gets the bosses
+  - kissing, and the assistants breathe again
+  tag: THE SCHEME WORKS — the bosses are dating
+  cats:
+  - chem
+  clusters:
+  - - charlie
+    - harper
+  - - kirsten
+    - rick
+- name: THE MAINTENANCE
+  loc: ≈ 42–52 min
+  cap:
+  - the bosses wobble, so the assistants write
+  - notes, gifts, and a rented weekend away
+  tag: THE MAINTENANCE — the romance becomes a project
+  cats: []
+  clusters:
+  - - charlie
+    - harper
+  - - kirsten
+    - rick
+- name: THE ENGAGEMENT PARTY
+  loc: ≈ 52–60 min
+  cap:
+  - Suze blows him off, so Charlie goes with
+  - Harper to her best friend's engagement party
+  tag: THE PAIRING — the assistants arrive as a couple
+  cats:
+  - bff
+  clusters:
+  - - charlie
+    - harper
+    - becca
+  enter:
+  - becca
+  stubs:
+  - becca
+- name: THE ENGAGEMENT
+  loc: ≈ 60–68 min
+  cap:
+  - the bosses come home engaged; Rick wanted
+  - a ring only to aggravate his ex-wife Kiki
+  tag: THE ROT — the ring is a weapon, not a promise
+  cats: []
+  clusters:
+  - - kirsten
+    - rick
+  - - charlie
+    - harper
+- name: THE RUPTURE
+  loc: ≈ 68–75 min
+  cap:
+  - she overhears Rick on the phone with Kiki
+  - and finds out that Charlie knew all along
+  tag: THE RUPTURE — the scheme outgrows the friendship
+  cats:
+  - breakup
+  clusters:
+  - - charlie
+    - harper
+  - - rick
+    - kirsten
+- name: THE TRUTH
+  loc: ≈ 75–84 min
+  cap:
+  - she tells Kirsten the whole plan and is
+  - fired for it; the wedding is still on
+  tag: THE CONFESSION — the truth costs her the job
+  cats: []
+  clusters:
+  - - harper
+    - kirsten
+- name: THE CUT
+  loc: ≈ 84–90 min
+  cap:
+  - he breaks up with Suze and quits the job
+  - he never wanted, then races to the airport
+  tag: THE CUT — the job and the girlfriend go
+  cats: []
+  clusters:
+  - - charlie
+    - suze
+  stubs:
+  - suze
+- name: THE AIRPORT
+  loc: ≈ 90–96 min
+  cap:
+  - he tells Kirsten that Rick will never know
+  - her; at the gate she leaves him behind
+  tag: THE UNRAVELING — the scheme dies at the gate
+  cats:
+  - breakup
+  clusters:
+  - - charlie
+    - kirsten
+    - rick
+  stubs:
+  - rick
+- name: THE SETUP
+  loc: the coda
+  cap:
+  - Kirsten plays matchmaker in the office and
+  - they confess it, despite every reason not to
+  tag: THE SETUP — the boss engineers the real thing
+  cats:
+  - gesture
+  - chem
+  - ebert
+  clusters:
+  - - charlie
+    - harper
+    - kirsten
