@@ -11,4 +11,5 @@ workspace:
   - packages/alluvial_store_yaml
   - packages/alluvial_store_memory
   - packages/alluvial_testing
+  - packages/alluvial_render
   - packages/alluvial_cli

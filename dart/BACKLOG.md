@@ -48,7 +48,13 @@ because the primary caller is an agent.
 | `timeline <key>` | beat by beat: parties in sequence, and who is off page |
 | `roundtrip [key...]` | read → encode → decode and report what moved, per story |
 | `format [key...] [--apply]` | write the canonical form; dry run unless `--apply`; refuses a story with errors |
+| `chart <key> [--out f] [--svg]` | draw the story as an SVG, or `--out-dir <d>` for every story in the store |
 | `version` | what is running, as JSON |
+
+`chart` takes `--variant braid\|colour-blind\|mini\|two-clock`. The renderer picks
+itself from the story's shape: a two-clock story has no braid to draw and a braid
+story has no second clock, so asking for the wrong one is a usage error (exit 64)
+rather than a silently empty chart. Nothing is written without `--out`/`--out-dir`.
 
 Exit codes: `0` fine, `1` the operation failed but the arguments were fine, `64`
 the arguments were not usable (including an unknown verb or a missing `--store`).

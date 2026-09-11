@@ -131,6 +131,27 @@ final class Story extends Equatable {
         .toList();
   }
 
+  /// The hand-tuned groups standing in [beatId] — the lane position and the
+  /// characters standing at it, in the order they were authored.
+  ///
+  /// Empty when the beat is placed by clusters instead. A hand-tuned beat is
+  /// how an already-approved chart stays exactly as approved, so the renderer
+  /// must take these positions verbatim.
+  List<(double, List<String>)> handTunedGroupsIn(String beatId) {
+    final lanes = <double>[];
+    final byLane = <double, List<String>>{};
+    for (final a in appearancesIn(beatId)) {
+      final lane = a.laneY;
+      if (lane == null) continue;
+      if (!byLane.containsKey(lane)) {
+        lanes.add(lane);
+        byLane[lane] = [];
+      }
+      byLane[lane]!.add(a.characterId);
+    }
+    return [for (final lane in lanes) (lane, byLane[lane]!)];
+  }
+
   /// The beats [characterId] appears in, in told order.
   List<Beat> beatsFor(String characterId) {
     final ids = appearances

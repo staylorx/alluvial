@@ -4,6 +4,7 @@ import 'package:alluvial_domain/alluvial_domain.dart';
 import 'package:alluvial_store_yaml/alluvial_store_yaml.dart';
 import 'package:args/command_runner.dart';
 
+import 'commands/chart_command.dart';
 import 'commands/format_command.dart';
 import 'commands/list_command.dart';
 import 'commands/roundtrip_command.dart';
@@ -60,6 +61,7 @@ final class AlluvialCli {
         ..addCommand(TimelineCommand(_repository))
         ..addCommand(RoundtripCommand(_repository))
         ..addCommand(FormatCommand(_repository))
+        ..addCommand(ChartCommand(_repository))
         ..addCommand(VersionCommand(alluvialVersion));
 
   bool _unknownVerb(CommandRunner<int> runner, List<String> args) {

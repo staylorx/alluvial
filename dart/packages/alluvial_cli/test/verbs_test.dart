@@ -248,6 +248,92 @@ void main() {
   );
 
   test(
+    'Given a story, when charted, then the SVG lands where the caller asked',
+    () async {
+      final out = File('${store.path}/chart.svg');
+      final result = await drive([
+        'chart',
+        'a-sample',
+        '--store',
+        store.path,
+        '--out',
+        out.path,
+      ]);
+
+      result.exitCode.should.be(0);
+      final svg = out.readAsStringSync();
+      svg.startsWith('<svg class="chart"').should.be(true);
+      svg.endsWith('</svg>').should.be(true);
+
+      final summary = jsonOf(result);
+      summary['key'].should.be('a-sample');
+      summary['shape'].should.be('braid');
+      ((summary['height']! as int) > 0).should.be(true);
+      ((summary['svg_bytes']! as int) > 1000).should.be(true);
+      summary['lane_overlaps'].should.be(0);
+    },
+  );
+
+  test(
+    'Given the svg flag, when charted, then the bytes go to stdout',
+    () async {
+      final result = await drive([
+        'chart',
+        'a-sample',
+        '--store',
+        store.path,
+        '--svg',
+      ]);
+
+      result.exitCode.should.be(0);
+      (result.stdout as String)
+          .startsWith('<svg class="chart"')
+          .should
+          .be(true);
+    },
+  );
+
+  test('Given no key, when charted, then it is a usage error', () async {
+    final result = await drive(['chart', '--store', store.path]);
+    result.exitCode.should.be(64);
+  });
+
+  test(
+    'Given a braid story, when the two-clock variant is asked for, then it is refused',
+    () async {
+      final result = await drive([
+        'chart',
+        'a-sample',
+        '--store',
+        store.path,
+        '--variant',
+        'two-clock',
+      ]);
+      result.exitCode.should.be(64);
+    },
+  );
+
+  test(
+    'Given the out-dir flag, when charted, then every story is drawn',
+    () async {
+      final dir = await Directory.systemTemp.createTemp('alluvial_charts_');
+      final result = await drive([
+        'chart',
+        '--out-dir',
+        dir.path,
+        '--store',
+        store.path,
+      ]);
+
+      result.exitCode.should.be(0);
+      final summary = jsonOf(result);
+      summary['count'].should.be(1);
+      File('${dir.path}/a-sample.svg').existsSync().should.be(true);
+      await dir.delete(recursive: true);
+    },
+  );
+
+  test(
     'Given the text output flag, when driven, then a person gets prose',
     () async {
       final result = await drive([
