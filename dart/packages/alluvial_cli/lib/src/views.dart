@@ -10,7 +10,7 @@ Map<String, Object?> summaryJson(StorySummary summary) => {
   'slug': summary.slug,
   'title': summary.title,
   'shape': summary.shape?.name,
-  'work': summary.work?.name,
+  'expression': summary.expression?.name,
   'year': summary.year,
   'runtime_min': summary.runtimeMinutes,
   'score': summary.score,
@@ -28,7 +28,7 @@ Map<String, Object?> storyJson(Story story) => {
   'slug': story.slug,
   'title': story.title,
   'shape': story.shape.name,
-  'work': story.work.name,
+  'expression': story.expression.name,
   'year': story.year,
   'runtime_min': story.runtimeMinutes,
   'score': story.score,
@@ -168,7 +168,7 @@ String summaryLine(StorySummary summary) {
 /// A whole story as text, beat by beat.
 String storyText(Story story) {
   final lines = <String>[
-    '${story.title} (${story.slug}) — ${story.shape.name}, ${story.work.name}',
+    '${story.title} (${story.slug}) — ${story.shape.name}, ${story.expression.name}',
     '${story.characters.length} strands, ${story.beats.length} beats',
     '',
   ];

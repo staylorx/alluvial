@@ -9,15 +9,16 @@ import '../entities/entity_kind.dart';
 import '../entities/presence_state.dart';
 import '../entities/story.dart';
 import '../entities/story_shape.dart';
-import '../entities/work_kind.dart';
+import '../entities/expression.dart';
 
 /// Field order a braid story is written back in.
 const _braidKeys = <String>[
   'slug',
   'title',
-  'kind',
+  'expression',
   'year',
   'runtime_min',
+  'rubric',
   'score',
   'score_note',
   'blurb',
@@ -37,7 +38,7 @@ const _braidKeys = <String>[
 const _twoClockKeys = <String>[
   'slug',
   'title',
-  'kind',
+  'expression',
   'year',
   'runtime_min',
   'sub',
@@ -81,9 +82,10 @@ const _sceneKeys = <String>[
 const _consumedStoryKeys = <String>{
   'slug',
   'title',
-  'kind',
+  'expression',
   'year',
   'runtime_min',
+  'rubric',
   'score',
   'legend_object',
   'order',
@@ -183,9 +185,10 @@ final class StoryDocumentCodec implements StoryCodec {
         slug: slug,
         title: title,
         shape: shape,
-        work: _workKind(document['kind']),
+        expression: Expression.fromYaml(document['expression']),
         year: _int(document['year']),
         runtimeMinutes: _int(document['runtime_min']),
+        rubricId: _str(document['rubric']),
         score: _int(document['score']),
         legendObject: _str(document['legend_object']),
         laneOrder: laneOrder.isEmpty
@@ -211,9 +214,14 @@ final class StoryDocumentCodec implements StoryCodec {
     final body = <String, Object?>{
       'slug': story.slug,
       'title': story.title,
-      if (story.work != WorkKind.film) 'kind': story.work.name,
+      // A film does not write the field back: absent means film, which is what
+      // every file predating `expression` relies on.
+      if (story.expression != Expression.film) 'expression': story.expression.yaml,
       'year': story.year,
       'runtime_min': story.runtimeMinutes,
+      // The rubric that grades this story, if one does. Nothing is assumed for a
+      // story that declares none.
+      if (story.rubricId != null) 'rubric': story.rubricId,
       'score': story.score,
       if (story.legendObject != null) 'legend_object': story.legendObject,
       'order': story.shape == StoryShape.braid ? story.laneOrder : null,
@@ -601,13 +609,4 @@ BeatKind _beatKind(Object? value) => switch (_str(value)) {
   'act' => BeatKind.act,
   'scene' => BeatKind.scene,
   _ => BeatKind.beat,
-};
-
-/// Reads a work kind, defaulting to a film.
-WorkKind _workKind(Object? value) => switch (_str(value)) {
-  'book' => WorkKind.book,
-  'play' => WorkKind.play,
-  'series' => WorkKind.series,
-  'other' => WorkKind.other,
-  _ => WorkKind.film,
 };

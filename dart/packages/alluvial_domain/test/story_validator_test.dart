@@ -187,6 +187,7 @@ void main() {
       'Given an unknown category, when validated, then it is named with the known set',
       () {
         final document = cleanDocument();
+        document['rubric'] = 'romcom-27';
         (document['beats']! as List)[0] = {
           ...(document['beats']! as List)[0] as Map<String, Object?>,
           'cats': ['chemistry'],
@@ -198,6 +199,63 @@ void main() {
           'beats[0].cats: unknown category "chemistry" — expected one of '
           'chem, meet, bff, breakup, gesture, ebert',
         );
+      },
+    );
+
+    test(
+      'Given a category on a story that declares no rubric, when validated, then it is reported',
+      () {
+        final document = cleanDocument();
+        (document['beats']! as List)[0] = {
+          ...(document['beats']! as List)[0] as Map<String, Object?>,
+          'cats': ['chem'],
+        };
+
+        final findings = validator.validate(decode(document));
+
+        messages(findings).should.contain(
+          'beats[0].cats: a category needs a declared rubric — nothing grades this story',
+        );
+      },
+    );
+
+    test(
+      'Given a score with no rubric, when validated, then it is reported',
+      () {
+        final document = cleanDocument();
+        document['score'] = 24;
+
+        final findings = validator.validate(decode(document));
+
+        messages(findings).should.contain(
+          'score: a score needs a rubric — nothing grades this story',
+        );
+      },
+    );
+
+    test(
+      'Given a rubric the store does not know, when validated, then it is named',
+      () {
+        final document = cleanDocument();
+        document['rubric'] = 'romcom-99';
+
+        final findings = validator.validate(decode(document));
+
+        messages(findings).should.contain(
+          "rubric: 'romcom-99' is not one of romcom-27",
+        );
+      },
+    );
+
+    test(
+      'Given a year before cinema, when validated, then it is accepted',
+      () {
+        final document = cleanDocument();
+        document['year'] = 1600;
+
+        final findings = validator.validate(decode(document));
+
+        messages(findings).should.beEmpty();
       },
     );
 

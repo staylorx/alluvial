@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 import 'story_shape.dart';
-import 'work_kind.dart';
+import 'expression.dart';
 
 /// The cheap face of a story: what a listing needs without decoding the cast.
 ///
@@ -21,7 +21,7 @@ final class StorySummary extends Equatable {
     this.slug,
     this.title,
     this.shape,
-    this.work,
+    this.expression,
     this.characterCount,
     this.beatCount,
     this.year,
@@ -43,7 +43,7 @@ final class StorySummary extends Equatable {
   final StoryShape? shape;
 
   /// Film, book, play, series, other, or null when undecoded.
-  final WorkKind? work;
+  final Expression? expression;
 
   /// How many strands the story carries, or null when undecoded.
   final int? characterCount;
@@ -57,7 +57,7 @@ final class StorySummary extends Equatable {
   /// Runtime in minutes, when the work has one.
   final int? runtimeMinutes;
 
-  /// Whole-work rubric score, when it has been taken.
+  /// The rubric that grades this story, if any (its store id).
   final int? score;
 
   /// Why this file could not be decoded, or null when it decoded cleanly.
@@ -69,7 +69,7 @@ final class StorySummary extends Equatable {
     slug,
     title,
     shape,
-    work,
+    expression,
     characterCount,
     beatCount,
     year,

@@ -15,7 +15,7 @@ export 'src/entities/presence_state.dart';
 export 'src/entities/story.dart';
 export 'src/entities/story_shape.dart';
 export 'src/entities/story_summary.dart';
-export 'src/entities/work_kind.dart';
+export 'src/entities/expression.dart';
 export 'src/failures/datasource_failure.dart';
 export 'src/failures/domain_failure.dart';
 export 'src/failures/validation_finding.dart';

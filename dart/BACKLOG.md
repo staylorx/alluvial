@@ -115,14 +115,21 @@ Neither file is written by `format --apply` until the data is fixed.
       beat id), so renaming a beat renames it everywhere. If a stable identity
       is wanted, the schema and the Python writer have to agree on an `id:` field
       first — do not invent one on the Dart side alone.
-- [ ] **Converge the work-form field with the Python reference.** The Dart port
-      calls it `kind` (`WorkKind`: film/book/play/series/other, unused by any file);
-      the Python store calls it `expression` (film|play|novel|series|short story|
-      essay|poem|song|musical, and films/hamlet.yaml uses `play`). Two names for one
-      field is the fork the doctrine warns about. Recommendation: Dart adopts
-      `expression` and the Python vocabulary — `kind` is already taken INSIDE the
-      same document (character kind, beat kind), which is why it reads badly at the
-      top level. Owner call.
+- [x] **Work-form field: converged on the Python reference's `expression`.**
+      2026-09-11: the port had invented `kind` (WorkKind: film/book/play/series/
+      other) for a field no file used. The Python store is the reference and calls
+      it `expression` (`film|play|novel|series|short story|essay|poem|song|musical`,
+      absent = film), so the port adopted the name AND the vocabulary — `kind`
+      already means something else inside the same document (a character's kind, a
+      beat's kind). `rubric` (the id of the rubric grading a story, e.g.
+      `romcom-27`) is first-class beside it: both are in the canonical key order
+      exactly where the Python writer puts them, which is what keeps emission
+      byte-identical. Categories are checked against the rubric the story DECLARES
+      (`rubricCategories`), and a score without a rubric is a finding: the rubrics
+      are romcom instruments and nothing is assumed about a story that declares
+      none. `year` is no longer bounded at 1900 (a play from 1600 is legal).
+      Measured on the renamed 36-file store: byte-identical 35/36, content stable
+      36/36 (the one difference remains the-tao-of-steve's explicit `score: null`).
 - [ ] The two-clock shape reads but does not yet expose its second clock in
       `timeline` (the crossings are the point of that chart).
 - [ ] A `new` verb to scaffold a story file from a template.

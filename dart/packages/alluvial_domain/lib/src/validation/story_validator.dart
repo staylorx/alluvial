@@ -6,8 +6,17 @@ import '../entities/story.dart';
 import '../entities/story_shape.dart';
 import '../failures/validation_finding.dart';
 
-/// The category ids a beat may claim.
-const knownCategories = ['chem', 'meet', 'bff', 'breakup', 'gesture', 'ebert'];
+/// The categories each rubric the store knows grades a beat with, by rubric id.
+///
+/// Categories belong to the rubric a story DECLARES: the romcom rubric is a
+/// romcom instrument, a story may or may not be one, and nothing is assumed about
+/// a story that declares no rubric (it has no categories to check).
+const rubricCategories = <String, List<String>>{
+  'romcom-27': ['chem', 'meet', 'bff', 'breakup', 'gesture', 'ebert'],
+};
+
+/// The rubric ids the store knows.
+final knownRubrics = rubricCategories.keys.toSet();
 
 /// Lane and beat budgets that keep a braid readable.
 const maxBraidLanes = 8;
@@ -53,6 +62,10 @@ final class StoryValidator {
   List<ValidationFinding> _braid(Story story) {
     final out = <ValidationFinding>[];
     _identity(story, out);
+    // The vocabulary a beat's categories are checked against comes from the rubric
+    // THIS story declares; no declaration means no categories are legal for it.
+    final allowedCategories =
+        rubricCategories[story.rubricId] ?? const <String>[];
 
     final characters = story.characters;
     if (characters.length < minBraidCharacters ||
@@ -141,13 +154,14 @@ final class StoryValidator {
         }
       }
       for (final cat in b.categories) {
-        if (!knownCategories.contains(cat)) {
+        if (!allowedCategories.contains(cat)) {
           out.add(
             ValidationFinding(
               path: '$path.cats',
-              message:
-                  'unknown category "$cat" — expected one of '
-                  '${knownCategories.join(', ')}',
+              message: allowedCategories.isEmpty
+                  ? 'a category needs a declared rubric — nothing grades this story'
+                  : 'unknown category "$cat" — expected one of '
+                        '${allowedCategories.join(', ')}',
             ),
           );
         }
@@ -274,7 +288,9 @@ final class StoryValidator {
       );
     }
     final year = story.year;
-    if (year != null && (year < 1900 || year > 2100)) {
+    // Not bounded at 1900: the store holds works older than cinema (a play from
+    // 1600 is legitimately `year: 1600`).
+    if (year != null && (year < 1 || year > 2100)) {
       out.add(
         ValidationFinding(path: 'year', message: '$year is out of range'),
       );
@@ -288,7 +304,26 @@ final class StoryValidator {
         ),
       );
     }
+    // Grading is DECLARED: a rubric id the store knows, or nothing. A score with
+    // no rubric is a claim about an instrument nobody named.
+    final rubric = story.rubricId;
+    if (rubric != null && !knownRubrics.contains(rubric)) {
+      out.add(
+        ValidationFinding(
+          path: 'rubric',
+          message: "'$rubric' is not one of ${knownRubrics.join(', ')}",
+        ),
+      );
+    }
     final score = story.score;
+    if (score != null && rubric == null) {
+      out.add(
+        const ValidationFinding(
+          path: 'score',
+          message: 'a score needs a rubric — nothing grades this story',
+        ),
+      );
+    }
     if (score != null && (score < 0 || score > 30)) {
       out.add(
         ValidationFinding(path: 'score', message: '$score is out of range'),

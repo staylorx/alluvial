@@ -5,7 +5,7 @@ import 'beat.dart';
 import 'character.dart';
 import 'presence_state.dart';
 import 'story_shape.dart';
-import 'work_kind.dart';
+import 'expression.dart';
 
 /// One whole story — a film, a book, a play, a series.
 ///
@@ -21,9 +21,10 @@ final class Story extends Equatable {
     required this.slug,
     required this.title,
     required this.shape,
-    this.work = WorkKind.film,
+    this.expression = Expression.film,
     this.year,
     this.runtimeMinutes,
+    this.rubricId,
     this.score,
     this.legendObject,
     this.laneOrder = const [],
@@ -42,14 +43,19 @@ final class Story extends Equatable {
   /// Which authored shape the file uses.
   final StoryShape shape;
 
-  /// Film, book, play, series, other.
-  final WorkKind work;
+  /// The form this story is told in.
+  final Expression expression;
 
   /// Year of release or publication.
   final int? year;
 
   /// Runtime in minutes, when the work has one.
   final int? runtimeMinutes;
+
+  /// The rubric that grades this story — its store id, e.g. `romcom-27` — or
+  /// null when nothing grades it. A rubric is an instrument some stories are
+  /// graded by, never an assumption about a story.
+  final String? rubricId;
 
   /// Whole-work rubric score, when it has been taken.
   final int? score;
@@ -178,7 +184,7 @@ final class Story extends Equatable {
     slug,
     title,
     shape,
-    work,
+    expression,
     year,
     runtimeMinutes,
     score,

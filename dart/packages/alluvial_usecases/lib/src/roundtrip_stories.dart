@@ -76,7 +76,7 @@ final class RoundtripStories {
     }
     if (before.title != after.title) moved.add('title');
     if (before.shape != after.shape) moved.add('shape');
-    if (before.work != after.work) moved.add('work');
+    if (before.expression != after.expression) moved.add('expression');
     if (before.year != after.year) moved.add('year');
     if (before.runtimeMinutes != after.runtimeMinutes) moved.add('runtime_min');
     if (before.score != after.score) moved.add('score');

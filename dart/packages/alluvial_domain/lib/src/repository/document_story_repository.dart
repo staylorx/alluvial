@@ -63,7 +63,7 @@ class DocumentStoryRepository implements StoryRepository {
           slug: story.slug,
           title: story.title,
           shape: story.shape,
-          work: story.work,
+          expression: story.expression,
           characterCount: story.characters.length,
           beatCount: story.beats.length,
           year: story.year,
