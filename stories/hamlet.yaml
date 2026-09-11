@@ -82,7 +82,6 @@ beats:
   cap:
   - Claudius takes the throne and the widow;
   - Hamlet keeps his black and his silence
-  tag: THE NEW ORDER — an uncle on the throne
   cats: []
   clusters:
   - - claudius
@@ -101,7 +100,7 @@ beats:
   cap:
   - Laertes warns his sister off Hamlet;
   - their father orders her to end it
-  tag: THE HOUSE — a brother and a father close a door
+  tag: THE HOUSE — the family closes the door
   cats: []
   clusters:
   - - laertes
@@ -226,7 +225,7 @@ beats:
   cap:
   - The queen drinks the cup, the king is stabbed,
   - and Hamlet dies in Horatio's arms
-  tag: THE FLOOR — four die; Fortinbras takes Denmark
+  tag: THE FLOOR — four die; Fortinbras inherits
   cats: []
   clusters:
   - - hamlet
@@ -238,4 +237,6 @@ caption_source: 'Written from the play''s action, act by act: no line is quoted 
   and scene numbers are the standard editorial division, not the author''s own. Not checked against a specific edition.'
 chart_limits: 'Hamlet''s cast is larger than eight lanes. Rosencrantz and Guildenstern, the players, Osric, the
   gravediggers and Fortinbras hold no lane — Fortinbras arrives in the last beat and is named in its tag. The graveyard
-  (ACT V, SC. 1) is folded into the beats around it, and the rubric does not apply: no beat carries a category.'
+  (ACT V, SC. 1) is folded into the beats around it, and the rubric does not apply: no beat carries a category.
+  THE COURT carries no tag line: five lanes arrive in ACT I, SC. 2 and the entrant list needs the whole row height,
+  so the beat''s name and caption do the work instead.'
