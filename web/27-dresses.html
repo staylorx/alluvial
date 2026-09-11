@@ -36,13 +36,15 @@
   .beat-link:focus { outline:none; }
   .beat-link:focus-visible { outline:2px solid var(--accent); outline-offset:-2px; }
   .rowmark.active { fill:rgba(138,106,31,.13); }
-  .reading { display:grid; grid-template-columns:300px 1fr; gap:2.6rem; align-items:start;
-              margin-top:3rem; border-top:1px solid var(--rule); padding-top:2rem; }
-  .map { position:sticky; top:1rem; }
+  .reading { position:relative; margin-top:2.5rem; border-top:1px solid var(--rule);
+              padding-top:1.5rem; }
+  .map { position:sticky; top:0; z-index:5; background:var(--bg); padding:.5rem 0 .4rem;
+          border-bottom:1px solid var(--rule); margin:0 0 1rem; }
+  .beats { max-width:74ch; }
   .map p { color:var(--faint); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase;
             margin:0 0 .5rem; }
   .map svg { display:block; width:100%; height:auto; }
-  article { scroll-margin-top:130px; padding-bottom:2.2rem; margin-bottom:2.2rem;
+  article { scroll-margin-top:250px; padding-bottom:2.2rem; margin-bottom:2.2rem;
              border-bottom:1px dotted var(--rule); }
   article:last-child { border-bottom:0; }
   .kicker { color:var(--faint); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase;
@@ -54,11 +56,14 @@
             color:var(--faint); font-style:italic; margin:0 0 .9rem; }
   .back { margin:0; font-size:.78rem; }
   .back a, a { color:var(--accent); }
+  /* Phones: fit-to-width renders the chart's captions at ~6px, so give it a
+     readable width and let it pan sideways. */
   @media (max-width:820px) {
-    .reading { grid-template-columns:1fr; gap:1.2rem; }
-    .map { top:0; background:var(--bg); padding:.4rem 0; border-bottom:1px solid var(--rule); }
-    .map svg { max-height:104px; }
-    .map .row-hit { pointer-events:none; }
+    .map { display:none; }
+    article { scroll-margin-top:12px; }
+    .chartwrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    .chartwrap svg.chart { width:820px; max-width:none; }
+    .chartwrap .row-hit { right:auto; width:820px; }
   }
 </style>
 </head>
@@ -495,121 +500,121 @@
   <section class="reading">
     <div class="map">
       <p>the map</p>
-      <div class="chartwrap"><svg class="chart" preserveAspectRatio="xMidYMin meet" xmlns="http://www.w3.org/2000/svg" width="560" height="476" viewBox="0 0 560 476" font-family="Helvetica, Arial, sans-serif">
+      <div class="chartwrap"><svg class="chart" preserveAspectRatio="xMidYMin meet" xmlns="http://www.w3.org/2000/svg" width="560" height="202" viewBox="0 0 560 202" font-family="Helvetica, Arial, sans-serif">
 <defs><pattern id="dots-mini" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.9" fill="#d8d2c8"/></pattern></defs>
-<rect width="560" height="476" fill="#faf7f2"/>
-<rect x="0" y="210.0" width="560" height="330.0" fill="url(#dots-mini)" opacity="0.55"/>
-<line x1="70" y1="300.0" x2="545.0" y2="300.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
-<line x1="545.0" y1="300.0" x2="556.0" y2="300.0" stroke="#ded7cb" stroke-width="1"/>
-<line x1="70" y1="315.0" x2="545.0" y2="315.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
-<line x1="545.0" y1="315.0" x2="556.0" y2="315.0" stroke="#ded7cb" stroke-width="1"/>
-<line x1="70" y1="330.0" x2="545.0" y2="330.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
-<line x1="545.0" y1="330.0" x2="556.0" y2="330.0" stroke="#ded7cb" stroke-width="1"/>
-<line x1="70" y1="345.0" x2="545.0" y2="345.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
-<line x1="545.0" y1="345.0" x2="556.0" y2="345.0" stroke="#ded7cb" stroke-width="1"/>
-<line x1="70" y1="360.0" x2="545.0" y2="360.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
-<line x1="545.0" y1="360.0" x2="556.0" y2="360.0" stroke="#ded7cb" stroke-width="1"/>
-<line x1="70" y1="375.0" x2="545.0" y2="375.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
-<line x1="545.0" y1="375.0" x2="556.0" y2="375.0" stroke="#ded7cb" stroke-width="1"/>
-<line x1="70" y1="390.0" x2="545.0" y2="390.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
-<line x1="545.0" y1="390.0" x2="556.0" y2="390.0" stroke="#ded7cb" stroke-width="1"/>
-<line x1="70" y1="405.0" x2="545.0" y2="405.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
-<line x1="545.0" y1="405.0" x2="556.0" y2="405.0" stroke="#ded7cb" stroke-width="1"/>
-<line x1="70" y1="420.0" x2="545.0" y2="420.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
-<line x1="545.0" y1="420.0" x2="556.0" y2="420.0" stroke="#ded7cb" stroke-width="1"/>
-<line x1="70" y1="435.0" x2="545.0" y2="435.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
-<line x1="545.0" y1="435.0" x2="556.0" y2="435.0" stroke="#ded7cb" stroke-width="1"/>
-<line x1="70" y1="450.0" x2="545.0" y2="450.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
-<line x1="545.0" y1="450.0" x2="556.0" y2="450.0" stroke="#ded7cb" stroke-width="1"/>
-<path d="M 506.6 405.0 C 506.6 429.4 510.5 438.6 510.5 463.0 L 512.5 463.0 C 512.5 438.6 516.5 429.4 516.5 405.0 Z" fill="#9c6552" fill-opacity="0.8"/>
-<path d="M 468.1 420.0 C 468.1 444.4 472.0 453.6 472.0 478.0 L 474.0 478.0 C 474.0 453.6 477.9 444.4 477.9 420.0 Z" fill="#6e9078" fill-opacity="0.8"/>
-<path d="M 117.7 300.0 C 117.7 306.3 117.7 308.7 117.7 315.0 L 124.3 315.0 C 124.3 308.7 124.3 306.3 124.3 300.0 Z" fill="#b08a94" fill-opacity="0.82"/>
-<path d="M 117.7 315.0 C 117.7 321.3 117.7 323.7 117.7 330.0 L 124.3 330.0 C 124.3 323.7 124.3 321.3 124.3 315.0 Z" fill="#b08a94" fill-opacity="0.82"/>
-<path d="M 117.7 330.0 C 117.7 336.3 117.7 338.7 117.7 345.0 L 124.3 345.0 C 124.3 338.7 124.3 336.3 124.3 330.0 Z" fill="#b08a94" fill-opacity="0.82"/>
-<path d="M 117.7 345.0 C 117.7 351.3 117.7 353.7 117.7 360.0 L 124.3 360.0 C 124.3 353.7 124.3 351.3 124.3 345.0 Z" fill="#b08a94" fill-opacity="0.82"/>
-<path d="M 117.7 360.0 C 117.7 366.3 117.7 368.7 117.7 375.0 L 124.3 375.0 C 124.3 368.7 124.3 366.3 124.3 360.0 Z" fill="#b08a94" fill-opacity="0.82"/>
-<path d="M 117.7 375.0 C 117.7 381.3 117.7 383.7 117.7 390.0 L 124.3 390.0 C 124.3 383.7 124.3 381.3 124.3 375.0 Z" fill="#b08a94" fill-opacity="0.82"/>
-<path d="M 117.7 390.0 C 117.7 396.3 117.7 398.7 117.7 405.0 L 124.3 405.0 C 124.3 398.7 124.3 396.3 124.3 390.0 Z" fill="#b08a94" fill-opacity="0.82"/>
-<path d="M 117.7 405.0 C 117.7 411.3 117.7 413.7 117.7 420.0 L 124.3 420.0 C 124.3 413.7 124.3 411.3 124.3 405.0 Z" fill="#b08a94" fill-opacity="0.82"/>
-<path d="M 117.7 420.0 C 117.7 426.3 117.7 428.7 117.7 435.0 L 124.3 435.0 C 124.3 428.7 124.3 426.3 124.3 420.0 Z" fill="#b08a94" fill-opacity="0.82"/>
-<path d="M 117.7 435.0 C 117.7 441.3 268.4 443.7 268.4 450.0 L 275.0 450.0 C 275.0 443.7 124.3 441.3 124.3 435.0 Z" fill="#b08a94" fill-opacity="0.82"/>
-<path d="M 216.2 315.0 C 216.2 321.3 216.2 323.7 216.2 330.0 L 223.8 330.0 C 223.8 323.7 223.8 321.3 223.8 315.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
-<path d="M 216.2 330.0 C 216.2 336.3 216.2 338.7 216.2 345.0 L 223.8 345.0 C 223.8 338.7 223.8 336.3 223.8 330.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
-<path d="M 216.2 345.0 C 216.2 351.3 216.2 353.7 216.2 360.0 L 223.8 360.0 C 223.8 353.7 223.8 351.3 223.8 345.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
-<path d="M 216.2 360.0 C 216.2 366.3 216.2 368.7 216.2 375.0 L 223.8 375.0 C 223.8 368.7 223.8 366.3 223.8 360.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
-<path d="M 216.2 375.0 C 216.2 381.3 216.2 383.7 216.2 390.0 L 223.8 390.0 C 223.8 383.7 223.8 381.3 223.8 375.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
-<path d="M 216.2 390.0 C 216.2 396.3 216.2 398.7 216.2 405.0 L 223.8 405.0 C 223.8 398.7 223.8 396.3 223.8 390.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
-<path d="M 216.2 405.0 C 216.2 411.3 216.2 413.7 216.2 420.0 L 223.8 420.0 C 223.8 413.7 223.8 411.3 223.8 405.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
-<path d="M 216.2 420.0 C 216.2 426.3 216.2 428.7 216.2 435.0 L 223.8 435.0 C 223.8 428.7 223.8 426.3 223.8 420.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
-<path d="M 216.2 435.0 C 216.2 441.3 216.2 443.7 216.2 450.0 L 223.8 450.0 C 223.8 443.7 223.8 441.3 223.8 435.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
-<path d="M 311.6 300.0 C 311.6 306.3 298.6 308.7 298.6 315.0 L 317.4 315.0 C 317.4 308.7 330.3 306.3 330.3 300.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
-<path d="M 298.6 315.0 C 298.6 321.3 298.6 323.7 298.6 330.0 L 317.4 330.0 C 317.4 323.7 317.4 321.3 317.4 315.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
-<path d="M 298.6 330.0 C 298.6 336.3 298.6 338.7 298.6 345.0 L 317.4 345.0 C 317.4 338.7 317.4 336.3 317.4 330.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
-<path d="M 298.6 345.0 C 298.6 351.3 298.6 353.7 298.6 360.0 L 317.4 360.0 C 317.4 353.7 317.4 351.3 317.4 345.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
-<path d="M 298.6 360.0 C 298.6 366.3 300.6 368.7 300.6 375.0 L 319.3 375.0 C 319.3 368.7 317.4 366.3 317.4 360.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
-<path d="M 300.6 375.0 C 300.6 381.3 298.6 383.7 298.6 390.0 L 317.4 390.0 C 317.4 383.7 319.3 381.3 319.3 375.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
-<path d="M 298.6 390.0 C 298.6 396.3 298.6 398.7 298.6 405.0 L 317.4 405.0 C 317.4 398.7 317.4 396.3 317.4 390.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
-<path d="M 298.6 405.0 C 298.6 411.3 298.6 413.7 298.6 420.0 L 317.4 420.0 C 317.4 413.7 317.4 411.3 317.4 405.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
-<path d="M 298.6 420.0 C 298.6 426.3 300.6 428.7 300.6 435.0 L 319.3 435.0 C 319.3 428.7 317.4 426.3 317.4 420.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
-<path d="M 300.6 435.0 C 300.6 441.3 277.8 443.7 277.8 450.0 L 296.5 450.0 C 296.5 443.7 319.3 441.3 319.3 435.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
-<path d="M 333.0 300.0 C 333.0 306.3 366.3 308.7 366.3 315.0 L 381.7 315.0 C 381.7 308.7 348.4 306.3 348.4 300.0 Z" fill="#d0316a" fill-opacity="0.82"/>
-<path d="M 366.3 315.0 C 366.3 321.3 366.3 323.7 366.3 330.0 L 381.7 330.0 C 381.7 323.7 381.7 321.3 381.7 315.0 Z" fill="#d0316a" fill-opacity="0.82"/>
-<path d="M 366.3 330.0 C 366.3 336.3 366.3 338.7 366.3 345.0 L 381.7 345.0 C 381.7 338.7 381.7 336.3 381.7 330.0 Z" fill="#d0316a" fill-opacity="0.82"/>
-<path d="M 366.3 345.0 C 366.3 351.3 344.3 353.7 344.3 360.0 L 359.7 360.0 C 359.7 353.7 381.7 351.3 381.7 345.0 Z" fill="#d0316a" fill-opacity="0.82"/>
-<path d="M 344.3 360.0 C 344.3 366.3 322.0 368.7 322.0 375.0 L 337.4 375.0 C 337.4 368.7 359.7 366.3 359.7 360.0 Z" fill="#d0316a" fill-opacity="0.82"/>
-<path d="M 322.0 375.0 C 322.0 381.3 382.8 383.7 382.8 390.0 L 398.2 390.0 C 398.2 383.7 337.4 381.3 337.4 375.0 Z" fill="#d0316a" fill-opacity="0.82"/>
-<path d="M 382.8 390.0 C 382.8 396.3 388.3 398.7 388.3 405.0 L 403.7 405.0 C 403.7 398.7 398.2 396.3 398.2 390.0 Z" fill="#d0316a" fill-opacity="0.82"/>
-<path d="M 388.3 405.0 C 388.3 411.3 388.3 413.7 388.3 420.0 L 403.7 420.0 C 403.7 413.7 403.7 411.3 403.7 405.0 Z" fill="#d0316a" fill-opacity="0.82"/>
-<path d="M 388.3 420.0 C 388.3 426.3 322.0 428.7 322.0 435.0 L 337.4 435.0 C 337.4 428.7 403.7 426.3 403.7 420.0 Z" fill="#d0316a" fill-opacity="0.82"/>
-<path d="M 322.0 435.0 C 322.0 441.3 299.2 443.7 299.2 450.0 L 314.6 450.0 C 314.6 443.7 337.4 441.3 337.4 435.0 Z" fill="#d0316a" fill-opacity="0.82"/>
-<path d="M 435.1 315.0 C 435.1 321.3 456.2 323.7 456.2 330.0 L 466.1 330.0 C 466.1 323.7 444.9 321.3 444.9 315.0 Z" fill="#6e9078" fill-opacity="0.82"/>
-<path d="M 456.2 330.0 C 456.2 336.3 456.2 338.7 456.2 345.0 L 466.1 345.0 C 466.1 338.7 466.1 336.3 466.1 330.0 Z" fill="#6e9078" fill-opacity="0.82"/>
-<path d="M 456.2 345.0 C 456.2 351.3 456.2 353.7 456.2 360.0 L 466.1 360.0 C 466.1 353.7 466.1 351.3 466.1 345.0 Z" fill="#6e9078" fill-opacity="0.82"/>
-<path d="M 456.2 360.0 C 456.2 366.3 456.2 368.7 456.2 375.0 L 466.1 375.0 C 466.1 368.7 466.1 366.3 466.1 360.0 Z" fill="#6e9078" fill-opacity="0.82"/>
-<path d="M 456.2 375.0 C 456.2 381.3 456.2 383.7 456.2 390.0 L 466.1 390.0 C 466.1 383.7 466.1 381.3 466.1 375.0 Z" fill="#6e9078" fill-opacity="0.82"/>
-<path d="M 456.2 390.0 C 456.2 396.3 435.1 398.7 435.1 405.0 L 444.9 405.0 C 444.9 398.7 466.1 396.3 466.1 390.0 Z" fill="#6e9078" fill-opacity="0.82"/>
-<path d="M 435.1 405.0 C 435.1 411.3 468.1 413.7 468.1 420.0 L 477.9 420.0 C 477.9 413.7 444.9 411.3 444.9 405.0 Z" fill="#6e9078" fill-opacity="0.82"/>
-<path d="M 468.9 330.0 C 468.9 336.3 468.9 338.7 468.9 345.0 L 478.8 345.0 C 478.8 338.7 478.8 336.3 478.8 330.0 Z" fill="#9c6552" fill-opacity="0.82"/>
-<path d="M 468.9 345.0 C 468.9 351.3 468.9 353.7 468.9 360.0 L 478.8 360.0 C 478.8 353.7 478.8 351.3 478.8 345.0 Z" fill="#9c6552" fill-opacity="0.82"/>
-<path d="M 468.9 360.0 C 468.9 366.3 468.9 368.7 468.9 375.0 L 478.8 375.0 C 478.8 368.7 478.8 366.3 478.8 360.0 Z" fill="#9c6552" fill-opacity="0.82"/>
-<path d="M 468.9 375.0 C 468.9 381.3 468.9 383.7 468.9 390.0 L 478.8 390.0 C 478.8 383.7 478.8 381.3 478.8 375.0 Z" fill="#9c6552" fill-opacity="0.82"/>
-<path d="M 468.9 390.0 C 468.9 396.3 506.6 398.7 506.6 405.0 L 516.5 405.0 C 516.5 398.7 478.8 396.3 478.8 390.0 Z" fill="#9c6552" fill-opacity="0.82"/>
+<rect width="560" height="202" fill="#faf7f2"/>
+<rect x="0" y="-64.0" width="560" height="330.0" fill="url(#dots-mini)" opacity="0.55"/>
+<line x1="70" y1="26.0" x2="545.0" y2="26.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="26.0" x2="556.0" y2="26.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="41.0" x2="545.0" y2="41.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="41.0" x2="556.0" y2="41.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="56.0" x2="545.0" y2="56.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="56.0" x2="556.0" y2="56.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="71.0" x2="545.0" y2="71.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="71.0" x2="556.0" y2="71.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="86.0" x2="545.0" y2="86.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="86.0" x2="556.0" y2="86.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="101.0" x2="545.0" y2="101.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="101.0" x2="556.0" y2="101.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="116.0" x2="545.0" y2="116.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="116.0" x2="556.0" y2="116.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="131.0" x2="545.0" y2="131.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="131.0" x2="556.0" y2="131.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="146.0" x2="545.0" y2="146.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="146.0" x2="556.0" y2="146.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="161.0" x2="545.0" y2="161.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="161.0" x2="556.0" y2="161.0" stroke="#ded7cb" stroke-width="1"/>
+<line x1="70" y1="176.0" x2="545.0" y2="176.0" stroke="#c9c2b6" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="545.0" y1="176.0" x2="556.0" y2="176.0" stroke="#ded7cb" stroke-width="1"/>
+<path d="M 506.6 131.0 C 506.6 155.4 510.5 164.6 510.5 189.0 L 512.5 189.0 C 512.5 164.6 516.5 155.4 516.5 131.0 Z" fill="#9c6552" fill-opacity="0.8"/>
+<path d="M 468.1 146.0 C 468.1 170.4 472.0 179.6 472.0 204.0 L 474.0 204.0 C 474.0 179.6 477.9 170.4 477.9 146.0 Z" fill="#6e9078" fill-opacity="0.8"/>
+<path d="M 117.7 26.0 C 117.7 32.3 117.7 34.7 117.7 41.0 L 124.3 41.0 C 124.3 34.7 124.3 32.3 124.3 26.0 Z" fill="#b08a94" fill-opacity="0.82"/>
+<path d="M 117.7 41.0 C 117.7 47.3 117.7 49.7 117.7 56.0 L 124.3 56.0 C 124.3 49.7 124.3 47.3 124.3 41.0 Z" fill="#b08a94" fill-opacity="0.82"/>
+<path d="M 117.7 56.0 C 117.7 62.3 117.7 64.7 117.7 71.0 L 124.3 71.0 C 124.3 64.7 124.3 62.3 124.3 56.0 Z" fill="#b08a94" fill-opacity="0.82"/>
+<path d="M 117.7 71.0 C 117.7 77.3 117.7 79.7 117.7 86.0 L 124.3 86.0 C 124.3 79.7 124.3 77.3 124.3 71.0 Z" fill="#b08a94" fill-opacity="0.82"/>
+<path d="M 117.7 86.0 C 117.7 92.3 117.7 94.7 117.7 101.0 L 124.3 101.0 C 124.3 94.7 124.3 92.3 124.3 86.0 Z" fill="#b08a94" fill-opacity="0.82"/>
+<path d="M 117.7 101.0 C 117.7 107.3 117.7 109.7 117.7 116.0 L 124.3 116.0 C 124.3 109.7 124.3 107.3 124.3 101.0 Z" fill="#b08a94" fill-opacity="0.82"/>
+<path d="M 117.7 116.0 C 117.7 122.3 117.7 124.7 117.7 131.0 L 124.3 131.0 C 124.3 124.7 124.3 122.3 124.3 116.0 Z" fill="#b08a94" fill-opacity="0.82"/>
+<path d="M 117.7 131.0 C 117.7 137.3 117.7 139.7 117.7 146.0 L 124.3 146.0 C 124.3 139.7 124.3 137.3 124.3 131.0 Z" fill="#b08a94" fill-opacity="0.82"/>
+<path d="M 117.7 146.0 C 117.7 152.3 117.7 154.7 117.7 161.0 L 124.3 161.0 C 124.3 154.7 124.3 152.3 124.3 146.0 Z" fill="#b08a94" fill-opacity="0.82"/>
+<path d="M 117.7 161.0 C 117.7 167.3 268.4 169.7 268.4 176.0 L 275.0 176.0 C 275.0 169.7 124.3 167.3 124.3 161.0 Z" fill="#b08a94" fill-opacity="0.82"/>
+<path d="M 216.2 41.0 C 216.2 47.3 216.2 49.7 216.2 56.0 L 223.8 56.0 C 223.8 49.7 223.8 47.3 223.8 41.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 216.2 56.0 C 216.2 62.3 216.2 64.7 216.2 71.0 L 223.8 71.0 C 223.8 64.7 223.8 62.3 223.8 56.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 216.2 71.0 C 216.2 77.3 216.2 79.7 216.2 86.0 L 223.8 86.0 C 223.8 79.7 223.8 77.3 223.8 71.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 216.2 86.0 C 216.2 92.3 216.2 94.7 216.2 101.0 L 223.8 101.0 C 223.8 94.7 223.8 92.3 223.8 86.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 216.2 101.0 C 216.2 107.3 216.2 109.7 216.2 116.0 L 223.8 116.0 C 223.8 109.7 223.8 107.3 223.8 101.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 216.2 116.0 C 216.2 122.3 216.2 124.7 216.2 131.0 L 223.8 131.0 C 223.8 124.7 223.8 122.3 223.8 116.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 216.2 131.0 C 216.2 137.3 216.2 139.7 216.2 146.0 L 223.8 146.0 C 223.8 139.7 223.8 137.3 223.8 131.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 216.2 146.0 C 216.2 152.3 216.2 154.7 216.2 161.0 L 223.8 161.0 C 223.8 154.7 223.8 152.3 223.8 146.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 216.2 161.0 C 216.2 167.3 216.2 169.7 216.2 176.0 L 223.8 176.0 C 223.8 169.7 223.8 167.3 223.8 161.0 Z" fill="#b09a4e" fill-opacity="0.82"/>
+<path d="M 311.6 26.0 C 311.6 32.3 298.6 34.7 298.6 41.0 L 317.4 41.0 C 317.4 34.7 330.3 32.3 330.3 26.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 298.6 41.0 C 298.6 47.3 298.6 49.7 298.6 56.0 L 317.4 56.0 C 317.4 49.7 317.4 47.3 317.4 41.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 298.6 56.0 C 298.6 62.3 298.6 64.7 298.6 71.0 L 317.4 71.0 C 317.4 64.7 317.4 62.3 317.4 56.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 298.6 71.0 C 298.6 77.3 298.6 79.7 298.6 86.0 L 317.4 86.0 C 317.4 79.7 317.4 77.3 317.4 71.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 298.6 86.0 C 298.6 92.3 300.6 94.7 300.6 101.0 L 319.3 101.0 C 319.3 94.7 317.4 92.3 317.4 86.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 300.6 101.0 C 300.6 107.3 298.6 109.7 298.6 116.0 L 317.4 116.0 C 317.4 109.7 319.3 107.3 319.3 101.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 298.6 116.0 C 298.6 122.3 298.6 124.7 298.6 131.0 L 317.4 131.0 C 317.4 124.7 317.4 122.3 317.4 116.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 298.6 131.0 C 298.6 137.3 298.6 139.7 298.6 146.0 L 317.4 146.0 C 317.4 139.7 317.4 137.3 317.4 131.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 298.6 146.0 C 298.6 152.3 300.6 154.7 300.6 161.0 L 319.3 161.0 C 319.3 154.7 317.4 152.3 317.4 146.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 300.6 161.0 C 300.6 167.3 277.8 169.7 277.8 176.0 L 296.5 176.0 C 296.5 169.7 319.3 167.3 319.3 161.0 Z" fill="#1b57c4" fill-opacity="0.82"/>
+<path d="M 333.0 26.0 C 333.0 32.3 366.3 34.7 366.3 41.0 L 381.7 41.0 C 381.7 34.7 348.4 32.3 348.4 26.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 366.3 41.0 C 366.3 47.3 366.3 49.7 366.3 56.0 L 381.7 56.0 C 381.7 49.7 381.7 47.3 381.7 41.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 366.3 56.0 C 366.3 62.3 366.3 64.7 366.3 71.0 L 381.7 71.0 C 381.7 64.7 381.7 62.3 381.7 56.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 366.3 71.0 C 366.3 77.3 344.3 79.7 344.3 86.0 L 359.7 86.0 C 359.7 79.7 381.7 77.3 381.7 71.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 344.3 86.0 C 344.3 92.3 322.0 94.7 322.0 101.0 L 337.4 101.0 C 337.4 94.7 359.7 92.3 359.7 86.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 322.0 101.0 C 322.0 107.3 382.8 109.7 382.8 116.0 L 398.2 116.0 C 398.2 109.7 337.4 107.3 337.4 101.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 382.8 116.0 C 382.8 122.3 388.3 124.7 388.3 131.0 L 403.7 131.0 C 403.7 124.7 398.2 122.3 398.2 116.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 388.3 131.0 C 388.3 137.3 388.3 139.7 388.3 146.0 L 403.7 146.0 C 403.7 139.7 403.7 137.3 403.7 131.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 388.3 146.0 C 388.3 152.3 322.0 154.7 322.0 161.0 L 337.4 161.0 C 337.4 154.7 403.7 152.3 403.7 146.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 322.0 161.0 C 322.0 167.3 299.2 169.7 299.2 176.0 L 314.6 176.0 C 314.6 169.7 337.4 167.3 337.4 161.0 Z" fill="#d0316a" fill-opacity="0.82"/>
+<path d="M 435.1 41.0 C 435.1 47.3 456.2 49.7 456.2 56.0 L 466.1 56.0 C 466.1 49.7 444.9 47.3 444.9 41.0 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 456.2 56.0 C 456.2 62.3 456.2 64.7 456.2 71.0 L 466.1 71.0 C 466.1 64.7 466.1 62.3 466.1 56.0 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 456.2 71.0 C 456.2 77.3 456.2 79.7 456.2 86.0 L 466.1 86.0 C 466.1 79.7 466.1 77.3 466.1 71.0 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 456.2 86.0 C 456.2 92.3 456.2 94.7 456.2 101.0 L 466.1 101.0 C 466.1 94.7 466.1 92.3 466.1 86.0 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 456.2 101.0 C 456.2 107.3 456.2 109.7 456.2 116.0 L 466.1 116.0 C 466.1 109.7 466.1 107.3 466.1 101.0 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 456.2 116.0 C 456.2 122.3 435.1 124.7 435.1 131.0 L 444.9 131.0 C 444.9 124.7 466.1 122.3 466.1 116.0 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 435.1 131.0 C 435.1 137.3 468.1 139.7 468.1 146.0 L 477.9 146.0 C 477.9 139.7 444.9 137.3 444.9 131.0 Z" fill="#6e9078" fill-opacity="0.82"/>
+<path d="M 468.9 56.0 C 468.9 62.3 468.9 64.7 468.9 71.0 L 478.8 71.0 C 478.8 64.7 478.8 62.3 478.8 56.0 Z" fill="#9c6552" fill-opacity="0.82"/>
+<path d="M 468.9 71.0 C 468.9 77.3 468.9 79.7 468.9 86.0 L 478.8 86.0 C 478.8 79.7 478.8 77.3 478.8 71.0 Z" fill="#9c6552" fill-opacity="0.82"/>
+<path d="M 468.9 86.0 C 468.9 92.3 468.9 94.7 468.9 101.0 L 478.8 101.0 C 478.8 94.7 478.8 92.3 478.8 86.0 Z" fill="#9c6552" fill-opacity="0.82"/>
+<path d="M 468.9 101.0 C 468.9 107.3 468.9 109.7 468.9 116.0 L 478.8 116.0 C 478.8 109.7 478.8 107.3 478.8 101.0 Z" fill="#9c6552" fill-opacity="0.82"/>
+<path d="M 468.9 116.0 C 468.9 122.3 506.6 124.7 506.6 131.0 L 516.5 131.0 C 516.5 124.7 478.8 122.3 478.8 116.0 Z" fill="#9c6552" fill-opacity="0.82"/>
 <g class="beat-rows">
-<rect class="rowmark" id="mini-01" data-beat="01" x="0" y="292" width="560" height="15.0" fill="transparent" pointer-events="none"/>
-<rect class="rowmark" id="mini-02" data-beat="02" x="0" y="308" width="560" height="15.0" fill="transparent" pointer-events="none"/>
-<rect class="rowmark" id="mini-03" data-beat="03" x="0" y="322" width="560" height="15.0" fill="transparent" pointer-events="none"/>
-<rect class="rowmark" id="mini-04" data-beat="04" x="0" y="338" width="560" height="15.0" fill="transparent" pointer-events="none"/>
-<rect class="rowmark" id="mini-05" data-beat="05" x="0" y="352" width="560" height="15.0" fill="transparent" pointer-events="none"/>
-<rect class="rowmark" id="mini-06" data-beat="06" x="0" y="368" width="560" height="15.0" fill="transparent" pointer-events="none"/>
-<rect class="rowmark" id="mini-07" data-beat="07" x="0" y="382" width="560" height="15.0" fill="transparent" pointer-events="none"/>
-<rect class="rowmark" id="mini-08" data-beat="08" x="0" y="398" width="560" height="15.0" fill="transparent" pointer-events="none"/>
-<rect class="rowmark" id="mini-09" data-beat="09" x="0" y="412" width="560" height="15.0" fill="transparent" pointer-events="none"/>
-<rect class="rowmark" id="mini-10" data-beat="10" x="0" y="428" width="560" height="15.0" fill="transparent" pointer-events="none"/>
-<rect class="rowmark" id="mini-11" data-beat="11" x="0" y="442" width="560" height="15.0" fill="transparent" pointer-events="none"/>
-<a class="beat-link" href="#beat-01"><rect class="hit" x="0" y="292" width="560" height="15.0" fill="transparent"/><title>TWO WEDDINGS, ONE NIGHT</title></a>
-<a class="beat-link" href="#beat-02"><rect class="hit" x="0" y="308" width="560" height="15.0" fill="transparent"/><title>THE COLUMN</title></a>
-<a class="beat-link" href="#beat-03"><rect class="hit" x="0" y="322" width="560" height="15.0" fill="transparent"/><title>TESS COMES HOME</title></a>
-<a class="beat-link" href="#beat-04"><rect class="hit" x="0" y="338" width="560" height="15.0" fill="transparent"/><title>THE ENGAGEMENT</title></a>
-<a class="beat-link" href="#beat-05"><rect class="hit" x="0" y="352" width="560" height="15.0" fill="transparent"/><title>THE BOATHOUSE</title></a>
-<a class="beat-link" href="#beat-06"><rect class="hit" x="0" y="368" width="560" height="15.0" fill="transparent"/><title>THE CLOSET</title></a>
-<a class="beat-link" href="#beat-07"><rect class="hit" x="0" y="382" width="560" height="15.0" fill="transparent"/><title>THE ARTICLE</title></a>
-<a class="beat-link" href="#beat-08"><rect class="hit" x="0" y="398" width="560" height="15.0" fill="transparent"/><title>THE SLIDESHOW</title></a>
-<a class="beat-link" href="#beat-09"><rect class="hit" x="0" y="412" width="560" height="15.0" fill="transparent"/><title>THE EMPTY VICTORY</title></a>
-<a class="beat-link" href="#beat-10"><rect class="hit" x="0" y="428" width="560" height="15.0" fill="transparent"/><title>ANOTHER WEDDING</title></a>
-<a class="beat-link" href="#beat-11"><rect class="hit" x="0" y="442" width="560" height="15.0" fill="transparent"/><title>ONE YEAR LATER</title></a>
+<rect class="rowmark" id="mini-01" data-beat="01" x="0" y="18" width="560" height="15.0" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="mini-02" data-beat="02" x="0" y="34" width="560" height="15.0" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="mini-03" data-beat="03" x="0" y="48" width="560" height="15.0" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="mini-04" data-beat="04" x="0" y="64" width="560" height="15.0" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="mini-05" data-beat="05" x="0" y="78" width="560" height="15.0" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="mini-06" data-beat="06" x="0" y="94" width="560" height="15.0" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="mini-07" data-beat="07" x="0" y="108" width="560" height="15.0" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="mini-08" data-beat="08" x="0" y="124" width="560" height="15.0" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="mini-09" data-beat="09" x="0" y="138" width="560" height="15.0" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="mini-10" data-beat="10" x="0" y="154" width="560" height="15.0" fill="transparent" pointer-events="none"/>
+<rect class="rowmark" id="mini-11" data-beat="11" x="0" y="168" width="560" height="15.0" fill="transparent" pointer-events="none"/>
+<a class="beat-link" href="#beat-01"><rect class="hit" x="0" y="18" width="560" height="15.0" fill="transparent"/><title>TWO WEDDINGS, ONE NIGHT</title></a>
+<a class="beat-link" href="#beat-02"><rect class="hit" x="0" y="34" width="560" height="15.0" fill="transparent"/><title>THE COLUMN</title></a>
+<a class="beat-link" href="#beat-03"><rect class="hit" x="0" y="48" width="560" height="15.0" fill="transparent"/><title>TESS COMES HOME</title></a>
+<a class="beat-link" href="#beat-04"><rect class="hit" x="0" y="64" width="560" height="15.0" fill="transparent"/><title>THE ENGAGEMENT</title></a>
+<a class="beat-link" href="#beat-05"><rect class="hit" x="0" y="78" width="560" height="15.0" fill="transparent"/><title>THE BOATHOUSE</title></a>
+<a class="beat-link" href="#beat-06"><rect class="hit" x="0" y="94" width="560" height="15.0" fill="transparent"/><title>THE CLOSET</title></a>
+<a class="beat-link" href="#beat-07"><rect class="hit" x="0" y="108" width="560" height="15.0" fill="transparent"/><title>THE ARTICLE</title></a>
+<a class="beat-link" href="#beat-08"><rect class="hit" x="0" y="124" width="560" height="15.0" fill="transparent"/><title>THE SLIDESHOW</title></a>
+<a class="beat-link" href="#beat-09"><rect class="hit" x="0" y="138" width="560" height="15.0" fill="transparent"/><title>THE EMPTY VICTORY</title></a>
+<a class="beat-link" href="#beat-10"><rect class="hit" x="0" y="154" width="560" height="15.0" fill="transparent"/><title>ANOTHER WEDDING</title></a>
+<a class="beat-link" href="#beat-11"><rect class="hit" x="0" y="168" width="560" height="15.0" fill="transparent"/><title>ONE YEAR LATER</title></a>
 </g>
 </svg>
-        <a class="row-hit" href="#beat-01" style="top:61.450%;height:3.151%"><span class="sr">TWO WEDDINGS, ONE NIGHT</span></a>
-        <a class="row-hit" href="#beat-02" style="top:64.601%;height:3.151%"><span class="sr">THE COLUMN</span></a>
-        <a class="row-hit" href="#beat-03" style="top:67.752%;height:3.151%"><span class="sr">TESS COMES HOME</span></a>
-        <a class="row-hit" href="#beat-04" style="top:70.903%;height:3.151%"><span class="sr">THE ENGAGEMENT</span></a>
-        <a class="row-hit" href="#beat-05" style="top:74.055%;height:3.151%"><span class="sr">THE BOATHOUSE</span></a>
-        <a class="row-hit" href="#beat-06" style="top:77.206%;height:3.151%"><span class="sr">THE CLOSET</span></a>
-        <a class="row-hit" href="#beat-07" style="top:80.357%;height:3.151%"><span class="sr">THE ARTICLE</span></a>
-        <a class="row-hit" href="#beat-08" style="top:83.508%;height:3.151%"><span class="sr">THE SLIDESHOW</span></a>
-        <a class="row-hit" href="#beat-09" style="top:86.660%;height:3.151%"><span class="sr">THE EMPTY VICTORY</span></a>
-        <a class="row-hit" href="#beat-10" style="top:89.811%;height:3.151%"><span class="sr">ANOTHER WEDDING</span></a>
-        <a class="row-hit" href="#beat-11" style="top:92.962%;height:3.151%"><span class="sr">ONE YEAR LATER</span></a></div>
+        <a class="row-hit" href="#beat-01" style="top:9.158%;height:7.426%"><span class="sr">TWO WEDDINGS, ONE NIGHT</span></a>
+        <a class="row-hit" href="#beat-02" style="top:16.584%;height:7.426%"><span class="sr">THE COLUMN</span></a>
+        <a class="row-hit" href="#beat-03" style="top:24.010%;height:7.426%"><span class="sr">TESS COMES HOME</span></a>
+        <a class="row-hit" href="#beat-04" style="top:31.436%;height:7.426%"><span class="sr">THE ENGAGEMENT</span></a>
+        <a class="row-hit" href="#beat-05" style="top:38.861%;height:7.426%"><span class="sr">THE BOATHOUSE</span></a>
+        <a class="row-hit" href="#beat-06" style="top:46.287%;height:7.426%"><span class="sr">THE CLOSET</span></a>
+        <a class="row-hit" href="#beat-07" style="top:53.713%;height:7.426%"><span class="sr">THE ARTICLE</span></a>
+        <a class="row-hit" href="#beat-08" style="top:61.139%;height:7.426%"><span class="sr">THE SLIDESHOW</span></a>
+        <a class="row-hit" href="#beat-09" style="top:68.564%;height:7.426%"><span class="sr">THE EMPTY VICTORY</span></a>
+        <a class="row-hit" href="#beat-10" style="top:75.990%;height:7.426%"><span class="sr">ANOTHER WEDDING</span></a>
+        <a class="row-hit" href="#beat-11" style="top:83.416%;height:7.426%"><span class="sr">ONE YEAR LATER</span></a></div>
     </div>
     <div class="beats">
       <p class="kicker" style="margin-bottom:1.4rem">each beat below is a link target &mdash;

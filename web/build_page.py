@@ -72,7 +72,8 @@ def chart_svg(cb=False, mini=False):
     spec["pattern_prefix"] = ("-alt" if cb else "") + ("-mini" if mini else "")
     if mini:
         step = spec.get("mini_step", 15.0)
-        spec["ys"] = [spec["ys"][0] + i * step for i in range(len(spec["ys"]))]
+        # mini rows start near the top: ROW0 is for the full chart's captions
+        spec["ys"] = [spec.get("mini_pad", 26) + i * step for i in range(len(spec["ys"]))]
         spec["mini"] = True
         spec["W"] = 560
         spec["rowmark_prefix"] = "mini"
@@ -184,13 +185,15 @@ def build_page():
   .beat-link:focus {{ outline:none; }}
   .beat-link:focus-visible {{ outline:2px solid var(--accent); outline-offset:-2px; }}
   .rowmark.active {{ fill:rgba(138,106,31,.13); }}
-  .reading {{ display:grid; grid-template-columns:300px 1fr; gap:2.6rem; align-items:start;
-              margin-top:3rem; border-top:1px solid var(--rule); padding-top:2rem; }}
-  .map {{ position:sticky; top:1rem; }}
+  .reading {{ position:relative; margin-top:2.5rem; border-top:1px solid var(--rule);
+              padding-top:1.5rem; }}
+  .map {{ position:sticky; top:0; z-index:5; background:var(--bg); padding:.5rem 0 .4rem;
+          border-bottom:1px solid var(--rule); margin:0 0 1rem; }}
+  .beats {{ max-width:74ch; }}
   .map p {{ color:var(--faint); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase;
             margin:0 0 .5rem; }}
   .map svg {{ display:block; width:100%; height:auto; }}
-  article {{ scroll-margin-top:130px; padding-bottom:2.2rem; margin-bottom:2.2rem;
+  article {{ scroll-margin-top:250px; padding-bottom:2.2rem; margin-bottom:2.2rem;
              border-bottom:1px dotted var(--rule); }}
   article:last-child {{ border-bottom:0; }}
   .kicker {{ color:var(--faint); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase;
@@ -202,11 +205,14 @@ def build_page():
             color:var(--faint); font-style:italic; margin:0 0 .9rem; }}
   .back {{ margin:0; font-size:.78rem; }}
   .back a, a {{ color:var(--accent); }}
+  /* Phones: fit-to-width renders the chart's captions at ~6px, so give it a
+     readable width and let it pan sideways. */
   @media (max-width:820px) {{
-    .reading {{ grid-template-columns:1fr; gap:1.2rem; }}
-    .map {{ top:0; background:var(--bg); padding:.4rem 0; border-bottom:1px solid var(--rule); }}
-    .map svg {{ max-height:104px; }}
-    .map .row-hit {{ pointer-events:none; }}
+    .map {{ display:none; }}
+    article {{ scroll-margin-top:12px; }}
+    .chartwrap {{ overflow-x:auto; -webkit-overflow-scrolling:touch; }}
+    .chartwrap svg.chart {{ width:820px; max-width:none; }}
+    .chartwrap .row-hit {{ right:auto; width:820px; }}
   }}
 </style>
 </head>
