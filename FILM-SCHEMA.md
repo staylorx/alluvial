@@ -45,6 +45,17 @@ that matter most:
 
 ## Field rules
 
+- **`expression`** — the form the story is told in: `film` (the default: an
+  absent field means film, which is what every file written before 2026-09-11
+  is), or `play`, `novel`, `series`, `short story`, `essay`, `poem`, `song`,
+  `musical`. Set it for anything that is not a film. The chart's anchors follow
+  it — a play's `loc` is an act and scene, not a minute mark — the store's
+  header names it, and the title block says which form it is instead of
+  counting minutes. **`year` is the WORK's year** (a play's first staging or
+  composition), so it is no longer bounded at 1900: the store holds works older
+  than cinema.
+- **`runtime_min`** — a film's running time. Leave it off for a play or a
+  novel; there is no honest number, so don't invent one.
 - **`order`** — every id, most important first. Stacks keep this order, so the
   chart reads consistently beat to beat. Lane **label size follows width**, so
   order matters less than width.
@@ -92,6 +103,10 @@ must run without error.
 
 ## What NOT to do
 
+- **A non-romcom must carry `cats: []` on every beat.** An OMITTED `cats` falls
+  back to the romcom rubric category for that beat number (`rubric27.for_beat`),
+  so a play or a novel silently acquires romcom commentary it never earned. Put
+  the empty list in — it is a statement, not a default.
 - Don't write prose, reviews, or opinion into `cap` — the captions are the
   film's skeleton.
 - Don't invent beats that aren't in the film, and don't invent character names

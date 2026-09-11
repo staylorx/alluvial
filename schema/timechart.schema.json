@@ -9,6 +9,10 @@
   "properties": {
     "slug": {"type": "string", "pattern": "^[a-z0-9-]+$"},
     "title": {"type": "string"},
+    "expression": {
+      "enum": ["film", "play", "novel", "series", "short story", "essay", "poem", "song", "musical"],
+      "description": "The form the story is told in. Absent means 'film'."
+    },
     "year": {"type": ["integer", "null"]},
     "runtime_min": {"type": ["integer", "null"]},
     "sub": {"type": "string"},

@@ -40,6 +40,17 @@ TAG = "#8a6a1f"
 FONTS = dict(beat=20, loc=16, cap=16.5, hard=16.5, band=14, legend_title=13,
              title=31, sub=15.5, sub2=14.5)
 
+# The form the work is told in (store field `expression`); absent means a film,
+# the medium this store started in. The title block follows it: a film is
+# anchored to minutes, everything else to the work's own divisions.
+FORMS = {"play": "A play", "novel": "A novel", "series": "A series",
+         "short story": "A short story", "essay": "An essay", "poem": "A poem",
+         "song": "A song", "musical": "A musical"}
+ANCHORS = {"play": "acts and scenes", "novel": "its parts", "series": "its episodes",
+           "short story": "the story's own turns", "essay": "its own sections",
+           "poem": "its own divisions", "song": "its own divisions",
+           "musical": "its acts"}
+
 
 def load(slug: str) -> dict:
     """Films come from the data store: films/<slug>.yaml (JSON still works)."""
@@ -138,8 +149,12 @@ def spec_for(film: dict, cb: bool = False, mini: bool = False) -> dict:
 
     lab = width_fonts(char, base=24.0, lo=14.0, hi=26.0)
     title = film["title"] + (" (%s)" % film["year"] if film.get("year") else "")
+    expr = film.get("expression") or "film"
     if film.get("title_notes"):
         notes = [(t, "note") for t in film["title_notes"]]
+    elif expr != "film":
+        notes = [("No beat carries a rubric category: the rubric is the romcom "
+                  "rubric, and this is not a romcom.", "note")]
     else:
         notes = [("Each beat names the rubric category its shape belongs to.", "note")]
     if film.get("score") and not film.get("title_notes"):
@@ -148,6 +163,15 @@ def spec_for(film: dict, cb: bool = False, mini: bool = False) -> dict:
     if cb:
         notes.append(("Colour-blind mode: each strand carries its own symbol; the darker the "
                       "ribbon, the heavier the character. Hue is decoration only.", "note"))
+
+    counted = f"{len(cols)} beats, {len(order)} lanes"
+    if expr == "film":
+        sub_line = (counted
+                    + (f", {film['runtime_min']} minutes" if film.get("runtime_min") else "")
+                    + ". Time runs down the page.")
+    else:
+        sub_line = (f"{counted}. {FORMS.get(expr, 'A ' + expr)} \u2014 the anchors are "
+                    f"{ANCHORS.get(expr, 'its own divisions')}, not minutes.")
 
     return dict(
         char=char, order=order, cols=cols, ys=ys, dashed=film.get("dashed", {}),
@@ -163,9 +187,7 @@ def spec_for(film: dict, cb: bool = False, mini: bool = False) -> dict:
                         if film.get("legend_object") else "")),
         title=film.get("title_block") or
               ([(f"{title} \u2014 the braid", "title"),
-                (f"{len(cols)} beats, {len(order)} lanes"
-                 + (f", {film['runtime_min']} minutes" if film.get("runtime_min") else "")
-                 + ". Time runs down the page.", "sub"),
+                (sub_line, "sub"),
                 ("Row spacing widens before the coda \u2014 time passes there.", "note")]
                + notes),
     )

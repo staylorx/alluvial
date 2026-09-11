@@ -137,6 +137,44 @@ practical ceilings.
 - [ ] Density mode: one caption line per beat for long works, prose carries detail.
 - [ ] Optional: Okabe–Ito palette swap as a second colour-blind mode.
 
+## Stories, not films — the `expression` field, and Hamlet (2026-09-11)
+
+The store's naming is behind its content: these are **stories**, and `film` is
+only one of the forms they arrive in. Two changes landed together:
+
+- **`expression`** (both schemas + `FILM_KEYS`/`TIME_KEYS`) — `film` by default,
+  else `play`, `novel`, `series`, `short story`, `essay`, `poem`, `song`,
+  `musical`. Absent means film, so every existing file, chart and published
+  artifact stays byte-identical. `year` is now the WORK's year (minimum 1, not
+  1900), and a non-film titles itself by form instead of counting minutes
+  ("A play — the anchors are acts and scenes, not minutes.").
+- **`films/hamlet.yaml`** — the first non-film: 13 beats, 8 lanes, every beat
+  anchored to an act and scene. Every beat carries `cats: []` explicitly — an
+  OMITTED `cats` silently inherits the romcom category for that beat number
+  (`rubric27.for_beat`), which is the trap a non-romcom falls into. The ghost
+  holds a lane; Fortinbras, Rosencrantz and Guildenstern, the players, Osric and
+  the gravediggers are named in captions/tags plus `chart_limits`.
+
+Two things were left BROKEN by `180d780` (Remove the superseded JSON store), and
+both failed SILENTLY — found while wiring Hamlet up, fixed here:
+
+- `web/build_eleventy.py` globbed `films/*.json` for discovery, so it published
+  **0 films** and reported success. Discovery now goes through the store's own
+  API (`FY.all_slugs()` + `is_timechart`). Verified by republishing: all 30 site
+  charts come back **byte-identical** to the live artifacts except the two whose
+  store data was corrected after the last publish (`the-wedding-singer`,
+  `10-things-i-hate-about-you`) — those corrections were never republished.
+- `scripts/verify_films.py`'s batch sweep globbed the same pattern: the gate
+  meant to catch lane and caption defects exited 0 over an EMPTY set. It now
+  sweeps `FY.all_slugs()` — 36 braids + 5 timecharts, 36/36 pass.
+
+Still open, in order: (1) rename the store and its paths from films to stories —
+`films/` -> `stories/`, `films_yaml.py` / `FILM-SCHEMA.md`, and on the site
+`/movies/` -> `/stories/` with redirects for the 30 live URLs; (2) give
+`expression` a first-class home in the Dart store (the codec carries it in
+`extra` today: it round-trips, but that is not modelling); (3) republish the two
+corrected films.
+
 ## Decisions worth not re-litigating
 
 - Ribbon width ≈ narrative presence (Sankey rule). Label size + colour-blind

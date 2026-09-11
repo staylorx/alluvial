@@ -54,13 +54,14 @@ def build(repo):
     data = os.path.join(repo, "src", "_data")
     os.makedirs(charts, exist_ok=True)
 
-    # films/<slug>.json are braid films; <slug>-timechart.json is a different
-    # chart shape and is handled by reorder_chart.py, not here.
-    entries, seen = [], sorted(p for p in glob.glob(os.path.join(FILMS, "*.json"))
-                               if not p.endswith("-timechart.json"))
-    for path in seen:
-        slug = os.path.basename(path)[:-5]
-        film = json.load(open(path, encoding="utf-8"))
+    # Discovery goes through the store — one loader, or the store forks. The
+    # YAML store is the authored source (JSON is only a legacy fallback), so
+    # globbing for *.json here found nothing the moment the JSON files were
+    # removed. <slug> is a braid chart; <slug>-timechart is the other shape and
+    # is rendered separately below.
+    entries, seen = [], [s for s in sorted(FY.all_slugs()) if not FY.is_timechart(s)]
+    for slug in seen:
+        film = FY.load(slug)
         svg, spec, H, _ = FC.render(film)
         mini, mspec, Hm, _ = FC.render(film, mini=True)
         open(os.path.join(charts, f"{slug}.svg"), "w", encoding="utf-8").write(svg)

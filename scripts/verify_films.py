@@ -21,10 +21,15 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import film_chart as FC          # noqa: E402
+import films_yaml as FY          # noqa: E402
 import rubric27                  # noqa: E402
 
 MAX_BEATS, MAX_LANES, CAP_LINES, CAP_CHARS = 13, 8, 2, 62
 CAT_IDS = set(rubric27.BY_ID)
+# The form the work is told in. Absent means a film (the store's first medium);
+# anything else is anchored to its own divisions rather than to minutes.
+EXPRESSIONS = {"film", "play", "novel", "series", "short story", "essay", "poem",
+               "song", "musical"}
 
 TEXT_RE = re.compile(
     r'<text[^>]*x="([-\d.]+)"[^>]*y="([-\d.]+)"[^>]*font-size="([\d.]+)"[^>]*>(.*?)</text>',
@@ -51,6 +56,9 @@ def timechart_errors(doc: dict) -> list[str]:
 
 def schema_errors(film: dict) -> list[str]:
     errs = []
+    expr = film.get("expression")
+    if expr is not None and expr not in EXPRESSIONS:
+        errs.append(f"expression {expr!r} is not one of {sorted(EXPRESSIONS)}")
     ids = [c["id"] for c in film.get("chars", [])]
     chars = {c["id"]: c for c in film.get("chars", [])}
     if not ids:
@@ -181,8 +189,10 @@ def check(slug: str) -> tuple[bool, list[str], list[str]]:
 
 
 def main(argv):
-    slugs = argv or [os.path.basename(p)[:-5] for p in sorted(glob.glob(
-        os.path.join(FC.FILMS, "*.json")))]
+    # Discovery goes through the store. This used to glob films/*.json, so the
+    # day the JSON files were removed the batch sweep verified NOTHING and still
+    # exited 0 — a green gate over an empty set.
+    slugs = argv or FY.all_slugs()
     bad = []
     for slug in slugs:
         try:

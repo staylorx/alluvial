@@ -33,12 +33,12 @@ ROOT = os.path.abspath(os.path.join(HERE, ".."))
 FILMS = os.path.join(ROOT, "films")
 SCHEMA = os.path.join(ROOT, "schema")
 
-FILM_KEYS = ["slug", "title", "year", "runtime_min", "score", "score_note", "blurb",
+FILM_KEYS = ["slug", "title", "expression", "year", "runtime_min", "score", "score_note", "blurb",
              "legend_object", "legend_note", "title_notes", "title_block", "mirror",
              "dashed", "never_separate_ok", "order", "chars", "beats"]
 CHAR_KEYS = ["id", "name", "width", "colour"]
 BEAT_KEYS = ["name", "loc", "cap", "tag", "cats", "clusters", "groups", "enter", "stubs", "hard"]
-TIME_KEYS = ["slug", "title", "year", "runtime_min", "sub", "notes", "legend_note", "threads", "scenes"]
+TIME_KEYS = ["slug", "title", "expression", "year", "runtime_min", "sub", "notes", "legend_note", "threads", "scenes"]
 SCENE_KEYS = ["id", "label", "chapter", "as_screened", "happened", "thread", "mins"]
 
 HEADER = """# {what}
@@ -83,9 +83,12 @@ def json_path(slug: str) -> str:
 
 
 def dump(doc: dict) -> str:
-    what = ("A film's braid chart: who stands with whom, beat by beat."
+    # The header names the form the store field says it is; absent means film,
+    # which is byte-identical to every header written before `expression` existed.
+    expr = doc.get("expression") or "film"
+    what = (f"A {expr}'s braid chart: who stands with whom, beat by beat."
             if "beats" in doc else
-            "A film's two-clock chart: as screened vs as it happened.")
+            f"A {expr}'s two-clock chart: as screened vs as it happened.")
     schema = "film.schema" if "beats" in doc else "timechart.schema"
     try:
         flow = doc["slug"] in ()

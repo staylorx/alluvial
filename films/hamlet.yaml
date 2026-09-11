@@ -1,0 +1,242 @@
+# A play's braid chart: who stands with whom, beat by beat.
+#
+# Schema: schema/film.schema.json   (enforced — run: python3 scripts/films_yaml.py validate)
+# yaml-language-server: $schema=schema/film.schema.json
+#
+# Editing notes:
+#   cap      exactly two caption lines per beat; anything past ~47 characters
+#            is word-wrapped at render time, so keep them short and factual
+#   clusters who stands together, left to right. Every character present in the
+#            beat must appear in exactly one cluster; anyone absent is drawn
+#            off-page (hatched) automatically
+#   stubs    a final exit, and it must sit on that character's LAST PRESENT beat
+#   cats     which rubric category the beat's shape belongs to — this is a
+#            description, NOT points owed (the film's score is the verdict)
+#   order    lane stacking order; label size follows `width` instead
+slug: hamlet
+title: Hamlet
+expression: play
+year: 1600
+blurb: Thirteen beats, eight lanes, five acts. Who stands with whom, act by act — and where the court comes apart.
+title_notes:
+- 'A play in five acts: each beat is anchored to an act and a scene, not to a minute mark.'
+- Row spacing widens before the coda — the last beat is four deaths.
+order:
+- hamlet
+- claudius
+- gertrude
+- ophelia
+- polonius
+- laertes
+- horatio
+- ghost
+chars:
+- id: hamlet
+  name: Hamlet
+  width: 34
+  colour: '#1b57c4'
+- id: claudius
+  name: Claudius
+  width: 30
+  colour: '#d0316a'
+- id: gertrude
+  name: Gertrude
+  width: 26
+  colour: '#6e9078'
+- id: ophelia
+  name: Ophelia
+  width: 24
+  colour: '#9c6552'
+- id: polonius
+  name: Polonius
+  width: 22
+  colour: '#b09a4e'
+- id: laertes
+  name: Laertes
+  width: 20
+  colour: '#8d7fa8'
+- id: horatio
+  name: Horatio
+  width: 18
+  colour: '#6f8f96'
+- id: ghost
+  name: the ghost
+  width: 14
+  colour: '#b08a94'
+beats:
+- name: THE WATCH
+  loc: ACT I, SC. 1
+  cap:
+  - A dead king walks the battlements at night;
+  - the watch brings Horatio out to see it
+  tag: THE HOOK — the dead king is walking
+  cats: []
+  clusters:
+  - - horatio
+  - - ghost
+  enter:
+  - horatio
+  - ghost
+- name: THE COURT
+  loc: ACT I, SC. 2
+  cap:
+  - Claudius takes the throne and the widow;
+  - Hamlet keeps his black and his silence
+  tag: THE NEW ORDER — an uncle on the throne
+  cats: []
+  clusters:
+  - - claudius
+    - gertrude
+  - - polonius
+    - laertes
+  - - hamlet
+  enter:
+  - claudius
+  - gertrude
+  - polonius
+  - laertes
+  - hamlet
+- name: THE HOUSE
+  loc: ACT I, SC. 3
+  cap:
+  - Laertes warns his sister off Hamlet;
+  - their father orders her to end it
+  tag: THE HOUSE — a brother and a father close a door
+  cats: []
+  clusters:
+  - - laertes
+    - ophelia
+  - - polonius
+  enter:
+  - ophelia
+- name: THE GHOST SPEAKS
+  loc: ACT I, SC. 4–5
+  cap:
+  - His father's ghost says he was murdered by
+  - the brother who took the crown and the wife
+  tag: THE CHARGE — a son is handed a murder
+  cats: []
+  clusters:
+  - - hamlet
+    - ghost
+- name: THE MADNESS
+  loc: ACT II, SC. 1–2
+  cap:
+  - Ophelia reports a visit, his clothes undone;
+  - the court decides the cause is love
+  tag: THE ALARM — the court reads him as lovesick
+  cats: []
+  clusters:
+  - - polonius
+    - ophelia
+  - - claudius
+    - gertrude
+  - - hamlet
+- name: THE NUNNERY
+  loc: ACT III, SC. 1
+  cap:
+  - With the king and her father listening,
+  - Hamlet tells Ophelia to go to a nunnery
+  tag: THE TURN — he sends her away and means it
+  cats: []
+  clusters:
+  - - hamlet
+    - ophelia
+  - - claudius
+    - polonius
+- name: THE TRAP
+  loc: ACT II, SC. 2 – III, SC. 2
+  cap:
+  - Actors stage a murder like his father's;
+  - the king gets up and calls for light
+  tag: THE TRAP — the guilty one shows himself
+  cats: []
+  clusters:
+  - - hamlet
+    - horatio
+  - - claudius
+    - gertrude
+  - - polonius
+    - ophelia
+- name: THE PRAYER
+  loc: ACT III, SC. 3
+  cap:
+  - Hamlet finds the king alone and kneeling,
+  - and does not do it — the one chance he gets
+  tag: THE SPARING — a sword put away, once
+  cats: []
+  clusters:
+  - - hamlet
+  - - claudius
+- name: THE CLOSET
+  loc: ACT III, SC. 4
+  cap:
+  - His sword goes through the curtain and finds
+  - the wrong man — Ophelia's father
+  tag: THE KILLING — the wrong man behind the arras
+  cats: []
+  clusters:
+  - - hamlet
+    - ghost
+  - - gertrude
+  - - polonius
+  stubs:
+  - polonius
+  - ghost
+- name: LAERTES RETURNS
+  loc: ACT IV, SC. 5
+  cap:
+  - Ophelia sings and hands out flowers;
+  - her brother breaks in with a mob
+  tag: THE ANGER — a brother comes home for blood
+  cats: []
+  clusters:
+  - - claudius
+    - laertes
+  - - gertrude
+    - ophelia
+  stubs:
+  - ophelia
+- name: THE WILLOW
+  loc: ACT IV, SC. 7
+  cap:
+  - Gertrude reports the willow and the water;
+  - the king and Laertes agree on a sharp foil
+  tag: THE ENDGAME — a duel, a cup, and no way back
+  cats: []
+  clusters:
+  - - claudius
+    - laertes
+  - - gertrude
+- name: THE MATCH
+  loc: ACT V, SC. 2
+  cap:
+  - Hamlet fences Laertes while the court watches;
+  - the foil and the cup are both poisoned
+  tag: THE MATCH — a fight he does not know is fixed
+  cats: []
+  clusters:
+  - - hamlet
+    - laertes
+  - - claudius
+    - gertrude
+  - - horatio
+- name: THE FLOOR
+  loc: ACT V, SC. 2 — the end
+  cap:
+  - The queen drinks the cup, the king is stabbed,
+  - and Hamlet dies in Horatio's arms
+  tag: THE FLOOR — four die; Fortinbras takes Denmark
+  cats: []
+  clusters:
+  - - hamlet
+    - horatio
+  - - claudius
+  - - laertes
+  - - gertrude
+caption_source: 'Written from the play''s action, act by act: no line is quoted and no scene is invented. The act
+  and scene numbers are the traditional division (the Folio has no act breaks in this play). Not checked against
+  a specific edition.'
+chart_limits: 'Hamlet''s cast is larger than eight lanes. Rosencrantz and Guildenstern, the players, Osric, the
+  gravediggers and Fortinbras hold no lane — Fortinbras arrives in the last beat and is named in its tag. The graveyard
+  (ACT V, SC. 1) is folded into the beats around it, and the rubric does not apply: no beat carries a category.'
