@@ -164,7 +164,8 @@ def render_v(spec):
     def cap_depth(c):
         d = 46 + LCAP * len(c["cap"]) + (8 if c.get("hard") else 0)
         if c.get("cap_extra"):
-            d += XGAP
+            _t = c["cap_extra"][0]
+            d += XGAP * (len(_t) if isinstance(_t, list) else 1)
         if c.get("enter"):
             d += XGAP
         return d
@@ -243,17 +244,22 @@ def render_v(spec):
             ly += XGAP
         if c.get("cap_extra"):
             txt, colr = c["cap_extra"]
-            A(f'<text x="{CAPX}" y="{ly}" font-size="{F["hard"]-1}" font-weight="700" '
-              f'fill="{colr}">{txt}</text>')
-            ly += XGAP
+            for _ln in (txt if isinstance(txt, list) else [txt]):
+                A(f'<text x="{CAPX}" y="{ly}" font-size="{F["hard"]-1}" font-weight="700" '
+                  f'fill="{colr}">{_ln}</text>')
+                ly += XGAP
         if c.get("enter"):
             A(f'<text x="{CAPX}" y="{ly}" font-size="{F["cap"]-2}" fill="#9a9086">'
               f'new lanes \u25b8</text>')
-            cx = CAPX + 78
-            for cid in c["enter"]:
-                A(f'<text x="{cx:.0f}" y="{ly}" font-size="{lab_font[cid]:.1f}" '
-                  f'font-weight="700" fill="{char[cid][2]}">{char[cid][0]}</text>')
-                cx += len(char[cid][0]) * lab_font[cid] * 0.58 + 12
+            cx, ely = CAPX + 78, ly          # y keeps the original repr so charts
+            for cid in c["enter"]:           # without a wrap stay byte-identical
+                ln = char[cid][0]
+                wneed = len(ln) * lab_font[cid] * 0.62
+                if cx + wneed > W - 8:
+                    cx, ely = CAPX + 78, ely + (F["cap"] - 2) * 1.5
+                A(f'<text x="{cx:.0f}" y="{ely}" font-size="{lab_font[cid]:.1f}" '
+                  f'font-weight="700" fill="{char[cid][2]}">{ln}</text>')
+                cx += wneed + 12
 
     # stubs, breaks, fades
     for i, c in enumerate(cols):
@@ -384,7 +390,8 @@ def render_v(spec):
         f = spec["legend_font"][cid]
         disp = max(6, round(w * S))
         item = disp + 6 + len(label) * f * 0.56 + 22
-        if cx + item > W - 60:
+        need = disp + 6 + len(label) * f * 0.62      # real width, not the spacing estimate
+        if cx + max(item, need) > W - 2:
             cx, cy = 60.0, cy + lfont * 1.5
         sh = max(11 if CB else 9, round(f * 0.62 * (1.3 if CB else 1)))
         A(f'<rect x="{cx:.0f}" y="{cy + f*0.78 - sh/2:.0f}" width="{max(disp, 11) if CB else disp}" '

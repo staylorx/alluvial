@@ -1,0 +1,133 @@
+{
+  "slug": "love-actually",
+  "title": "Love Actually",
+  "year": 2003,
+  "runtime_min": 135,
+  "score": 19,
+  "order": ["jamie", "karen", "daniel", "sam", "billy", "harry", "aurelia", "others"],
+  "chars": [
+    {"id": "jamie",   "name": "Jamie",   "width": 32, "colour": "#1b57c4"},
+    {"id": "karen",   "name": "Karen",   "width": 32, "colour": "#d0316a"},
+    {"id": "daniel",  "name": "Daniel",  "width": 30, "colour": "#6e9078"},
+    {"id": "sam",     "name": "Sam",     "width": 30, "colour": "#9c6552"},
+    {"id": "billy",   "name": "Billy",   "width": 26, "colour": "#6f8f96"},
+    {"id": "harry",   "name": "Harry",   "width": 24, "colour": "#8d7fa8"},
+    {"id": "aurelia", "name": "Aurelia", "width": 22, "colour": "#b09a4e"},
+    {"id": "others",  "name": "others",  "width": 20, "colour": "#b08a94"}
+  ],
+  "beats": [
+    {
+      "name": "THE ARRIVALS GATE",
+      "loc": "≈ 0–5 min",
+      "cap": ["the Prime Minister's voiceover plays over families",
+              "embracing at Heathrow before Christmas"],
+      "tag": "FRAME — the arrivals hall the film ends in",
+      "cats": [],
+      "clusters": [["others"]],
+      "enter": ["others"]
+    },
+    {
+      "name": "BILLY MACK",
+      "loc": "≈ 5–12 min",
+      "cap": ["Billy Mack records a novelty Christmas single and",
+              "mocks it while manager Joe books the chat shows"],
+      "tag": "BFF — Joe takes the jokes and stays",
+      "cats": ["bff"],
+      "clusters": [["billy"], ["others"]],
+      "enter": ["billy"]
+    },
+    {
+      "name": "DOWNING STREET",
+      "loc": "≈ 15–22 min",
+      "cap": ["New prime minister David meets Natalie, a junior",
+              "staffer at Number 10, and likes her at once"],
+      "tag": "MEET-CUTE — Downing Street, of all places",
+      "cats": ["meet"],
+      "clusters": [["others"]]
+    },
+    {
+      "name": "JAMIE'S HOME TRUTH",
+      "loc": "≈ 18–25 min",
+      "cap": ["Jamie finds his girlfriend with his own brother and",
+              "leaves London to write in the south of France"],
+      "tag": "BREAKUP — he puts a country between them",
+      "cats": ["breakup"],
+      "clusters": [["jamie"], ["others"]],
+      "enter": ["jamie"]
+    },
+    {
+      "name": "THE HOUSEKEEPER",
+      "loc": "≈ 25–35 min",
+      "cap": ["At the French house Jamie falls for Aurelia, who",
+              "keeps the place and shares not one word of English"],
+      "tag": "MEET-CUTE — they fall in love by sign language",
+      "cats": ["meet", "chem"],
+      "clusters": [["jamie", "aurelia"]],
+      "enter": ["aurelia"]
+    },
+    {
+      "name": "DANIEL AND SAM",
+      "loc": "≈ 30–42 min",
+      "cap": ["Daniel is bringing up his stepson Sam alone; his",
+              "wife has died and Sam loves a girl in his class"],
+      "tag": "FAMILY — grief and a crush in one house",
+      "cats": [],
+      "clusters": [["daniel", "sam"]],
+      "enter": ["daniel", "sam"]
+    },
+    {
+      "name": "THE NECKLACE",
+      "loc": "≈ 60–75 min",
+      "cap": ["Harry buys a gold necklace for his assistant Mia;",
+              "his wife Karen sees him pay and says nothing"],
+      "tag": "BREAKUP — the marriage turns on a shop counter",
+      "cats": [],
+      "clusters": [["harry"], ["karen"]]
+    },
+    {
+      "name": "THE SCHOOL CONCERT",
+      "loc": "≈ 85–95 min",
+      "cap": ["Sam has learned the drums to impress Joanna and",
+              "plays the school Christmas show to reach her"],
+      "tag": "GESTURE — the stepfather sits in the front row",
+      "cats": [],
+      "clusters": [["daniel", "sam"], ["others"]]
+    },
+    {
+      "name": "THE CUE CARDS",
+      "loc": "≈ 95–105 min",
+      "cap": ["Mark calls at Juliet's door on Christmas Eve with",
+              "cards that say he loves her, then walks away"],
+      "tag": "GESTURE — a confession that asks for nothing",
+      "cats": ["gesture"],
+      "clusters": [["others"]]
+    },
+    {
+      "name": "CHRISTMAS EVE",
+      "loc": "≈ 100–108 min",
+      "cap": ["Karen unwraps a Joni Mitchell CD instead of the",
+              "necklace, and cries in the bedroom on her own"],
+      "tag": "BREAKUP — she thanks him and keeps the peace",
+      "cats": ["breakup"],
+      "clusters": [["harry", "others"], ["karen"]]
+    },
+    {
+      "name": "THE AIRPORT RUN",
+      "loc": "≈ 108–118 min",
+      "cap": ["Sam runs past airport security to tell Joanna he",
+              "loves her before her flight back to America"],
+      "tag": "GESTURE — the boy outruns the film's grownups",
+      "cats": ["gesture"],
+      "clusters": [["daniel", "sam"], ["others"]]
+    },
+    {
+      "name": "ARRIVALS",
+      "loc": "the coda",
+      "cap": ["At Heathrow arrivals Jamie proposes to Aurelia in",
+              "Portuguese, and the film returns where it began"],
+      "tag": "CODA — back where the voiceover started",
+      "cats": ["chem"],
+      "clusters": [["jamie", "aurelia"], ["daniel", "sam"], ["others"]]
+    }
+  ]
+}

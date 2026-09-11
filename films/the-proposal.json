@@ -1,0 +1,121 @@
+{
+  "slug": "the-proposal",
+  "title": "The Proposal",
+  "year": 2009,
+  "runtime_min": 107,
+  "score": 24,
+  "order": ["margaret", "andrew", "joe", "grace", "annie", "gertrude", "bob"],
+  "chars": [
+    {"id": "margaret", "name": "Margaret", "width": 34, "colour": "#1b57c4"},
+    {"id": "andrew", "name": "Andrew", "width": 32, "colour": "#d0316a"},
+    {"id": "joe", "name": "Joe", "width": 18, "colour": "#6e9078"},
+    {"id": "grace", "name": "Grace", "width": 16, "colour": "#9c6552"},
+    {"id": "annie", "name": "Annie", "width": 16, "colour": "#b09a4e"},
+    {"id": "gertrude", "name": "Gertrude", "width": 13, "colour": "#8d7fa8"},
+    {"id": "bob", "name": "Bob", "width": 12, "colour": "#6f8f96"}
+  ],
+  "beats": [
+    {
+      "name": "THE DEPORTATION PROBLEM",
+      "loc": "≈ 0–12 min",
+      "cap": ["Margaret, a Canadian editor, faces",
+              "deportation and forces Andrew to marry her"],
+      "tag": "SETUP — a sham marriage is proposed",
+      "cats": [],
+      "clusters": [["margaret", "andrew"], ["bob"]],
+      "enter": ["margaret", "andrew", "bob"]
+    },
+    {
+      "name": "THE REHEARSAL",
+      "loc": "≈ 12–22 min",
+      "cap": ["they memorise how they met and the proposal;",
+              "the immigration interview is days away"],
+      "tag": "PLAN — the lie gets a script",
+      "cats": [],
+      "clusters": [["margaret", "andrew"], ["bob"]]
+    },
+    {
+      "name": "FLIGHT TO SITKA",
+      "loc": "≈ 22–32 min",
+      "cap": ["Andrew takes Margaret to Alaska for his",
+              "grandmother's 90th birthday"],
+      "tag": "ARRIVAL — the lie meets the family",
+      "cats": [],
+      "clusters": [["margaret", "andrew", "joe", "grace", "annie"]],
+      "enter": ["joe", "grace", "annie"]
+    },
+    {
+      "name": "THE ENGAGEMENT DINNER",
+      "loc": "≈ 32–44 min",
+      "cap": ["Margaret announces the engagement; Annie is",
+              "delighted and the family is stunned"],
+      "tag": "THE FAMILY — a bear hug, not a handshake",
+      "cats": [],
+      "clusters": [["margaret", "andrew", "joe", "grace", "annie"]]
+    },
+    {
+      "name": "THE FOREST",
+      "loc": "≈ 44–54 min",
+      "cap": ["they bump into each other naked in the",
+              "woods; the lie starts to feel real"],
+      "tag": "ATTRACTION — the first crack",
+      "cats": ["chem", "ebert"],
+      "clusters": [["margaret", "andrew"]]
+    },
+    {
+      "name": "JOE AND ANDREW",
+      "loc": "≈ 54–64 min",
+      "cap": ["Joe presses Andrew to stay in Sitka;",
+              "father and son argue"],
+      "tag": "TENSION — the town he fled",
+      "cats": [],
+      "clusters": [["andrew", "joe", "grace"]]
+    },
+    {
+      "name": "GERTRUDE ARRIVES",
+      "loc": "≈ 64–72 min",
+      "cap": ["Andrew's ex Gertrude turns up and Margaret",
+              "must play the jealous fiancee"],
+      "tag": "COMPLICATION — the old flame",
+      "cats": [],
+      "clusters": [["margaret", "andrew", "gertrude", "grace", "annie"]],
+      "enter": ["gertrude"]
+    },
+    {
+      "name": "GRACE AND MARGARET",
+      "loc": "≈ 72–80 min",
+      "cap": ["Grace warms to Margaret and the family",
+              "begins to treat the couple as real"],
+      "tag": "WARMTH — she starts to belong",
+      "cats": [],
+      "clusters": [["margaret", "grace", "annie"]]
+    },
+    {
+      "name": "THE INTERVIEW",
+      "loc": "≈ 80–90 min",
+      "cap": ["the immigration officer catches them out;",
+              "Andrew confesses the scheme"],
+      "tag": "BREAKUP — the lie collapses",
+      "cats": ["breakup"],
+      "clusters": [["margaret", "andrew"]]
+    },
+    {
+      "name": "THE AIRPORT CHASE",
+      "loc": "≈ 90–100 min",
+      "cap": ["Andrew races to the airport and asks",
+              "Margaret to stay; she says yes"],
+      "tag": "GESTURE — he goes public",
+      "cats": ["gesture"],
+      "clusters": [["margaret", "andrew"], ["bob"]]
+    },
+    {
+      "name": "CODA",
+      "loc": "the coda",
+      "cap": ["the arrangement becomes real; Margaret",
+              "and Andrew stay together in New York"],
+      "tag": "PAYOFF — the merger is a marriage",
+      "cats": ["chem"],
+      "clusters": [["margaret", "andrew"]]
+    }
+  ]
+}

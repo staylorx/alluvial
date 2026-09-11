@@ -4,8 +4,9 @@ One JSON file per film: `films/<slug>.json`. Everything visual is computed from
 it, so authoring a film is filling in a table, not drawing a chart. Two rules
 that matter most:
 
-- **Captions are chart captions, not prose.** Two lines, each ≤ 62 characters, or
-  the layout breaks.
+- **Captions are chart captions, not prose.** Two lines, each ≤ **47** characters.
+  The caption column fits about 47 at 16.5px; longer lines run off the canvas and
+  the verifier will fail the film.
 - **Clusters are who is standing together.** That IS the chart: a character in a
   cluster with someone else shares a lane with them; a character absent from a
   beat is off-page (drawn hatched) and the engine handles that for you.
@@ -67,7 +68,10 @@ that matter most:
     standing together. Every character who is *present* must appear in exactly
     one cluster; omitted characters are drawn off-page. Within a cluster the
     `order` list decides who sits on top.
-  - **`enter` / `stubs`** — a first appearance and a final exit.
+  - **`enter` / `stubs`** — a first appearance and a final exit. **`stubs` must
+    name the character's LAST PRESENT beat**, not the beat after (the renderer
+    draws the off-page hatch from that beat's lane, so a stub on a beat where the
+    character is absent raises `KeyError`).
 
 ## Hard limits
 

@@ -1,0 +1,123 @@
+{
+  "slug": "crazy-rich-asians",
+  "title": "Crazy Rich Asians",
+  "year": 2018,
+  "runtime_min": 147,
+  "score": 25,
+  "score_note": "chemistry, the bff lane and the mahjong gesture carry it",
+  "legend_object": "the mahjong tile",
+  "order": ["rachel", "nick", "eleanor", "astrid", "peiklin", "suyi", "others"],
+  "chars": [
+    {"id": "rachel", "name": "Rachel", "width": 32, "colour": "#1b57c4"},
+    {"id": "nick", "name": "Nick", "width": 30, "colour": "#d0316a"},
+    {"id": "eleanor", "name": "Eleanor", "width": 24, "colour": "#6e9078"},
+    {"id": "astrid", "name": "Astrid", "width": 20, "colour": "#9c6552"},
+    {"id": "peiklin", "name": "Peik Lin", "width": 18, "colour": "#b09a4e"},
+    {"id": "suyi", "name": "Su Yi", "width": 16, "colour": "#8d7fa8"},
+    {"id": "others", "name": "others", "width": 14, "colour": "#6f8f96"}
+  ],
+  "beats": [
+    {
+      "name": "FIRST CLASS TO SINGAPORE",
+      "loc": "≈ 0\u201310 min",
+      "cap": ["nick admits on the plane that his family is",
+              "wealthy; rachel trusts him and boards"],
+      "tag": "SETUP \u2014 the secret he has been keeping",
+      "cats": [],
+      "clusters": [["rachel", "nick"]],
+      "enter": ["rachel", "nick"]
+    },
+    {
+      "name": "PEIK LIN'S HOUSE",
+      "loc": "≈ 10\u201322 min",
+      "cap": ["peik lin explains how rich the youngs are",
+              "and drives rachel to the family estate"],
+      "tag": "EXPOSITION \u2014 the scale of the family fortune",
+      "cats": ["bff"],
+      "clusters": [["rachel", "peiklin"], ["others"]],
+      "enter": ["peiklin", "others"]
+    },
+    {
+      "name": "DINNER AT THE YOUNG ESTATE",
+      "loc": "≈ 22\u201335 min",
+      "cap": ["eleanor disapproves and the cousins quiz her;",
+              "astrid learns michael is unfaithful"],
+      "tag": "THE VERDICT \u2014 she is not what he needs",
+      "cats": ["breakup"],
+      "clusters": [["rachel", "nick"], ["eleanor", "suyi"], ["astrid", "others"]],
+      "enter": ["eleanor", "astrid", "suyi"]
+    },
+    {
+      "name": "THE PARTIES",
+      "loc": "≈ 35\u201358 min",
+      "cap": ["a dead fish and a hateful note at the",
+              "bachelorette; nick tells colin he'll propose"],
+      "tag": "PARALLEL \u2014 the women close ranks, the men doubt",
+      "cats": [],
+      "clusters": [["rachel", "astrid", "others"], ["nick"]]
+    },
+    {
+      "name": "DUMPLINGS AND THE RING",
+      "loc": "≈ 58\u201372 min",
+      "cap": ["eleanor says rachel will never be good",
+              "enough; her own ring was made, not given"],
+      "tag": "WARNING \u2014 what marrying in would cost her",
+      "cats": [],
+      "clusters": [["rachel", "nick"], ["eleanor"], ["suyi"], ["others"]]
+    },
+    {
+      "name": "THE WEDDING",
+      "loc": "≈ 72\u201395 min",
+      "cap": ["a makeover, then rachel confronts amanda and",
+              "charms the guests; astrid faces michael"],
+      "tag": "SPECTACLE \u2014 rachel holds the room at last",
+      "cats": ["chem"],
+      "clusters": [["rachel", "nick"], ["peiklin"], ["eleanor", "suyi"], ["astrid", "others"]]
+    },
+    {
+      "name": "THE RECEPTION",
+      "loc": "≈ 95\u2013110 min",
+      "cap": ["a private eye found rachel's father alive",
+              "and her birth a lie; the family strikes"],
+      "tag": "EXPOSURE \u2014 the family strikes at her past",
+      "cats": ["breakup"],
+      "clusters": [["rachel", "nick"], ["eleanor", "suyi"], ["others"]]
+    },
+    {
+      "name": "KERRY ARRIVES",
+      "loc": "≈ 110\u2013122 min",
+      "cap": ["nick flies rachel's mother in and tells the",
+              "truth; rachel refuses his proposal"],
+      "tag": "GESTURE \u2014 he gives up his family, and she says no",
+      "cats": ["gesture"],
+      "clusters": [["rachel", "nick", "peiklin", "others"]]
+    },
+    {
+      "name": "ASTRID LEAVES MICHAEL",
+      "loc": "≈ 118\u2013128 min",
+      "cap": ["astrid moves out with cassian and names",
+              "his insecurity as the cause"],
+      "tag": "BREAKUP \u2014 the other marriage ends",
+      "cats": ["breakup"],
+      "clusters": [["astrid", "others"]]
+    },
+    {
+      "name": "MAHJONG WITH ELEANOR",
+      "loc": "≈ 125\u2013138 min",
+      "cap": ["rachel hands eleanor the winning mahjong",
+              "tile, proving she could have kept it"],
+      "tag": "GESTURE \u2014 game theory used as an act of love",
+      "cats": ["gesture"],
+      "clusters": [["rachel", "eleanor"]]
+    },
+    {
+      "name": "THE ENGAGEMENT",
+      "loc": "the coda",
+      "cap": ["nick proposes with his mother's ring; eleanor",
+              "nods from across the room"],
+      "tag": "RESOLUTION \u2014 approval, on her own terms",
+      "cats": ["chem"],
+      "clusters": [["rachel", "nick"], ["eleanor", "others"]]
+    }
+  ]
+}

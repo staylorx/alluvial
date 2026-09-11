@@ -50,8 +50,12 @@ def schema_errors(film: dict) -> list[str]:
         cap = b.get("cap", [])
         if len(cap) != CAP_LINES:
             errs.append(f"beat {i}: {len(cap)} caption lines (want {CAP_LINES})")
-        for ln in cap:
-            if len(ln) > CAP_CHARS:
+        if not isinstance(cap, list):
+            errs.append(f"beat {i}: cap is {type(cap).__name__}, not a list")
+        for ln in cap if isinstance(cap, list) else []:
+            if not isinstance(ln, str):
+                errs.append(f"beat {i}: caption line is {type(ln).__name__}, not a string")
+            elif len(ln) > CAP_CHARS:
                 errs.append(f"beat {i}: caption line is {len(ln)} chars (max {CAP_CHARS})")
         if not b.get("groups"):
             flat = [i2 for cl in b.get("clusters", []) for i2 in cl]
@@ -62,9 +66,14 @@ def schema_errors(film: dict) -> list[str]:
                        if x not in chars]
             if unknown:
                 errs.append(f"beat {i}: unknown ids {sorted(set(unknown))}")
-        for cid in b.get("cats") or []:
+        cats = b.get("cats")
+        if cats is not None and not isinstance(cats, list):
+            errs.append(f"beat {i}: cats is {type(cats).__name__}, not a list")
+        for cid in (cats if isinstance(cats, list) else []):
             if cid not in CAT_IDS:
-                errs.append(f"beat {i}: unknown rubric id '{cid}'")
+                errs.append(f"beat {i}: unknown rubric id {cid!r}")
+        if not isinstance(b.get("name", ""), str) or not isinstance(b.get("tag", ""), str):
+            errs.append(f"beat {i}: name/tag must be strings")
     return errs
 
 

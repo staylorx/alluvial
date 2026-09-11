@@ -1,0 +1,120 @@
+<svg class="chart" preserveAspectRatio="xMidYMin meet" xmlns="http://www.w3.org/2000/svg" width="1010" height="2024" viewBox="0 0 1010 2024" font-family="Helvetica, Arial, sans-serif">
+<rect width="1010" height="2024" fill="#faf7f2"/>
+<text x="56" y="92" font-size="31" font-weight="700" fill="#22201d">Pulp Fiction — two clocks</text>
+<text x="56" y="126" font-size="15.5" fill="#4a453f">Nine scenes. The left spine is the order the film screens them; the right spine is the order they happen to the people in them.</text>
+<text x="56" y="158" font-size="14.5" fill="#7d7568">Where a ribbon runs straight, the story is telling itself in order. Where it crosses, the film cut time.</text>
+<text x="56" y="182" font-size="14.5" fill="#7d7568">Chronology is the standard reading of the film: the diner robbery that opens it is the last thing that happens.</text>
+<text x="56.0" y="208" font-size="13" font-weight="700" letter-spacing="1.2" fill="#9a9086">AS SCREENED</text>
+<text x="954.0" y="208" font-size="13" font-weight="700" letter-spacing="1.2" fill="#9a9086" text-anchor="end">AS IT HAPPENED</text>
+<path d="M 426 281.0 C 497 281.0 513 457.0 584 457.0" fill="none" stroke="#b09a4e" stroke-width="7.0" stroke-opacity="0.55" stroke-linecap="round"/>
+<path d="M 426 457.0 C 497 457.0 513 633.0 584 633.0" fill="none" stroke="#1b57c4" stroke-width="11.0" stroke-opacity="0.55" stroke-linecap="round"/>
+<path d="M 426 633.0 C 497 633.0 513 1161.0 584 1161.0" fill="none" stroke="#6e9078" stroke-width="14.0" stroke-opacity="0.55" stroke-linecap="round"/>
+<path d="M 426 809.0 C 497 809.0 513 281.0 584 281.0" fill="none" stroke="#d0316a" stroke-width="6.0" stroke-opacity="0.55" stroke-linecap="round"/>
+<path d="M 426 985.0 C 497 985.0 513 1337.0 584 1337.0" fill="none" stroke="#d0316a" stroke-width="13.0" stroke-opacity="0.55" stroke-linecap="round"/>
+<path d="M 426 1161.0 C 497 1161.0 513 1513.0 584 1513.0" fill="none" stroke="#d0316a" stroke-width="12.0" stroke-opacity="0.55" stroke-linecap="round"/>
+<path d="M 426 1337.0 C 497 1337.0 513 809.0 584 809.0" fill="none" stroke="#8d7fa8" stroke-width="14.0" stroke-opacity="0.55" stroke-linecap="round"/>
+<path d="M 426 1513.0 C 497 1513.0 513 985.0 584 985.0" fill="none" stroke="#1b57c4" stroke-width="6.0" stroke-opacity="0.55" stroke-linecap="round"/>
+<path d="M 426 1689.0 C 497 1689.0 513 1689.0 584 1689.0" fill="none" stroke="#d0316a" stroke-width="6.0" stroke-opacity="0.55" stroke-linecap="round"/>
+<rect x="56" y="250.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#b09a4e" stroke-width="2"/>
+<rect x="56" y="250.0" width="7" height="62" rx="3" fill="#b09a4e"/>
+<text x="74" y="276.0" font-size="17" font-weight="700" fill="#22201d">Two diners plan a robbery</text>
+<text x="74" y="298.0" font-size="13.5" fill="#7d7568">PROLOGUE</text>
+<text x="410" y="287.0" font-size="16" font-weight="700" fill="#b09a4e" text-anchor="end">1</text>
+<rect x="56" y="426.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#1b57c4" stroke-width="2"/>
+<rect x="56" y="426.0" width="7" height="62" rx="3" fill="#1b57c4"/>
+<text x="74" y="452.0" font-size="17" font-weight="700" fill="#22201d">The apartment, the briefcase</text>
+<text x="74" y="474.0" font-size="13.5" fill="#7d7568">PRELUDE — VINCENT & MIA</text>
+<text x="410" y="463.0" font-size="16" font-weight="700" fill="#1b57c4" text-anchor="end">2</text>
+<rect x="56" y="602.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#6e9078" stroke-width="2"/>
+<rect x="56" y="602.0" width="7" height="62" rx="3" fill="#6e9078"/>
+<text x="74" y="628.0" font-size="17" font-weight="700" fill="#22201d">Jack Rabbit Slim's, the needle</text>
+<text x="74" y="650.0" font-size="13.5" fill="#7d7568">VINCENT & MARSELLUS'S WIFE</text>
+<text x="410" y="639.0" font-size="16" font-weight="700" fill="#6e9078" text-anchor="end">3</text>
+<rect x="56" y="778.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#d0316a" stroke-width="2"/>
+<rect x="56" y="778.0" width="7" height="62" rx="3" fill="#d0316a"/>
+<text x="74" y="804.0" font-size="17" font-weight="700" fill="#22201d">Captain Koons and the watch</text>
+<text x="74" y="826.0" font-size="13.5" fill="#7d7568">PRELUDE — THE GOLD WATCH</text>
+<text x="410" y="815.0" font-size="16" font-weight="700" fill="#d0316a" text-anchor="end">4</text>
+<rect x="56" y="954.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#d0316a" stroke-width="2"/>
+<rect x="56" y="954.0" width="7" height="62" rx="3" fill="#d0316a"/>
+<text x="74" y="980.0" font-size="17" font-weight="700" fill="#22201d">The fight, the escape</text>
+<text x="74" y="1002.0" font-size="13.5" fill="#7d7568">THE GOLD WATCH</text>
+<text x="410" y="991.0" font-size="16" font-weight="700" fill="#d0316a" text-anchor="end">5</text>
+<rect x="56" y="1130.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#d0316a" stroke-width="2"/>
+<rect x="56" y="1130.0" width="7" height="62" rx="3" fill="#d0316a"/>
+<text x="74" y="1156.0" font-size="17" font-weight="700" fill="#22201d">The pawn shop, Zed's chopper</text>
+<text x="74" y="1178.0" font-size="13.5" fill="#7d7568">THE GOLD WATCH</text>
+<text x="410" y="1167.0" font-size="16" font-weight="700" fill="#d0316a" text-anchor="end">6</text>
+<rect x="56" y="1306.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#8d7fa8" stroke-width="2"/>
+<rect x="56" y="1306.0" width="7" height="62" rx="3" fill="#8d7fa8"/>
+<text x="74" y="1332.0" font-size="17" font-weight="700" fill="#22201d">Marvin, Jimmy's house, the Wolf</text>
+<text x="74" y="1354.0" font-size="13.5" fill="#7d7568">THE BONNIE SITUATION</text>
+<text x="410" y="1343.0" font-size="16" font-weight="700" fill="#8d7fa8" text-anchor="end">7</text>
+<rect x="56" y="1482.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#1b57c4" stroke-width="2"/>
+<rect x="56" y="1482.0" width="7" height="62" rx="3" fill="#1b57c4"/>
+<text x="74" y="1508.0" font-size="17" font-weight="700" fill="#22201d">The robbery, and Jules lets them go</text>
+<text x="74" y="1530.0" font-size="13.5" fill="#7d7568">EPILOGUE</text>
+<text x="410" y="1519.0" font-size="16" font-weight="700" fill="#1b57c4" text-anchor="end">8</text>
+<rect x="56" y="1658.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#d0316a" stroke-width="2"/>
+<rect x="56" y="1658.0" width="7" height="62" rx="3" fill="#d0316a"/>
+<text x="74" y="1684.0" font-size="17" font-weight="700" fill="#22201d">Butch and Fabienne ride off</text>
+<text x="74" y="1706.0" font-size="13.5" fill="#7d7568">THE GOLD STOP</text>
+<text x="410" y="1695.0" font-size="16" font-weight="700" fill="#d0316a" text-anchor="end">9</text>
+<rect x="584" y="250.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#d0316a" stroke-width="2"/>
+<rect x="584" y="250.0" width="7" height="62" rx="3" fill="#d0316a"/>
+<text x="602" y="276.0" font-size="17" font-weight="700" fill="#22201d">Captain Koons and the watch</text>
+<text x="602" y="298.0" font-size="13.5" fill="#7d7568">PRELUDE — THE GOLD WATCH</text>
+<text x="938" y="287.0" font-size="16" font-weight="700" fill="#d0316a" text-anchor="end">1</text>
+<rect x="584" y="426.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#b09a4e" stroke-width="2"/>
+<rect x="584" y="426.0" width="7" height="62" rx="3" fill="#b09a4e"/>
+<text x="602" y="452.0" font-size="17" font-weight="700" fill="#22201d">Two diners plan a robbery</text>
+<text x="602" y="474.0" font-size="13.5" fill="#7d7568">PROLOGUE</text>
+<text x="938" y="463.0" font-size="16" font-weight="700" fill="#b09a4e" text-anchor="end">2</text>
+<rect x="584" y="602.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#1b57c4" stroke-width="2"/>
+<rect x="584" y="602.0" width="7" height="62" rx="3" fill="#1b57c4"/>
+<text x="602" y="628.0" font-size="17" font-weight="700" fill="#22201d">The apartment, the briefcase</text>
+<text x="602" y="650.0" font-size="13.5" fill="#7d7568">PRELUDE — VINCENT & MIA</text>
+<text x="938" y="639.0" font-size="16" font-weight="700" fill="#1b57c4" text-anchor="end">3</text>
+<rect x="584" y="778.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#8d7fa8" stroke-width="2"/>
+<rect x="584" y="778.0" width="7" height="62" rx="3" fill="#8d7fa8"/>
+<text x="602" y="804.0" font-size="17" font-weight="700" fill="#22201d">Marvin, Jimmy's house, the Wolf</text>
+<text x="602" y="826.0" font-size="13.5" fill="#7d7568">THE BONNIE SITUATION</text>
+<text x="938" y="815.0" font-size="16" font-weight="700" fill="#8d7fa8" text-anchor="end">4</text>
+<rect x="584" y="954.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#1b57c4" stroke-width="2"/>
+<rect x="584" y="954.0" width="7" height="62" rx="3" fill="#1b57c4"/>
+<text x="602" y="980.0" font-size="17" font-weight="700" fill="#22201d">The robbery, and Jules lets them go</text>
+<text x="602" y="1002.0" font-size="13.5" fill="#7d7568">EPILOGUE</text>
+<text x="938" y="991.0" font-size="16" font-weight="700" fill="#1b57c4" text-anchor="end">5</text>
+<rect x="584" y="1130.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#6e9078" stroke-width="2"/>
+<rect x="584" y="1130.0" width="7" height="62" rx="3" fill="#6e9078"/>
+<text x="602" y="1156.0" font-size="17" font-weight="700" fill="#22201d">Jack Rabbit Slim's, the needle</text>
+<text x="602" y="1178.0" font-size="13.5" fill="#7d7568">VINCENT & MARSELLUS'S WIFE</text>
+<text x="938" y="1167.0" font-size="16" font-weight="700" fill="#6e9078" text-anchor="end">6</text>
+<rect x="584" y="1306.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#d0316a" stroke-width="2"/>
+<rect x="584" y="1306.0" width="7" height="62" rx="3" fill="#d0316a"/>
+<text x="602" y="1332.0" font-size="17" font-weight="700" fill="#22201d">The fight, the escape</text>
+<text x="602" y="1354.0" font-size="13.5" fill="#7d7568">THE GOLD WATCH</text>
+<text x="938" y="1343.0" font-size="16" font-weight="700" fill="#d0316a" text-anchor="end">7</text>
+<rect x="584" y="1482.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#d0316a" stroke-width="2"/>
+<rect x="584" y="1482.0" width="7" height="62" rx="3" fill="#d0316a"/>
+<text x="602" y="1508.0" font-size="17" font-weight="700" fill="#22201d">The pawn shop, Zed's chopper</text>
+<text x="602" y="1530.0" font-size="13.5" fill="#7d7568">THE GOLD WATCH</text>
+<text x="938" y="1519.0" font-size="16" font-weight="700" fill="#d0316a" text-anchor="end">8</text>
+<rect x="584" y="1658.0" width="370" height="62" rx="8" fill="#ffffff" stroke="#d0316a" stroke-width="2"/>
+<rect x="584" y="1658.0" width="7" height="62" rx="3" fill="#d0316a"/>
+<text x="602" y="1684.0" font-size="17" font-weight="700" fill="#22201d">Butch and Fabienne ride off</text>
+<text x="602" y="1706.0" font-size="13.5" fill="#7d7568">THE GOLD STOP</text>
+<text x="938" y="1695.0" font-size="16" font-weight="700" fill="#d0316a" text-anchor="end">9</text>
+<text x="56" y="1874" font-size="13" font-weight="700" letter-spacing="1.1" fill="#9a9086">THREADS</text>
+<rect x="56" y="1888" width="22" height="9" rx="2" fill="#1b57c4" fill-opacity="0.85"/>
+<text x="86" y="1897" font-size="14" font-weight="600" fill="#2b2622">Jules & Vincent</text>
+<rect x="238" y="1888" width="22" height="9" rx="2" fill="#d0316a" fill-opacity="0.85"/>
+<text x="268" y="1897" font-size="14" font-weight="600" fill="#2b2622">Butch</text>
+<rect x="336" y="1888" width="22" height="9" rx="2" fill="#6e9078" fill-opacity="0.85"/>
+<text x="366" y="1897" font-size="14" font-weight="600" fill="#2b2622">Mia</text>
+<rect x="417" y="1888" width="22" height="9" rx="2" fill="#b09a4e" fill-opacity="0.85"/>
+<text x="447" y="1897" font-size="14" font-weight="600" fill="#2b2622">the diners</text>
+<rect x="557" y="1888" width="22" height="9" rx="2" fill="#8d7fa8" fill-opacity="0.85"/>
+<text x="587" y="1897" font-size="14" font-weight="600" fill="#2b2622">the cleanup</text>
+<text x="56" y="1932" font-size="14" font-style="italic" fill="#8b8377">Node numbering: left spine = screening position, right spine = real order. The gap between the two numbers is the edit.</text>
+</svg>

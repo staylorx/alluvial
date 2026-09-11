@@ -1,0 +1,292 @@
+{
+  "slug": "the-wedding-singer",
+  "title": "The Wedding Singer",
+  "year": 1998,
+  "runtime_min": 96,
+  "score": 25,
+  "order": [
+    "robbie",
+    "julia",
+    "linda",
+    "glenn",
+    "sammy",
+    "george",
+    "rosie",
+    "holly"
+  ],
+  "chars": [
+    {
+      "id": "robbie",
+      "name": "Robbie",
+      "width": 34,
+      "colour": "#1b57c4"
+    },
+    {
+      "id": "julia",
+      "name": "Julia",
+      "width": 31,
+      "colour": "#d0316a"
+    },
+    {
+      "id": "linda",
+      "name": "Linda",
+      "width": 18,
+      "colour": "#6e9078"
+    },
+    {
+      "id": "glenn",
+      "name": "Glenn",
+      "width": 19,
+      "colour": "#9c6552"
+    },
+    {
+      "id": "sammy",
+      "name": "Sammy",
+      "width": 17,
+      "colour": "#b09a4e"
+    },
+    {
+      "id": "george",
+      "name": "George",
+      "width": 16,
+      "colour": "#8d7fa8"
+    },
+    {
+      "id": "rosie",
+      "name": "Rosie",
+      "width": 15,
+      "colour": "#6f8f96"
+    },
+    {
+      "id": "holly",
+      "name": "Holly",
+      "width": 14,
+      "colour": "#b08a94"
+    }
+  ],
+  "beats": [
+    {
+      "name": "THE FIRST RECEPTION",
+      "loc": "\u2248 0\u20138 min",
+      "cap": [
+        "Robbie's band plays a reception; he is",
+        "engaged to Linda and sure of his life"
+      ],
+      "tag": "OPENING \u2014 the job and the wedding he expects",
+      "cats": [],
+      "clusters": [
+        [
+          "robbie",
+          "linda"
+        ],
+        [
+          "sammy",
+          "george"
+        ]
+      ],
+      "enter": [
+        "robbie",
+        "linda",
+        "sammy",
+        "george"
+      ]
+    },
+    {
+      "name": "LEFT AT THE ALTAR",
+      "loc": "\u2248 10\u201320 min",
+      "cap": [
+        "Linda leaves a note on the wedding day and",
+        "walks out; Robbie is left at the altar"
+      ],
+      "tag": "BREAKUP \u2014 she leaves before the vows",
+      "cats": [
+        "breakup"
+      ],
+      "clusters": [
+        [
+          "robbie"
+        ]
+      ]
+    },
+    {
+      "name": "\"LOVE STINKS\"",
+      "loc": "\u2248 22\u201330 min",
+      "cap": [
+        "Shattered, Robbie hijacks another reception",
+        "with 'Love Stinks' and insults the guests"
+      ],
+      "tag": "LOW POINT \u2014 the job becomes the wound",
+      "cats": [],
+      "clusters": [
+        [
+          "robbie",
+          "sammy",
+          "george"
+        ]
+      ]
+    },
+    {
+      "name": "THE WAITRESS",
+      "loc": "\u2248 30\u201338 min",
+      "cap": [
+        "Robbie meets Julia, a waitress working the",
+        "same receptions; they talk and hit it off"
+      ],
+      "tag": "MEET-CUTE \u2014 two people already promised",
+      "cats": [
+        "meet"
+      ],
+      "clusters": [
+        [
+          "robbie",
+          "julia"
+        ]
+      ],
+      "enter": [
+        "julia"
+      ]
+    },
+    {
+      "name": "HELPING JULIA PLAN",
+      "loc": "\u2248 40\u201352 min",
+      "cap": [
+        "Julia is engaged to Glenn; Robbie helps her",
+        "plan the wedding and they grow closer"
+      ],
+      "tag": "FRIENDSHIP \u2014 the aisle he starts walking",
+      "cats": [],
+      "clusters": [
+        [
+          "robbie",
+          "julia"
+        ],
+        [
+          "glenn"
+        ],
+        [
+          "sammy",
+          "holly"
+        ]
+      ],
+      "enter": [
+        "glenn",
+        "holly"
+      ]
+    },
+    {
+      "name": "ROSIE'S ADVICE",
+      "loc": "\u2248 52\u201360 min",
+      "cap": [
+        "Rosie, his grandmother, tells him not to",
+        "give up on love; she is on his side"
+      ],
+      "tag": "ADVICE \u2014 the elder voice in his corner",
+      "cats": [],
+      "clusters": [
+        [
+          "robbie",
+          "rosie"
+        ]
+      ],
+      "enter": [
+        "rosie"
+      ]
+    },
+    {
+      "name": "THE SONG FOR JULIA",
+      "loc": "\u2248 60\u201370 min",
+      "cap": [
+        "Robbie writes Julia a song and sings it to",
+        "her; she is heading out to see Glenn"
+      ],
+      "tag": "GESTURE \u2014 the first song meant only for her",
+      "cats": [
+        "chem"
+      ],
+      "clusters": [
+        [
+          "robbie",
+          "julia"
+        ]
+      ]
+    },
+    {
+      "name": "LINDA, IN LAS VEGAS",
+      "loc": "\u2248 70\u201380 min",
+      "cap": [
+        "In Las Vegas Julia sees Robbie with Linda",
+        "and misreads it; she pulls away from him"
+      ],
+      "tag": "MISREAD \u2014 neither says what they mean",
+      "cats": [],
+      "clusters": [
+        [
+          "robbie",
+          "linda"
+        ],
+        [
+          "julia"
+        ]
+      ]
+    },
+    {
+      "name": "THE PLANE WEDDING",
+      "loc": "\u2248 80\u201388 min",
+      "cap": [
+        "Glenn and Julia's wedding is set on a plane",
+        "to Las Vegas that same day; Robbie learns"
+      ],
+      "tag": "THE CLOCK \u2014 a wedding nobody told him about",
+      "cats": [],
+      "clusters": [
+        [
+          "julia",
+          "glenn"
+        ],
+        [
+          "robbie"
+        ]
+      ]
+    },
+    {
+      "name": "THE RACE TO THE AIRPORT",
+      "loc": "\u2248 88\u201394 min",
+      "cap": [
+        "Rosie, Sammy, George and Holly get him to",
+        "the airport and onto the plane in time"
+      ],
+      "tag": "THE RACE \u2014 the friends get him aboard",
+      "cats": [],
+      "clusters": [
+        [
+          "robbie",
+          "sammy",
+          "george",
+          "rosie",
+          "holly"
+        ]
+      ]
+    },
+    {
+      "name": "GROW OLD WITH YOU",
+      "loc": "the coda",
+      "cap": [
+        "Robbie takes the cabin microphone and sings",
+        "'Grow Old with You'; Julia walks from Glenn"
+      ],
+      "tag": "GRAND GESTURE \u2014 the song lands this time",
+      "cats": [
+        "gesture"
+      ],
+      "clusters": [
+        [
+          "robbie",
+          "julia"
+        ],
+        [
+          "glenn"
+        ]
+      ]
+    }
+  ]
+}

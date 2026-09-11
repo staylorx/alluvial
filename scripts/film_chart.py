@@ -46,6 +46,19 @@ def load(slug: str) -> dict:
         return json.load(fh)
 
 
+def _flat_ids(v) -> list[str]:
+    """Accept ['a','b'] or [['a'],['b']] — hand-authored tables produce both."""
+    if not v:
+        return []
+    out = []
+    for x in (v if isinstance(v, list) else [v]):
+        if isinstance(x, list):
+            out.extend(y for y in x if isinstance(y, str))
+        elif isinstance(x, str):
+            out.append(x)
+    return out
+
+
 def groups_for(clusters: list[list[str]]) -> list[tuple[float, list[str]]]:
     """Even, weight-aware placement of each cluster across the lane band.
 
@@ -64,6 +77,25 @@ def groups_for(clusters: list[list[str]]) -> list[tuple[float, list[str]]]:
     return out
 
 
+CAP_CHARS = 47          # the caption column fits ~47 chars at 16.5px
+
+
+def wrap(text: str, width: int = CAP_CHARS) -> list[str]:
+    """Word-wrap a chart caption. Short lines pass through untouched, which is
+    what keeps already-published charts byte-identical."""
+    words, lines, cur = str(text).split(), [], ""
+    for w in words:
+        cand = f"{cur} {w}".strip()
+        if cur and len(cand) > width:
+            lines.append(cur)
+            cur = w
+        else:
+            cur = cand
+    if cur:
+        lines.append(cur)
+    return lines or [""]
+
+
 def spec_for(film: dict, cb: bool = False, mini: bool = False) -> dict:
     order = list(film["order"]) if film.get("order") else [c["id"] for c in film["chars"]]
     char = {c["id"]: (c["name"], c["width"], c["colour"]) for c in film["chars"]}
@@ -71,18 +103,29 @@ def spec_for(film: dict, cb: bool = False, mini: bool = False) -> dict:
 
     cols = []
     for b in film["beats"]:
-        d = dict(beat=b["name"], loc=b["loc"], cap=list(b["cap"]))
+        cap: list[str] = []
+        for ln in b["cap"]:
+            cap.extend(wrap(ln))
+        d = dict(beat=b["name"], loc=b["loc"], cap=cap)
         if b.get("groups"):
             d["groups"] = [(float(y), list(ids)) for y, ids in b["groups"]]
         else:
             cl = [[i for i in ids if i in known] for ids in b["clusters"]]
             d["groups"] = groups_for([c for c in cl if c])
         if b.get("tag"):
-            d["cap_extra"] = ("\u25b8 " + b["tag"], TAG)
-        if b.get("enter"):
-            d["enter"] = [i for i in b["enter"] if i in known]
-        if b.get("stubs"):
-            d["stubs"] = [(i, "out", None) for i in b["stubs"] if i in known]
+            tag = wrap("\u25b8 " + b["tag"])
+            d["cap_extra"] = (tag if len(tag) > 1 else tag[0], TAG)
+        # enter/stubs arrive from hand-authored tables: flatten any nesting, drop
+        # unknown ids, and drop ids that are not actually on-page in this beat
+        # (the renderer hatches from this beat's lane, so an absent id is a KeyError).
+        present = {i for _y, ids in d["groups"] for i in ids}
+        ent = _flat_ids(b.get("enter"))
+        d["enter"] = [i for i in ent if i in known]
+        st = _flat_ids(b.get("stubs"))
+        d["stubs"] = [(i, "out", None) for i in st if i in known and i in present]
+        if len(d["stubs"]) != len(st):
+            print(f"    ! {film['slug']}: dropped {len(st) - len(d['stubs'])} stub(s) "
+                  f"not on-page in this beat")
         if b.get("hard"):
             d["hard"] = b["hard"]
         cols.append(d)
