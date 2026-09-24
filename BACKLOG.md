@@ -230,3 +230,154 @@ rather than a silent re-render of approved charts.
   film runtime marks). The clamp on near-instant gaps is itself a finding.
 - PNG is for chat; SVG is the deliverable. The web page inlines the SVG so the
   page's CSS and links can reach every beat.
+
+## Audit — Windows lane build & bible comparison (2026-09-24)
+
+Built and audited on the Windows lane (Dart SDK 3.13.1; Flutter not needed).
+`dart/` is a Dart **pub workspace** (`dart/pubspec.yaml` lists 7 packages; the
+repo root has no pubspec, as the acceptance note expected). Gates exercised:
+
+- `dart pub get` — resolves (3 packages have newer versions outside constraints).
+- `dart analyze --fatal-infos --fatal-warnings` — **clean, zero diagnostics**.
+- `dart build cli --target bin/alluvial.dart` — builds
+  `build/cli/windows_x64/bundle/bin/alluvial.exe`; the binary runs
+  (`version`, `list`, `validate` over `stories/`: 36 stories, 2 invalid).
+- `dart test` — green in 6 of 7 packages; **`packages/alluvial_render` fails**
+  (see below). Per-package: cli 20, domain 39, store_memory 10, store_yaml 27,
+  usecases 13.
+- The byte-identity gate was **rebuilt from scratch here**, because the Python
+  pipeline is the only thing that can produce the reference:
+  `python dart/tool/render_reference.py C:/tmp/ref` (31 braid × 3 treatments +
+  spec JSON, 5 two-clock) and `python dart/tool/number_corpus.py
+  C:/tmp/ref/numbers.tsv` (534 values). Result with the corpus present:
+  **96 of 98 artifacts byte-identical**; 2 differ (`hamlet`, `hamlet.cb`).
+
+### Build & analysis findings (open)
+
+- [ ] **`packages/alluvial_render` fails its own gate on Windows.** Two causes,
+      both in the harness rather than in the engine:
+      1. `test/parity_test.dart` rebuilds its file keys with
+         `f.path.split('/').last` — on Windows the separator is `\`, so the key
+         is the whole path and **every** corpus lookup misses. The test then
+         compares nothing and fails only on the hardcoded
+         `identical.should.be(95)`. With the separator fixed the gate really
+         runs: 96/98 identical.
+      2. `test/py_num_test.dart` hard-fails (`corpus.length > 100` → false) when
+         the CPython-generated fixture is absent, where the sibling parity test
+         skips. On a machine with no corpus, `dart test` in this package is red
+         by construction.
+- [ ] **`hamlet` is the one real content divergence: 2 of 98 artifacts.** With
+      the corpus rebuilt and LF-normalised, `renderFilmChart` reproduces every
+      artifact except `hamlet.svg` and `hamlet.cb.svg`, which differ in exactly
+      one `<text>` line: Python emits `13 beats, 8 lanes. A play — the anchors
+      are acts and scenes, not minutes.` (its non-film branch in
+      `scripts/story_chart.py`), the Dart builder always emits the film wording
+      `13 beats, 8 lanes. Time runs down the page.`
+      (`dart/packages/alluvial_render/lib/src/builder/story_chart_builder.dart`,
+      the `_titleBlock(...) ??` fallback). Hamlet is the only non-film braid, so
+      it is the only casualty; `hamlet.mini.svg` has no footer and matches. The
+      committed `out/hamlet-vertical.svg` already carries the play wording, so
+      the Python side is the reference. This is the Dart half of the BACKLOG's
+      "give `expression` a first-class home in the Dart store": the codec
+      round-trips `expression` through `extra`, but the renderer never reads it.
+      Fixing it is a code change, so it is recorded, not made.
+- [ ] **The gate's count assertion is stale.** `identical.should.be(95)` (and
+      the README / `dart/BACKLOG.md` "30 films × 3 + 5 = 95") predates the 36th
+      story: the store now holds **36 stories = 31 braid + 5 two-clock = 98
+      artifacts**. The assertion has to move with the store.
+- [ ] **`python3` is not usable on this host** — `python3` is a pyenv-win shim
+      with no version selected ("No global/local python version has been set"),
+      so the documented commands (`python3 dart/tool/render_reference.py`,
+      `python3 scripts/...`) fail as written. `python` (3.11.16, PyYAML 6.0.3)
+      runs them fine. The two corpus generators needed only that rename.
+- [ ] **The corpus generator writes CRLF on Windows.** `render_reference.py`
+      and `number_corpus.py` open their outputs in text mode without
+      `newline=''`, so on Windows every one of the 129 reference files gets
+      `\r\n`. The Dart renderers emit `\n`, so a Windows-generated corpus fails
+      **all 93** braid comparisons on line endings alone — a false alarm that
+      hides the two genuine `hamlet` diffs. Generate with `newline=''`, or
+      normalise, or compare after normalising.
+- [ ] **`dart test` at the workspace root exits 65** —
+      "No test files were passed and the default test/ directory doesn't exist".
+      The gates only run per package; the README's "`dart test` runs that gate"
+      and `dart/BACKLOG.md`'s "`dart analyze` / tests" are per-package in
+      practice. Either add a root-level runner or say per-package in the docs.
+- [ ] **`dart format` is not clean** (bible §2 wants the tree formatted before
+      a commit): `dart format --output=none --set-exit-if-changed .` reports 2
+      files it would change —
+      `dart/packages/alluvial_domain/lib/src/codec/story_document_codec.dart`
+      (a `if (...) 'expression': ...` line it wants split) and
+      `dart/packages/alluvial_domain/test/story_validator_test.dart` (a block of
+      `test(...)` calls it wants collapsed). Not touched here: formatting is a
+      code change, and the diff is 140 lines.
+- [ ] **Stale numbers in the docs.** `README.md` and `dart/BACKLOG.md` say 35
+      stories / 30 braid films / 95 artifacts / "34 of 35 byte-identical"; the
+      store is at 36 stories now (31 braid + 5 two-clock). `dart/BACKLOG.md`
+      still lists the renderers under "Not ported (deliberately)" although both
+      are ported and gated.
+- [ ] **The two data defects are still open** (`validate`: 2 of 36 invalid) —
+      `50-first-dates` (`beats[6].stubs` names henry, who stands in "THE BOAT"
+      later; the same pair also marks him `enter` after he appeared) and
+      `about-time` (`beats[9].stubs` names dad, who does not stand in that
+      beat). Unchanged from `dart/BACKLOG.md`; the renderer still silently drops
+      that stub.
+- [ ] **No `AGENTS.md` in this repo**, though the task and the bible both assume
+      one (the bible repo has its own). Not created here — writing an AGENTS.md
+      is a conventions decision for the owner.
+
+### Deviations from `staylorx/dart-flutter-bible` (flags, not fixes)
+
+Read against the compact blob and §1–§11. Each is a spot where the code differs
+from the bible and the bible may itself be wrong; none was changed.
+
+- Deviation: `dart/` — no `dart_arch_test` boundary test. The bible makes
+  package-boundary direction + workspace-wide cycle-freedom a **test-enforced CI
+  hard gate** (§2 "Test-enforced", §9 step 7, §10 checklist). The workspace has
+  none: no `dart_arch_test` dependency, no architecture test, no workspace-root
+  `test/`. Boundaries are currently enforced by nothing.
+- Deviation: `dart/` — no workspace-wide `dart test`. The bible's gate is
+  "`dart test` green across the workspace" (§10); the workspace root has no test
+  directory, so the gate only exists per package.
+- Deviation: `dart/packages/alluvial_domain/lib/src/failures/domain_failure.dart`,
+  `.../datasource_failure.dart`, `.../contracts/story_codec.dart`,
+  `dart/packages/alluvial_render/lib/src/spec/chart_spec.dart`,
+  `.../engine/vertical_renderer.dart`,
+  `dart/packages/alluvial_usecases/lib/src/models/timeline.dart` — more than one
+  class per file (5, 5, 2, 10, 3 and 4 respectively). The bible's rule is "One
+  class per file, one file per class" (§2, §3). Argue for an exception (a sealed
+  failure family and a spec value-object set read better together) or split
+  them; the bible does not carve one out.
+- Deviation: every package — **the error style is not declared**. §4 requires
+  the style (FP-style tuples vs plain exceptions) stated in the package
+  barrel's doc comment, the package README, and `AGENTS.md` on deviation
+  ("silence is the violation"). The barrels carry a descriptive line but never
+  say what a consumer receives; **no package has a README**; the repo has no
+  `AGENTS.md`.
+- Deviation: `dart/packages/alluvial_store_yaml` — the file store is a
+  hand-rolled `dart:io` + `package:yaml` folder adapter, where §5 names
+  **sembast** as "the default pure-Dart embedded file store" (tests:
+  `databaseFactoryMemory`). The bible's rule assumes a database; this store is a
+  folder of authored YAML that has to stay byte-identical and human-editable, so
+  the bible may be the thing that is wrong here.
+- Deviation: `dart/packages/alluvial_domain/lib/src/contracts/story_repository.dart`
+  — no `IUnitOfWork? uow` on any method. §5/§10 want write methods (and
+  optionally reads) to carry an optional `IUnitOfWork? uow`, with
+  non-transactional stores sinking it gracefully. A folder-of-files store
+  arguably has no transaction to expose; the contract is uniform today because
+  every adapter is the same shape.
+- Deviation: `dart/packages/alluvial_render/test/parity_test.dart` and
+  `.../py_num_test.dart` — absolute POSIX paths (`/tmp/ref`, `/tmp/ref/numbers.tsv`)
+  as the defaults, and a `'../../../stories'` CWD-relative store. §6's pitfall
+  list bans hardcoded absolute paths in tests (env/`systemTemp` + `path`, and no
+  `/tmp/foo` literals); on Windows `/tmp/...` is not the same place MSYS thinks
+  it is, which is how the gate came up skipped.
+- Deviation: `dart/packages/alluvial_render/test/parity_test.dart` — file names
+  are derived with `split('/')`, a POSIX-only assumption. §6's spirit (and
+  "tests pass on my machine, fail in CI") covers it; there is no bible rule
+  about separators, only about portability.
+- Deviation: `dart/packages/alluvial_store_memory` — the in-memory store is a
+  legitimate second adapter and the contract suite does run against both
+  (bible-compliant), but no bible §5 "UnitOfWork pitfalls" apply here because
+  there is no UnitOfWork; recorded so the next reader does not go looking for
+  the pitfall section.
+
