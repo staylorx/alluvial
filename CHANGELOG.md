@@ -7,9 +7,8 @@ project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html) where
 a version applies — the Dart packages under `dart/packages/` carry `0.1.0`
 today, and no git tags exist yet.
 
-Open and pending work lives in [`BACKLOG.md`](BACKLOG.md) (the Python pipeline
-and this file's own audit record) and [`dart/BACKLOG.md`](dart/BACKLOG.md) (the
-Dart port). Decisions — as opposed to changes — belong here.
+Open and pending work lives on the `backlog/` board. Decisions — as opposed to
+changes — belong here.
 
 ## [Unreleased]
 
