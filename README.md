@@ -24,11 +24,11 @@ strand is off page.
 
 - **`dart/` — the port.** A Dart pub workspace: the store, a validator, an
   agent-facing CLI, and **both renderers** (the braid chart and the two-clock
-  chart). Start at [`dart/BACKLOG.md`](dart/BACKLOG.md).
+  chart). Start at the board: [`backlog/`](backlog/).
 - **`scripts/` + `stories/` + `out/` + `web/` — the original.** The Python pipeline
   that produced every approved chart, the story store itself, the committed SVGs,
   and the Eleventy publisher that turns a story into a page. Start at
-  [`BACKLOG.md`](BACKLOG.md).
+  [`backlog/`](backlog/).
 
 The Dart renderers reproduce the Python engine **byte for byte** — 95 of 95
 reference artifacts: 30 films in each treatment the pages embed (default,
@@ -77,9 +77,9 @@ live at [staylorx.com/movies](https://staylorx.com/stories/27-dresses/).
 
 ## Where to read next
 
-- [`dart/BACKLOG.md`](dart/BACKLOG.md) — what the port has proven, what it has
-  deliberately not ported, and the two real data defects it found.
-- [`BACKLOG.md`](BACKLOG.md) — the Python pipeline's own record.
+- [`backlog/`](backlog/) — the one board for both halves: what the port has
+  proven, what it has deliberately not ported, the two real data defects it
+  found, and the Python pipeline's own record.
 - [`STORY-SCHEMA.md`](STORY-SCHEMA.md) and
   [`STORY-SCHEMA-TIMECHART.md`](STORY-SCHEMA-TIMECHART.md) — the two chart shapes,
   written out for an author.
