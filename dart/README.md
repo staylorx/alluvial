@@ -3,7 +3,7 @@
 The story store and its CLI, as a Dart pub workspace. One file per story in a
 folder is the repository; the CLI reads it, checks it, and writes it back.
 
-**Read `BACKLOG.md` first** — it holds what is built, what is proven, what is
+**Read the board first** (`../backlog/`) — it holds what is built, what is proven, what is
 deliberately absent, and the open questions.
 
 ## Layout
