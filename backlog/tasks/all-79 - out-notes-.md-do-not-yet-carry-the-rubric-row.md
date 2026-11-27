@@ -4,7 +4,7 @@ title: out/notes/*.md do not yet carry the rubric row
 status: To Do
 assignee: []
 created_date: '2026-11-08T18:53:00Z'
-labels: []
+labels: ["site"]
 dependencies: []
 ordinal: 22900
 ---

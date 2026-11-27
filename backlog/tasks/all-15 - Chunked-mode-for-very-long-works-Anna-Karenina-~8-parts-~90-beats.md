@@ -4,7 +4,7 @@ title: 'Chunked mode for very long works (Anna Karenina: ~8 parts, ~90 beats)'
 status: To Do
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
-labels: []
+labels: ["feature"]
 dependencies: []
 ordinal: 15000
 ---

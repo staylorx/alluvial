@@ -4,7 +4,7 @@ title: 'Focus mode for big casts (Anna Karenina): click a character, dim the res
 status: To Do
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
-labels: []
+labels: ["feature"]
 dependencies: []
 ordinal: 14000
 ---

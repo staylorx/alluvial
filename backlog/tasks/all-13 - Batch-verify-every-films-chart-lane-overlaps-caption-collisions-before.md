@@ -4,7 +4,7 @@ title: Batch-verify every film's chart (lane overlaps + caption collisions) befo
 status: To Do
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
-labels: []
+labels: ["feature"]
 dependencies: []
 ordinal: 13000
 ---

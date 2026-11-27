@@ -4,7 +4,7 @@ title: 'Deviation: `dart/packages/alluvial_render/test/parity_test.dart` and'
 status: To Do
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
-labels: []
+labels: ["deviation"]
 dependencies: []
 ordinal: 48000
 ---

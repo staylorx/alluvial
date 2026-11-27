@@ -21,6 +21,18 @@ changes — belong here.
   `staylorx/dart-flutter-bible`. Nothing in it was fixed here — the findings are
   recorded so the owner can decide.
 
+### Changed
+
+- The backlog board was triaged 2026-11-27. It had been seeded by pouring both
+  retired `BACKLOG.md` files into tasks, so most entries were captured state,
+  rules or proofs rather than work: 38 tasks were archived (12 already true in
+  the tree, 26 were notes), the proof and defect content was restored to
+  `backlog/docs/dart/what-is-proven` (doc-16) and `…/real-defects-…` (doc-17), a
+  new `…/design-rules` doc (doc-18) holds the rules that had no other home, and
+  the duplicate tickets were folded (the Windows render gate → ALL-32, the two
+  data defects → ALL-40). The open queue is now 33 items, labelled `defect` /
+  `data` / `deviation` / `feature` / `refactor` / `site`.
+
 ### Known issues
 
 - The Dart port's byte-identity gate does not pass as written on Windows:
@@ -36,7 +48,8 @@ changes — belong here.
 - `dart format` reports two files it would change; `dart test` at the workspace
   root exits 65 (there is no root `test/` directory).
 - `validate` reports 2 of 36 stories invalid — `50-first-dates` and `about-time`,
-  both unchanged data defects recorded in `dart/BACKLOG.md`.
+  both unchanged data defects now tracked as ALL-40 and recorded in
+  `backlog/docs/dart/real-defects-this-found-in-the-existing-data` (doc-17).
 
 ## [0.1.0] — 2026-09-11
 

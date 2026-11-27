@@ -4,7 +4,7 @@ title: The two data defects are still open
 status: To Do
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
-labels: []
+labels: ["data"]
 dependencies: []
 ordinal: 40000
 ---

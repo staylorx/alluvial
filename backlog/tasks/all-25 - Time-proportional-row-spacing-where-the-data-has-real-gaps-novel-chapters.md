@@ -4,7 +4,7 @@ title: Time-proportional row spacing where the data has real gaps (novel chapter
 status: To Do
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
-labels: []
+labels: ["feature"]
 dependencies: []
 ordinal: 25000
 ---

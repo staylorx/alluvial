@@ -4,7 +4,7 @@ title: 'Deviation: `dart/` — no `dart_arch_test` boundary test'
 status: To Do
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
-labels: []
+labels: ["deviation"]
 dependencies: []
 ordinal: 42000
 ---

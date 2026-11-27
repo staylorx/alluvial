@@ -4,7 +4,7 @@ title: The two-clock shape reads but does not yet expose its second clock in
 status: To Do
 assignee: []
 created_date: '2026-11-08T18:52:00Z'
-labels: []
+labels: ["defect"]
 dependencies: []
 ordinal: 65000
 ---

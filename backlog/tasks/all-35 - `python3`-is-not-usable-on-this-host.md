@@ -4,7 +4,7 @@ title: '`python3` is not usable on this host'
 status: To Do
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
-labels: []
+labels: ["defect"]
 dependencies: []
 ordinal: 35000
 ---

@@ -4,7 +4,7 @@ title: '`packages/alluvial_render` fails its own gate on Windows'
 status: To Do
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
-labels: []
+labels: ["defect"]
 dependencies: []
 ordinal: 32000
 ---
