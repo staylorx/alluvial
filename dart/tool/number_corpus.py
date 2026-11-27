@@ -90,7 +90,7 @@ for value in values:
     rows.append(value)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
-with open(OUT, "w", encoding="utf-8") as fh:
+with open(OUT, "w", encoding="utf-8", newline="") as fh:
     for value in rows:
         fh.write("\t".join([
             repr(value),

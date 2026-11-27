@@ -1,7 +1,7 @@
 ---
 id: ALL-36
 title: The corpus generator writes CRLF on Windows
-status: To Do
+status: Done
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
 labels: ["defect"]
@@ -20,3 +20,9 @@ ordinal: 36000
       hides the two genuine `hamlet` diffs. Generate with `newline=''`, or
       normalise, or compare after normalising.
 <!-- SECTION:DESCRIPTION:END -->
+
+## Final Summary
+
+<!-- SECTION:FINAL_SUMMARY:BEGIN -->
+Fixed: `render_reference.py` and `number_corpus.py` open their outputs with newline="", so a generated corpus is LF-clean on any platform.
+<!-- SECTION:FINAL_SUMMARY:END -->

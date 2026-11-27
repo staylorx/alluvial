@@ -33,10 +33,14 @@ counts have moved by one — see ALL-34 for the stale assertions.
   clean (zero diagnostics); `dart build cli` builds
   `build/cli/<os>/bundle/bin/alluvial` and the binary runs (`version`, `list`,
   `validate` over `stories/`).
-- **Analyzer / tests** — `dart analyze` reports nothing; `dart format` changes
-  nothing; 100 tests pass (domain 35, usecases 13, folder store 27, memory store
-  10, CLI 15).
+- **Analyzer / tests** — `dart analyze --fatal-infos --fatal-warnings` reports
+  nothing; 137 tests pass across the workspace (domain 43, render 24, usecases
+  13, folder store 27, memory store 10, CLI 20). `dart format` still reports two
+  files it would change (ALL-38).
 - **The artifact** — `dart build cli` produces a bundle; a full listing takes
   ~70 ms, against ~2 s for `dart run`. Build the bundle an agent actually uses.
-- **Known divergence** — `hamlet` is the one real content divergence: 2 of the
-  artifacts (`hamlet.svg`, `hamlet.cb.svg`) differ in exactly one `<text` span.
+- **Known divergence — resolved 2026-11-27.** `hamlet` used to be the one real
+  content divergence (`hamlet.svg`, `hamlet.cb.svg` differed in one `<text`
+  span) because the Dart builder hardcoded the film subtitle for every form; it
+  now follows the story's `expression` like the reference does. All 98 reference
+  artifacts are byte-identical.

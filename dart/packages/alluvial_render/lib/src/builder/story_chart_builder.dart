@@ -32,6 +32,32 @@ const ChartFonts filmFonts = ChartFonts();
 /// The canvas the film charts are laid out on.
 const int chartWidth = 1010;
 
+/// The title-block wording for a non-film form — the Python reference's `FORMS`
+/// (`scripts/story_chart.py`). A film is anchored to minutes; every other
+/// expression to the work's own divisions.
+const Map<Expression, String> expressionForms = {
+  Expression.play: 'A play',
+  Expression.novel: 'A novel',
+  Expression.series: 'A series',
+  Expression.shortStory: 'A short story',
+  Expression.essay: 'An essay',
+  Expression.poem: 'A poem',
+  Expression.song: 'A song',
+  Expression.musical: 'A musical',
+};
+
+/// The Python reference's `ANCHORS`: what a non-film is divided into.
+const Map<Expression, String> expressionAnchors = {
+  Expression.play: 'acts and scenes',
+  Expression.novel: 'its parts',
+  Expression.series: 'its episodes',
+  Expression.shortStory: "the story's own turns",
+  Expression.essay: 'its own sections',
+  Expression.poem: 'its own divisions',
+  Expression.song: 'its own divisions',
+  Expression.musical: 'its acts',
+};
+
 /// Word-wrap a chart caption.
 ///
 /// Short lines pass through untouched, which is what keeps already-published
@@ -295,6 +321,20 @@ ChartSpec buildChartSpec(Story story, {bool cb = false}) {
   final storedLegendNote = _stringOrNull(story.extra['legend_note']);
   final runtime = story.runtimeMinutes;
 
+  // The title block follows the FORM, exactly as the Python reference's
+  // `spec_for` does: a film is anchored to minutes, every other expression to
+  // the work's own divisions. This used to hardcode the film wording, which is
+  // why `hamlet` — a play — diverged from the reference by one text span.
+  final counted = '${columns.length} beats, ${order.length} lanes';
+  final subLine = story.expression == Expression.film
+      ? '$counted${runtime == null ? '' : ', $runtime minutes'}. '
+            'Time runs down the page.'
+      : '$counted. '
+            '${expressionForms[story.expression] ?? 'A ${story.expression.yaml}'} '
+            '\u2014 the anchors are '
+            '${expressionAnchors[story.expression] ?? 'its own divisions'}, '
+            'not minutes.';
+
   return ChartSpec(
     characters: characters,
     order: order,
@@ -304,12 +344,7 @@ ChartSpec buildChartSpec(Story story, {bool cb = false}) {
         _titleBlock(story.extra['title_block']) ??
         <ChartTitleLine>[
           ChartTitleLine('$titleText \u2014 the braid', 'title'),
-          ChartTitleLine(
-            '${columns.length} beats, ${order.length} lanes'
-                '${runtime != null ? ', $runtime minutes' : ''}. '
-                'Time runs down the page.',
-            'sub',
-          ),
+          ChartTitleLine(subLine, 'sub'),
           const ChartTitleLine(
             'Row spacing widens before the coda \u2014 time passes there.',
             'note',

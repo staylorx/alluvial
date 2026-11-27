@@ -37,13 +37,14 @@ Future<void> main() async {
             Directory(_store)
                 .listSync()
                 .whereType<File>()
-                .map((f) => f.path.split('/').last)
+                .map((f) => f.uri.pathSegments.last)
                 .where((name) => name.endsWith('.yaml'))
                 .map((name) => name.replaceAll(RegExp(r'\.yaml$'), ''))
                 .toList()
               ..sort();
 
         var identical = 0;
+        var expected = 0;
         final failures = <String>[];
         for (final key in keys) {
           final story = (await repository.load(key)).getRight().toNullable();
@@ -51,6 +52,7 @@ Future<void> main() async {
           if (story.shape == StoryShape.twoClock) {
             final file = File('$_reference/twoclock/$key.svg');
             if (!file.existsSync()) continue;
+            expected += 1;
             if (renderTwoClock(story) == file.readAsStringSync()) {
               identical += 1;
             } else {
@@ -65,6 +67,7 @@ Future<void> main() async {
           ]) {
             final file = File('$_reference/$key$suffix.svg');
             if (!file.existsSync()) continue;
+            expected += 1;
             final drawn = renderFilmChart(story, cb: cb, mini: mini).svg;
             if (drawn == file.readAsStringSync()) {
               identical += 1;
@@ -76,8 +79,23 @@ Future<void> main() async {
 
         failures.take(8).join(', ').should.be('');
         failures.length.should.be(0);
-        // 30 braid films x 3 treatments + 5 two-clock charts
-        identical.should.be(95);
+        // Counted, not hardcoded (it was `95` and went stale when the store
+        // grew). And counted against the CORPUS, so the gate cannot pass
+        // vacuously: every reference artifact must have been looked at.
+        final corpusArtifacts =
+            Directory(_reference)
+                .listSync()
+                .whereType<File>()
+                .where((f) => f.path.endsWith('.svg'))
+                .length +
+            Directory('$_reference/twoclock')
+                .listSync()
+                .whereType<File>()
+                .where((f) => f.path.endsWith('.svg'))
+                .length;
+        (corpusArtifacts > 0).should.be(true);
+        expected.should.be(corpusArtifacts);
+        identical.should.be(expected);
       },
     );
 
@@ -93,7 +111,7 @@ Future<void> main() async {
         );
         final differences = <String>[];
         for (final entity in Directory(_store).listSync().whereType<File>()) {
-          final name = entity.path.split('/').last;
+          final name = entity.uri.pathSegments.last;
           if (!name.endsWith('.yaml')) continue;
           final key = name.replaceAll(RegExp(r'\.yaml$'), '');
           final specFile = File('$_reference/$key.spec.json');

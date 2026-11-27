@@ -52,14 +52,14 @@ for slug in stories_yaml.all_slugs():
     doc = stories_yaml.load(slug)
     if "scenes" in doc:
         svg, _info = reorder_chart.render(doc)
-        with open(os.path.join(OUT, "twoclock", f"{slug}.svg"), "w", encoding="utf-8") as fh:
+        with open(os.path.join(OUT, "twoclock", f"{slug}.svg"), "w", encoding="utf-8", newline="") as fh:
             fh.write(svg)
         two_clock += 1
         continue
 
     for suffix, kwargs in (("", {}), (".cb", {"cb": True}), (".mini", {"mini": True})):
         svg, spec, height, checks = story_chart.render(doc, **kwargs)
-        with open(os.path.join(OUT, f"{slug}{suffix}.svg"), "w", encoding="utf-8") as fh:
+        with open(os.path.join(OUT, f"{slug}{suffix}.svg"), "w", encoding="utf-8", newline="") as fh:
             fh.write(svg)
         if suffix == "":
             # beat_links is a callable; the port hard-codes the same href rule
@@ -69,7 +69,7 @@ for slug in stories_yaml.all_slugs():
                 "legend_rows": checks["legend_rows"],
                 "lane_overlaps": checks["lane_overlaps"],
             }
-            with open(os.path.join(OUT, f"{slug}.spec.json"), "w", encoding="utf-8") as fh:
+            with open(os.path.join(OUT, f"{slug}.spec.json"), "w", encoding="utf-8", newline="") as fh:
                 json.dump(payload, fh, indent=1, sort_keys=True, ensure_ascii=False)
     braid += 1
 

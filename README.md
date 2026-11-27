@@ -30,12 +30,13 @@ strand is off page.
   and the Eleventy publisher that turns a story into a page. Start at
   [`backlog/`](backlog/).
 
-The Dart renderers reproduce the Python engine **byte for byte** — 95 of 95
-reference artifacts: 30 films in each treatment the pages embed (default,
+The Dart renderers reproduce the Python engine **byte for byte** — all 98
+reference artifacts: 31 works in each treatment the pages embed (default,
 colour-blind, mini) plus all five two-clock charts, with the drawn layout
 matching field for field. The layout is hand-tuned across a hundred artifacts,
-so "equivalent output" was never going to be good enough. `dart test` runs that
-gate.
+so "equivalent output" was never going to be good enough. The
+`alluvial_render` test suite is that gate, and it counts the corpus, so it can
+neither go stale nor pass vacuously. `dart test` runs it.
 
 ## Quick start
 
@@ -72,7 +73,7 @@ identity, and two files can share one — a two-clock chart is filed as
 `<slug>-timechart.yaml` while still naming the film it belongs to. A folder of
 these files is the whole collection.
 
-35 stories so far: 30 braids, 5 two-clock charts. The pages built from them are
+36 stories so far: 31 braids, 5 two-clock charts. The pages built from them are
 live at [staylorx.com/movies](https://staylorx.com/stories/27-dresses/).
 
 ## Where to read next

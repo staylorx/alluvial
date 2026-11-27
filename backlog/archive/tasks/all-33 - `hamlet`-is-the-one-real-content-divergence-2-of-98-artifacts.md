@@ -32,5 +32,5 @@ ordinal: 33000
 ## Final Summary
 
 <!-- SECTION:FINAL_SUMMARY:BEGIN -->
-Known divergence, not work — recorded in docs/dart/what-is-proven (doc-16).
+RESOLVED 2026-11-27: it was the Dart builder hardcoding the film subtitle for every form; it now follows the story's `expression`. All 98 artifacts are byte-identical (see ALL-32).
 <!-- SECTION:FINAL_SUMMARY:END -->

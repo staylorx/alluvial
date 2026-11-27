@@ -33,20 +33,29 @@ changes — belong here.
   data defects → ALL-40). The open queue is now 33 items, labelled `defect` /
   `data` / `deviation` / `feature` / `refactor` / `site`.
 
+### Fixed
+
+- The `alluvial_render` byte-identity gate now runs and passes. Three harness
+  defects had made it unreliable: the parity test rebuilt file keys with a
+  POSIX-only `split('/')` (so on Windows it compared nothing and failed only on
+  a hardcoded count), the number-corpus test hard-failed when its generated
+  fixture was absent instead of skipping, and the count assertion was stale at
+  `95`. The keys now use the URI's last path segment, both tests skip when the
+  corpus is absent, and the expectation is counted against the corpus — so the
+  gate can neither go stale nor pass vacuously. **98 of 98 reference artifacts
+  are byte-identical**, and `dart test` is green across the workspace.
+- `hamlet` reproduces the Python engine. The Dart builder hardcoded the film
+  subtitle ("Time runs down the page") for every form; it now follows the
+  story's `expression` exactly as the reference does, so a play is anchored to
+  its acts and scenes, not minutes. The last two divergent artifacts are gone.
+- The reference-corpus generators (`dart/tool/render_reference.py`,
+  `dart/tool/number_corpus.py`) open their outputs with `newline=""`, so a
+  corpus is LF-clean on any platform.
+
 ### Known issues
 
-- The Dart port's byte-identity gate does not pass as written on Windows:
-  `dart test` in `dart/packages/alluvial_render` fails, because the parity test
-  derives file keys with a POSIX separator and the number-corpus test hard-fails
-  when its generated fixture is absent. With the corpus rebuilt and the
-  separator fixed, **96 of 98 artifacts are byte-identical**.
-- The two genuine divergences are `hamlet` and `hamlet.cb`: the Dart builder
-  emits the film subtitle for a story whose `expression` is `play`. The committed
-  `out/hamlet-vertical.svg` carries the correct play wording.
-- The reference-corpus generators write CRLF on Windows, which makes a
-  Windows-generated corpus fail every comparison on line endings alone.
 - `dart format` reports two files it would change; `dart test` at the workspace
-  root exits 65 (there is no root `test/` directory).
+  root exits 65 (there is no root `test/` directory). *(Board: ALL-37, ALL-38.)*
 - `validate` reports 2 of 36 stories invalid — `50-first-dates` and `about-time`,
   both unchanged data defects now tracked as ALL-40 and recorded in
   `backlog/docs/dart/real-defects-this-found-in-the-existing-data` (doc-17).

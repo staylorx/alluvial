@@ -1,7 +1,7 @@
 ---
 id: ALL-34
 title: The gate's count assertion is stale
-status: To Do
+status: Done
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
 labels: ["defect"]
@@ -17,3 +17,9 @@ ordinal: 34000
       story: the store now holds **36 stories = 31 braid + 5 two-clock = 98
       artifacts**. The assertion has to move with the store.
 <!-- SECTION:DESCRIPTION:END -->
+
+## Final Summary
+
+<!-- SECTION:FINAL_SUMMARY:BEGIN -->
+Fixed: the count is no longer hardcoded. The expectation is counted against the corpus, so it cannot go stale — and asserting the total equals the corpus size stops the gate passing vacuously.
+<!-- SECTION:FINAL_SUMMARY:END -->
