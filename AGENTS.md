@@ -97,10 +97,12 @@ Expected (doctrine) vs actual (this repo). Status: open unless marked.
    `.../py_num_test.dart`
    - Expected (§6): never hardcode absolute paths in tests — no `/tmp/foo`;
      `Directory.systemTemp` plus `package:path`.
-   - Actual: both default to `/tmp/ref`, which is not the same place on the
-     Windows lane — and is how the renderer gate came up *skipped* rather than
-     run.
-   - Status: open.
+   - Actual: **resolved 2026-11-27.** Both suites and the store resolve through
+     `alluvial_render/test/corpus_paths.dart` — `Directory.systemTemp` plus
+     `package:path`, environment-overridable, no literal — and
+     `dart/tool/render_reference.py` / `number_corpus.py` write to the same
+     default, so the gate runs rather than skipping.
+   - Status: fixed.
 5. **The file store is not sembast** — `dart/packages/alluvial_store_yaml`
    - Expected (§5.4): sembast is the default pure-Dart embedded file store.
    - Actual: a hand-rolled `dart:io` + `package:yaml` folder adapter.
@@ -108,16 +110,20 @@ Expected (doctrine) vs actual (this repo). Status: open unless marked.
      git-diffable YAML, and its byte-identity IS the product gate. A document
      database would destroy the property this repo exists to keep. §5.3
      explicitly declines to force a second file-based adapter.
-6. **No `UnitOfWork` on the rule-carrying operation** —
-   `dart/packages/alluvial_domain/lib/src/repository/document_story_repository.dart`
-   - Expected (§5.5): the *repository contract stays plain*, and an operation
-     that **decides a rule by reading and then writes** takes a required
-     `UnitOfWork` (the no-op is wired at the composition root for a store that
-     cannot roll back).
-   - Actual: `save()` validates a story and then writes it, and no operation
-     carries the seam.
-   - Status: open. (An earlier ticket read this as "repository methods need an
-     optional `uow`" — that reading is wrong; the contract is correct as-is.)
+6. **The bulk `format --apply` has no unit of work** —
+   `dart/packages/alluvial_cli/lib/src/commands/format_command.dart`
+   - Expected (§5.5, §5.6): the seam sits on the OPERATION — a required
+     `UnitOfWork` constructor dependency, with the *repository contract left
+     plain*. A store that cannot roll back says so once at the composition root,
+     and emulates by buffering and committing whole.
+   - Actual: `format --apply` loops over every story and calls `SaveStory` one at
+     a time, so a failure partway (disk full, permissions) leaves the store
+     **half-formatted** — and the store is the product. A single `save()` is not
+     the problem: a pure validator check plus one write, with no store read
+     feeding the decision.
+   - Status: open. (The original ticket read this as "repository methods want an
+     optional `uow`" — wrong; the contract is correct as it stands. Sharpened
+     2026-11-27 by reading the command.)
 7. **The SDK floor cannot be met by the sanctioned boundary tool** — every
    `pubspec.yaml`
    - Expected (§2.1, §RULES): `sdk: '>=3.10.0 <4.0.0'` in every pubspec.
