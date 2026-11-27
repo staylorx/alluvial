@@ -216,7 +216,8 @@ final class StoryDocumentCodec implements StoryCodec {
       'title': story.title,
       // A film does not write the field back: absent means film, which is what
       // every file predating `expression` relies on.
-      if (story.expression != Expression.film) 'expression': story.expression.yaml,
+      if (story.expression != Expression.film)
+        'expression': story.expression.yaml,
       'year': story.year,
       'runtime_min': story.runtimeMinutes,
       // The rubric that grades this story, if one does. Nothing is assumed for a

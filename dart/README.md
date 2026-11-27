@@ -22,9 +22,13 @@ deliberately absent, and the open questions.
 
 ```bash
 dart pub get                                  # from this directory (the workspace root)
-dart test                                     # per package: cd packages/<name> && dart test
-dart analyze --fatal-infos --fatal-warnings   # must report nothing at all
-dart format .
+
+# THE gate: analyze clean, then every package's suite, in one command. The
+# workspace root is not a package with a test/ of its own, so `dart test` here
+# exits 65 — tool/gate.dart is what runs the whole workspace.
+dart run tool/gate.dart
+dart analyze --fatal-infos --fatal-warnings   # analyze alone; must report nothing
+dart format .                                 # the tree stays formatted
 
 # against a store (the store lives at the repo root; this is packages/alluvial_cli)
 cd packages/alluvial_cli

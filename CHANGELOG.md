@@ -20,6 +20,10 @@ changes — belong here.
   every build/analysis finding and every divergence from
   `staylorx/dart-flutter-bible`. Nothing in it was fixed here — the findings are
   recorded so the owner can decide.
+- `dart/tool/gate.dart` — the workspace gate: analyze clean (fatal infos and
+  warnings), then every package's suite, in one command. The workspace root is
+  not a package, so `dart test` there exits 65; this is what covers the whole
+  workspace, and it closes the "no workspace-wide `dart test`" deviation.
 
 ### Changed
 
@@ -32,6 +36,9 @@ changes — belong here.
   the duplicate tickets were folded (the Windows render gate → ALL-32, the two
   data defects → ALL-40). The open queue is now 33 items, labelled `defect` /
   `data` / `deviation` / `feature` / `refactor` / `site`.
+- The Dart tree is `dart format`-clean (two files reformatted), and both READMEs
+  point at `dart run tool/gate.dart` instead of a root `dart test` that cannot
+  work.
 
 ### Fixed
 

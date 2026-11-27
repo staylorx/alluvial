@@ -1,7 +1,7 @@
 ---
 id: ALL-38
 title: '`dart format` is not clean'
-status: To Do
+status: Done
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
 labels: ["defect"]
@@ -21,3 +21,9 @@ ordinal: 38000
       `test(...)` calls it wants collapsed). Not touched here: formatting is a
       code change, and the diff is 140 lines.
 <!-- SECTION:DESCRIPTION:END -->
+
+## Final Summary
+
+<!-- SECTION:FINAL_SUMMARY:BEGIN -->
+Fixed: `dart format .` reformatted the two files (`story_document_codec.dart`, `story_validator_test.dart`); `dart format --set-exit-if-changed .` is clean.
+<!-- SECTION:FINAL_SUMMARY:END -->

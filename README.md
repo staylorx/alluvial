@@ -35,8 +35,9 @@ reference artifacts: 31 works in each treatment the pages embed (default,
 colour-blind, mini) plus all five two-clock charts, with the drawn layout
 matching field for field. The layout is hand-tuned across a hundred artifacts,
 so "equivalent output" was never going to be good enough. The
-`alluvial_render` test suite is that gate, and it counts the corpus, so it can
-neither go stale nor pass vacuously. `dart test` runs it.
+`alluvial_render` test suite is that gate, and it counts the corpus, so it
+can neither go stale nor pass vacuously. `dart run tool/gate.dart` (from `dart/`)
+runs that suite and every other, behind a clean analyze.
 
 ## Quick start
 

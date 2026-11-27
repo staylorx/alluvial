@@ -241,23 +241,20 @@ void main() {
 
         final findings = validator.validate(decode(document));
 
-        messages(findings).should.contain(
-          "rubric: 'romcom-99' is not one of romcom-27",
-        );
+        messages(
+          findings,
+        ).should.contain("rubric: 'romcom-99' is not one of romcom-27");
       },
     );
 
-    test(
-      'Given a year before cinema, when validated, then it is accepted',
-      () {
-        final document = cleanDocument();
-        document['year'] = 1600;
+    test('Given a year before cinema, when validated, then it is accepted', () {
+      final document = cleanDocument();
+      document['year'] = 1600;
 
-        final findings = validator.validate(decode(document));
+      final findings = validator.validate(decode(document));
 
-        messages(findings).should.beEmpty();
-      },
-    );
+      messages(findings).should.beEmpty();
+    });
 
     test(
       'Given a stub on a beat the character appears in later, when validated, then the exit is reported',
