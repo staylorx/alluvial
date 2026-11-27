@@ -76,8 +76,12 @@ Expected (doctrine) vs actual (this repo). Status: open unless marked.
    - Expected (§2.9, §9 step 7, §10.1): package-boundary direction + workspace
      cycle-freedom as a test-enforced gate over the resolved import graph, with
      **plain `package:` URI assertions** (the glob DSL is package-name-blind).
-   - Actual: none. Nothing prevents a domain → data import today.
-   - Status: open.
+   - Actual: **resolved 2026-11-27.** `dart/test/architecture_test.dart` asserts
+     what each package may reach, that `lib/src/` is reachable only through the
+     barrel, and workspace-wide cycle-freedom. It runs inside `melos run test`
+     (the root is a package via `melos: useRootAsPackage`), and it fails on a
+     deliberately injected cross-package `lib/src/` import.
+   - Status: fixed.
 3. **Several classes per file** — `dart/packages/alluvial_domain/lib/src/failures/*`
      (5 + 5), `.../contracts/story_codec.dart` (2),
      `dart/packages/alluvial_render/lib/src/spec/chart_spec.dart` (10),
@@ -114,6 +118,16 @@ Expected (doctrine) vs actual (this repo). Status: open unless marked.
      carries the seam.
    - Status: open. (An earlier ticket read this as "repository methods need an
      optional `uow`" — that reading is wrong; the contract is correct as-is.)
+7. **The SDK floor cannot be met by the sanctioned boundary tool** — every
+   `pubspec.yaml`
+   - Expected (§2.1, §RULES): `sdk: '>=3.10.0 <4.0.0'` in every pubspec.
+   - Actual: `dart_arch_test` — the tool §2.9 names — requires `^3.11.0` in every
+     release, so the declared 3.10 floor does not resolve; it also pins
+     `analyzer: ">=9.0.0 <12.0.0"`, which holds the workspace's dev analyzer at
+     11.x. (`dart analyze` itself is the SDK's analyzer and is unaffected.)
+   - Status: **recorded, not changed.** The bible's own `example/` declares
+     `>=3.10.0` while running the same tool, so the tension is the doctrine's;
+     this repo follows the doctrine rather than inventing a fourth answer.
 
 Resolved in this file: the repo had no `AGENTS.md`, and every package was silent
 about its error style (§4.9) — both are declared above. The in-memory store
