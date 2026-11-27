@@ -147,8 +147,6 @@ beats:
   - - marlin
   - - doug
   - - uyla
-  stubs:
-  - henry
 - name: THE BOAT
   loc: ≈ 84–93 min
   cap:
@@ -162,8 +160,6 @@ beats:
     - lucy
   - - marlin
   - - doug
-  enter:
-  - henry
 - name: THE WAKE-UP
   loc: the coda
   cap:

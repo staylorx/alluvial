@@ -83,6 +83,24 @@ changes — belong here.
 - The reference-corpus generators (`dart/tool/render_reference.py`,
   `dart/tool/number_corpus.py`) open their outputs with `newline=""`, so a
   corpus is LF-clean on any platform.
+- Two content defects the validator had been reporting are fixed, and
+  **`validate` is now clean: 0 of 36 invalid.** They were two different
+  authoring errors, both the same confusion — using `enter` / `stubs`, which
+  mean *first* and *last* appearance, to express a mid-story departure:
+  - `50-first-dates` marked henry `stubs` when Lucy lets him go and `enter` when
+    he comes back on the boat. Henry never leaves the story — he stands in every
+    beat — so both marks were false. Removed. The chart loses a phantom
+    "new lanes ▸ Henry" banner and a spurious exit stub, and is 24 px shorter.
+  - `about-time` marked dad `stubs` on "THE THIRD CHILD", a beat he does not
+    stand in (he is dead by then). Moved to "THE LAST TRIP", his last present
+    beat, so his exit stub is now actually drawn at the scene that is his
+    goodbye — the Python engine had been silently dropping it.
+  - Both edits change the rendered SVG, and the Python and Dart engines still
+    agree byte for byte: 98 of 98.
+  - Not expressible, so not "fixed": a character who leaves and returns mid-story
+    has no schema support. The prose (`cap` / `tag`) carries it. Recorded here
+    rather than invented in the data.
+- `format --apply` no longer refuses those two stories, so all 36 write.
 
 ### Known issues
 
@@ -93,9 +111,11 @@ changes — belong here.
   `sdk: ^3.11.0`, so the declared `>=3.10.0` floor does not resolve; the bible's
   own example declares `>=3.10.0` while running the same tool, so the tension is
   the doctrine's and is recorded rather than changed.
-- `validate` reports 2 of 36 stories invalid — `50-first-dates` and `about-time`,
-  both unchanged data defects now tracked as ALL-40 and recorded in
-  `backlog/docs/dart/real-defects-this-found-in-the-existing-data` (doc-17).
+- `alluvial format` in dry-run mode is not a dry run of anything: it reports
+  `would-write` for every story that merely *validates*, without ever comparing
+  bytes, and `--apply` calls `SaveStory` on all 36 unconditionally — so it
+  rewrites the whole store (all 36 files, only the two above differing) even when
+  nothing would change. Same code and same fix as ALL-47.
 
 ## [0.1.0] — 2026-09-11
 

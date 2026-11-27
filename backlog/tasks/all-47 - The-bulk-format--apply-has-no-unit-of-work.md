@@ -33,4 +33,19 @@ not apply to it.
 Rewritten 2026-11-27 by reading the command. The original ticket read this as
 "repository methods want an optional `IUnitOfWork? uow`" — that is wrong; the
 contract is correct as it stands. Recorded in AGENTS.md item 6.
+
+**Evidence found while fixing ALL-40 (2026-11-27)** — stronger than the ticket
+assumed:
+
+- Dry-run mode is not a dry run. `format` without `--apply` reports
+  `would-write` for every story that merely **validates**, without ever
+  comparing bytes (`format_command.dart:63-78`), so its output cannot tell you
+  whether anything would actually change.
+- `--apply` calls `SaveStory` on **all 36 stories unconditionally**
+  (`format_command.dart:80`). Verified on a scratch copy of an unchanged store:
+  it rewrote every file while changing not one byte. Every run rewrites the whole
+  store even when the result is identical, so the half-write window is always
+  36 files wide, not just the changed ones.
+- The fix is therefore two parts: compare before writing, and make the batch
+  all-or-nothing (buffer and commit whole, §5.6).
 <!-- SECTION:DESCRIPTION:END -->

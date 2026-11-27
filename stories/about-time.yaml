@@ -180,6 +180,8 @@ beats:
   - - mary
     - kitkat
   - - jay
+  stubs:
+  - dad
 - name: THE THIRD CHILD
   loc: ≈ 98–108 min
   cap:
@@ -192,8 +194,6 @@ beats:
     - mary
   - - kitkat
   - - jay
-  stubs:
-  - dad
 - name: THE ORDINARY DAY
   loc: the coda
   cap:
