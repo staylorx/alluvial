@@ -20,10 +20,12 @@ changes — belong here.
   every build/analysis finding and every divergence from
   `staylorx/dart-flutter-bible`. Nothing in it was fixed here — the findings are
   recorded so the owner can decide.
-- `dart/tool/gate.dart` — the workspace gate: analyze clean (fatal infos and
-  warnings), then every package's suite, in one command. The workspace root is
-  not a package, so `dart test` there exits 65; this is what covers the whole
-  workspace, and it closes the "no workspace-wide `dart test`" deviation.
+- The **melos script contract** in the root manifest (§2.1, §11): `analyze`,
+  `test`, `format` and `gate`, so `melos run <task>` is the one entry point CI,
+  agents and humans call. The workspace root is not a package, so `dart test`
+  there exits 65; `melos run test` is what covers the workspace. A hand-rolled
+  `tool/gate.dart` stood in for it for a few hours earlier the same day; it is
+  deleted, so there is one entry point again.
 - `AGENTS.md` — the bible-first pointer plus this repo's numbered deviations
   register. Re-reading the `dart-flutter-bible` sweep against the doctrine there
   closed two items (no `AGENTS.md`, undeclared error style), turned two into
@@ -44,8 +46,7 @@ changes — belong here.
   data defects → ALL-40). The open queue is now 33 items, labelled `defect` /
   `data` / `deviation` / `feature` / `refactor` / `site`.
 - The Dart tree is `dart format`-clean (two files reformatted), and both READMEs
-  point at `dart run tool/gate.dart` instead of a root `dart test` that cannot
-  work.
+  point at `melos run gate` instead of a root `dart test` that cannot work.
 - Every package barrel now declares what a caller receives: **FP-style tuples**
   by default, plain values for the renderer (an SVG string) and the CLI (an exit
   code — it is the ring).

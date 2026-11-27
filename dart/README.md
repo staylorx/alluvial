@@ -25,10 +25,11 @@ dart pub get                                  # from this directory (the workspa
 
 # THE gate: analyze clean, then every package's suite, in one command. The
 # workspace root is not a package with a test/ of its own, so `dart test` here
-# exits 65 — tool/gate.dart is what runs the whole workspace.
-dart run tool/gate.dart
-dart analyze --fatal-infos --fatal-warnings   # analyze alone; must report nothing
-dart format .                                 # the tree stays formatted
+# exits 65 — `melos run gate` is what runs the whole workspace (§2.1: melos is
+# the script contract, one entry point for CI, agents and humans).
+melos run gate
+melos run analyze          # analyze alone; must report nothing
+melos run format           # the tree stays formatted
 
 # against a store (the store lives at the repo root; this is packages/alluvial_cli)
 cd packages/alluvial_cli

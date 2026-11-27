@@ -29,9 +29,9 @@ Two halves of one thing:
 
 ## Local wiring
 
-- `cd dart && dart run tool/gate.dart` — the workspace gate: analyze clean, then
-  every package's suite. The workspace root is not a package, so `dart test`
-  there exits 65.
+- `cd dart && melos run gate` — the workspace gate: analyze clean, then every
+  package's suite. The workspace root is not a package, so `dart test` there
+  exits 65; `melos run <task>` is the one entry point (§2.1, §11).
 - `python3 dart/tool/render_reference.py <dir>` + `number_corpus.py <dir>` —
   generate the reference corpus the renderer gate compares against. The Dart
   side SKIPS when it is absent; it never invents a reference.
@@ -67,10 +67,11 @@ Expected (doctrine) vs actual (this repo). Status: open unless marked.
    - Expected (§2.1, §11): every repo declares its tasks in one root `melos:`
      block, and `melos run <task>` is *the* entry point CI, agents and humans
      call.
-   - Actual: a pub workspace with no `melos:` block and no melos dependency; the
-     gate is the hand-rolled `dart/tool/gate.dart`.
-   - Status: open (a decision — adopt melos and fold `gate.dart` into
-     `melos run test`, or record that this repo keeps the runner).
+   - Actual: **resolved 2026-11-27.** The root `melos:` block declares
+     `analyze`, `test`, `format` and `gate`; the hand-rolled
+     `dart/tool/gate.dart` that briefly stood in for it is gone, so there is one
+     entry point again.
+   - Status: fixed. (The 2026-09-24 audit had missed this deviation entirely.)
 2. **No `dart_arch_test` boundary test** — `dart/`
    - Expected (§2.9, §9 step 7, §10.1): package-boundary direction + workspace
      cycle-freedom as a test-enforced gate over the resolved import graph, with

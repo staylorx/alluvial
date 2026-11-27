@@ -13,3 +13,24 @@ workspace:
   - packages/alluvial_testing
   - packages/alluvial_render
   - packages/alluvial_cli
+
+dev_dependencies:
+  melos: ^8.8.0  # Apache-2.0
+
+# The script contract (bible §2.1, §11): `melos run <task>` is the one entry
+# point CI, agents and humans call, so every task is declared here and nowhere
+# else. The workspace root is not a package, so `dart test` at the root exits 65
+# — `melos run test` is what covers the workspace, and melos enforces no
+# boundary: that is the architecture test's job (§2.9).
+melos:
+  scripts:
+    analyze:
+      exec: dart analyze --fatal-infos --fatal-warnings
+    # A package with no test/ directory (alluvial_testing carries the shared
+    # contract suite, not its own tests) is skipped rather than failed.
+    test:
+      run: melos exec --dir-exists=test -- dart test
+    format:
+      exec: dart format .
+    gate:
+      run: melos run analyze && melos run test
