@@ -8,6 +8,11 @@
 /// every approved chart: the layout is hand-tuned across a hundred artifacts,
 /// so "equivalent output" is not good enough. Every number is printed through
 /// [PyNum], which reproduces CPython's rounding.
+///
+/// **This package presents plain values**: [renderFilmChart] answers a
+/// rendered chart and [renderTwoClock] an SVG string. There is no failure
+/// channel — a pure function of a decoded story; asking for the wrong shape is
+/// a usage error, decided by the caller.
 library;
 
 export 'src/builder/story_chart_builder.dart';

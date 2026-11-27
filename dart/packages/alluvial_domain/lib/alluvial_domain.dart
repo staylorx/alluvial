@@ -1,5 +1,9 @@
 /// The alluvial story model: the three entities, the failures, and the
 /// contracts a store is built on.
+///
+/// **This package presents FP-style tuples.** Repository calls answer
+/// `Future<Either<DomainFailure, T>>`; the datasource seam answers the unrun
+/// `TaskEither<DatasourceFailure, T>` — `.run()` it. No exceptions on the seam.
 library;
 
 export 'src/codec/story_document_codec.dart';

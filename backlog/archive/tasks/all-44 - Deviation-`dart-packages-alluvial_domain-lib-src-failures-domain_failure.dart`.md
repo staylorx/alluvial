@@ -3,7 +3,7 @@ id: ALL-44
 title: >-
   Deviation:
   `dart/packages/alluvial_domain/lib/src/failures/domain_failure.dart`,
-status: To Do
+status: Done
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
 labels: ["deviation"]
@@ -24,3 +24,9 @@ class per file, one file per class" (§2, §3). Argue for an exception (a sealed
 failure family and a spec value-object set read better together) or split
 them; the bible does not carve one out.
 <!-- SECTION:DESCRIPTION:END -->
+
+## Final Summary
+
+<!-- SECTION:FINAL_SUMMARY:BEGIN -->
+Recorded, not fixed: an argued exception in `AGENTS.md` item 3 — a sealed failure family is one unit and its exhaustive switch is a contract; splitting it would scatter that.
+<!-- SECTION:FINAL_SUMMARY:END -->

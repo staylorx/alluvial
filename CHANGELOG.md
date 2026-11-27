@@ -24,6 +24,13 @@ changes — belong here.
   warnings), then every package's suite, in one command. The workspace root is
   not a package, so `dart test` there exits 65; this is what covers the whole
   workspace, and it closes the "no workspace-wide `dart test`" deviation.
+- `AGENTS.md` — the bible-first pointer plus this repo's numbered deviations
+  register. Re-reading the `dart-flutter-bible` sweep against the doctrine there
+  closed two items (no `AGENTS.md`, undeclared error style), turned two into
+  recorded exceptions (the non-sembast store, the multi-class files), corrected
+  one (the `UnitOfWork` seam sits on the operation, not on the repository
+  contract), and surfaced one the audit had missed (no melos script contract).
+- A README per package, declaring its error style near the top (§4.9).
 
 ### Changed
 
@@ -39,6 +46,9 @@ changes — belong here.
 - The Dart tree is `dart format`-clean (two files reformatted), and both READMEs
   point at `dart run tool/gate.dart` instead of a root `dart test` that cannot
   work.
+- Every package barrel now declares what a caller receives: **FP-style tuples**
+  by default, plain values for the renderer (an SVG string) and the CLI (an exit
+  code — it is the ring).
 
 ### Fixed
 

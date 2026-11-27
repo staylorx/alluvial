@@ -1,7 +1,7 @@
 ---
 id: ALL-50
 title: 'Deviation: `dart/packages/alluvial_store_memory` — the in-memory store is a'
-status: To Do
+status: Done
 assignee: []
 created_date: '2026-11-08T18:51:00Z'
 labels: ["deviation"]
@@ -18,3 +18,9 @@ legitimate second adapter and the contract suite does run against both
 there is no UnitOfWork; recorded so the next reader does not go looking for
 the pitfall section.
 <!-- SECTION:DESCRIPTION:END -->
+
+## Final Summary
+
+<!-- SECTION:FINAL_SUMMARY:BEGIN -->
+Not a deviation: the in-memory store is the compliant second adapter behind the contract suite. Recorded as such in `AGENTS.md`.
+<!-- SECTION:FINAL_SUMMARY:END -->

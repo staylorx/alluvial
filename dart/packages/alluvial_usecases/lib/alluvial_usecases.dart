@@ -1,4 +1,7 @@
 /// The application layer: one use case per thing a caller can ask for.
+///
+/// **This package presents FP-style tuples**: every use case answers
+/// `Future<Either<DomainFailure, T>>`. A failure is a value, never a throw.
 library;
 
 export 'src/list_stories.dart';
