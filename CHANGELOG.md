@@ -33,6 +33,11 @@ changes — belong here.
   one (the `UnitOfWork` seam sits on the operation, not on the repository
   contract), and surfaced one the audit had missed (no melos script contract).
 - A README per package, declaring its error style near the top (§4.9).
+- `dart/test/architecture_test.dart` — the `dart_arch_test` boundary gate
+  (§2.9): what each package may reach, `lib/src/` reachable only through the
+  barrel, and workspace-wide cycle-freedom. It runs inside `melos run test`,
+  because the root is a package via `melos: useRootAsPackage`. Verified to fire:
+  a deliberately injected cross-package `lib/src/` import fails the suite.
 
 ### Changed
 
@@ -47,6 +52,9 @@ changes — belong here.
   `data` / `deviation` / `feature` / `refactor` / `site`.
 - The Dart tree is `dart format`-clean (two files reformatted), and both READMEs
   point at `melos run gate` instead of a root `dart test` that cannot work.
+- `dart test` at the workspace root now works: the boundary gate gives the root
+  a `test/` directory of its own, so the two stale Known-issues entries about it
+  exiting 65 and about `dart format` are gone.
 - Every package barrel now declares what a caller receives: **FP-style tuples**
   by default, plain values for the renderer (an SVG string) and the CLI (an exit
   code — it is the ring).
@@ -72,8 +80,13 @@ changes — belong here.
 
 ### Known issues
 
-- `dart format` reports two files it would change; `dart test` at the workspace
-  root exits 65 (there is no root `test/` directory). *(Board: ALL-37, ALL-38.)*
+- `dart_arch_test` (the tool §2.9 names for the boundary gate) pins
+  `analyzer: ">=9.0.0 <12.0.0"`, so the workspace's **dev** analyzer moves from
+  14.3.0 to 11.0.0 and `test` from 1.32.0 to 1.31.1. Dev-only — `dart analyze`
+  is the SDK's own analyzer and is unaffected. The tool also requires
+  `sdk: ^3.11.0`, so the declared `>=3.10.0` floor does not resolve; the bible's
+  own example declares `>=3.10.0` while running the same tool, so the tension is
+  the doctrine's and is recorded rather than changed.
 - `validate` reports 2 of 36 stories invalid — `50-first-dates` and `about-time`,
   both unchanged data defects now tracked as ALL-40 and recorded in
   `backlog/docs/dart/real-defects-this-found-in-the-existing-data` (doc-17).

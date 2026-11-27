@@ -15,7 +15,12 @@ workspace:
   - packages/alluvial_cli
 
 dev_dependencies:
+  # The boundary gate is a test, not a config (§2.9) — it lives at the workspace
+  # root so it can see every member package in one resolved import graph.
+  dart_arch_test: ^0.3.1  # MIT
   melos: ^8.8.0  # Apache-2.0
+  path: ^1.9.0  # BSD-3-Clause
+  test: ^1.25.0  # BSD-3-Clause
 
 # The script contract (bible §2.1, §11): `melos run <task>` is the one entry
 # point CI, agents and humans call, so every task is declared here and nowhere
@@ -23,6 +28,10 @@ dev_dependencies:
 # — `melos run test` is what covers the workspace, and melos enforces no
 # boundary: that is the architecture test's job (§2.9).
 melos:
+  # The workspace root is not a publishable package, but it IS a package: it
+  # carries the boundary test (test/architecture_test.dart), so `melos exec`
+  # must include it or the gate would sit outside the script contract.
+  useRootAsPackage: true
   scripts:
     analyze:
       exec: dart analyze --fatal-infos --fatal-warnings
