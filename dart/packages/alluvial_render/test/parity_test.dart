@@ -7,6 +7,8 @@ import 'package:alluvial_store_yaml/alluvial_store_yaml.dart';
 import 'package:shouldly/shouldly.dart';
 import 'package:test/test.dart';
 
+import 'corpus_paths.dart';
+
 /// The port's real gate: byte-identity with the Python engine that produced
 /// every approved chart.
 ///
@@ -15,8 +17,11 @@ import 'package:test/test.dart';
 /// (default, colour-blind, mini) and the spec dict as JSON, plus every
 /// two-clock chart. When the corpus is absent the test SKIPS — it is a gate,
 /// not a fixture, and a port cannot invent its own reference.
-final _store = Platform.environment['ALLUVIAL_STORE'] ?? '../../../stories';
-final _reference = Platform.environment['ALLUVIAL_REFERENCE'] ?? '/tmp/ref';
+///
+/// The paths come from `corpus_paths.dart`: no `/tmp/foo` literals (§6), and
+/// both the corpus and the store are overridable by environment variable.
+final _store = storeDirectory;
+final _reference = referenceDirectory;
 
 Future<void> main() async {
   final corpusThere = Directory(_reference).existsSync();

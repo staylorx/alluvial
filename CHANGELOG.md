@@ -55,6 +55,12 @@ changes — belong here.
 - `dart test` at the workspace root now works: the boundary gate gives the root
   a `test/` directory of its own, so the two stale Known-issues entries about it
   exiting 65 and about `dart format` are gone.
+- The render gates carry no `/tmp/...` literals (§6). The corpus paths live in
+  one place — `alluvial_render/test/corpus_paths.dart` — built from
+  `Directory.systemTemp` plus `package:path`, and both Python generators write to
+  the same default, so `python3 dart/tool/render_reference.py` with no argument
+  plus `dart test` is the whole gate on any platform. Verified running, not
+  skipping.
 - Every package barrel now declares what a caller receives: **FP-style tuples**
   by default, plain values for the renderer (an SVG string) and the CLI (an exit
   code — it is the ring).

@@ -17,16 +17,19 @@ is wrong, the spec diff says whether it was the builder (layout) or the engine
 (markup).
 
 Usage:  python3 dart/tool/render_reference.py [out-dir] [slug]
-        python3 dart/tool/render_reference.py /tmp/ref
+        python3 dart/tool/render_reference.py
 
+With no argument it writes to `<system temp>/alluvial-reference`, which is the
+default the Dart gate looks in (`alluvial_render/test/corpus_paths.dart`).
 Then:   cd dart/packages/alluvial_render && dart test
-        dart run tool/parity_report.dart <store-dir> /tmp/ref
+        dart run tool/parity_report.dart <store-dir> <out-dir>
 """
 from __future__ import annotations
 
 import json
 import os
 import sys
+import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
@@ -38,7 +41,11 @@ import story_chart          # noqa: E402
 import stories_yaml          # noqa: E402
 import reorder_chart       # noqa: E402
 
-OUT = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else "/tmp/ref"
+OUT = (
+    os.path.abspath(sys.argv[1])
+    if len(sys.argv) > 1
+    else os.path.join(tempfile.gettempdir(), "alluvial-reference")
+)
 ONLY = sys.argv[2] if len(sys.argv) > 2 else None
 
 os.makedirs(OUT, exist_ok=True)

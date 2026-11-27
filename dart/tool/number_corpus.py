@@ -18,12 +18,16 @@ disagreement, so the port is checked against CPython's own output rather than
 against hand-written expectations.
 
 Usage:  python3 dart/tool/number_corpus.py [out-file]
-        python3 dart/tool/number_corpus.py /tmp/ref/numbers.tsv
+        python3 dart/tool/number_corpus.py
+
+With no argument it writes `<system temp>/alluvial-reference/numbers.tsv`, the
+default the Dart gate looks in (`alluvial_render/test/corpus_paths.dart`).
 """
 from __future__ import annotations
 
 import os
 import sys
+import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
@@ -34,7 +38,11 @@ for path in (os.path.join(ROOT, "scripts"), os.path.join(ROOT, "web")):
 import story_chart          # noqa: E402
 import stories_yaml          # noqa: E402
 
-OUT = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else "/tmp/ref/numbers.tsv"
+OUT = (
+    os.path.abspath(sys.argv[1])
+    if len(sys.argv) > 1
+    else os.path.join(tempfile.gettempdir(), "alluvial-reference", "numbers.tsv")
+)
 
 values: list[float] = []
 
